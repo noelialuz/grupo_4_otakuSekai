@@ -13,7 +13,11 @@ https://kokohai.com/
 https://www.besidearg.com/
 
 :busts_in_silhouette: **Team:**
+
 Renzo Damián Aquino:
+
 Jhoaxani Andreina Diaz:
+
 Ezequiel Juan:
-**Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá y líder de pryecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a todo con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
+
+**Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de pryecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
