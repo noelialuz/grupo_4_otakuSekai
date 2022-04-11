@@ -29,9 +29,15 @@ Ezequiel Juan:
 
 **Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de pryecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
 
-Wireframe: 
+:page_with_curl:Wireframe: 
+
 ○ Home: https://wireframe.cc/pro/pp/f1241d050537161 ("HomePage")
+
 ○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161 ("Product info")
+
 ○ Carrito de compras: 
-○ Formulario de registro: 
-○ Formulario de login: 
+
+○ Formulario de registro: https://wireframe.cc/pro/edit/537384 ("registro")
+
+○ Formulario de login: https://wireframe.cc/pro/edit/537384 ("Login")
+
