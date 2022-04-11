@@ -15,14 +15,14 @@ https://todotakushop.com/ :
 
 https://akibamarket.com/:
 
-** "akibamarket" nos impresiono con la exposicion de los productos en su pagina inicial, despliega una buena transicion, contiene multilenguaje y poder guardar las cosas en Pinterest es algo bastante inusual tambien. **
+**"akibamarket" nos impresiono con la exposicion de los productos en su pagina inicial, despliega una buena transicion, contiene multilenguaje y poder guardar las cosas en Pinterest es algo bastante inusual tambien.**
 
 https://kokohai.com/ : 
-** esta pagina nos intereso mucho xq tiene demasiadas cosas que un amante del anime le encantaria ver, con los posters iniciales de cada anime, logos y referencias seguro lo que estes buscando puede estar aqui, ademas el logo de "kokohai" esta muy bien creado. **
+**Esta pagina nos intereso mucho xq tiene demasiadas cosas que un amante del anime le encantaria ver, con los posters iniciales de cada anime, logos y referencias seguro lo que estes buscando puede estar aqui, ademas el logo de "kokohai" esta muy bien creado.**
 
 https://www.besidearg.com/ :
 
-** En cuanto a "Beside" nos enfocamos en que es una de las paginas de compra de productos de anime muy popular en las redes sociales, siendo esta de argentina nos guia a conocer la manera de como llegar al cliente local si nos enfocamos de una web de venta solo dedicada en este caso a argentina.**
+**En cuanto a "Beside" nos enfocamos en que es una de las paginas de compra de productos de anime muy popular en las redes sociales, siendo esta de argentina nos guia a conocer la manera de como llegar al cliente local si nos enfocamos de una web de venta solo dedicada en este caso a argentina.**
 
 :busts_in_silhouette: **Team:**
 
@@ -34,13 +34,13 @@ Jhoaxani Andreina Diaz:
 
 Ezequiel Juan:
 
-**Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de pryecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
+**Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de proyecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
 
 :page_with_curl:Wireframe: 
 
-○ Home: https://wireframe.cc/pro/pp/f1241d050537161#1 ("HomePage")
+○ Home: https://wireframe.cc/pro/pp/f1241d050537161#1 
 
-○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161#rf7jzz10 ("Product info")
+○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161#rf7jzz10 
 
 ○ Carrito de compras sin items: https://wireframe.cc/pro/pp/f1241d050537161#4ltdsl1i
 
