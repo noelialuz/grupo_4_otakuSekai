@@ -18,6 +18,7 @@ https://akibamarket.com/:
 **"akibamarket" nos impresiono con la exposicion de los productos en su pagina inicial, despliega una buena transicion, contiene multilenguaje y poder guardar las cosas en Pinterest es algo bastante inusual tambien.**
 
 https://kokohai.com/ : 
+
 **Esta pagina nos intereso mucho xq tiene demasiadas cosas que un amante del anime le encantaria ver, con los posters iniciales de cada anime, logos y referencias seguro lo que estes buscando puede estar aqui, ademas el logo de "kokohai" esta muy bien creado.**
 
 https://www.besidearg.com/ :
