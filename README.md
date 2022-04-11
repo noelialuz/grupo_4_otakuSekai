@@ -5,23 +5,30 @@ Proyecto integrador curso DigitalHouse
 
 :bulb: **Nuestra inspiración:**
 
-https://www.gastovic.com.ar/
+https://www.gastovic.com.ar/ :
 
-https://todotakushop.com/
+**Lo que nos atrajo mucho de "gastovic" fue un diseño fresco y agradable, sencillo pero completo a la vez pudiendo asimilarlo facil con mucha referencia a Mercado Libre**
 
-https://akibamarket.com/
+https://todotakushop.com/ :
 
-https://www.gastovic.com.ar/
+**En el caso de "todotakushop" si bien la pagina redirecciona mantiene un contacto amigable con el visitante deseando conocer las categorias y que hay en cada una de ellas.**
 
-https://www.neoakiha.com/
+https://akibamarket.com/:
 
-https://kokohai.com/
+** "akibamarket" nos impresiono con la exposicion de los productos en su pagina inicial, despliega una buena transicion, contiene multilenguaje y poder guardar las cosas en Pinterest es algo bastante inusual tambien. **
 
-https://www.besidearg.com/
+https://kokohai.com/ : 
+** esta pagina nos intereso mucho xq tiene demasiadas cosas que un amante del anime le encantaria ver, con los posters iniciales de cada anime, logos y referencias seguro lo que estes buscando puede estar aqui, ademas el logo de "kokohai" esta muy bien creado. **
+
+https://www.besidearg.com/ :
+
+** En cuanto a "Beside" nos enfocamos en que es una de las paginas de compra de productos de anime muy popular en las redes sociales, siendo esta de argentina nos guia a conocer la manera de como llegar al cliente local si nos enfocamos de una web de venta solo dedicada en este caso a argentina.**
 
 :busts_in_silhouette: **Team:**
 
-Renzo Damián Aquino:
+Renzo Damián Aquino: Un gusto, soy Renzo Damian Aquino, tengo 28 años. Padre de dante y Comprometido con Veronica Segovia. me apasionan mucho los video juegos,
+anime y el deporte, comence a estudiar programacion para lograr formar una carrera profesional y lograr superarme para construir un futuro junto a mi familia
+y seres queridos, espero ansioso futuros proyectos!.
 
 Jhoaxani Andreina Diaz:
 
@@ -31,11 +38,13 @@ Ezequiel Juan:
 
 :page_with_curl:Wireframe: 
 
-○ Home: https://wireframe.cc/pro/pp/f1241d050537161 ("HomePage")
+○ Home: https://wireframe.cc/pro/pp/f1241d050537161#1 ("HomePage")
 
-○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161 ("Product info")
+○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161#rf7jzz10 ("Product info")
 
-○ Carrito de compras: 
+○ Carrito de compras sin items: https://wireframe.cc/pro/pp/f1241d050537161#4ltdsl1i
+
+○ Carrito de compras: https://wireframe.cc/pro/pp/f1241d050537161#xnxocisg
 
 ○ Formulario de registro: https://wireframe.cc/pro/edit/537384 ("registro")
 
