@@ -4,12 +4,19 @@ Proyecto integrador curso DigitalHouse
 :shopping: **Otaku Sekai** es una tienda de anime y series animadas pensada y hecha por fanáticos. El objetivo es poder ofrecerle a nuestros usuarios todo en un solo lugar, podrás encontrar mangas en español y en su idioma original, figuras coleccionables, indumetaria, accesorios, libros y más. Nuestra tienda está pensada para personas de todas las edades que sean fanáticos de las series animadas tanto como nosotros.
 
 :bulb: **Nuestra inspiración:**
+
 https://www.gastovic.com.ar/
+
 https://todotakushop.com/
+
 https://akibamarket.com/
+
 https://www.gastovic.com.ar/
+
 https://www.neoakiha.com/
+
 https://kokohai.com/
+
 https://www.besidearg.com/
 
 :busts_in_silhouette: **Team:**
