@@ -27,13 +27,13 @@ https://www.besidearg.com/ :
 
 :busts_in_silhouette: **Team:**
 
-Renzo Damián Aquino: Un gusto, soy Renzo Damian Aquino, tengo 28 años. Padre de dante y Comprometido con Veronica Segovia. me apasionan mucho los video juegos,
+**Renzo Damián Aquino**: Un gusto, soy Renzo Damian Aquino, tengo 28 años. Padre de dante y Comprometido con Veronica Segovia. me apasionan mucho los video juegos,
 anime y el deporte, comence a estudiar programacion para lograr formar una carrera profesional y lograr superarme para construir un futuro junto a mi familia
 y seres queridos, espero ansioso futuros proyectos!.
 
-Jhoaxani Andreina Diaz:
+**Jhoxani Diaz Arrieche**: Hola! Soy Jhoxi, tengo 21 años y soy de Venezuela. Estoy en Argentina desde hace 5 años y soy mamá de Panchi, una hermosa perrita rescatada. Trabajo desde ese entonces en tecnología y educación. Mi objetivo con el curso de Full Stack es adentrarme aún más en el mundo de la programación y participar de grandes proyectos a futuro.
 
-Ezequiel Juan:
+**Ezequiel Juan**:
 
 **Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de proyecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
 
