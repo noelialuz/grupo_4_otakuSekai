@@ -39,15 +39,17 @@ y seres queridos, espero ansioso futuros proyectos!.
 
 :page_with_curl:Wireframe: 
 
-○ Home: https://wireframe.cc/pro/pp/f1241d050537161#1 
+○ Home: https://marvelapp.com/prototype/dd1f93d/screen/86256932
 
-○ Detalle de producto: https://wireframe.cc/pro/pp/f1241d050537161#rf7jzz10 
+○ Detalle de producto: https://marvelapp.com/prototype/dd1f93d/screen/86276458
 
-○ Carrito de compras sin items: https://wireframe.cc/pro/pp/f1241d050537161#4ltdsl1i
+○ Listado de productos: https://marvelapp.com/prototype/dd1f93d/screen/86276543
 
-○ Carrito de compras: https://wireframe.cc/pro/pp/f1241d050537161#xnxocisg
+○ Carrito de compras vacío: https://marvelapp.com/prototype/dd1f93d/screen/86276573
 
-○ Formulario de registro: https://wireframe.cc/pro/edit/537384 ("registro")
+○ Carrito de compras lleno: https://marvelapp.com/prototype/dd1f93d/screen/86276633
 
-○ Formulario de login: https://wireframe.cc/pro/edit/537384 ("Login")
+○ Formulario de registro: https://marvelapp.com/prototype/dd1f93d/screen/86276728
+
+○ Formulario de login: https://marvelapp.com/prototype/dd1f93d/screen/86278243
 
