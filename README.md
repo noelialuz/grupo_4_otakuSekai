@@ -31,7 +31,7 @@ https://www.besidearg.com/ :
 anime y el deporte, comence a estudiar programacion para lograr formar una carrera profesional y lograr superarme para construir un futuro junto a mi familia
 y seres queridos, espero ansioso futuros proyectos!.
 
-**Jhoaxani Andreina Diaz**: Hola! Soy Jhoxi, tengo 21 años y soy de Venezuela. Estoy en Argentina desde hace 5 años y soy mamá de Panchi, una hermosa perrita rescatada. Trabajo desde ese entonces en tecnología y educación. Mi objetivo con el curso de Full Stack es adentrarme aún más en el mundo de la programación y participar de grandes proyectos a futuro.
+**Jhoxani Diaz Arrieche**: Hola! Soy Jhoxi, tengo 21 años y soy de Venezuela. Estoy en Argentina desde hace 5 años y soy mamá de Panchi, una hermosa perrita rescatada. Trabajo desde ese entonces en tecnología y educación. Mi objetivo con el curso de Full Stack es adentrarme aún más en el mundo de la programación y participar de grandes proyectos a futuro.
 
 **Ezequiel Juan**:
 
