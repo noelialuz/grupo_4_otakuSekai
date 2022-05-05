@@ -40,16 +40,23 @@ y seres queridos, espero ansioso futuros proyectos!.
 :page_with_curl:Wireframe: 
 
 ○ Home: https://marvelapp.com/prototype/dd1f93d/screen/86256932
+○ Home Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86591369
 
 ○ Detalle de producto: https://marvelapp.com/prototype/dd1f93d/screen/86276458
+○ Detalle de producto Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86591530
 
 ○ Listado de productos: https://marvelapp.com/prototype/dd1f93d/screen/86276543
+○ Listado de productos Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86591775
 
 ○ Carrito de compras vacío: https://marvelapp.com/prototype/dd1f93d/screen/86276573
+○ Carrito de compras vacío Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86591874
 
 ○ Carrito de compras lleno: https://marvelapp.com/prototype/dd1f93d/screen/86276633
+○ Carrito de compras lleno Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86592573
 
 ○ Formulario de registro: https://marvelapp.com/prototype/dd1f93d/screen/86276728
+○ Formulario de registro Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86592751
 
 ○ Formulario de login: https://marvelapp.com/prototype/dd1f93d/screen/86278243
+○ Formulario de login Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86593864
 
