@@ -60,3 +60,12 @@ y seres queridos, espero ansioso futuros proyectos!.
 ○ Formulario de login: https://marvelapp.com/prototype/dd1f93d/screen/86278243
 ○ Formulario de login Mobile: https://marvelapp.com/prototype/dd1f93d/screen/86593864
 
+Tablero de trabajo: https://trello.com/invite/b/xE7ehWhG/f306b9e5439b7bd1b587956f7c876ac8/otakusekai
+Repositorio git: https://github.com/noelialuz/grupo_4_otakuSekai.git 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Pasos para correr el proyecto:
+1- Bajarse el repositorio
+2- Correr el comando "npm install"
+3- Correr el comando "npm start"
+4- Abrir en el browser "http://localhost:3000/"
