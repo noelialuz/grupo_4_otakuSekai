@@ -1,0 +1,37 @@
+.create-form{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 80%;
+    flex-direction: column;
+    border: #E5E1EE 1px solid;
+    background-color: white;
+    margin: auto;
+    
+}
+
+.create-form-titulo{
+    border-bottom: 1px solid #D2C3FA;
+    text-align: left;
+}
+
+.control-formulario-campos{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.control-formulario-redes_sociales{
+    justify-content: center;
+    width: 80%;
+}
+
+.control-formulario-boton{
+    background-color: #47525E;
+    color: white;
+    text-align: center;
+    margin:auto;
+    margin-top: 20px;
+}
