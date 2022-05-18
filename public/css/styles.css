@@ -14,7 +14,7 @@ img {
 
 body {
     background-image: url("/img/back-anime.jpg");
-
+    margin: 0;
 }
 
 /* ---------------------------------- HEADER ---------------------------------- */
@@ -180,10 +180,6 @@ main {
     }
 }
 
-/* On smaller screens, decrease text size VER MODIFICAR*/
-/* @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  } */
 
 
 /* -------------------------- FIN DEL CARRUSEL DE FOTOS -------------------- */
@@ -366,7 +362,16 @@ main {
 
 /* ---------------- FLEX BOX CON NUESTROS PRODUCTOS ---------------- */
 
-.nuestrosProductos a img {
+.subtitulos {
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: var(--gris) 1px solid;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+.nuestrosProductos a {
     width: 100%;
     padding: 0;
 }
@@ -377,85 +382,19 @@ main {
 }
 
 .columnaProductos {
-    flex: 25%;
-    max-width: 25%;
+    max-width: 100%;
     padding: 0 4px;
 }
 
 .columnaProductos a {
     margin-top: 8px;
     vertical-align: middle;
-    width: 90%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
-}
-
-.nuestrosProductos1 {
-    height: 180px;
-    background-image: url("/img/imageTest.jpg");
-    background-size: cover;
-}
-
-.nuestrosProductos2 {
-    height: 270px;
-    background-image: url("/img/imageTest.jpg");
-    background-size: cover;
-}
-
-.nuestrosProductos3 {
-    height: 130px;
-    background-image: url("/img/imageTest.jpg");
-    background-size: cover;
-}
-
-.nuestrosProductos4 {
-    height: 100px;
-    background-image: url("/img/imageTest.jpg");
-    background-size: cover;
-}
-
-.nuestrosProductos5 {
-    height: 190px;
-    background-image: url("/img/imageTest.jpg");
-    background-size: cover;
-}
-
-
-/* ------------------------------ Version Tablet ------------------------------ */
-@media (min-width: 361px) {
-
-    /* ---------- Caracteristicas de ventas Home ---------- */
-    .caracteristicasVentas {
-        display: flex;
-        flex-direction: row;
-        width: 80%;
-        margin-left: 10%;
-    }
-
- /* ---------- Nuestros productos categorias ---------- */
- .nuestrosProductos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-around;
-    justify-content: space-around;
-
-}
-
-.nuestrosProductos a {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    background-color: var(--azulClaro);
-    border-radius: 5px;
-    margin: 10px;
+    position: relative;
     text-decoration: none;
     color: white;
-    position: relative;
-}
-
-.nuestrosProductos h3 {
-    display: none;
 }
 
 .nuestrosProductos a h3 {
@@ -471,11 +410,291 @@ main {
     transition: opacity 2s;
 }
 
-.columnaProductos {
-    flex: 50%;
-    max-width: 50%;
+.nuestrosProductos1 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
 }
 
+.nuestrosProductos2 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos3 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos4 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos5 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+/* ---------------- FIN DE FLEX BOX CON NUESTROS PRODUCTOS ---------------- */
+
+
+/* ---------------- CAJA CON PRODUCTOS EN OFERTA ---------------- */
+
+.productosEnOferta {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.productosEnOferta a {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.productosEnOferta a img {
+    width: 100%;
+}
+
+.productosEnOferta div {
+    width: 50%;
+    border-left: var(--gris) 1px solid;
+    margin-left: 5px;
+}
+
+.productosEnOferta div h4,
+.productosEnOferta div p {
+    margin: 2px;
+}
+
+.botonAgregar {
+    background-color: var(--azul);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 90%;
+}
+
+.botonAgregar:active {
+    background-color: var(--azulClaro);
+    font-weight: bold;
+}
+
+
+.precioAnterior{
+    text-decoration:line-through
+}
+
+.porcentajeDescuento{
+    color: var(--azul);
+    font-weight: bold;
+}
+
+
+/* -------------------------------------------- FOOTER -------------------------------------------- */
+
+/* -------------------- Categorias en el footer -------------------- */
+
+.categoriasDelFooter1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: 30px 5%;
+    border-top: var(--gris) 1px solid;
+    padding: 10px 0px;
+}
+
+.categoriasDelFooter1 a{
+    margin: 0 3%;
+    text-decoration: none;
+}
+
+.categoriasDelFooter1 li{
+    list-style: none;
+    width: 5em;
+    height: 5em;
+    border: var(--azulClaro) 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.categoriasDelFooter1 a:active li{
+    opacity: 1;
+}
+
+.categoriasDelFooter2{
+    display: none;
+}
+
+/* -------------------------- Footer Final -------------------- */
+
+footer{
+    text-align: center;
+}
+
+.iconosRedesSocialesFooter i{
+    font-size: 2em;
+    margin: 0 3%;
+}
+
+.logoDelFooter{
+    width: 70%;
+    margin-top: 10px;
+}
+
+.finalDelFooter{
+    background-color: var(--azul);
+    padding: 20px;
+}
+
+.detalleFooterul li{
+    list-style-type: none;
+    color: white;
+}
+
+.detalleFooterul{
+    padding: 10px;
+    margin: 10px 15%;
+    border-top: var(--gris) 1px solid;
+    border-bottom: var(--gris) 1px solid;
+    width: 70%;
+}
+
+.copyright{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ------------------------------ Version Tablet ------------------------------ */
+@media (min-width: 361px) {
+
+    /* ---------- Caracteristicas de ventas Home ---------- */
+    .caracteristicasVentas {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* ---------- Nuestros productos categorias ---------- */
+
+    .nuestrosProductos1 {
+        height: 180px;
+    }
+
+    .nuestrosProductos2 {
+        height: 270px;
+    }
+
+    .nuestrosProductos3 {
+        height: 140px;
+    }
+
+    .nuestrosProductos4 {
+        height: 100px;
+    }
+
+    .nuestrosProductos5 {
+        height: 200px;
+    }
+
+    .nuestrosProductos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around;
+        justify-content: space-around;
+
+    }
+
+    .nuestrosProductos a {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        background-color: var(--azulClaro);
+        border-radius: 5px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+
+    .nuestrosProductos a h3 {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--azul);
+        opacity: 0.7;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transition: opacity 2s;
+    }
+
+    .columnaProductos {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    /* ---------------- Caja con productos en oferta ---------------- */
+
+    .productosEnOferta{
+        width: 48%;
+        margin: 5px 0px;
+    }
+    .cajaConProductosEnOferta{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1%;
+    }
+
+
+    /* ------------Footer -------------- */
+    .categoriasDelFooter2{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+
+    }
+
+    .categoriasDelFooter2 li{
+        list-style-type: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .logoDelFooter{
+        max-width: 300px;
+    }
+    
 }
 
 /* ------------------------------ Version Desktop ------------------------------ */
@@ -542,24 +761,56 @@ main {
         margin-left: 10%;
     }
 
-   /* ----------- HOVER AL MENU DE NUESTROS PRODUCTOS------------ */
-   
-   .nuestrosProductos a h3{
-       display: none;
-   }
-   .nuestrosProductos a:hover h3 {
-    display: block;
-    margin: 0;
-    padding: 20px;
-    background-color: var(--azul);
-    opacity: 0.7;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    transition: opacity 2s;
+    /* ----------- HOVER AL MENU DE NUESTROS PRODUCTOS------------ */
 
-}
+    .nuestrosProductos a h3 {
+        display: none;
+    }
+
+    .nuestrosProductos a:hover h3 {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--azul);
+        opacity: 0.7;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transition: opacity 2s;
+    }
+
+    .botonAgregar:hover {
+        background-color: var(--celeste);
+        color: var(--azul);
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+     /* ---------------- Caja con productos en oferta ---------------- */
+
+     .productosEnOferta{
+        width: 23%;
+        margin: 5px 0px;
+    }
+
+    .cajaConProductosEnOferta{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1%;
+    }
+    .botonAgregar:active {
+        background-color: var(--azul);
+        font-weight: bold;
+        color: var(--celeste);
+        transition: 0;
+    }
+
+    /* -------------- categorias del footer -------------- */
+    .categoriasDelFooter1 a:hover li{
+        opacity: 1;
+    }
 
 }
 
