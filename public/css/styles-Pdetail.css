@@ -144,3 +144,79 @@ align-self: center;
     align-self: center;
     display: none;
 }
+
+
+.cajaConProductosEnOferta1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 1%;
+    display: none;
+}
+
+.detallesOferta{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productosEnOfertaDetail {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.productosEnOfertaDetail a {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.productosEnOfertaDetail a img {
+    width: 100%;
+}
+
+.productosEnOfertaDetail div {
+    width: 50%;
+    border-left: var(--gris) 1px solid;
+    margin-left: 5px;
+}
+
+.productosEnOfertaDetail div h4,
+.productosEnOfertaDetail div p {
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------Media Queris---------------------------*/
+/*------------------------------Visual para celulares medianos y Tablets-----------------------*/
+@media(min-width: 361px){
+
+.miniaturasProducto4,.miniaturasProducto{
+    display: block;
+    width: 20%;
+}
+
+.cajaConProductosEnOferta1{
+    display: contents;
+}
+.productosEnOfertaDetail{
+    width: 55%;
+    margin: 5px 0px;
+}
+}
