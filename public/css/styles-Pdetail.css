@@ -88,6 +88,7 @@ input#abrir-cerrar {
 
 .presentacion-producto{
     display: flex;
+    flex-direction: column;
 }
 
 .nombre-producto{
@@ -212,11 +213,40 @@ align-self: center;
     width: 20%;
 }
 
+.productCountainer{
+    max-width: 60%
+}
+
+.nombre-producto{
+font-size: 25px;
+}
 .cajaConProductosEnOferta1{
     display: contents;
 }
 .productosEnOfertaDetail{
     width: 55%;
     margin: 5px 0px;
+    
+}
+}
+
+
+
+@media (min-width: 769px){
+.miniaturasProducto5, .miniaturasProducto4,.miniaturasProducto{
+    display: block;
+    width: 15%;
+}
+
+.productCountainer{
+    width: 50%;
+}
+.otros-productos{
+    font-size: 30px;
+}
+.nombre-producto{
+    font-size: 30px;
+    padding: 10px;
+    
 }
 }
