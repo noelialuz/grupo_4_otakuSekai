@@ -1,3 +1,10 @@
+:root {
+    --gris: #E5E1EE;
+    --celeste: #DFFDFF;
+    --azulClaro: #90BEDE;
+    --azul: #003F91;
+    --violeta: #C090DE;
+}
 
 .carrito{
     display: flex;
@@ -13,11 +20,11 @@
     
 }
 .card-carrito{
-    justify-content: center;
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
+    margin: 20px;
     
 }
 
@@ -29,4 +36,112 @@
 
 .card-carrito_empty{
     display: none;
+}
+
+.card-carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border: #E5E1EE 1px solid;
+    margin: 20px;
+}
+.imagen{
+    max-width: 25%;
+    max-height: 25%;
+    
+}
+
+.card-carrito-info-botton_add_delete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-carrito-producto-info-precio{
+    max-width: 30%;
+}
+
+p{
+    font-size: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.carrito-buttons{
+    display:flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+.carrito-buttons_comprar{
+    background-color: #003F91;
+    color: white;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #003F91;
+    margin: 10px;
+}
+
+.carrito-buttons_vaciar{
+    background-color: white;
+    color: gray;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: white;
+    margin: 10px;
+}
+
+
+
+.carrito-button-items{
+    background: none;
+  border: 0;
+  color: inherit;
+}
+.fa-circle-plus:hover{
+    color: grey;
+}
+
+.fa-circle-minus:hover{
+    color: grey;
+}
+
+.botonComprar{
+    width: 15%;
+    margin: 10px ;
+}
+
+.botonVaciar{
+    width: 15%;
+    margin: 10px ;
+    background-color: white;
+    color: var(--azul);
+    border: var(--azulClaro) 1px solid;
+}
+
+
+.botonComprar:hover{
+    background-color: #90BEDE;
+    border-color: #90BEDE;
+}
+
+.botonVaciar:hover{
+    background-color: var(--azulClaro);
+    border-color: #E5E1EE;
+}
+
+@media (min-width: 361px) {
+ 
+}
+@media (min-width: 769px) {
+    p{
+        font-size: 15px;
+    }
 }

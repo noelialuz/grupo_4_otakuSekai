@@ -39,8 +39,3 @@ app.get('/productVerMas', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productVerMas.html'));
 });
 
-
-/* ------------- Si no se usa, hay que sacarlo -------------  */
-app.get('/prueba_DetalleProducto', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/prueba_DetalleProducto.html'));
-});
