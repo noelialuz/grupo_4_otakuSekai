@@ -1,0 +1,29 @@
+
+.carrito{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 80%;
+    flex-direction: column;
+    border: #E5E1EE 1px solid;
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;
+    min-height: 50vh;
+    
+}
+.card-carrito{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+
+.card-carrito-titulo{
+    border-bottom: 1px solid #D2C3FA;
+    text-align: left;
+    margin: revert;
+}
+
