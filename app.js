@@ -31,6 +31,3 @@ app.get('/productDetail', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
 
-app.get('/prueba_DetalleProducto', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/prueba_DetalleProducto.html'));
-});
