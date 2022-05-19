@@ -1,0 +1,23 @@
+.detalle-producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-producto{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    width: 90%;
+}
+
+
+.contenedor-miniaturas{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
