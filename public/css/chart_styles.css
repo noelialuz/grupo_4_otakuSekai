@@ -58,6 +58,7 @@
 p{
     font-size: 10px;
     padding: 5px;
+    text-align: left;
 }
 
 .carrito-buttons{
@@ -98,4 +99,27 @@ p{
 .carrito-buttons_vaciar:hover{
     background-color: #E5E1EE;
     border-color: #E5E1EE;
+}
+
+.carrito-button-items{
+    background: none;
+  border: 0;
+  color: inherit;
+}
+.fa-circle-plus:hover{
+    color: grey;
+}
+
+.fa-circle-minus:hover{
+    color: grey;
+}
+
+
+@media (min-width: 361px) {
+ 
+}
+@media (min-width: 769px) {
+    p{
+        font-size: 15px;
+    }
 }
