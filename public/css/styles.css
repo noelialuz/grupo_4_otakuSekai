@@ -2,3 +2,822 @@
 @import url("/grupo_4_otakuSekai/public/css/normalize.css");
 
 
+/* -------------------- Para que se vea bien al principio, disponible para editar luego ------------- */
+img {
+    width: 300px;
+}
+
+/* ---------------------------------- GENERALES ---------------------------------- */
+:root {
+    --gris: #E5E1EE;
+    --celeste: #DFFDFF;
+    --azulClaro: #90BEDE;
+    --azul: #003F91;
+    --violeta: #C090DE;
+}
+
+body {
+    background-image: url("/img/back-anime.jpg");
+    margin: 0;
+}
+
+/* ---------------------------------- HEADER ---------------------------------- */
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    background-color: var(--azul);
+    font-weight: bold;
+    color: white;
+}
+
+/* ----------------- LOGO ----------------- */
+.logo {
+    width: 15%;
+    max-width: 300px;
+    max-height: 50px;
+    display: flex;
+}
+
+.logo img {
+    width: 100%;
+    max-height: 50px;
+    align-items: center;
+}
+
+/* ----------------- BARRA DE NAVEGACION - NAV BAR ----------------- */
+
+.navbar {
+    display: none;
+}
+
+
+/*  Hay que mostrarlo al apretar la lupa PENDIENTE DE HACER */
+.buscador input {
+    display: none;
+}
+
+.iconosHeader {
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+}
+
+.iconosHeader i {
+    padding: 5px;
+}
+
+#opcionElegida {
+    height: 25px;
+    border-radius: 5px;
+    color: var(--azul);
+    width: 40%;
+}
+
+/* ---------------------------------- MAIN ---------------------------------- */
+/* ----------------------CARRUSEL BANNER ---------------------- */
+* {
+    box-sizing: border-box
+}
+
+main {
+    text-align: center;
+}
+
+/* contenerdor carrusel */
+.contenedorDelCarrusel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Ocultar imagenes por default */
+.mySlides1 {
+    display: none;
+}
+
+.imgBanner {
+    vertical-align: middle;
+}
+
+/* Botones next y previus */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posicionar next a la derecha */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Cambio de color con hover */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Detalle texto subtitulo */
+.textCarrusel1 {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Numero de imagen (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Punto indicador de numero de imagen */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Animacion con efecto desvanecer */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+/* -------------------------- FIN DEL CARRUSEL DE FOTOS -------------------- */
+
+
+/* ------------ Iconos Redes Sociales------------ */
+
+.banner {
+    position: relative;
+}
+
+.iconosRedesSociales {
+    font-size: 2em;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+.fa-whatsapp {
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-youtube {
+    color: #c4302b;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-instagram {
+    /*     background: #f09433; */
+    color: white;
+    border-radius: 30%;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+
+/* ------------ Características------------ */
+
+.caracteristicasVentas {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20%;
+}
+
+.caracteristicasVentas h3 {
+    text-align: center;
+}
+
+
+/* --------------------- CARRUSEL DE CARTAS EN 3D ------------------------- */
+.carruselAnimado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon-cards {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    color: black;
+    perspective: 1000px;
+    transform-origin: center;
+}
+
+.icon-cards__content {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 30s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.icon-cards.step-animation {
+    animation: carousel 50s infinite steps(1) forwards;
+}
+
+.icon-cards__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    transform-origin: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-cards__item img {
+    width: 80%;
+}
+
+.icon-cards__item:nth-child(1) {
+    background: var(--celeste);
+    transform: rotateY(0) translateZ(40vw);
+}
+
+.icon-cards__item:nth-child(2) {
+    background: var(--azulClaro);
+    transform: rotateY(72deg) translateZ(40vw);
+}
+
+.icon-cards__item:nth-child(3) {
+    background: var(--gris);
+    transform: rotateY(144deg) translateZ(40vw);
+}
+
+.icon-cards__item:nth-child(4) {
+    background: var(--celeste);
+    transform: rotateY(216deg) translateZ(40vw);
+}
+
+.icon-cards__item:nth-child(5) {
+    background: var(--azulClaro);
+    transform: rotateY(288deg) translateZ(40vw);
+}
+
+
+@keyframes carousel {
+
+    0%,
+    16.6% {
+        transform: translateZ(-40vw) rotateY(0);
+    }
+
+    16.6%,
+    33.2% {
+        transform: translateZ(-40vw) rotateY(-72deg);
+    }
+
+    33.2%,
+    49.8% {
+        transform: translateZ(-40vw) rotateY(-144deg);
+    }
+
+    49.8%,
+    66.4% {
+        transform: translateZ(-40vw) rotateY(-216deg);
+    }
+
+    66.4%,
+    83% {
+        transform: translateZ(-40vw) rotateY(-288deg);
+    }
+
+    83%,
+    100% {
+        transform: translateZ(-40vw) rotateY(-360deg);
+    }
+}
+
+/* ---------------- FIN DEL CARRUSEL DE CARTAS EN 3D ---------------- */
+
+
+/* ---------------- FLEX BOX CON NUESTROS PRODUCTOS ---------------- */
+
+.subtitulos {
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: var(--gris) 1px solid;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+.nuestrosProductos a {
+    width: 100%;
+    padding: 0;
+}
+
+.nuestrosProductos {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.columnaProductos {
+    max-width: 100%;
+    padding: 0 4px;
+}
+
+.columnaProductos a {
+    margin-top: 8px;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.nuestrosProductos a h3 {
+    display: block;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--azul);
+    opacity: 0.7;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 2s;
+}
+
+.nuestrosProductos1 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos2 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos3 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos4 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos5 {
+    height: 180px;
+    background-image: url("/img/imageTest.jpg");
+    background-size: cover;
+}
+
+/* ---------------- FIN DE FLEX BOX CON NUESTROS PRODUCTOS ---------------- */
+
+
+/* ---------------- CAJA CON PRODUCTOS EN OFERTA ---------------- */
+
+.productosEnOferta {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.productosEnOferta a {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.productosEnOferta a img {
+    width: 100%;
+}
+
+.productosEnOferta div {
+    width: 50%;
+    border-left: var(--gris) 1px solid;
+    margin-left: 5px;
+}
+
+.productosEnOferta div h4,
+.productosEnOferta div p {
+    margin: 2px;
+}
+
+.botonAgregar {
+    background-color: var(--azul);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 90%;
+}
+
+.botonAgregar:active {
+    background-color: var(--azulClaro);
+    font-weight: bold;
+}
+
+
+.precioAnterior{
+    text-decoration:line-through
+}
+
+.porcentajeDescuento{
+    color: var(--azul);
+    font-weight: bold;
+}
+
+
+/* -------------------------------------------- FOOTER -------------------------------------------- */
+
+/* -------------------- Categorias en el footer -------------------- */
+
+.categoriasDelFooter1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: 30px 5%;
+    border-top: var(--gris) 1px solid;
+    padding: 10px 0px;
+}
+
+.categoriasDelFooter1 a{
+    margin: 0 3%;
+    text-decoration: none;
+}
+
+.categoriasDelFooter1 li{
+    list-style: none;
+    width: 5em;
+    height: 5em;
+    border: var(--azulClaro) 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.categoriasDelFooter1 a:active li{
+    opacity: 1;
+}
+
+.categoriasDelFooter2{
+    display: none;
+}
+
+/* -------------------------- Footer Final -------------------- */
+
+footer{
+    text-align: center;
+}
+
+.iconosRedesSocialesFooter i{
+    font-size: 2em;
+    margin: 0 3%;
+}
+
+.logoDelFooter{
+    width: 70%;
+    margin-top: 10px;
+}
+
+.finalDelFooter{
+    background-color: var(--azul);
+    padding: 20px;
+}
+
+.detalleFooterul li{
+    list-style-type: none;
+    color: white;
+}
+
+.detalleFooterul{
+    padding: 10px;
+    margin: 10px 15%;
+    border-top: var(--gris) 1px solid;
+    border-bottom: var(--gris) 1px solid;
+    width: 70%;
+}
+
+.copyright{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ------------------------------ Version Tablet ------------------------------ */
+@media (min-width: 361px) {
+
+    /* ---------- Caracteristicas de ventas Home ---------- */
+    .caracteristicasVentas {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* ---------- Nuestros productos categorias ---------- */
+
+    .nuestrosProductos1 {
+        height: 180px;
+    }
+
+    .nuestrosProductos2 {
+        height: 270px;
+    }
+
+    .nuestrosProductos3 {
+        height: 140px;
+    }
+
+    .nuestrosProductos4 {
+        height: 100px;
+    }
+
+    .nuestrosProductos5 {
+        height: 200px;
+    }
+
+    .nuestrosProductos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around;
+        justify-content: space-around;
+
+    }
+
+    .nuestrosProductos a {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        background-color: var(--azulClaro);
+        border-radius: 5px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+
+    .nuestrosProductos a h3 {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--azul);
+        opacity: 0.7;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transition: opacity 2s;
+    }
+
+    .columnaProductos {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    /* ---------------- Caja con productos en oferta ---------------- */
+
+    .productosEnOferta{
+        width: 48%;
+        margin: 5px 0px;
+    }
+    .cajaConProductosEnOferta{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1%;
+    }
+
+
+    /* ------------Footer -------------- */
+    .categoriasDelFooter2{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+
+    }
+
+    .categoriasDelFooter2 li{
+        list-style-type: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .logoDelFooter{
+        max-width: 300px;
+    }
+    
+}
+
+/* ------------------------------ Version Desktop ------------------------------ */
+@media (min-width: 769px) {
+
+    /* ----------------- BARRA DE NAVEGACION - NAV BAR ----------------- */
+    #opcionElegida {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        width: 65%;
+        height: 50px;
+        align-items: center
+    }
+
+    .navbar li,
+    .navbar a {
+        text-decoration: none;
+        list-style-type: none;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* ------------- VER para que sombree toda la caja del a */
+
+    /* ---------- NAV BAR ---------- */
+    .navbar a:hover {
+        background-color: var(--gris);
+    }
+
+    .iconosRedesSociales {
+        font-size: 3em;
+    }
+
+    .barraDeNavegacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    /* ---------- barra oculta ---------- */
+    .categoriasDeProductos,
+    .categoriasDeAnime {
+        display: none;
+        position: relative;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .linkProductos:hover .categoriasDeProductos {
+        display: block;
+    }
+
+
+    /* ---------- Subtitutlos Home ---------- */
+    .subtitulos {
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    /* ----------- HOVER AL MENU DE NUESTROS PRODUCTOS------------ */
+
+    .nuestrosProductos a h3 {
+        display: none;
+    }
+
+    .nuestrosProductos a:hover h3 {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--azul);
+        opacity: 0.7;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transition: opacity 2s;
+    }
+
+    .botonAgregar:hover {
+        background-color: var(--celeste);
+        color: var(--azul);
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+     /* ---------------- Caja con productos en oferta ---------------- */
+
+     .productosEnOferta{
+        width: 23%;
+        margin: 5px 0px;
+    }
+
+    .cajaConProductosEnOferta{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1%;
+    }
+    .botonAgregar:active {
+        background-color: var(--azul);
+        font-weight: bold;
+        color: var(--celeste);
+        transition: 0;
+    }
+
+    /* -------------- categorias del footer -------------- */
+    .categoriasDelFooter1 a:hover li{
+        opacity: 1;
+    }
+
+}
+
+
+
+/* ------------ FIN Version Desktop ------------ */
