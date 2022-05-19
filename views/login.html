@@ -1,162 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-        <meta name="viewport" content="width=device-width">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
-        <link href="/css/styles.css" rel="stylesheet">
-        <link href="/css/formularios_styles.css" rel="stylesheet">
-        <title>Otaku Sekai</title>
-        <link rel="icon" type="image/x-icon" href="/img/totoro.png">
-    </head>
-    <body>
-        <header>
-            <a href="/" class="logo"><img src="/img/logoAcortado.png" alt="Logo Otaku Sekai"></a> <!-- Poner link home -->
-            <nav class="navbar">
-                <!-- Barra de navegación (oculta para Mobile) -->
-                <a href="/">
-                    <li>Home</li>
-                </a>
-                <a href="#">
-                    <li>Quienes somos</li>
-                </a>
-                <a href="/productCart" class="linkProductos">
-                    <li>Productos <i class="fa fa-caret-down"></i></li>
-                </a>
-                <ul class="categoriasDeProductos">
-                    <!-- Ocultar en las tres vistas. Visible para hover en Productos -->
-                    <li>Tazas, llaveros, pins, aros</li>
-                    <li>Indumentaria y accesorios</li>
-                    <li>Figuras</li>
-                    <li>Pósters y cuadros</li>
-                    <li>Mangas y comics</li>
-                </ul>
-                <a href="#" class="linkAnime">
-                    <li>Anime <i class="fa fa-caret-down"></i></li>
-                </a>
-                <ul class="categoriasDeAnime">
-                    <!-- Ocultar en las tres vistas. Visible para hover en Anime -->
-                    <li>One Piece</li>
-                    <li>Dragon Ball Z</li>
-                    <li>Naruto</li>
-                    <li>Demon Slayer: Kimetsu no Yaiba</li>
-                    <li>Shingeky no Kyojim</li>
-                    <li>Jujutsu Kaisen</li>
-                    <li>Ranking of Kings</li>
-                    <li>Soul Eater</li>
-                    <li>Pokemon</li>
-                    <li>Boku No Hero Academia</li>
-                    <li>Digimon</li>
-                    <li>One Punch Man</li>
-                    <li>HxH</li>
-                    <li>Shamang King</li>
-                </ul>
-                <a href="#">
-                    <li>Preguntas frecuentes</li>
-                </a>
-            </nav>
-    
-            <select name="" id="opcionElegida">
-                <!-- Categorias con menu en forma desplegable -->
-                <option value="todasLasCategorias">Todas las categorías</option>
-                <option value="home">Home</option>
-                <option value="quienesSomos">Quienes Somos</option>
-                <option value="productos">Productos</option>
-                <option value="anime">Anime</option>
-                <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
-            </select>
-    
-            <div class="iconosHeader">
-                <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
-                <form class="buscador">
-                    <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
-                    <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
-                </form>
-                <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
-                <i class="fa-solid fa-cart-shopping"></i> <!-- Carrito de compras -->
-            </div>
-    
-        </header>
-        <form action="" method="POST" class="create-form">
-                <div class="control-formulario-campos">
-                    <h4 class="create-form-titulo">Inicia sesión</h4>
-                    <label>Usuario: <input type="text" name="user" placeholder="Usuario" class="control" required></label>
-                    <label>Contraseña: <input type="password" id="password" name="password" class="control" placeholder="Contraseña" required></label>
-                    <button type="submit" class="control-formulario-boton">Iniciar Sesión</button>
-                </div>
-                <div class="control-formulario-redes_sociales">
-                    <h4 class="create-form-titulo">Ingresa con</h4>
-                    <a><i class="fav fa-brands fa-facebook"></i></a>
-                    <a><i class="fav fa-brands fa-instagram-square"></i></a>
-                    <a><i class="fav fa-brands fa-google"></i></a>
-                </div>
-                <div class="control-formulario-registro">
-                    <p>¿Todavía no tenes cuenta?</p>
-                    <button type="submit" class="control-formulario-boton">Registrate</button>
-                </div>
-        </form>
-        <footer>
 
-            <ul class="categoriasDelFooter1">
-                <a href="#">
-                    <li>Home</li>
-                </a>
-                <a href="#">
-                    <li>Quienes somos</li>
-                </a>
-                <a href="#">
-                    <li>Productos</li>
-                </a>
-                <a href="#">
-                    <li>Anime</li>
-                </a>
-                <a href="#">
-                    <li>Preguntas frecuentes</li>
-                </a>
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/formularios_styles.css" rel="stylesheet">
+    <title>Otaku Sekai</title>
+    <link rel="icon" type="image/x-icon" href="/img/totoro.png">
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><img src="/img/logoAcortado.png" alt="Logo Otaku Sekai"></a> <!-- Poner link home -->
+        <nav class="navbar">
+            <!-- Barra de navegación (oculta para Mobile) -->
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>Quienes somos</li>
+            </a>
+            <a href="/productCart" class="linkProductos">
+                <li>Productos <i class="fa fa-caret-down"></i></li>
+            </a>
+            <ul class="categoriasDeProductos">
+                <!-- Ocultar en las tres vistas. Visible para hover en Productos -->
+                <li>Tazas, llaveros, pins, aros</li>
+                <li>Indumentaria y accesorios</li>
+                <li>Figuras</li>
+                <li>Pósters y cuadros</li>
+                <li>Mangas y comics</li>
             </ul>
-    
-    
-            <section class="finalDelFooter">
-                <section class="iconosRedesSocialesFooter">
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </section>
-    
-                <section class="detalleDelFooter">
-                    <a href="/"><img src="/img/logo.png" alt="Logo Otaku Sekai" class="logoDelFooter"></a>
-                    <!-- Poner link home -->
-                    <ul class="categoriasDelFooter2">
-                        <!------------ Ocultar para Mobile ------------>
-                        <li>Home</li>
-                        <li>Quienes somos</li>
-                        <li>Productos</li>
-                        <li>Anime</li>
-                        <li>Preguntas frecuentes</li>
-                    </ul>
-                    <ul class="detalleFooterul">
-                        <li>Calle Falsa 123</li>
-                        <li>+54 9 11 12345678</li>
-                        <li>Lunes a Viernes: 10 a 20 hs</li>
-                        <li>Sábados: 10 a 14 hs</li>
-                    </ul>
-                </section>
-    
-                <section class="copyright">
-                    <p>Copyright © 2022 Otaku Sekai S.R.L.</p>
-                </section>
-    
-            </section>
-    
+            <a href="#" class="linkAnime">
+                <li>Anime <i class="fa fa-caret-down"></i></li>
+            </a>
+            <ul class="categoriasDeAnime">
+                <!-- Ocultar en las tres vistas. Visible para hover en Anime -->
+                <li>One Piece</li>
+                <li>Dragon Ball Z</li>
+                <li>Naruto</li>
+                <li>Demon Slayer: Kimetsu no Yaiba</li>
+                <li>Shingeky no Kyojim</li>
+                <li>Jujutsu Kaisen</li>
+                <li>Ranking of Kings</li>
+                <li>Soul Eater</li>
+                <li>Pokemon</li>
+                <li>Boku No Hero Academia</li>
+                <li>Digimon</li>
+                <li>One Punch Man</li>
+                <li>HxH</li>
+                <li>Shamang King</li>
+            </ul>
+            <a href="#">
+                <li>Preguntas frecuentes</li>
+            </a>
+        </nav>
+
+        <select name="" id="opcionElegida">
+            <!-- Categorias con menu en forma desplegable -->
+            <option value="todasLasCategorias">Todas las categorías</option>
+            <option value="home">Home</option>
+            <option value="quienesSomos">Quienes Somos</option>
+            <option value="productos">Productos</option>
+            <option value="anime">Anime</option>
+            <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
+        </select>
+
+        <div class="iconosHeader">
+            <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
+            <form class="buscador">
+                <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
+                <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
+            </form>
+            <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
+            <i class="fa-solid fa-cart-shopping"></i> <!-- Carrito de compras -->
+        </div>
+
+    </header>
+    <main>
+        <form action="" method="POST" class="create-form">
+            <div class="control-formulario-campos">
+                <h4 class="create-form-titulo">Inicia sesión</h4>
+                <label>Usuario: <input type="text" name="user" placeholder="Usuario" class="control" required></label>
+                <label>Contraseña: <input type="password" id="password" name="password" class="control"
+                        placeholder="Contraseña" required></label>
+                <button type="submit" class="control-formulario-boton">Iniciar Sesión</button>
             </div>
-    
-        </footer>
-    
-    </body>
+            <div class="control-formulario-redes_sociales">
+                <h4 class="create-form-titulo">Ingresa con</h4>
+                <a><i class="fav fa-brands fa-facebook"></i></a>
+                <a><i class="fav fa-brands fa-instagram-square"></i></a>
+                <a><i class="fav fa-brands fa-google"></i></a>
+            </div>
+            <div class="control-formulario-registro">
+                <p>¿Todavía no tenes cuenta?</p>
+                <button type="submit" class="control-formulario-boton">Registrate</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+        <ul class="categoriasDelFooter1">
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>Quienes somos</li>
+            </a>
+            <a href="#">
+                <li>Productos</li>
+            </a>
+            <a href="#">
+                <li>Anime</li>
+            </a>
+            <a href="#">
+                <li>Preguntas frecuentes</li>
+            </a>
+        </ul>
+
+
+        <section class="finalDelFooter">
+            <section class="iconosRedesSocialesFooter">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </section>
+
+            <section class="detalleDelFooter">
+                <a href="/"><img src="/img/logo.png" alt="Logo Otaku Sekai" class="logoDelFooter"></a>
+                <!-- Poner link home -->
+                <ul class="categoriasDelFooter2">
+                    <!------------ Ocultar para Mobile ------------>
+                    <li>Home</li>
+                    <li>Quienes somos</li>
+                    <li>Productos</li>
+                    <li>Anime</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+                <ul class="detalleFooterul">
+                    <li>Calle Falsa 123</li>
+                    <li>+54 9 11 12345678</li>
+                    <li>Lunes a Viernes: 10 a 20 hs</li>
+                    <li>Sábados: 10 a 14 hs</li>
+                </ul>
+            </section>
+
+            <section class="copyright">
+                <p>Copyright © 2022 Otaku Sekai S.R.L.</p>
+            </section>
+
+        </section>
+
+        </div>
+
+    </footer>
+
+</body>
+
 </html>
