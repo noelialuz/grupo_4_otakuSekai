@@ -10,8 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/cart_styles.css" rel="stylesheet">
+    <link href="/css/detail_styles.css" rel="stylesheet">
     <link href="/css/formularios_styles.css" rel="stylesheet">
-    <title>Otaku Sekai</title>
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/styles-Pdetail.css" rel="stylesheet">
+    <title>Otaku Sekai - Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/img/totoro.png">
 </head>
 
@@ -26,7 +36,7 @@
             <a href="#">
                 <li>Quienes somos</li>
             </a>
-            <a href="/productCart" class="linkProductos">
+            <a href="/productVerMas" class="linkProductos">
                 <li>Productos <i class="fa fa-caret-down"></i></li>
             </a>
             <ul class="categoriasDeProductos">
@@ -78,10 +88,10 @@
                 <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
                 <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
             </form>
-            <i class="fa-solid fa-user" onclick="location.href='/login'"></i>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
             <!--Login-->
             <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
-            <i class="fa-solid fa-cart-shopping" onclick="location.href='/productCart'"></i> <!-- Carrito de compras -->
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
         </div>
 
     </header>
@@ -96,8 +106,10 @@
                         placeholder="Contraseña" required></label>
                 <label>Repite contraseña: <input type="password" id="password-validacion" name="password-validacion"
                         class="control" placeholder="Contraseña" required></label>
-                <button type="submit" class="control-formulario-boton" onclick="location.href='/'">Registrate</button>
+                <label for="aceptoTerminos"><input type="checkbox" id="aceptoTerminos"> Acepto Términos y Condiciones</label>
             </div>
+            <button type="submit" class="botonAgregar botonLogin" onclick="location.href='/'">Registrate</button>
+
             <div class="control-formulario-redes_sociales">
                 <h4 class="create-form-titulo">Ingresa con</h4>
                 <a><i class="fav fa-brands fa-facebook"></i></a>
@@ -106,9 +118,10 @@
             </div>
             <div class="control-formulario-registro">
                 <p>¿Ya tenes cuenta?</p>
-                <button type="submit" class="control-formulario-boton" onclick="location.href='/login'">Inicia
-                    Sesión</button>
+                
             </div>
+            <button type="submit" class="botonAgregar botonLogin" onclick="location.href='/login'">Inicia
+                Sesión</button>
         </form>
     </main>
     <footer>
@@ -120,7 +133,7 @@
             <a href="#">
                 <li>Quienes somos</li>
             </a>
-            <a href="#">
+            <a href="/productVerMas">
                 <li>Productos</li>
             </a>
             <a href="#">

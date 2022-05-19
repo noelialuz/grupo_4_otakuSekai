@@ -19,6 +19,7 @@ img {
 body {
     background-image: url("/img/back-anime.jpg");
     margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 /* ---------------------------------- HEADER ---------------------------------- */
@@ -63,6 +64,11 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 3px;
+}
+
+.iconosHeader a{
+    text-decoration: none;
+    color: white;
 }
 
 .iconosHeader i {
@@ -244,6 +250,9 @@ main {
 
 .caracteristicasVentas h3 {
     text-align: center;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 
 
@@ -489,6 +498,16 @@ main {
     border: none;
     padding: 5px;
     width: 90%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+}
+
+#linkBotonAgregar{
+    text-decoration: none;
+    width: 100%;
+    padding: 0%;
+    margin: 0;
+    display: block;
 }
 
 .botonAgregar:active {
@@ -497,11 +516,11 @@ main {
 }
 
 
-.precioAnterior{
-    text-decoration:line-through
+.precioAnterior {
+    text-decoration: line-through
 }
 
-.porcentajeDescuento{
+.porcentajeDescuento {
     color: var(--azul);
     font-weight: bold;
 }
@@ -511,7 +530,7 @@ main {
 
 /* -------------------- Categorias en el footer -------------------- */
 
-.categoriasDelFooter1{
+.categoriasDelFooter1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -522,12 +541,12 @@ main {
     padding: 10px 0px;
 }
 
-.categoriasDelFooter1 a{
+.categoriasDelFooter1 a {
     margin: 0 3%;
     text-decoration: none;
 }
 
-.categoriasDelFooter1 li{
+.categoriasDelFooter1 li {
     list-style: none;
     width: 5em;
     height: 5em;
@@ -543,41 +562,41 @@ main {
     opacity: 0.8;
 }
 
-.categoriasDelFooter1 a:active li{
+.categoriasDelFooter1 a:active li {
     opacity: 1;
 }
 
-.categoriasDelFooter2{
+.categoriasDelFooter2 {
     display: none;
 }
 
 /* -------------------------- Footer Final -------------------- */
 
-footer{
+footer {
     text-align: center;
 }
 
-.iconosRedesSocialesFooter i{
+.iconosRedesSocialesFooter i {
     font-size: 2em;
     margin: 0 3%;
 }
 
-.logoDelFooter{
+.logoDelFooter {
     width: 70%;
     margin-top: 10px;
 }
 
-.finalDelFooter{
+.finalDelFooter {
     background-color: var(--azul);
     padding: 20px;
 }
 
-.detalleFooterul li{
+.detalleFooterul li {
     list-style-type: none;
     color: white;
 }
 
-.detalleFooterul{
+.detalleFooterul {
     padding: 10px;
     margin: 10px 15%;
     border-top: var(--gris) 1px solid;
@@ -585,7 +604,7 @@ footer{
     width: 70%;
 }
 
-.copyright{
+.copyright {
     color: white;
     font-weight: bold;
 }
@@ -668,11 +687,12 @@ footer{
 
     /* ---------------- Caja con productos en oferta ---------------- */
 
-    .productosEnOferta{
+    .productosEnOferta {
         width: 48%;
         margin: 5px 0px;
     }
-    .cajaConProductosEnOferta{
+
+    .cajaConProductosEnOferta {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -681,7 +701,7 @@ footer{
 
 
     /* ------------Footer -------------- */
-    .categoriasDelFooter2{
+    .categoriasDelFooter2 {
         display: block;
         display: flex;
         justify-content: space-around;
@@ -689,16 +709,20 @@ footer{
 
     }
 
-    .categoriasDelFooter2 li{
+    .categoriasDelFooter2 li {
         list-style-type: none;
         color: white;
         font-weight: bold;
     }
 
-    .logoDelFooter{
+    .categoriasDelFooter2 a {
+        text-decoration: none;
+    }
+
+    .logoDelFooter {
         max-width: 300px;
     }
-    
+
 }
 
 /* ------------------------------ Version Desktop ------------------------------ */
@@ -714,7 +738,8 @@ footer{
         justify-content: space-around;
         width: 65%;
         height: 50px;
-        align-items: center
+        align-items: center;
+        position: relative;
     }
 
     .navbar li,
@@ -725,11 +750,23 @@ footer{
         color: white;
     }
 
+    .navbar a {
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
     /* ------------- VER para que sombree toda la caja del a */
 
     /* ---------- NAV BAR ---------- */
     .navbar a:hover {
-        background-color: var(--gris);
+        background-color: var(--celeste);
+        transition: 0.5s;
+    }
+
+    .navbar a:hover li {
+        color: var(--azul);
     }
 
     .iconosRedesSociales {
@@ -747,22 +784,46 @@ footer{
     .categoriasDeProductos,
     .categoriasDeAnime {
         display: none;
-        position: relative;
-        background-color: #f9f9f9;
+    }
+
+
+    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
+    .linkProductos:hover .categoriasDeProductos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 50px;
+        background-color: var(--azul);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
-    .linkProductos:hover .categoriasDeProductos {
-        display: block;
+    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
+    .linkAnime:hover .categoriasDeAnime {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 50px;
+        background-color: var(--azul);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
-
 
     /* ---------- Subtitutlos Home ---------- */
     .subtitulos {
         text-align: left;
         margin-left: 10%;
+        font-family: 'Comforter Brush', cursive;
+        font-size: 40px;
+        letter-spacing: 1px;
     }
 
     /* ----------- HOVER AL MENU DE NUESTROS PRODUCTOS------------ */
@@ -787,23 +848,23 @@ footer{
     .botonAgregar:hover {
         background-color: var(--celeste);
         color: var(--azul);
-        font-weight: bold;
         transition: 0.5s;
     }
 
-     /* ---------------- Caja con productos en oferta ---------------- */
+    /* ---------------- Caja con productos en oferta ---------------- */
 
-     .productosEnOferta{
+    .productosEnOferta {
         width: 23%;
         margin: 5px 0px;
     }
 
-    .cajaConProductosEnOferta{
+    .cajaConProductosEnOferta {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         margin: 0 1%;
     }
+
     .botonAgregar:active {
         background-color: var(--azul);
         font-weight: bold;
@@ -812,8 +873,9 @@ footer{
     }
 
     /* -------------- categorias del footer -------------- */
-    .categoriasDelFooter1 a:hover li{
+    .categoriasDelFooter1 a:hover li {
         opacity: 1;
+        transition: 0.5s;
     }
 
 }

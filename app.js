@@ -19,6 +19,10 @@ app.get('/productCart', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productCart.html'));
 });
 
+app.get('/productCartFull', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/productCartFull.html'));
+});
+
 app.get('/register', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
@@ -31,6 +35,12 @@ app.get('/productDetail', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
 
+app.get('/productVerMas', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/productVerMas.html'));
+});
+
+
+/* ------------- Si no se usa, hay que sacarlo -------------  */
 app.get('/prueba_DetalleProducto', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/prueba_DetalleProducto.html'));
 });
