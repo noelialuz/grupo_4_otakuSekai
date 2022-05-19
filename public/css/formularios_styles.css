@@ -45,4 +45,12 @@
     margin:auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #47525E;
+
+}
+
+.control-formulario-boton:hover{
+    background-color: #90BEDE;
+    border-color: #90BEDE;
 }

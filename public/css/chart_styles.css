@@ -27,3 +27,6 @@
     margin: revert;
 }
 
+.card-carrito_empty{
+    display: none;
+}
