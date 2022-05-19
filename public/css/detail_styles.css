@@ -21,3 +21,20 @@
     margin-bottom: 25px;
 
 }
+
+.img-gigante{
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+}
+
+.imagen-miniatura{
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 25%;
+}
