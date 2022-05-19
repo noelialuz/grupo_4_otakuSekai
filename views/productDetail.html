@@ -14,27 +14,87 @@
         <link rel="icon" type="image/x-icon" href="/img/totoro.png">
     </head>
     <body>
-        <header>
-            <div class="main_header">
-                <div class="main_header-top-bar">
-                    <img class=logo src="/img/logo.png" alt="Logo de Otaku sekai">
-                    <form action="search" method="POST" class="search-form">
-                        <input type="text" name="data-search" placeholder="Buscar productos, marcas y más" class="buscador">
-                        <button type="submit" class="lupa-img"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-                <nav class="main_header-botton-bar">
-                    <div class = "menu">
-                        <ul>
-                            <li><a href="/">Home</a></il>
-                            <li><a href="/register">Creá tu cuenta <i class="fas fa-solid fa-address-card"></i></a></li>
-                            <li><a href="/login">Ingresá <i class="fas fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                            <li><a href="/productCart">Mis compras <i class="fas fa-regular fa-bag-shopping"></i></a></li>
-                        </ul>
-                    </div>
+        <head>
+            <meta charset="UTF-8">
+            <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+            <meta name="viewport" content="width=device-width">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+            <link href="/css/styles.css" rel="stylesheet">
+            <title>Otaku Sekai</title>
+            <link rel="icon" type="image/x-icon" href="/img/totoro.png">
+        </head>
+        
+        <body>
+            <header>
+                <a href="/" class="logo"><img src="/img/logoAcortado.png" alt="Logo Otaku Sekai"></a> <!-- Poner link home -->
+                <nav class="navbar">
+                    <!-- Barra de navegación (oculta para Mobile) -->
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>Quienes somos</li>
+                    </a>
+                    <a href="/productCart" class="linkProductos">
+                        <li>Productos <i class="fa fa-caret-down"></i></li>
+                    </a>
+                    <ul class="categoriasDeProductos">
+                        <!-- Ocultar en las tres vistas. Visible para hover en Productos -->
+                        <li>Tazas, llaveros, pins, aros</li>
+                        <li>Indumentaria y accesorios</li>
+                        <li>Figuras</li>
+                        <li>Pósters y cuadros</li>
+                        <li>Mangas y comics</li>
+                    </ul>
+                    <a href="#" class="linkAnime">
+                        <li>Anime <i class="fa fa-caret-down"></i></li>
+                    </a>
+                    <ul class="categoriasDeAnime">
+                        <!-- Ocultar en las tres vistas. Visible para hover en Anime -->
+                        <li>One Piece</li>
+                        <li>Dragon Ball Z</li>
+                        <li>Naruto</li>
+                        <li>Demon Slayer: Kimetsu no Yaiba</li>
+                        <li>Shingeky no Kyojim</li>
+                        <li>Jujutsu Kaisen</li>
+                        <li>Ranking of Kings</li>
+                        <li>Soul Eater</li>
+                        <li>Pokemon</li>
+                        <li>Boku No Hero Academia</li>
+                        <li>Digimon</li>
+                        <li>One Punch Man</li>
+                        <li>HxH</li>
+                        <li>Shamang King</li>
+                    </ul>
+                    <a href="#">
+                        <li>Preguntas frecuentes</li>
+                    </a>
                 </nav>
-            </div>
-        </header>
+        
+                <select name="" id="opcionElegida">
+                    <!-- Categorias con menu en forma desplegable -->
+                    <option value="todasLasCategorias">Todas las categorías</option>
+                    <option value="home">Home</option>
+                    <option value="quienesSomos">Quienes Somos</option>
+                    <option value="productos">Productos</option>
+                    <option value="anime">Anime</option>
+                    <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
+                </select>
+        
+                <div class="iconosHeader">
+                    <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
+                    <form class="buscador">
+                        <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
+                        <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
+                    </form>
+                    <i class="fa-solid fa-user" onclick="location.href='/login'"></i> <!--Login-->
+                    <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
+                    <i class="fa-solid fa-cart-shopping" onclick="location.href='/productCart'"></i> <!-- Carrito de compras -->
+                </div>
+            </header>
         <main>
             <div class="presentacion-producto">
                 <div>
@@ -49,72 +109,129 @@
             <div class="divcontendor">
                 <article class="productCountainer">
                  <img class="productImg" src="/img/luffy-gear-4.jpg" alt="producto"> 
-                </article>
-                    <button class="agregarCarritoProducto">
-                        agregar al carrito
+                    <button class="botonProducto">
+                        Agregar al carrito
                     </button>
-                
+                    <div class="detallesArticulo">
+                    <h4>Portrait.Of.Pirates ONE PIECE "SA-MAXIMUM" Monkey D. Luffy Gear Four "Boundman"</h4>
+                    <p>Portrait.Of.Piratesワンピース“SA-MAXIMUM”モンキー・D・ルフィ ギア“4”「弾む男」</p>
+                    <p>¥18,479 (Tax Included)</p>
+                    </div>
+                </article>
             </div>
-            <div>
-                <div>
-                    <p>descripcion</p>
-                </div>
-                <p>
-                    detalle
-                </p>
-                <div>
-                    <p>
-                        precio
-                    </p>
-                </div>
-            </div>
-            <div>
-                <article>
-                    imagen
+            <div class="contenedorMiniaturas">
+                <article class="miniaturasProducto">
+                    <img class="imagenMiniatura" src="/img/lufffy-boundman-1.jpg" alt="boundoman1">
                 </article>
-                <article>
-                    imagen
+                <article class="miniaturasProducto">
+                    <img class="imagenMiniatura" src="/img/luffy-boundman-2.jpg" alt="boundoman2">
                 </article>
-                <article>
-                    imagen
+                <article class="miniaturasProducto">
+                    <img class="imagenMiniatura" src="/img/luffy-boundman-5.jpg" alt="boundoman3">
                 </article>
-                <article>
-                    imagen
+                <article class="miniaturasProducto4">
+                    <img class="imagenMiniatura" src="/img/luffy-boundman-4.jpg" alt="boundoman4">
                 </article>
-                <article>
-                    imagen
+                <article class="miniaturasProducto5">
+                    <img class="imagenMiniatura" src="/img/luffy-boundman-3.jpg" alt="boundoman5">
                 </article>
             </div>
             <div>
-                <p>
+                <h3>
                     Otros porductos similares...
-                </p>
+                </h3>
             </div>
-            <div>
-                
-                <p>$70.500</p>
-                <p> nombre porductos</p>
-                <h4>Teléfono móvil Samsung Galaxy S10</h4>
-                <div><button>agregar al carrito</button></div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
+            <div class="cajaConProductosEnOferta">
+                <div class="productosEnOferta">
+                    <a href="#"> <img class="imagenMiniatura" src="/img/yamato.jpg" alt=""></a> <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 1</h4>
+                        <p class="porcentajeDescuento">- 00% off</p>
+                        <p class="precioAnterior">$ 000</p>
+                        <p class="precioActual">$ 000</p>
+                        <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="cajaConProductosEnOferta">
+                    <div class="productosEnOferta">
+                        <a href="#"> <img class="imagenMiniatura" src="/img/ace.jpg" alt=""></a> <!-- Link a la página del producto -->
+                        <div>
+                            <h4>Producto 2</h4>
+                            <p class="porcentajeDescuento">- 00% off</p>
+                            <p class="precioAnterior">$ 000</p>
+                            <p class="precioActual">$ 000</p>
+                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="cajaConProductosEnOferta">
+                        <div class="productosEnOferta">
+                            <a href="#"> <img src="/img/zoro-ashura.jpg" alt=""></a> <!-- Link a la página del producto -->
+                            <div>
+                                <h4>Producto 3</h4>
+                                <p class="porcentajeDescuento">- 00% off</p>
+                                <p class="precioAnterior">$ 000</p>
+                                <p class="precioActual">$ 000</p>
+                                <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                            </div>
+                        </div>
         </main>
-        <footer class="footer">
+        <footer>
+
+            <ul class="categoriasDelFooter1">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Quienes somos</li>
+                </a>
+                <a href="#">
+                    <li>Productos</li>
+                </a>
+                <a href="#">
+                    <li>Anime</li>
+                </a>
+                <a href="#">
+                    <li>Preguntas frecuentes</li>
+                </a>
+            </ul>
+    
+    
+            <section class="finalDelFooter">
+                <section class="iconosRedesSocialesFooter">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </section>
+    
+                <section class="detalleDelFooter">
+                    <a href="/"><img src="/img/logo.png" alt="Logo Otaku Sekai" class="logoDelFooter"></a>
+                    <!-- Poner link home -->
+                    <ul class="categoriasDelFooter2">
+                        <!------------ Ocultar para Mobile ------------>
+                        <li>Home</li>
+                        <li>Quienes somos</li>
+                        <li>Productos</li>
+                        <li>Anime</li>
+                        <li>Preguntas frecuentes</li>
+                    </ul>
+                    <ul class="detalleFooterul">
+                        <li>Calle Falsa 123</li>
+                        <li>+54 9 11 12345678</li>
+                        <li>Lunes a Viernes: 10 a 20 hs</li>
+                        <li>Sábados: 10 a 14 hs</li>
+                    </ul>
+                </section>
+    
                 <section class="copyright">
                     <p>Copyright © 2022 Otaku Sekai S.R.L.</p>
-                </section> 
+                </section>
+    
+            </section>
+    
             </div>
-            
+    
         </footer>
         </body>
 </html>

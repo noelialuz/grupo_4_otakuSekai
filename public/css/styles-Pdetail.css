@@ -4,7 +4,7 @@
     -paleCerulean:#90BEDE;
     -darkBlue:#003F91;
 }
-/* Css del burger menu */
+/*---------------------------- Css del burger menu---------------------------- */
 .abrir, .cerrar { 
     position:absolute;
     top:0;
@@ -84,7 +84,7 @@ input#abrir-cerrar {
     box-sizing: border-box;
 }
 
-/* Estilos para el Main */ 
+/*------------------------------------Estilos para el Main---------------------------------------- */ 
 
 .presentacion-producto{
     display: flex;
@@ -95,20 +95,52 @@ input#abrir-cerrar {
 }
 
 .productCountainer{
-  width: 80% ;
-  padding: 20px;
-  position: relative;
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 6px;
 }
 
 .productImg{
     width: 100%;
-    padding: 20px;
 }
-.divcontenedor{
-position: relative;
+
+.divcontendor{
+    padding: 10px;
 }
-.agregarCarritoProducto{
-    position: absolute;
-    left: 202px;
-    bottom: -175px;
+
+.botonProducto{
+    background-color: var(--azul);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 5px;
+}
+   
+.detallesArticulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedorMiniaturas{
+display: flex;
+justify-content: space-around;
+margin: 10px;
+}
+.miniaturasProducto{
+width: 30%;
+align-self: center;
+}
+.imagenMiniatura{
+    width: 100%;
+}
+
+.miniaturasProducto4, .miniaturasProducto5 {
+    width: 30%;
+    align-self: center;
+    display: none;
 }
