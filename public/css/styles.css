@@ -786,12 +786,6 @@ footer {
     .categoriasDeProductos,
     .categoriasDeAnime {
         display: none;
-    }
-
-
-    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
-    .linkProductos:hover .categoriasDeProductos {
-        display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
@@ -802,12 +796,30 @@ footer {
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
+        color: white;
+        margin-top: 2px;
+    }
+    
+    .categoriasDeProductos ul li {
+        display: block;
+        color: white;
+    }
+    .elementosLista{
+        color: white;
+    }
+
+
+    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
+    /*Tiene que estar de base y solo hay que agregar en el hover un "display flex"*/
+    .linkProductos:hover .categoriasDeProductos {
+        display: flex;
+       
     }
 
     /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
     .linkAnime:hover .categoriasDeAnime {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
         flex-wrap: wrap;
@@ -816,7 +828,7 @@ footer {
         background-color: var(--azul);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 1;*/
     }
 
     /* ---------- Subtitutlos Home ---------- */
