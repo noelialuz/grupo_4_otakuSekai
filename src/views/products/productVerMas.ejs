@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+
+        <!----------------------------  ---------------------------->
+
+        <div class="caracteristicasVentas">
+            <h3>Objetos populares</h3>
+            <h3>Envíos gratis</h3>
+            <h3>Pagos sin interés</h3>
+        </div>
+
+        <!---------------------------- CARRUSEL DE PRODUCTOS ---------------------------->
+        <!--------- VER COMO HACER PARA QUE EN MOBILE APAREZCAN DOS PRODUCTOS Y EN DESKTOP SE VEAN 4 --------->
+        <!-- contenerdor carrusel -->
+        <div class="carruselAnimado">
+            <figure class="icon-cards mt-3">
+                <div class="icon-cards__content">
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                        <img src="/img/imageTest.jpg" alt="">
+                        <h4>Detalle del Producto 1</h4>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                        <img src="/img/imageTest.jpg" alt="">
+                        <h4>Detalle del Producto 2</h4>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                        <img src="/img/imageTest.jpg" alt="">
+                        <h4>Detalle del Producto 3</h4>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                        <img src="/img/imageTest.jpg" alt="">
+                        <h4>Detalle del Producto 4</h4>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                        <img src="/img/imageTest.jpg" alt="">
+                        <h4>Detalle del Producto 5</h4>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <!---------------------------- FIN DEL CARRUSEL DE PRODUCTOS ---------------------------->
+
+
+        <!---------------------------- PRODUCTOS EN OFERTA ---------------------------->
+        <section>
+            <h2 class="subtitulos">Productos en oferta</h2>
+
+            <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
+
+            <div class="cajaConProductosEnOferta">
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 1</h4>
+                        <p class="porcentajeDescuento">- 00% off</p>
+                        <p class="precioAnterior">$ 000</p>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 2</h4>
+                        <p class="porcentajeDescuento">- 00% off</p>
+                        <p class="precioAnterior">$ 000</p>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 3</h4>
+                        <p class="porcentajeDescuento">- 00% off</p>
+                        <p class="precioAnterior">$ 000</p>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 4</h4>
+                        <p class="porcentajeDescuento">- 00% off</p>
+                        <p class="precioAnterior">$ 000</p>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2 class="subtitulos">Todos nuestros productos</h2>
+
+            <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
+
+            <div class="cajaConProductosEnOferta">
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 1</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 2</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 3</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 4</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 5</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 6</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 7</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 8</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 9</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 10</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 11</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+
+                <div class="productosEnOferta">
+                    <a href="/products/productDetail"> <img src="/img/imageTest.jpg" alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4>Producto 12</h4>
+                        <p class="precioActual">$ 000</p>
+                        <a href="/products/productCart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <form action="" method="POST" class="create-form">
+            <div class="control-formulario-campos">
+                <h4 class="create-form-titulo">Inicia sesión</h4>
+                <label>Usuario: <input type="text" name="user" placeholder="Usuario" class="control" required></label>
+                <label>Contraseña: <input type="password" id="password" name="password" class="control"
+                        placeholder="Contraseña" required></label>
+                
+            </div>
+            <button type="submit" class="botonAgregar botonLogin" onclick="location.href='/'">Iniciar
+                Sesión</button>
+            <div class="control-formulario-redes_sociales">
+                <h4 class="create-form-titulo">Ingresa con</h4>
+                <a><i class="fav fa-brands fa-facebook"></i></a>
+                <a><i class="fav fa-brands fa-instagram-square"></i></a>
+                <a><i class="fav fa-brands fa-google"></i></a>
+            </div>
+            <div class="control-formulario-registro">
+                <p>¿Todavía no tenes cuenta?</p>
+                
+            </div>
+            <button type="submit" class="botonAgregar botonLogin"
+                    onclick="location.href='/users/register'">Registrate</button>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
