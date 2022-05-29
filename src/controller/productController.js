@@ -1,15 +1,13 @@
+console.log('estoy en productcontroller')
 const controller = {
     cart: (req, res) => {
-        res.render('./products/productCart.ejs');
-    },
-    cartFull: (req, res) => {
-        res.render('./products/productCartFull.ejs');
+        res.render('./products/productCart');
     },
     detail: (req, res) => {
-        res.render('./products/productDetaill.ejs');
+        res.render('./products/productDetail');
     },
     verMas: (req, res) => {
-        res.render('./products/productVerMas.ejs');
+        res.render('./products/productVerMas');
     },
 };
 
