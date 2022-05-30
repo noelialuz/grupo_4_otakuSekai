@@ -1,0 +1,69 @@
+<header>
+    <a href="/" class="logo"><img src="/img/logoAcortado.png" alt="Logo Otaku Sekai"></a> <!-- Poner link home -->
+    <nav class="navbar">
+        <!-- Barra de navegación (oculta para Mobile) -->
+        <a href="/">
+            <li>Home</li>
+        </a>
+        <a href="#">
+            <li>Quienes somos</li>
+        </a>
+        <a href="/products/verMas" class="linkProductos">
+            <li>Productos <i class="fa fa-caret-down"></i></li>
+            <ul class="categoriasDeProductos">
+                <!-- Ocultar en las tres vistas. Visible para hover en Productos -->
+                <li>Tazas, llaveros, pins, aros</li>
+                <li>Indumentaria y accesorios</li>
+                <li>Figuras</li>
+                <li>Pósters y cuadros</li>
+                <li>Mangas y comics</li>
+            </ul>
+        </a>
+        <a href="#" class="linkAnime">
+            <li>Anime <i class="fa fa-caret-down"></i></li>
+            <ul class="categoriasDeAnime">
+                <!-- Ocultar en las tres vistas. Visible para hover en Anime -->
+                <li class="elementosLista">One Piece</li>
+                <li>Dragon Ball Z</li>
+                <li>Naruto</li>
+                <li>Demon Slayer: Kimetsu no Yaiba</li>
+                <li>Shingeky no Kyojim</li>
+                <li>Jujutsu Kaisen</li>
+                <li>Ranking of Kings</li>
+                <li>Soul Eater</li>
+                <li>Pokemon</li>
+                <li>Boku No Hero Academia</li>
+                <li>Digimon</li>
+                <li>One Punch Man</li>
+                <li>HxH</li>
+                <li>Shamang King</li>
+            </ul>
+        </a>
+        <a href="#">
+            <li>Preguntas frecuentes</li>
+        </a>
+    </nav>
+
+    <select name="" id="opcionElegida">
+        <!-- Categorias con menu en forma desplegable -->
+        <option value="todasLasCategorias">Todas las categorías</option>
+        <option value="home">Home</option>
+        <option value="quienesSomos">Quienes Somos</option>
+        <option value="productos">Productos</option>
+        <option value="anime">Anime</option>
+        <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
+    </select>
+
+    <div class="iconosHeader">
+        <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
+        <form class="buscador">
+            <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
+            <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
+        </form>
+        <a href="/users/login"><i class="fa-solid fa-user"></i></a> 
+        <!--Login-->
+        <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
+        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
+    </div>
+
+</header>
