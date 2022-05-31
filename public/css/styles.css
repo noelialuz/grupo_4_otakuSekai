@@ -66,7 +66,7 @@ header {
     padding: 3px;
 }
 
-.iconosHeader a{
+.iconosHeader a {
     text-decoration: none;
     color: white;
 }
@@ -469,9 +469,11 @@ main {
     width: 90%;
     margin-left: 5%;
 }
-.productosEnOferta p{
+
+.productosEnOferta p {
     text-align: center;
 }
+
 .productosEnOferta a {
     width: 50%;
     display: flex;
@@ -504,7 +506,7 @@ main {
     font-weight: bold;
 }
 
-#linkBotonAgregar{
+#linkBotonAgregar {
     text-decoration: none;
     width: 100%;
     padding: 0%;
@@ -798,37 +800,29 @@ footer {
         z-index: 1;
         color: white;
         margin-top: 2px;
+        padding: 25px;
     }
-    
-    .categoriasDeProductos ul li {
+
+    .categoriasDeProductos li, .categoriasDeAnime li {
         display: block;
         color: white;
-    }
-    .elementosLista{
-        color: white;
+        padding: 5px 0px;
     }
 
+    .categoriasDeProductos li:hover, .categoriasDeAnime li:hover {
+        color: var(--azul);
+        background-color: var(--celeste);
+    }
 
-    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
-    /*Tiene que estar de base y solo hay que agregar en el hover un "display flex"*/
     .linkProductos:hover .categoriasDeProductos {
         display: flex;
-       
+        background-color: var(--celeste);
+        padding: 15px;
     }
 
-    /* ------------------- ¡¡¡ NO ESTA FUNCIONANDO !!! ------------------- */
     .linkAnime:hover .categoriasDeAnime {
         display: flex;
-        /* flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        position: absolute;
-        top: 50px;
-        background-color: var(--azul);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;*/
+        background-color: var(--celeste);
     }
 
     /* ---------- Subtitutlos Home ---------- */
