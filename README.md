@@ -33,7 +33,7 @@ y seres queridos, espero ansioso futuros proyectos!.
 
 **Jhoxani Diaz Arrieche**: Hola! Soy Jhoxi, tengo 21 años y soy de Venezuela. Estoy en Argentina desde hace 5 años y soy mamá de Panchi, una hermosa perrita rescatada. Trabajo desde ese entonces en tecnología y educación. Mi objetivo con el curso de Full Stack es adentrarme aún más en el mundo de la programación y participar de grandes proyectos a futuro.
 
-**Ezequiel Juan**: Hola mi nombre es Ezequiel, tengo 39 años, Papa de 4 niños, empleado, empezando a estudiar de nuevo
+**Bruno Maiorano**: 
 
 **Noelia Luz Fernandez**: Hola!, soy Noe y tengo 30 años. Soy mamá de Sakura y Tadashi, esposa de Damy y líder de proyecto. Me gusta mucho perder el tiempo viendo pavadas y tengo muchas ganas de volver a las raices de mi interés que es desarrollar. Quise tomar el curso en digitalhouse para poder estar a tono con ciertas terminologías que utiliza mi equipo de trabajo pero no sentía que iba a poder hacerlo sola ya que no estoy pudiendo organizarme bien con el tiempo. Estoy muy contenta de haber arrancado este nuevo desafío!!
 
