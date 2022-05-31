@@ -519,6 +519,23 @@ main {
     font-weight: bold;
 }
 
+.botonEditar{
+    background-color: var(--azul);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.divBotonEditar{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
 
 .precioAnterior {
     text-decoration: line-through
@@ -687,6 +704,13 @@ footer {
     .columnaProductos {
         flex: 50%;
         max-width: 50%;
+    }
+
+    /* ---------- Boton editar o agregar ---------- */
+        
+    .divBotonEditar{
+        width: 40%;
+        margin: 30px 5% 30px 55%;  
     }
 
     /* ---------------- Caja con productos en oferta ---------------- */
@@ -878,6 +902,13 @@ footer {
         font-weight: bold;
         color: var(--celeste);
         transition: 0;
+    }
+
+    /* ---------- Boton editar o agregar ---------- */
+        
+    .divBotonEditar{
+        width: 30%;
+        margin: 30px 5% 30px 65%;  
     }
 
     /* -------------- categorias del footer -------------- */

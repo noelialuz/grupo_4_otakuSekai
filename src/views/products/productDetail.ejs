@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
-<body>
-    <%- include('../partials/header') %>
-    <main>
-        <div class="presentacion-producto">
-            <div>
-                <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
-                <label for="abrir-cerrar" class="toggle-button">
-                    <span class="cerrar" title="Cerrar">Cerrar</span>
-                    <span class="abrir" title="Abrir">Abrir</span>
-                </label>
-            </div>
-            <h2 class="nombre-producto">nombre del producto</h2>
-        </div>
-        <div class="divcontendor">
-            <article class="productCountainer">
-                <img class="productImg" src="/img/luffy-gear-4.jpg" alt="producto">
-                <button class="botonProducto">
-                    Agregar al carrito
-                </button>
-                <div class="detallesArticulo">
-                    <h4>Portrait.Of.Pirates ONE PIECE "SA-MAXIMUM" Monkey D. Luffy Gear Four "Boundman"</h4>
-                    <p>Portrait.Of.Piratesワンピース“SA-MAXIMUM”モンキー・D・ルフィ ギア“4”「弾む男」</p>
-                    <p>¥18,479 (Tax Included)</p>
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <div class="presentacion-producto">
+                    <div>
+                        <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+                        <label for="abrir-cerrar" class="toggle-button">
+                            <span class="cerrar" title="Cerrar">Cerrar</span>
+                            <span class="abrir" title="Abrir">Abrir</span>
+                        </label>
+                    </div>
+                    <h2 class="nombre-producto">nombre del producto</h2>
                 </div>
-            </article>
-        </div>
-        <div class="contenedorMiniaturas">
-            <article class="miniaturasProducto">
-                <img class="imagenMiniatura" src="/img/lufffy-boundman-1.jpg" alt="boundoman1">
-            </article>
-            <article class="miniaturasProducto">
-                <img class="imagenMiniatura" src="/img/luffy-boundman-2.jpg" alt="boundoman2">
-            </article>
-            <article class="miniaturasProducto">
-                <img class="imagenMiniatura" src="/img/luffy-boundman-5.jpg" alt="boundoman3">
-            </article>
-            <article class="miniaturasProducto4">
-                <img class="imagenMiniatura" src="/img/luffy-boundman-4.jpg" alt="boundoman4">
-            </article>
-            <article class="miniaturasProducto5">
-                <img class="imagenMiniatura" src="/img/luffy-boundman-3.jpg" alt="boundoman5">
-            </article>
-        </div>
-        <div>
-            <h3>
-                Otros porductos similares...
-            </h3>
-        </div>
-        <div class="cajaConProductosEnOferta">
-            <div class="productosEnOfertaDetail">
-                <a href="#"> <img class="imagenMiniatura" src="/img/yamato.jpg" alt=""></a>
-                <!-- Link a la página del producto -->
-                <div class="detallesOferta">
-                    <h4>Producto 1</h4>
-                    <p class="porcentajeDescuento">- 00% off</p>
-                    <p class="precioAnterior">$ 000</p>
-                    <p class="precioActual">$ 000</p>
-                    <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                <div class="divcontendor">
+                    <article class="productCountainer">
+                        <img class="productImg" src="/img/luffy-gear-4.jpg" alt="producto">
+                        <button class="botonProducto">
+                            Agregar al carrito
+                        </button>
+                        <div class="detallesArticulo">
+                            <h4>Portrait.Of.Pirates ONE PIECE "SA-MAXIMUM" Monkey D. Luffy Gear Four "Boundman"</h4>
+                            <p>Portrait.Of.Piratesワンピース“SA-MAXIMUM”モンキー・D・ルフィ ギア“4”「弾む男」</p>
+                            <p>¥18,479 (Tax Included)</p>
+                        </div>
+                    </article>
                 </div>
-            </div>
-            <div class="cajaConProductosEnOferta">
-                <div class="productosEnOfertaDetail">
-                    <a href="#"> <img class="imagenMiniatura" src="/img/ace.jpg" alt=""></a>
-                    <!-- Link a la página del producto -->
-                    <div class="detallesOferta">
-                        <h4>Producto 2</h4>
-                        <p class="porcentajeDescuento">- 00% off</p>
-                        <p class="precioAnterior">$ 000</p>
-                        <p class="precioActual">$ 000</p>
-                        <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                <div class="contenedorMiniaturas">
+                    <article class="miniaturasProducto">
+                        <img class="imagenMiniatura" src="/img/lufffy-boundman-1.jpg" alt="boundoman1">
+                    </article>
+                    <article class="miniaturasProducto">
+                        <img class="imagenMiniatura" src="/img/luffy-boundman-2.jpg" alt="boundoman2">
+                    </article>
+                    <article class="miniaturasProducto">
+                        <img class="imagenMiniatura" src="/img/luffy-boundman-5.jpg" alt="boundoman3">
+                    </article>
+                    <article class="miniaturasProducto4">
+                        <img class="imagenMiniatura" src="/img/luffy-boundman-4.jpg" alt="boundoman4">
+                    </article>
+                    <article class="miniaturasProducto5">
+                        <img class="imagenMiniatura" src="/img/luffy-boundman-3.jpg" alt="boundoman5">
+                    </article>
+                </div>
+                <div>
+                    <h3>
+                        Otros porductos similares...
+                    </h3>
+                </div>
+                <div class="cajaConProductosEnOferta">
+                    <div class="productosEnOfertaDetail">
+                        <a href="#"> <img class="imagenMiniatura" src="/img/yamato.jpg" alt=""></a>
+                        <!-- Link a la página del producto -->
+                        <div class="detallesOferta">
+                            <h4>Producto 1</h4>
+                            <p class="porcentajeDescuento">- 00% off</p>
+                            <p class="precioAnterior">$ 000</p>
+                            <p class="precioActual">$ 000</p>
+                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cajaConProductosEnOferta">
+                    <div class="productosEnOfertaDetail">
+                        <a href="#"> <img class="imagenMiniatura" src="/img/ace.jpg" alt=""></a>
+                        <!-- Link a la página del producto -->
+                        <div class="detallesOferta">
+                            <h4>Producto 2</h4>
+                            <p class="porcentajeDescuento">- 00% off</p>
+                            <p class="precioAnterior">$ 000</p>
+                            <p class="precioActual">$ 000</p>
+                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
                 <div class="cajaConProductosEnOferta">
@@ -85,20 +88,23 @@
                             <button onclick="" class="botonAgregar">Agregar al carrito</button>
                         </div>
                     </div>
-                    <div class="cajaConProductosEnOferta1">
-                        <div class="productosEnOfertaDetail">
-                            <a href="#"> <img src="/img/doflamingo.jpg" alt=""></a>
-                            <!-- Link a la página del producto -->
-                            <div class="detallesOferta">
-                                <h4>Producto 4</h4>
-                                <p class="porcentajeDescuento">- 00% off</p>
-                                <p class="precioAnterior">$ 000</p>
-                                <p class="precioActual">$ 000</p>
-                                <button onclick="" class="botonAgregar">Agregar al carrito</button>
-                            </div>
+                </div>
+                <div class="cajaConProductosEnOferta1">
+                    <div class="productosEnOfertaDetail">
+                        <a href="#"> <img src="/img/doflamingo.jpg" alt=""></a>
+                        <!-- Link a la página del producto -->
+                        <div class="detallesOferta">
+                            <h4>Producto 4</h4>
+                            <p class="porcentajeDescuento">- 00% off</p>
+                            <p class="precioAnterior">$ 000</p>
+                            <p class="precioActual">$ 000</p>
+                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
                         </div>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+                    </div>
+                </div>
+                
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>

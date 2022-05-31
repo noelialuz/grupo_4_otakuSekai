@@ -39,6 +39,12 @@ const controller = {
     verMas: (req, res) => {
         res.render('./products/productVerMas');
     },
+    agregarProducto: (req, res) => {
+        res.render('./products/productAgregar');
+    },
+    editarProducto: (req, res) => {
+        res.render('./products/productEditar');
+    },
 };
 
 module.exports = controller;
