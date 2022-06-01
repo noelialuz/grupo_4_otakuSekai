@@ -1,50 +1,99 @@
-/* Tener en cuenta: precioActual= precioAnterior*(100-descuento)/100 */
+const fs = require('fs');
+const path = require('path');
 
-let productos = [
-    {
-        name: "Taza Mágica Goku",
-        categoria: "Tazas, llaveros, pins, aros",
-        descuento: "20",
-        precioAnterior: "1500",
-        descripcion: "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
-        id: 1,
-        imagen1: "/img/tazas,llaveros,pins,aros/1/taza1.png",
-        imagen2: "/img/tazas,llaveros,pins,aros/1/taza1a.png",
-        imagen3: "/img/tazas,llaveros,pins,aros/1/taza1b.png",
-        imagen4: "/img/tazas,llaveros,pins,aros/1/taza1c.png"  
-    },
-    {
-        name: "Taza Mágica Dragon Ball Z",
-        categoria: "Tazas, llaveros, pins, aros",
-        descuento: "20",
-        precioAnterior: "1500",
-        descripcion: "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
-        id: 2,
-        imagen1: "/img/tazas,llaveros,pins,aros/1/taza2.png",
-        imagen2: "/img/tazas,llaveros,pins,aros/1/taza2a.png",
-        imagen3: "/img/tazas,llaveros,pins,aros/1/taza2b.png",
-        imagen4: "/img/tazas,llaveros,pins,aros/1/taza2c.png"  
-    },
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
-]
-
-console.log('estoy en productcontroller')
 const controller = {
+    /* Ver carrito de compras */
     cart: (req, res) => {
         res.render('./products/productCart');
     },
+
+    /* Ver detalle y descripcion de un producto */
     detail: (req, res) => {
-        res.render('./products/productDetail');
-    },
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id;
+		let product = products.find(product => product.id == id);
+		res.render('./products/productDetail', {
+			product
+		})
+	},
+
+    /* Ver el listado completo de productos */
     verMas: (req, res) => {
         res.render('./products/productVerMas');
     },
-    agregarProducto: (req, res) => {
-        res.render('./products/productAgregar');
-    },
-    editarProducto: (req, res) => {
-        res.render('./products/productEditar');
-    },
+
+    /* Crear un nuevo producto */
+    create: (req, res) => {
+		res.render('./products/productCreate')
+	},
+
+    store: (req, res) => {
+		/* res.send("Producto nuevo agregado"); */
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let newProduct = {
+			name: req.body.name,
+			categoria: req.body.categoria,
+			descuento: req.body.descuento,
+			precioAnterior: req.body.precioAnterior,
+            descripcion: req.body.descripcion,
+            id: products[products.length - 1].id + 1,
+			imagen1: "imageTest.jpg",
+            imagen2: "imageTest.jpg",
+            imagen3: "imageTest.jpg",
+            imagen4: "imageTest.jpg",
+		}
+
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		res.redirect("/products/verMas");
+	},
+
+    /* Editar un producto existente*/
+    edit: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('./products/productEdit', {productToEdit})
+	},
+
+    update: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productToEdit = products.find(product => req.params.id == product.id);
+
+		let editedProduct = {
+            name: req.body.name,
+			categoria: req.body.categoria,
+			descuento: req.body.descuento,
+			precioAnterior: req.body.precioAnterior,
+            descripcion: req.body.descripcion,
+            id: req.params.id,
+			imagen1: productToEdit.imagen1,
+            imagen2: productToEdit.imagen2,
+            imagen3: productToEdit.imagen3,
+            imagen4: productToEdit.imagen4,
+		}
+
+		let indice = products.findIndex(product => product.id == req.params.id);
+		products[indice] = editedProduct;
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/products/verMas");
+	},
+
+    /* Eliminar un producto existente*/
+    destroy : (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let finalProducts = products.filter(product => product.id != req.params.id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+		
+		res.redirect("/products/verMas");
+	}
+
+
 };
 
 module.exports = controller;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <form action="/products" method="POST" class="create-form">
+                    <div class="control-formulario-campos">
+                        <h4 class="create-form-titulo">Agregar nuevos productos</h4>
+
+                        <label for="name">Nombre del producto: </label>
+                        <input type="text" id="name" name="name" class="control" placeholder="Nombre del producto" required >
+
+                        <label for="descripcionProducto">Descripción:</label>
+                        <input type="text" name="descriptionProduct" class="control" placeholder="Descripción del producto" required id="descripcionProducto">
+
+                        <label for="imagenProducto">Imagen principal:</label>
+                        <input type="file" name="imageProduct" class="control" placeholder="Imagen del producto"  id="imagenProducto">
+
+                        <label for="imagenProducto1">Imagen secundaria 1:</label>
+                        <input type="file" name="imageProduct1" class="control" placeholder="Imagen del producto"  id="imagenProducto1">
+
+                        <label for="imagenProducto2">Imagen secundaria 2:</label>
+                        <input type="file" name="imageProduct2" class="control" placeholder="Imagen del producto"  id="imagenProducto2">
+
+                        <label for="imagenProducto3">Imagen secundaria 3:</label>
+                        <input type="file" name="imageProduct3" class="control" placeholder="Imagen del producto"  id="imagenProducto3">
+
+                        <label for="categoria">Categoría:</label>
+                        <input type="text" id="categoria" name="categoria" class="control" placeholder="Tazas, indumentaria, Figuras, Pósters o Mangas" required>
+
+                        <label for="precioProducto">Precio:</label>
+                        <input type="number" name="priceProduct" class="control" placeholder="Precio del producto" required id="precioProducto">
+
+                        <label for="descuento">Descuento:</label>
+                        <input type="number" id="descuento" name="descuento" class="control" placeholder="Decuento del producto" required>
+
+                    </div>
+                    <button type="submit" class="botonAgregar botonLogin" onclick="">Agregar producto</button>
+
+                </form>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
