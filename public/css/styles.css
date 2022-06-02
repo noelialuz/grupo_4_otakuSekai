@@ -441,31 +441,31 @@ main {
 
 .nuestrosProductos1 {
     height: 180px;
-    background-image: url("/img/imageTest.jpg");
+    background-image: url("/img/nuestrosProductos/tazas1.png");
     background-size: cover;
 }
 
 .nuestrosProductos2 {
     height: 180px;
-    background-image: url("/img/imageTest.jpg");
+    background-image: url("/img/nuestrosProductos/indumentaria1.jpg");
     background-size: cover;
 }
 
 .nuestrosProductos3 {
     height: 180px;
-    background-image: url("/img/imageTest.jpg");
+    background-image: url("/img/nuestrosProductos/figuras1.png");
     background-size: cover;
 }
 
 .nuestrosProductos4 {
     height: 180px;
-    background-image: url("/img/imageTest.jpg");
+    background-image: url("/img/nuestrosProductos/posters1.png");
     background-size: cover;
 }
 
 .nuestrosProductos5 {
     height: 180px;
-    background-image: url("/img/imageTest.jpg");
+    background-image: url("/img/nuestrosProductos/mangas1.png");
     background-size: cover;
 }
 

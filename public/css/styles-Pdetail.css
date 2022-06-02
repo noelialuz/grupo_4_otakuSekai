@@ -125,6 +125,7 @@ input#abrir-cerrar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: white;
 }
 
 .contenedorMiniaturas{
