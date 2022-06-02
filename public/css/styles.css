@@ -530,6 +530,10 @@ main {
     text-decoration: none;
     margin: 10px;
 }
+.botonEliminar{
+    background-color: var(--violeta);
+    color: black;
+}
 
 .divBotonEditar{
     margin: 30px;

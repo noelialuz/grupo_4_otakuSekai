@@ -59,11 +59,12 @@
                     <div class="productosEnOferta">
                         <a href="/products/detail/ <%= product.id %> "> <img src= <%= product.imagen1 %> alt=""></a>
                         <!-- Link a la página del producto -->
+
                         <div>
-                            <h4>Producto 1</h4>
+                            <h4><%= product.name %></h4>
                             <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
                             <p class="precioAnterior">$ <%= product.precioAnterior %> </p>
-                            <p class="precioActual">$ <%= precioActual %>  </p>
+                            <p class="precioActual">$ <%= product.precioAnterior * (100-product.descuento) /100 %>  </p>
                             <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
                         </div>
                     </div>  
@@ -94,8 +95,7 @@
         </section>
 
         <section class="divBotonEditar">
-                <a href="/products/productAgregar" class="botonEditar">Agregar productos</a>
-                <a href="/products/productEditar" class="botonEditar">Editar productos</a>
+                <a href="/products/create" class="botonEditar">Agregar productos</a>
         </section>
 
     </main>

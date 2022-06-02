@@ -14,7 +14,7 @@ router.get('/verMas', productController.verMas);
 
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 
-router.post('/verMas', productController.store);
+router.post('/', productController.store);
 
 /* Editar un producto existente*/
 router.get('/edit/:id', productController.edit);

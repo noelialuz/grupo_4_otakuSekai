@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <%- include('../partials/head') %>
 
     <body>
         <%- include('../partials/header') %>
             <main>
-
-
-                <!-- VER METODO A UTILIZAR  -->
-
-
-                <form action="" method="POST" class="create-form">
+                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="create-form">
                     <div class="control-formulario-campos">
-                        <h4 class="create-form-titulo">Editar productos existentes</h4>
+                        <h4 class="create-form-titulo">Editar producto: <i> <%= productToEdit.name %>  </i></h4>
 
-                        <label for="nombreProducto">Nombre del producto: </label>
-                        <input type="text" name="nameProduct" class="control" placeholder="Nombre del producto" required id="nombreProducto">
+                        <label for="name">Nombre del producto: </label>
+                        <input type="text" value="<%= productToEdit.name %>" id="name" name="name" class="control" placeholder="Ejemplo: <%= productToEdit.name %>" required >
 
-                        <label for="descripcionProducto">Descripción:</label>
-                        <input type="text" name="descriptionProduct" class="control" placeholder="Descripción del producto" required id="descripcionProducto">
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" value="<%= productToEdit.descripcion %>" id="descripcion" name="descripcion" class="control" placeholder="Ejemplo: Material pvc resistente al agua" required >
 
-                        <label for="imageProducto">Imagen principal:</label>
-                        <input type="file" name="imagenProduct" class="control" placeholder="Imagen del producto" required id="imageProducto">
+                        <label for="imagen1">Imagen principal:</label>
+                        <input type="file" value="<%= productToEdit.imagen1 %>" id="imagen1" name="imagen1" class="control" placeholder="Imagen del producto">
 
-                        <label for="imageProducto1">Imagen secundaria 1:</label>
-                        <input type="file" name="imagenProduct1" class="control" placeholder="Imagen del producto" required id="imageProducto1">
+                        <label for="imagen2">Imagen secundaria 1:</label>
+                        <input type="file" value="<%= productToEdit.imagen2 %>" id="imagen2" name="imagen2" class="control" placeholder="Imagen del producto">
 
-                        <label for="imageProducto2">Imagen secundaria 2:</label>
-                        <input type="file" name="imagenProduct2" class="control" placeholder="Imagen del producto" required id="imageProducto2">
+                        <label for="imagen3">Imagen secundaria 2:</label>
+                        <input type="file" value="<%= productToEdit.imagen3 %>" id="imagen3" name="imagen3" class="control" placeholder="Imagen del producto">
 
-                        <label for="imageProducto3">Imagen secundaria 3:</label>
-                        <input type="file" name="imagenProduct3" class="control" placeholder="Imagen del producto" required id="imageProducto3">
+                        <label for="imagen4">Imagen secundaria 3:</label>
+                        <input type="file" value="<%= productToEdit.imagen4 %>" id="imagen4" name="imagen4" class="control" placeholder="Imagen del producto">
 
-                        <label for="categoryProducto">Categoría:</label>
-                        <input type="text" name="categoriaProduct" class="control" placeholder="Tazas, indumentaria, Figuras, Pósters o Mangas" required id="categoryProducto">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" name="categoria" class="control">
+							<option value="">Elegí</option>
+							<option value="tazas">Tazas, llaveros, pins, aros</option>
+							<option value="indumentaria">Indumentaria y accesorios</option>
+                            <option value="figuras">Figuras</option>
+                            <option value="posters">Pósters y cuadros</option>
+                            <option value="mangas">Mangas y comics</option>
+						</select>
 
-                        <label for="priceProducto">Precio:</label>
-                        <input type="number" name="precioProduct" class="control" placeholder="Precio del producto" required id="priceProducto">
+                        <label for="precioAnterior">Precio:</label>
+                        <input type="number" value="<%= productToEdit.precioAnterior %>" id="precioAnterior" name="precioAnterior" class="control" placeholder="<%= productToEdit.precioAnterior %>" required >
 
-                        <label for="discountProducto">Descuento:</label>
-                        <input type="number" name="descuentoProduct" class="control" placeholder="Decuento del producto" required id="discountProducto">
+                        <label for="descuento">Descuento:</label>
+                        <input type="number" value="<%= productToEdit.descuento %>" id="descuento" name="descuento" class="control" placeholder="<%= productToEdit.descuento %>" required>
 
                     </div>
-                    <button type="submit" class="botonAgregar botonLogin" onclick="location.href='/'">Editar producto</button>
+                    <button type="submit" class="botonAgregar botonLogin" onclick="">Editar producto</button>
 
                 </form>
             </main>
