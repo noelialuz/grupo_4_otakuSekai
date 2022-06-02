@@ -14,6 +14,7 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = products.find(product => product.id == id);
+        console.log(product);
 		res.render('./products/productDetail', {
 			product,
 			products: products
