@@ -41,7 +41,6 @@ const controller = {
 	},
 
     store: (req, res) => {
-		/* res.send("Producto nuevo agregado"); */
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let newProduct = {
 			name: req.body.name,

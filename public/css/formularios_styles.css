@@ -1,3 +1,11 @@
+:root {
+    --gris: #E5E1EE;
+    --celeste: #DFFDFF;
+    --azulClaro: #90BEDE;
+    --azul: #003F91;
+    --violeta: #C090DE;
+}
+
 .create-form{
     display: flex;
     align-items: center;
@@ -8,7 +16,6 @@
     background-color: white;
     margin: auto;
     margin-top: 30px;
-    
 }
 
 .create-form-titulo{
@@ -30,7 +37,7 @@
     text-align: inherit;
     border: 2px #D4D9E0 solid;
     border-radius: 5px;
-    color: #D4D9E0;
+    color: var(--azul);
 }
 
 .control-formulario-redes_sociales{
