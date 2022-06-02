@@ -57,13 +57,12 @@
                 <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
                     <div class="productosEnOferta">
-                        <a href="/products/detail"> <img src= <%= product.imagen1 %> alt=""></a>
-                        <!-- Link a la página del producto -->
+                        <a href="/products/detail/<%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
                         <div>
-                            <h4>Producto 1</h4>
+                            <h4><%= product.name %></h4>
                             <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
                             <p class="precioAnterior">$ <%= product.precioAnterior %> </p>
-                            <p class="precioActual">$ <%= precioActual %>  </p>
+                            <p class="precioActual">$ <%= product.precioAnterior * (100-product.descuento) /100 %>  </p>
                             <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
                         </div>
                     </div>  
