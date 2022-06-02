@@ -76,7 +76,7 @@
                                 <h4><%= products[num].name %></h4>
                                 <p class="porcentajeDescuento">- <%= products[num].descuento %> off</p>
                                 <p class="precioAnterior">$ <%= products[num].precioAnterior %></p>
-                                <p class="precioActual">$ 000</p>
+                                <p class="precioActual">$ <%= precioActual = (products[num].precioAnterior - ((100 * products[num].descuento) / products[num].precioAnterior)).toFixed(0) %></p>
                                 <button onclick="" class="botonAgregar">Agregar al carrito</button>
                             </div>
                         </div>
