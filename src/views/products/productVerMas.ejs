@@ -23,23 +23,23 @@
                 <div class="icon-cards__content">
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 1</h4>
+                        <h4> <%= products[1].name  %> </h4>
                     </div>
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 2</h4>
+                        <h4> <%= products[2].name  %>  </h4>
                     </div>
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 3</h4>
+                        <h4> <%= products[3].name  %> </h4>
                     </div>
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 4</h4>
+                        <h4> <%= products[4].name  %> </h4>
                     </div>
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 5</h4>
+                        <h4> <%= products[5].name  %>  </h4>
                     </div>
                 </div>
             </figure>
@@ -57,7 +57,7 @@
                 <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
                     <div class="productosEnOferta">
-                        <a href="/products/detail"> <img src= <%= product.imagen1 %> alt=""></a>
+                        <a href="/products/detail/ <%= product.id %> "> <img src= <%= product.imagen1 %> alt=""></a>
                         <!-- Link a la página del producto -->
                         <div>
                             <h4>Producto 1</h4>
@@ -80,7 +80,7 @@
             <div class="cajaConProductosEnOferta">
                 <% products.forEach(function(product){ %>
                 <div class="productosEnOferta">
-                    <a href="/products/detail"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <a href="/products/detail/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
                     <!-- Link a la página del producto -->
                     <div>
                         <h4> <%= product.name %>  </h4>

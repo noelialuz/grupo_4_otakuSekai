@@ -1,99 +1,74 @@
 [
-    {
-        "name": "Taza Mágica Goku",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 20,
-        "precioAnterior": 1500,
-        "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
-        "id": 1,
-        "imagen1": "/img/tazas,llaveros,pins,aros/1/taza1.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/1/taza1a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/1/taza1b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/1/taza1c.png"  
-    },
-    {
-        "name": "Taza Mágica Dragon Ball Z",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 20,
-        "precioAnterior": 1500,
-        "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
-        "id": 2,
-        "imagen1": "/img/tazas,llaveros,pins,aros/2/taza2.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/2/taza2a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/2/taza2b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/2/taza2c.png"  
-    },
-    {
-        "name": "Llavero Totoro varios modelos",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 10,
-        "precioAnterior": 690,
-        "descripcion": "Llavero totoro excelente calidad. El material es de PVC. El precio es por unidad. Altura 8 cm. Ancho 4 cm. Incluye gancho.",
-        "id": 3,
-        "imagen1": "/img/tazas,llaveros,pins,aros/3/llavero3.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/3/llavero3a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/3/llavero3b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/3/llavero3c.png"  
-    },
-    {
-        "name": "Peluche Llavero Pokemon Go",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 0,
-        "precioAnterior": 780,
-        "descripcion": "Peluches Pokemon excelente calidad. El precio es por unidad. En la lista desplegable de variantes figuran las opciones disponibles. Altura 12 cm. Excelente calidad",
-        "id": 4,
-        "imagen1": "/img/tazas,llaveros,pins,aros/4/llavero4.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/4/llavero4a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/4/llavero4b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/4/llavero4c.png"  
-    },
-    {
-        "name": "Prendedores Pins Demon Slayer Nezuko",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 10,
-        "precioAnterior": 75,
-        "descripcion": "Prendedores Pins Demon Slayer Nezuko. Excelente calidad. Diseño a elección",
-        "id": 5,
-        "imagen1": "/img/tazas,llaveros,pins,aros/5/pin5.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/5/pin5a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/5/pin5b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/5/pin5c.png"  
-    },
-    {
-        "name": "Aros Naruto Shippuden Aldea De La Hoja Naruto Metal",
-        "categoria": "Tazas, llaveros, pins, aros",
-        "descuento": 0,
-        "precioAnterior": 550,
-        "descripcion": "Modelo: naruto shippuden. Material: Metal. Formato de venta: pack por 2 unidades",
-        "id": 6,
-        "imagen1": "/img/tazas,llaveros,pins,aros/6/aros6.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/6/aros6a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/6/aros6b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/6/aros6c.png"  
-    },
-    {
-        "name": "Piece Luffy Boundman",
-        "categoria": "Figuras",
-        "descuento": 15,
-        "precioAnterior": 5400,
-        "descripcion": "Figura de Plástico. Alto 25 cm. Desmontable. Incluye base. Producto original",
-        "id": 7,
-        "imagen1": "/img/tazas,llaveros,pins,aros/7/figura7.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/7/figura7a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/7/figura7b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/7/figura7c.png"  
-    },
-    {
-        "name": "Figura de acción Marvel Hombre Araña",
-        "categoria": "Figuras",
-        "descuento": 0,
-        "precioAnterior": 4700,
-        "descripcion": "Las figuras de acción están hechas de pvc, plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Juguetes articulados. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
-        "id": 8,
-        "imagen1": "/img/tazas,llaveros,pins,aros/8/figura8.png",
-        "imagen2": "/img/tazas,llaveros,pins,aros/8/figura8a.png",
-        "imagen3": "/img/tazas,llaveros,pins,aros/8/figura8b.png",
-        "imagen4": "/img/tazas,llaveros,pins,aros/8/figura8c.png"  
-    }
-
+ {
+  "name": "Llavero Totoro varios modelos",
+  "categoria": "Tazas, llaveros, pins, aros",
+  "descuento": 10,
+  "precioAnterior": 690,
+  "descripcion": "Llavero totoro excelente calidad. El material es de PVC. El precio es por unidad. Altura 8 cm. Ancho 4 cm. Incluye gancho.",
+  "id": 3,
+  "imagen1": "/img/tazas,llaveros,pins,aros/3/llavero3.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/3/llavero3a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/3/llavero3b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/3/llavero3c.png"
+ },
+ {
+  "name": "Peluche Llavero Pokemon Go",
+  "categoria": "Tazas, llaveros, pins, aros",
+  "descuento": 0,
+  "precioAnterior": 780,
+  "descripcion": "Peluches Pokemon excelente calidad. El precio es por unidad. En la lista desplegable de variantes figuran las opciones disponibles. Altura 12 cm. Excelente calidad",
+  "id": 4,
+  "imagen1": "/img/tazas,llaveros,pins,aros/4/llavero4.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/4/llavero4a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/4/llavero4b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/4/llavero4c.png"
+ },
+ {
+  "name": "Prendedores Pins Demon Slayer Nezuko",
+  "categoria": "Tazas, llaveros, pins, aros",
+  "descuento": 10,
+  "precioAnterior": 75,
+  "descripcion": "Prendedores Pins Demon Slayer Nezuko. Excelente calidad. Diseño a elección",
+  "id": 5,
+  "imagen1": "/img/tazas,llaveros,pins,aros/5/pin5.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/5/pin5a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/5/pin5b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/5/pin5c.png"
+ },
+ {
+  "name": "Aros Naruto Shippuden Aldea De La Hoja Naruto Metal",
+  "categoria": "Tazas, llaveros, pins, aros",
+  "descuento": 0,
+  "precioAnterior": 550,
+  "descripcion": "Modelo: naruto shippuden. Material: Metal. Formato de venta: pack por 2 unidades",
+  "id": 6,
+  "imagen1": "/img/tazas,llaveros,pins,aros/6/aros6.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/6/aros6a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/6/aros6b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/6/aros6c.png"
+ },
+ {
+  "name": "Piece Luffy Boundman",
+  "categoria": "Figuras",
+  "descuento": 15,
+  "precioAnterior": 5400,
+  "descripcion": "Figura de Plástico. Alto 25 cm. Desmontable. Incluye base. Producto original",
+  "id": 7,
+  "imagen1": "/img/tazas,llaveros,pins,aros/7/figura7.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/7/figura7a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/7/figura7b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/7/figura7c.png"
+ },
+ {
+  "name": "Figura de acción Marvel Hombre Araña",
+  "categoria": "Figuras",
+  "descuento": 0,
+  "precioAnterior": 4700,
+  "descripcion": "Las figuras de acción están hechas de pvc, plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Juguetes articulados. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
+  "id": 8,
+  "imagen1": "/img/tazas,llaveros,pins,aros/8/figura8.png",
+  "imagen2": "/img/tazas,llaveros,pins,aros/8/figura8a.png",
+  "imagen3": "/img/tazas,llaveros,pins,aros/8/figura8b.png",
+  "imagen4": "/img/tazas,llaveros,pins,aros/8/figura8c.png"
+ }
 ]

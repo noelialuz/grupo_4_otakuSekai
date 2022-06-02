@@ -131,13 +131,22 @@ input#abrir-cerrar {
 display: flex;
 justify-content: space-around;
 margin: 10px;
+width: 90%;
 }
 .miniaturasProducto{
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+background-color: white;
+border-radius: 5px;
 width: 30%;
 align-self: center;
 }
 .imagenMiniatura{
     width: 100%;
+}
+
+.otherProductsImg{
+    width: 20vw;
+    max-height: 30vh;
 }
 
 .miniaturasProducto4, .miniaturasProducto5 {
@@ -146,13 +155,9 @@ align-self: center;
     display: none;
 }
 
-
-.cajaConProductosEnOferta1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 1%;
-    display: none;
+.titulo_seccion{
+    text-align: center;
+    font-size: 20px;
 }
 
 .detallesOferta{
@@ -163,20 +168,23 @@ align-self: center;
     align-items: center;
 }
 
-.productosEnOfertaDetail {
+.detallesOferta button{
+    width: 10vw;
+}
+
+.productosEnOfertaDetail{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     justify-content: space-around;
     padding: 15px;
-    margin-bottom: 10px;
     background-color: white;
     border-radius: 5px;
-    width: 90%;
-    margin-left: 5%;
+    width: 30%;
+   
 }
 
 .productosEnOfertaDetail a {
-    width: 50%;
+    width: 30%;
     display: flex;
     align-items: center;
 }
@@ -186,7 +194,7 @@ align-self: center;
 }
 
 .productosEnOfertaDetail div {
-    width: 50%;
+    width: 30%;
     border-left: var(--gris) 1px solid;
     margin-left: 5px;
 }
@@ -194,6 +202,34 @@ align-self: center;
 .productosEnOfertaDetail div h4,
 .productosEnOfertaDetail div p {
     margin: 2px;
+}
+
+.otherProducts-Container{
+    display: flex; 
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.titulo_seccion{
+    text-align: center;    
+    width: 90%;
+}
+
+.products-Container{
+    display: flex; 
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 3rem;
+}
+
+article{
+    width: 80vw;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    
 }
 
 
@@ -214,7 +250,7 @@ align-self: center;
 }
 
 .productCountainer{
-    max-width: 60%
+    max-width: 40%
 }
 
 .nombre-producto{
@@ -224,7 +260,6 @@ font-size: 25px;
     display: contents;
 }
 .productosEnOfertaDetail{
-    width: 55%;
     margin: 5px 0px;
     
 }

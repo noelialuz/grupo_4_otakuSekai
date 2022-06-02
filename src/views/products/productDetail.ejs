@@ -14,94 +14,76 @@
                             <span class="abrir" title="Abrir">Abrir</span>
                         </label>
                     </div>
-                    <h2 class="nombre-producto">nombre del producto</h2>
+                    <h2 class="nombre-producto"> <%= product.name %> </h2>
                 </div>
                 <div class="divcontendor">
                     <article class="productCountainer">
-                        <img class="productImg" src="/img/luffy-gear-4.jpg" alt="producto">
+                        <img class="productImg" src= <%= product.imagen1  %>  alt="producto">
                         <button class="botonProducto">
                             Agregar al carrito
                         </button>
                         <div class="detallesArticulo">
-                            <h4>Portrait.Of.Pirates ONE PIECE "SA-MAXIMUM" Monkey D. Luffy Gear Four "Boundman"</h4>
-                            <p>Portrait.Of.Piratesワンピース“SA-MAXIMUM”モンキー・D・ルフィ ギア“4”「弾む男」</p>
-                            <p>¥18,479 (Tax Included)</p>
+                            <h4> <%= product.name %> </h4>
+                            <p> <%= product.descripcion %> </p>
+                            <p> <%= product.precioAnterior %>  (Tax Included)</p>
                         </div>
                     </article>
                 </div>
                 <div class="contenedorMiniaturas">
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src="/img/lufffy-boundman-1.jpg" alt="boundoman1">
+                        <img class="imagenMiniatura" src= <%= product.imagen1  %>
+                        alt="boundoman1">
                     </article>
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src="/img/luffy-boundman-2.jpg" alt="boundoman2">
+                        <img class="imagenMiniatura" src= <%= product.imagen2 %>
+                         alt="boundoman2">
                     </article>
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src="/img/luffy-boundman-5.jpg" alt="boundoman3">
+                        <img class="imagenMiniatura" src= <%= product.imagen3 %> 
+                        alt="boundoman3">
                     </article>
-                    <article class="miniaturasProducto4">
-                        <img class="imagenMiniatura" src="/img/luffy-boundman-4.jpg" alt="boundoman4">
-                    </article>
-                    <article class="miniaturasProducto5">
-                        <img class="imagenMiniatura" src="/img/luffy-boundman-3.jpg" alt="boundoman5">
+                    <article class="miniaturasProducto">
+                        <img class="imagenMiniatura" src= <%= product.imagen4 %>
+                         alt="boundoman4">
                     </article>
                 </div>
-                <div>
-                    <h3>
-                        Otros porductos similares...
-                    </h3>
-                </div>
-                <div class="cajaConProductosEnOferta">
-                    <div class="productosEnOfertaDetail">
-                        <a href="#"> <img class="imagenMiniatura" src="/img/yamato.jpg" alt=""></a>
-                        <!-- Link a la página del producto -->
-                        <div class="detallesOferta">
-                            <h4>Producto 1</h4>
-                            <p class="porcentajeDescuento">- 00% off</p>
-                            <p class="precioAnterior">$ 000</p>
-                            <p class="precioActual">$ 000</p>
-                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
+
+                <a href="/edit/<%= product.id %>" class="botonEditar">Editar este producto</a>
+
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="botonEditar botonEliminar">ELIMINAR</button>
+                </form>
+
+                               
+               <section class="otherProducts-Container">
+                <h3 class="titulo_seccion">Otros porductos similares...</h3>
+                    <div class="products-Container">
+
+                        <% function getRandomArbitrary(min, max) {
+                            return Math.random() * (max - min) + min;
+                          } %>
+                        <% let ant = 0; %>  
+                        <% for(let x = 0; x < 3; x++){ %> 
+                        <% let num = getRandomArbitrary(1, products.length).toFixed(0) %> 
+                        <% while(num == ant){
+                            num = getRandomArbitrary(1, products.length).toFixed(0)
+                        } %>
+                        <div class="productosEnOfertaDetail">
+                            <a href="#"> <img class="otherProductsImg" 
+                                src= <%= products[num].imagen1 %>  alt=""></a>
+                            <!-- Link a la página del producto -->
+                            <div class="detallesOferta">
+                                <h4><%= products[num].name %></h4>
+                                <p class="porcentajeDescuento">- <%= products[num].descuento %> off</p>
+                                <p class="precioAnterior">$ <%= products[num].precioAnterior %></p>
+                                <p class="precioActual">$ 000</p>
+                                <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                            </div>
                         </div>
+                        <% ant = num %> 
+                        <%}%> 
                     </div>
-                </div>
-                <div class="cajaConProductosEnOferta">
-                    <div class="productosEnOfertaDetail">
-                        <a href="#"> <img class="imagenMiniatura" src="/img/ace.jpg" alt=""></a>
-                        <!-- Link a la página del producto -->
-                        <div class="detallesOferta">
-                            <h4>Producto 2</h4>
-                            <p class="porcentajeDescuento">- 00% off</p>
-                            <p class="precioAnterior">$ 000</p>
-                            <p class="precioActual">$ 000</p>
-                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cajaConProductosEnOferta">
-                    <div class="productosEnOfertaDetail">
-                        <a href="#"> <img src="/img/zoro-ashura.jpg" alt=""></a> <!-- Link a la página del producto -->
-                        <div class="detallesOferta">
-                            <h4>Producto 3</h4>
-                            <p class="porcentajeDescuento">- 00% off</p>
-                            <p class="precioAnterior">$ 000</p>
-                            <p class="precioActual">$ 000</p>
-                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cajaConProductosEnOferta1">
-                    <div class="productosEnOfertaDetail">
-                        <a href="#"> <img src="/img/doflamingo.jpg" alt=""></a>
-                        <!-- Link a la página del producto -->
-                        <div class="detallesOferta">
-                            <h4>Producto 4</h4>
-                            <p class="porcentajeDescuento">- 00% off</p>
-                            <p class="precioAnterior">$ 000</p>
-                            <p class="precioActual">$ 000</p>
-                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
+               </section>
                 
             </main>
             <%- include('../partials/footer') %>
