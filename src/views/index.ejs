@@ -70,26 +70,14 @@
         <div class="carruselAnimado">
             <figure class="icon-cards mt-3">
                 <div class="icon-cards__content">
+                    <% for(let i = 0; i < 5; i++){ %> 
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 1</h4>
+                        <div class="product_infoCard">
+                            <img src=<%= offerProducts[i].imagen1 %>  alt="">
+                            <h4> <%= offerProducts[i].name %> </h4>
+                        </div>
                     </div>
-                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 2</h4>
-                    </div>
-                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 3</h4>
-                    </div>
-                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 4</h4>
-                    </div>
-                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <img src="/img/imageTest.jpg" alt="">
-                        <h4>Detalle del Producto 5</h4>
-                    </div>
+                    <% } %> 
                 </div>
             </figure>
         </div>
