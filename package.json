@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/noelialuz/grupo_4_otakuSekai/issues"
   },
-  "homepage": "https://github.com/noelialuz/grupo_4_otakuSekai#readme"
+  "homepage": "https://github.com/noelialuz/grupo_4_otakuSekai#readme",
+  "devDependencies": {}
 }

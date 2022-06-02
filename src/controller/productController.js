@@ -21,7 +21,18 @@ const controller = {
 
     /* Ver el listado completo de productos */
     verMas: (req, res) => {
-        res.render('./products/productVerMas');
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let offerProducts = [];
+
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento != 0){
+				offerProducts.push(products[x])
+			}
+		}
+        res.render('./products/productVerMas', {
+			products: products,
+			offerProducts: offerProducts});
     },
 
     /* Crear un nuevo producto */
