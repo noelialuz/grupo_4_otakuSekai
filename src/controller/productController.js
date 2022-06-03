@@ -16,7 +16,8 @@ const controller = {
 		let product = products.find(product => product.id == id);
 		res.render('./products/productDetail', {
 			product,
-			products: products
+			products: products,
+			title: product.name
 		})
 	},
 
