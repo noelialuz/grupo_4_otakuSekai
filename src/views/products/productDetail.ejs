@@ -64,9 +64,9 @@
                           } %>
                         <% let ant = 0; %>  
                         <% for(let x = 0; x < 3; x++){ %> 
-                        <% let num = getRandomArbitrary(1, products.length).toFixed(0) %> 
+                        <% let num = getRandomArbitrary(0, products.length).toFixed(0) %> 
                         <% while(num == ant){
-                            num = getRandomArbitrary(1, products.length).toFixed(0)
+                            num = getRandomArbitrary(0, products.length).toFixed(0)
                         } %>
                         <div class="productosEnOfertaDetail">
                             <a href="#"> <img class="otherProductsImg" 
