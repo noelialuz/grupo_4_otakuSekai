@@ -7,10 +7,10 @@ const productController = require('../controller/productController');
 router.get('/cart', productController.cart);
 
 /* Ver detalle y descripcion de un producto */
-router.get('/detail/:id', productController.detail); 
+router.get('/:id', productController.detail); 
 
 /* Ver el listado completo de productos */
-router.get('/verMas', productController.verMas); 
+router.get('/', productController.verMas); 
 
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 

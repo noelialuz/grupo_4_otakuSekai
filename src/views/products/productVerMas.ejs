@@ -5,6 +5,7 @@
 
 <body>
     <%- include('../partials/header') %>
+
     <main>
 
         <!----------------------------  ---------------------------->
@@ -45,7 +46,7 @@
                 <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
                     <div class="productosEnOferta">
-                        <a href="/products/detail/<%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
+                        <a href="/products/ <%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
                         <div>
                             <h4><%= product.name %></h4>
                             <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
@@ -67,7 +68,7 @@
             <div class="cajaConProductosEnOferta">
                 <% products.forEach(function(product){ %>
                 <div class="productosEnOferta">
-                    <a href="/products/detail/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
                     <!-- Link a la página del producto -->
                     <div>
                         <h4> <%= product.name %>  </h4>

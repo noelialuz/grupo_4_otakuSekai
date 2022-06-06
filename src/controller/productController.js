@@ -59,8 +59,8 @@ const controller = {
 
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		res.redirect("/products/verMas");
+	
+		res.redirect("/products");
 	},
 
     /* Editar un producto existente*/
