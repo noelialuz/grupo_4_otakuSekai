@@ -34,15 +34,12 @@ const controller = {
 		}
         res.render('./products/productVerMas', {
 			products: products,
-			offerProducts: offerProducts,
-			title: "Products" });
+			offerProducts: offerProducts});
     },
 
     /* Crear un nuevo producto */
     create: (req, res) => {
-		res.render('./products/productCreate',{
-			title: "Create Product"
-		})
+		res.render('./products/productCreate')
 	},
 
     store: (req, res) => {
@@ -73,7 +70,7 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('./products/productEdit', {productToEdit, title: "Edit Product"})
+		res.render('./products/productEdit', {productToEdit, title: productToEdit.name})
 	},
 
     update: (req, res) => {
@@ -97,7 +94,7 @@ const controller = {
 		products[indice] = editedProduct;
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products/verMas", {title: "Update Product"});
+		res.redirect("./products/productVerMas");
 	},
 
     /* Eliminar un producto existente*/
@@ -107,7 +104,7 @@ const controller = {
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		
-		res.redirect("/products/verMas", {title:  "Delete Product"});
+		res.redirect("/products/productVerMas");
 	}
 
 

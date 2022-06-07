@@ -12,30 +12,6 @@
   "imagen4": "/img/tazas,llaveros,pins,aros/1/taza1c.png"
  },
  {
-  "name": "Taza Mágica Dragon Ball Z",
-  "categoria": "tazas",
-  "descuento": 20,
-  "precioAnterior": 1500,
-  "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
-  "id": 2,
-  "imagen1": "/img/tazas,llaveros,pins,aros/2/taza2.png",
-  "imagen2": "/img/tazas,llaveros,pins,aros/2/taza2a.png",
-  "imagen3": "/img/tazas,llaveros,pins,aros/2/taza2b.png",
-  "imagen4": "/img/tazas,llaveros,pins,aros/2/taza2c.png"
- },
- {
-  "name": "Llavero Totoro varios modelos",
-  "categoria": "tazas",
-  "descuento": 10,
-  "precioAnterior": 690,
-  "descripcion": "Llavero totoro excelente calidad. El material es de PVC. El precio es por unidad. Altura 8 cm. Ancho 4 cm. Incluye gancho.",
-  "id": 3,
-  "imagen1": "/img/tazas,llaveros,pins,aros/3/llavero3.png",
-  "imagen2": "/img/tazas,llaveros,pins,aros/3/llavero3a.png",
-  "imagen3": "/img/tazas,llaveros,pins,aros/3/llavero3b.png",
-  "imagen4": "/img/tazas,llaveros,pins,aros/3/llavero3c.png"
- },
- {
   "name": "Peluche Llavero Pokemon Go",
   "categoria": "",
   "descuento": "0",

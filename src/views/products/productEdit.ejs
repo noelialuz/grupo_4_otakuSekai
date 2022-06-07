@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', {title: 'Editar producto'}) %>
+<%- include('../partials/head' , {title: title}) %>
 
     <body>
         <%- include('../partials/header') %>
@@ -45,7 +45,8 @@
                         <input type="number" value="<%= productToEdit.descuento %>" id="descuento" name="descuento" class="control" placeholder="<%= productToEdit.descuento %>" required>
 
                     </div>
-                    <button type="submit" class="botonAgregar botonLogin" onclick="">Editar producto</button>
+                    <a href="/products/<%= productToEdit.id %>/update" class="botonEditar">Editar producto</a>
+                    <!--<button type="submit" class="botonAgregar botonLogin" onclick="">Editar producto</button>-->
 
                 </form>
             </main>

@@ -48,9 +48,9 @@
                     </article>
                 </div>
 
-                <a href="/edit/<%= product.id %>" class="botonEditar">Editar este producto</a>
+                <a href="/products/<%= product.id %>/edit" class="botonEditar">Editar este producto</a>
 
-                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <form action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="botonEditar botonEliminar">ELIMINAR</button>
                 </form>
 
