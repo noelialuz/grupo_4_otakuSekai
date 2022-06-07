@@ -1,9 +1,12 @@
 const controller = {
     login: (req, res) => {
-        res.render('./users/login');
+        res.render('./users/login',{
+            title: "Login"
+        });
     },
     register: (req, res) => {
-        res.render('./users/register');
+        res.render('./users/register',
+        {title: "Register"});
     }
 };
 

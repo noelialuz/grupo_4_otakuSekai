@@ -34,12 +34,15 @@ const controller = {
 		}
         res.render('./products/productVerMas', {
 			products: products,
-			offerProducts: offerProducts});
+			offerProducts: offerProducts,
+			title: "Products" });
     },
 
     /* Crear un nuevo producto */
     create: (req, res) => {
-		res.render('./products/productCreate')
+		res.render('./products/productCreate',{
+			title: "Create Product"
+		})
 	},
 
     store: (req, res) => {
@@ -60,7 +63,9 @@ const controller = {
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 	
-		res.redirect("/products");
+		res.redirect("/products", {
+			title: 'Products'
+		});
 	},
 
     /* Editar un producto existente*/
@@ -68,7 +73,7 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('./products/productEdit', {productToEdit})
+		res.render('./products/productEdit', {productToEdit, title: "Edit Product"})
 	},
 
     update: (req, res) => {
@@ -92,7 +97,7 @@ const controller = {
 		products[indice] = editedProduct;
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products/verMas");
+		res.redirect("/products/verMas", {title: "Update Product"});
 	},
 
     /* Eliminar un producto existente*/
@@ -102,7 +107,7 @@ const controller = {
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		
-		res.redirect("/products/verMas");
+		res.redirect("/products/verMas", {title:  "Delete Product"});
 	}
 
 
