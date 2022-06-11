@@ -18,10 +18,10 @@ router.get('/', productController.verMas);
 
 /* Editar un producto existente*/
 router.get('/:id/edit', productController.edit);
-router.patch('/:id/update', productController.update); 
+router.patch('/:id', productController.update); 
 
 /* Eliminar un producto existente*/
-router.delete('/:id/delete/', productController.destroy);
+router.delete('/:id', productController.destroy);
 
 
 /* Exportar modulo */

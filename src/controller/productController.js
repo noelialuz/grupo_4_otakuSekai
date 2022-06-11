@@ -60,9 +60,7 @@ const controller = {
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 	
-		res.redirect("/products", {
-			title: 'Products'
-		});
+		res.redirect("/products");
 	},
 
     /* Editar un producto existente*/
@@ -94,7 +92,7 @@ const controller = {
 		products[indice] = editedProduct;
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("./products/productVerMas");
+		res.redirect("/products");
 	},
 
     /* Eliminar un producto existente*/
@@ -104,7 +102,7 @@ const controller = {
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		
-		res.redirect("/products/productVerMas");
+		res.redirect("/products");
 	}
 
 
