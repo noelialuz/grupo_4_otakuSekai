@@ -43,7 +43,7 @@
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
 
             <div class="cajaConProductosEnOferta">
-                <% offerProducts.slice(0, 8).forEach(function(product){ %>
+                <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
                     <div class="productosEnOferta">
                         <a href="/products/ <%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
@@ -66,7 +66,7 @@
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
 
             <div class="cajaConProductosEnOferta">
-                <% products.slice(0, 12).forEach(function(product){ %>
+                <% products.forEach(function(product){ %>
                 <div class="productosEnOferta">
                     <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
                     <!-- Link a la página del producto -->
