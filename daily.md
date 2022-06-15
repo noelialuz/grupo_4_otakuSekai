@@ -68,3 +68,6 @@ A la noche cuando vuelvo sigo trabajando con esto
 
 05/06/2022 a las 18.00 hs: hicimos reunión para dividir tareas y actualizar Trello. Tenemos bastante del Sprint 4 avanzado porque hicimos tareas demás para el Sprint 3. Pusimos fecha de finalización de estas tareas para el próximo sábado 11/06/2022, donde nos volveremos a juntar para ver si se terminaron todas las tareas y adelantar tareas del Sprint siguiente.
 
+10/06/2022: Bruno actualizó las rutas de productos con la estructura requerida en este Sprint. Agregó slices con los productos para mejorar la visual del home. Bruno creó el json de usuarios. Agregó algunas correcciones.
+
+14/06/2022: Jhoxani actualizó la lista de productos en el json cubriendo las categorías pendientes.
