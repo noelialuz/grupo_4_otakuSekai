@@ -68,7 +68,7 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('./products/productEdit', {productToEdit})
+		res.render('./products/productEdit', {productToEdit, title: productToEdit.name})
 	},
 
     update: (req, res) => {
@@ -92,7 +92,7 @@ const controller = {
 		products[indice] = editedProduct;
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products/verMas");
+		res.redirect("/products");
 	},
 
     /* Eliminar un producto existente*/
@@ -102,7 +102,7 @@ const controller = {
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		
-		res.redirect("/products/verMas");
+		res.redirect("/products");
 	}
 
 

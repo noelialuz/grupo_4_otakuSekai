@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', {title: 'Editar producto'}) %>
+<%- include('../partials/head' , {title: title}) %>
 
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="create-form">
+                <form action="/products/<%= productToEdit.id %>?_method=PATCH" method="POST" class="create-form">
                     <div class="control-formulario-campos">
                         <h4 class="create-form-titulo">Editar producto: <i> <%= productToEdit.name %>  </i></h4>
 
@@ -45,6 +45,7 @@
                         <input type="number" value="<%= productToEdit.descuento %>" id="descuento" name="descuento" class="control" placeholder="<%= productToEdit.descuento %>" required>
 
                     </div>
+                 
                     <button type="submit" class="botonAgregar botonLogin" onclick="">Editar producto</button>
 
                 </form>
