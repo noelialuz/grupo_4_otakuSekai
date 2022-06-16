@@ -39,9 +39,7 @@
         <!---------------------------- PRODUCTOS EN OFERTA ---------------------------->
         <section>
             <h2 class="subtitulos">Productos en oferta</h2>
-
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-
             <div class="cajaConProductosEnOferta">
                 <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
@@ -59,14 +57,24 @@
             </div>
         </section>
 
-
         <section>
             <h2 class="subtitulos">Todos nuestros productos</h2>
-
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-
             <div class="cajaConProductosEnOferta">
-                <% products.forEach(function(product){ %>
+                <% noOfferProducts.forEach(function(product){ %>
+                <div class="productosEnOferta">
+                    <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4> <%= product.name %>  </h4>
+                            <p class="precioActual">$ <%= product.precioAnterior %>  </p>
+                        <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+                <% }) %> 
+            </div>
+            <div class="cajaConProductosEnOferta">
+                <% offerProducts.forEach(function(product){ %>
                 <div class="productosEnOferta">
                     <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
                     <!-- Link a la página del producto -->
@@ -79,7 +87,6 @@
                     </div>
                 </div>
                 <% }) %> 
-
             </div>
         </section>
 

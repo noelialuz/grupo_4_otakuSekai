@@ -21,7 +21,7 @@ router.get('/:id/edit', productController.edit);
 router.patch('/:id', productController.update); 
 
 /* Eliminar un producto existente*/
-router.delete('/:id', productController.destroy);
+router.delete('/:id', productController.remove);
 
 
 /* Exportar modulo */

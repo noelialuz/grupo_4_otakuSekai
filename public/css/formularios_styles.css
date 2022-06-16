@@ -22,6 +22,7 @@
     border-bottom: 1px solid #D2C3FA;
     text-align: left;
     margin: revert;
+    font-size: 18px;
 }
 
 .control-formulario-campos{
@@ -30,6 +31,36 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
+}
+
+.control-formulario-campos label{
+    color: var(--azul);
+    display: block;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#aceptoTerminosyCondiciones{
+    display: inline;
+}
+
+#aceptoTerminos{
+    margin: 0px;
+    display: inline;
+    width: auto;
+}
+
+.control-formulario-campos input{
+    width: 60%;
+    display: block;
+    margin: 10px auto;
+}
+
+.control-formulario-registro p{
+    color: var(--azul);
+    font-weight: bolder;
+    font-size: 16px;
 }
 
 .control{
@@ -44,7 +75,15 @@
     justify-content: center;
     width: 80%;
 }
-
+.control-formulario-redes_sociales a{
+    margin: 5px;
+}
+.control-formulario-redes_sociales i{
+    font-size: 18px;
+}
+.fa-google{
+    color: var(--azul);
+}
 .botonLogin{
     width: 30%;
     margin: 10px ;

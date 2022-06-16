@@ -71,3 +71,5 @@ A la noche cuando vuelvo sigo trabajando con esto
 10/06/2022: Bruno actualizó las rutas de productos con la estructura requerida en este Sprint. Agregó slices con los productos para mejorar la visual del home. Bruno creó el json de usuarios. Agregó algunas correcciones.
 
 14/06/2022: Jhoxani actualizó la lista de productos en el json cubriendo las categorías pendientes.
+
+16/06/2022: Jhoxani arregló las cajitas de productos para que los que no tuviesen descuento no muestren el descuento ni el precio anterior tachado. Mejoró formulario de login y registro. Realizó borrado lógico de productos (cambio de propiedades para no eliminar por completo).

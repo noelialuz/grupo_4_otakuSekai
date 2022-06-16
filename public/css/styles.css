@@ -262,6 +262,21 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 100px;
+}
+
+/* ------------ Media query carrusel ------------ */
+
+@media (min-width: 481px){
+    .carruselAnimado {
+        margin-bottom: 70px;
+    }
+}
+
+@media (min-width: 511px){
+    .carruselAnimado {
+        margin-top: 0px;
+    }
 }
 
 .icon-cards {
@@ -305,10 +320,11 @@ main {
     transform-origin: center;
     text-align: center;
     padding: 20px;
+    min-height: 250px;
 }
 
 .product_infoCard{
-    width: 18vw;
+    width: 40vw;
     margin: auto;
     padding-bottom: 3rem;
 }
@@ -318,6 +334,7 @@ main {
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     font-style:oblique;
+    margin-top: 5px;
 }
 
 .icon-cards__item img {
@@ -397,7 +414,9 @@ main {
     border-top: var(--gris) 1px solid;
     width: 80%;
     margin-left: 10%;
-
+    font-family: 'Comforter Brush', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 
 .nuestrosProductos a {
@@ -558,12 +577,19 @@ main {
 }
 
 .precioAnterior {
-    text-decoration: line-through
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.precioActual{
+    font-size: 20px;
+    color: var(--azul);
+    font-weight: bold;
 }
 
 .porcentajeDescuento {
     color: var(--azul);
     font-weight: bold;
+    font-size: 14px;
 }
 
 
@@ -662,8 +688,8 @@ footer {
     .caracteristicasVentas {
         display: flex;
         flex-direction: row;
-        width: 80%;
-        margin-left: 10%;
+        width: 94%;
+        margin-left: 3%;
     }
 
     /* ---------- Nuestros productos categorias ---------- */
@@ -771,6 +797,9 @@ footer {
         max-width: 300px;
     }
 
+    .porcentajeDescuento {
+        font-size: 16px;
+    }
 }
 
 /* ------------------------------ Version Desktop ------------------------------ */
@@ -935,6 +964,19 @@ footer {
     .categoriasDelFooter1 a:hover li {
         opacity: 1;
         transition: 0.5s;
+    }
+
+    .product_infoCard{
+        width: 18vw;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+    
+    .product_infoCard h4{
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        font-style:oblique;
     }
 
 }
