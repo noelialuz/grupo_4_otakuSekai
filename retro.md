@@ -15,6 +15,7 @@ Accionables:
 
 URL a la retro: https://metroretro.io/board/LBXIWH1YTUGC
 
+
 **Retrospectiva 2** 
 A Mejorar                                       
 1- Usar sala de discord para trabajar en equipo en el momento con una tarea           
@@ -27,3 +28,17 @@ Accionables:
 3- Definir las tareas al principio del sprint
 
 URL a la retro: https://metroretro.io/board/LBPA4RJV03CZ 
+
+
+**Retrospectiva 3** 
+A Mejorar
+1- Chequeo de cosas que no funcionan
+2- Organización y repartición de tareas
+3- Dejar las cosas para último momento
+
+Accionables: 
+1- Juntarnos un rato antes de las clases. Al menos 30 min
+2- Poner fechas para repartir y asignar tareas
+3- Establecer deadlines
+
+URL a la retro: https://metroretro.io/board/LB5ZRWZZ2N0D

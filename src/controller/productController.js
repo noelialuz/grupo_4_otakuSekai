@@ -21,6 +21,59 @@ const controller = {
 		})
 	},
 
+
+
+
+
+
+
+
+
+
+
+
+	/* Ver detalle y descripcion de un producto POR CATEGORIA */
+	/* ------------------------------ VER DETALLE CATEGORIAS ------------------------------ */
+	
+	detailCategory: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let categoria = req.params.categoria;
+		
+		let offerProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento != 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+				offerProducts.push(products[x])
+			}
+		}
+
+		let noOfferProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento == 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+				noOfferProducts.push(products[x])
+			}
+		}
+
+        res.render('./products/productCategory', {
+			/* products: products, */
+			offerProducts: offerProducts,
+			noOfferProducts: noOfferProducts,
+			/* title: products.categoria */
+		});
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* Ver el listado completo de productos */
     verMas: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
