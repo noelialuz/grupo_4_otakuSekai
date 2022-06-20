@@ -3,6 +3,22 @@ const router = express.Router();
 
 const productController = require('../controller/productController');
 
+
+
+
+
+
+
+/* Ver el listado completo de productos por Categoria*/
+router.get('/:categoria', productController.detailCategory); 
+
+
+
+
+
+
+
+
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 
 router.post('/', productController.store);
@@ -21,7 +37,7 @@ router.get('/:id/edit', productController.edit);
 router.patch('/:id', productController.update); 
 
 /* Eliminar un producto existente*/
-router.delete('/:id', productController.destroy);
+router.delete('/:id', productController.remove);
 
 
 /* Exportar modulo */

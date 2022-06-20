@@ -39,11 +39,9 @@
         <!---------------------------- PRODUCTOS EN OFERTA ---------------------------->
         <section>
             <h2 class="subtitulos">Productos en oferta</h2>
-
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-
             <div class="cajaConProductosEnOferta">
-                <% offerProducts.slice(0, 8).forEach(function(product){ %>
+                <% offerProducts.forEach(function(product){ %>
                 <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
                     <div class="productosEnOferta">
                         <a href="/products/ <%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
@@ -59,14 +57,28 @@
             </div>
         </section>
 
-
         <section>
             <h2 class="subtitulos">Todos nuestros productos</h2>
-
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-
             <div class="cajaConProductosEnOferta">
+<<<<<<< HEAD
                 <% products.forEach(function(product){ %>
+=======
+                <% noOfferProducts.forEach(function(product){ %>
+                <div class="productosEnOferta">
+                    <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4> <%= product.name %>  </h4>
+                            <p class="precioActual">$ <%= product.precioAnterior %>  </p>
+                        <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+                <% }) %> 
+            </div>
+            <div class="cajaConProductosEnOferta">
+                <% offerProducts.forEach(function(product){ %>
+>>>>>>> cd5c492112b1bc0fa146c464c825aac610c6905c
                 <div class="productosEnOferta">
                     <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
                     <!-- Link a la página del producto -->
@@ -79,7 +91,6 @@
                     </div>
                 </div>
                 <% }) %> 
-
             </div>
         </section>
 

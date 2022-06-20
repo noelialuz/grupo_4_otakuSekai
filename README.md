@@ -68,4 +68,4 @@ Pasos para correr el proyecto:
 1- Bajarse el repositorio
 2- Correr el comando "npm install"
 3- Correr el comando "npm start"
-4- Abrir en el browser "http://localhost:3000/"
+4- Abrir en el browser "http://localhost:3030/"

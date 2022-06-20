@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {title: 'Productos'}) %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <!----------------------------  ---------------------------->
+
+        <div class="caracteristicasVentas">
+            <h3>Objetos populares</h3>
+            <h3>Envíos gratis</h3>
+            <h3>Pagos sin interés</h3>
+        </div>
+
+
+
+        <!---------------------------- TODOS NUESTROS PRODUCTOS ---------------------------->
+        <section>
+            <h2 class="subtitulos">Todos nuestros productos</h2>
+            <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
+            <div class="cajaConProductosEnOferta">
+                <% noOfferProducts.forEach(function(product){ %>
+                <div class="productosEnOferta">
+                    <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4> <%= product.name %>  </h4>
+                            <p class="precioActual">$ <%= product.precioAnterior %>  </p>
+                        <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+                <% }) %> 
+            </div>
+            <div class="cajaConProductosEnOferta">
+                <% offerProducts.forEach(function(product){ %>
+                <div class="productosEnOferta">
+                    <a href="/products/ <%= product.id %>"> <img src=<%= product.imagen1 %>  alt=""></a>
+                    <!-- Link a la página del producto -->
+                    <div>
+                        <h4> <%= product.name %>  </h4>
+                        <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
+                            <p class="precioAnterior">$ <%= product.precioAnterior %> </p>
+                            <p class="precioActual">$ <%= product.precioAnterior * (100-product.descuento) /100 %>  </p>
+                        <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
+                    </div>
+                </div>
+                <% }) %> 
+            </div>
+        </section>
+
+        <section class="divBotonEditar">
+                <a href="/products/create" class="botonEditar">Agregar productos</a>
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
