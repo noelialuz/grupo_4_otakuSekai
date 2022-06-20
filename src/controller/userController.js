@@ -3,8 +3,7 @@ const controller = {
         res.render('./users/login');
     },
     register: (req, res) => {
-        res.render('./users/register',
-        {title: "Register"});
+        res.render('./users/register');
     }
 };
 
