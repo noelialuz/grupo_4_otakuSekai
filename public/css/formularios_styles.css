@@ -25,12 +25,68 @@
     font-size: 18px;
 }
 
+.control{
+    text-align: inherit;
+    color: var(--azul);
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.controlInvalid{
+    text-align: inherit;
+    color: var(--azul);
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-color: red;
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg")no-repeat 95% 50%; 
+}
+
+.controlInvalid:focus {
+    border-color: red;
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+  }
+
+
+.control select{
+    margin-top: 10px; 
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;
+    
+}
+
 .control-formulario-campos{
     justify-content: center;
     flex-direction: column;
     display: flex;
     justify-content: space-between;
     width: 80%;
+}
+
+.text-danger{
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+    visibility: visible;    
 }
 
 .control-formulario-campos label{
@@ -51,24 +107,13 @@
     width: auto;
 }
 
-.control-formulario-campos input{
-    width: 60%;
-    display: block;
-    margin: 10px auto;
-}
+
+
 
 .control-formulario-registro p{
     color: var(--azul);
     font-weight: bolder;
     font-size: 16px;
-}
-
-.control{
-    margin: 5px;
-    text-align: inherit;
-    border: 2px #D4D9E0 solid;
-    border-radius: 5px;
-    color: var(--azul);
 }
 
 .control-formulario-redes_sociales{
@@ -88,3 +133,16 @@
     width: 30%;
     margin: 10px ;
 }
+
+/*  Con esto manejo los estilos de los imput en los form*/
+
+
+ /* input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+  }
+  input:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+  }*/
+

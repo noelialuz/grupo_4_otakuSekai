@@ -107,7 +107,7 @@ const controller = {
 
     store: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let newProduct = {
+		 let newProduct = {
 			name: req.body.name,
 			categoria: req.body.categoria,
 			descuento: req.body.descuento,
@@ -119,11 +119,11 @@ const controller = {
             imagen3: "imageTest.jpg",
             imagen4: "imageTest.jpg",
 		}
-
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 	
-		res.redirect("/products");
+		res.redirect("/products"); 
+		res.send(req.body);
 	},
 
     /* Editar un producto existente*/
