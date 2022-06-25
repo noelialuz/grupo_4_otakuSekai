@@ -1,7 +1,7 @@
 # grupo_4_otakuSekai
 Retrospectiva del Sprint 1
 
-**Retrospectiva 1** 
+**Retrospectiva 1 - Sprint 2** 
 A Mejorar                                       
 1-Mantener mas al día los progresos           
 2-dejar las cosas para ultimo momento
@@ -16,7 +16,7 @@ Accionables:
 URL a la retro: https://metroretro.io/board/LBXIWH1YTUGC
 
 
-**Retrospectiva 2** 
+**Retrospectiva 2 - Sprint 3** 
 A Mejorar                                       
 1- Usar sala de discord para trabajar en equipo en el momento con una tarea           
 2- Cambios muy grandes antes de la entrega
@@ -30,7 +30,7 @@ Accionables:
 URL a la retro: https://metroretro.io/board/LBPA4RJV03CZ 
 
 
-**Retrospectiva 3** 
+**Retrospectiva 3 - Sprint 4** 
 A Mejorar
 1- Chequeo de cosas que no funcionan
 2- Organización y repartición de tareas
@@ -42,3 +42,17 @@ Accionables:
 3- Establecer deadlines
 
 URL a la retro: https://metroretro.io/board/LB5ZRWZZ2N0D
+
+
+**Retrospectiva 4 - Sprint 5** 
+A Mejorar
+1- 
+2- 
+3- 
+
+Accionables: 
+1- 
+2- 
+3- 
+
+URL a la retro: 

@@ -75,3 +75,10 @@ A la noche cuando vuelvo sigo trabajando con esto
 16/06/2022: Jhoxani arregló las cajitas de productos para que los que no tuviesen descuento no muestren el descuento ni el precio anterior tachado. Mejoró formulario de login y registro. Realizó borrado lógico de productos (cambio de propiedades para no eliminar por completo). Vista nueva de productos por categoría
 
 16/06/2022: nos reunimos en grupo para hacer la retro y actualizar trello
+
+
+**Sprint 5**
+
+23/06/2022: Bruno trabajó sobre el formulario de registro y la validación de los campos. Terminó de completar el punto 5 de este Sprint. 
+
+25/06/2022: Jhoxani hizo la página 404 not-found
