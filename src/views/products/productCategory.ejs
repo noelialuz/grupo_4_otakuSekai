@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head', {title: 'Nuestros productos'}) %>
+    <%- include('../partials/head', {title: 'Productos'}) %>
 
 <body>
     <%- include('../partials/header') %>
@@ -16,47 +16,9 @@
             <h3>Pagos sin interés</h3>
         </div>
 
-        <!---------------------------- CARRUSEL DE PRODUCTOS ---------------------------->
-        <!--------- VER COMO HACER PARA QUE EN MOBILE APAREZCAN DOS PRODUCTOS Y EN DESKTOP SE VEAN 4 --------->
-        <!-- contenerdor carrusel -->
-        <div class="carruselAnimado">
-            <figure class="icon-cards mt-3">
-                <div class="icon-cards__content">
-                    <% for(let i = 0; i < 5; i++){ %> 
-                    <div class="icon-cards__item d-flex align-items-center justify-content-center">
-                        <div class="product_infoCard">
-                            <img src=<%= offerProducts[i].imagen1 %>  alt="">
-                            <h4> <%= offerProducts[i].name %> </h4>
-                        </div>
-                    </div>
-                    <% } %> 
-                </div>
-            </figure>
-        </div>
-        <!---------------------------- FIN DEL CARRUSEL DE PRODUCTOS ---------------------------->
 
 
-        <!---------------------------- PRODUCTOS EN OFERTA ---------------------------->
-        <section>
-            <h2 class="subtitulos">Productos en oferta</h2>
-            <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-            <div class="cajaConProductosEnOferta">
-                <% offerProducts.forEach(function(product){ %>
-                <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
-                    <div class="productosEnOferta">
-                        <a href="/products/ <%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
-                        <div>
-                            <h4><%= product.name %></h4>
-                            <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
-                            <p class="precioAnterior">$ <%= product.precioAnterior %> </p>
-                            <p class="precioActual">$ <%= product.precioAnterior * (100-product.descuento) /100 %>  </p>
-                            <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
-                        </div>
-                    </div>  
-                    <% }) %> 
-            </div>
-        </section>
-
+        <!---------------------------- TODOS NUESTROS PRODUCTOS ---------------------------->
         <section>
             <h2 class="subtitulos">Todos nuestros productos</h2>
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->

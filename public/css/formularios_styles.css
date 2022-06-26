@@ -22,6 +22,56 @@
     border-bottom: 1px solid #D2C3FA;
     text-align: left;
     margin: revert;
+    font-size: 18px;
+}
+
+.control{
+    text-align: inherit;
+    color: var(--azul);
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.controlInvalid{
+    text-align: inherit;
+    color: var(--azul);
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-color: red;
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg")no-repeat 95% 50%; 
+}
+
+.controlInvalid:focus {
+    border-color: red;
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+  }
+
+
+.control select{
+    margin-top: 10px; 
+    border: 2px solid;
+    border-radius: 4px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;
+    
 }
 
 .control-formulario-campos{
@@ -32,20 +82,67 @@
     width: 80%;
 }
 
-.control{
-    margin: 5px;
-    text-align: inherit;
-    border: 2px #D4D9E0 solid;
-    border-radius: 5px;
+.text-danger{
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+    visibility: visible;    
+}
+
+.control-formulario-campos label{
     color: var(--azul);
+    display: block;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#aceptoTerminosyCondiciones{
+    display: inline;
+}
+
+#aceptoTerminos{
+    margin: 0px;
+    display: inline;
+    width: auto;
+}
+
+
+
+
+.control-formulario-registro p{
+    color: var(--azul);
+    font-weight: bolder;
+    font-size: 16px;
 }
 
 .control-formulario-redes_sociales{
     justify-content: center;
     width: 80%;
 }
-
+.control-formulario-redes_sociales a{
+    margin: 5px;
+}
+.control-formulario-redes_sociales i{
+    font-size: 18px;
+}
+.fa-google{
+    color: var(--azul);
+}
 .botonLogin{
     width: 30%;
     margin: 10px ;
 }
+
+/*  Con esto manejo los estilos de los imput en los form*/
+
+
+ /* input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+  }
+  input:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+  }*/
+

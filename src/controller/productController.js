@@ -21,6 +21,59 @@ const controller = {
 		})
 	},
 
+
+
+
+
+
+
+
+
+
+
+
+	/* Ver detalle y descripcion de un producto POR CATEGORIA */
+	/* ------------------------------ VER DETALLE CATEGORIAS ------------------------------ */
+	
+	detailCategory: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let categoria = req.params.categoria;
+		
+		let offerProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento != 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+				offerProducts.push(products[x])
+			}
+		}
+
+		let noOfferProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento == 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+				noOfferProducts.push(products[x])
+			}
+		}
+
+        res.render('./products/productCategory', {
+			/* products: products, */
+			offerProducts: offerProducts,
+			noOfferProducts: noOfferProducts,
+			/* title: products.categoria */
+		});
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* Ver el listado completo de productos */
     verMas: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -28,13 +81,23 @@ const controller = {
 		let offerProducts = [];
 
 		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento != 0){
+			if(products[x].descuento != 0 && products[x].eliminado == "false"){
 				offerProducts.push(products[x])
 			}
 		}
+
+		let noOfferProducts = [];
+
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento == 0 && products[x].eliminado == "false"){
+				noOfferProducts.push(products[x])
+			}
+		}
+
         res.render('./products/productVerMas', {
 			products: products,
-			offerProducts: offerProducts});
+			offerProducts: offerProducts,
+			noOfferProducts: noOfferProducts});
     },
 
     /* Crear un nuevo producto */
@@ -44,7 +107,7 @@ const controller = {
 
     store: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let newProduct = {
+		 let newProduct = {
 			name: req.body.name,
 			categoria: req.body.categoria,
 			descuento: req.body.descuento,
@@ -56,11 +119,11 @@ const controller = {
             imagen3: "imageTest.jpg",
             imagen4: "imageTest.jpg",
 		}
-
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 	
-		res.redirect("/products");
+		res.redirect("/products"); 
+		res.send(req.body);
 	},
 
     /* Editar un producto existente*/
@@ -96,12 +159,21 @@ const controller = {
 	},
 
     /* Eliminar un producto existente*/
-    destroy : (req, res) => {
+    remove : (req, res) => {
+		/* Para eliminar un producto definitivamente: 
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 		let finalProducts = products.filter(product => product.id != req.params.id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-		
+		res.redirect("/products");
+		 */
+
+		/* Vamos a hacer un BORRADO LÓGICO cambiando propiedades del producto sin eliminarlo por completo */
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productToDelete = products.find(product => req.params.id == product.id);
+		let removeProduct = "true"
+		let indice = products.findIndex(product => product.id == req.params.id);
+		products[indice].eliminado = removeProduct;
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		res.redirect("/products");
 	}
 

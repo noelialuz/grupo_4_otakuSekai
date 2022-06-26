@@ -262,6 +262,21 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 100px;
+}
+
+/* ------------ Media query carrusel ------------ */
+
+@media (min-width: 481px) {
+    .carruselAnimado {
+        margin-bottom: 70px;
+    }
+}
+
+@media (min-width: 511px) {
+    .carruselAnimado {
+        margin-top: 0px;
+    }
 }
 
 .icon-cards {
@@ -305,19 +320,21 @@ main {
     transform-origin: center;
     text-align: center;
     padding: 20px;
+    min-height: 250px;
 }
 
-.product_infoCard{
-    width: 18vw;
+.product_infoCard {
+    width: 40vw;
     margin: auto;
     padding-bottom: 3rem;
 }
 
-.product_infoCard h4{
+.product_infoCard h4 {
     text-align: center;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
-    font-style:oblique;
+    font-style: oblique;
+    margin-top: 5px;
 }
 
 .icon-cards__item img {
@@ -397,7 +414,9 @@ main {
     border-top: var(--gris) 1px solid;
     width: 80%;
     margin-left: 10%;
-
+    font-family: 'Comforter Brush', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 
 .nuestrosProductos a {
@@ -535,7 +554,7 @@ main {
     font-weight: bold;
 }
 
-.botonEditar{
+.botonEditar {
     background-color: var(--azul);
     color: white;
     border-radius: 5px;
@@ -546,24 +565,33 @@ main {
     text-decoration: none;
     margin: 10px;
 }
-.botonEliminar{
+
+.botonEliminar {
     background-color: var(--violeta);
     color: black;
 }
 
-.divBotonEditar{
+.divBotonEditar {
     margin: 30px;
     display: flex;
     flex-direction: column;
 }
 
 .precioAnterior {
-    text-decoration: line-through
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+.precioActual {
+    font-size: 20px;
+    color: var(--azul);
+    font-weight: bold;
 }
 
 .porcentajeDescuento {
     color: var(--azul);
     font-weight: bold;
+    font-size: 14px;
 }
 
 
@@ -580,6 +608,10 @@ main {
     margin: 30px 5%;
     border-top: var(--gris) 1px solid;
     padding: 10px 0px;
+}
+
+#categoriasDelFooter1{
+    border-top: none;
 }
 
 .categoriasDelFooter1 a {
@@ -651,6 +683,28 @@ footer {
 }
 
 
+/* ------------------------------ Pagina not found 404 ------------------------------ */
+
+.totoro-not-found, .totoro-not-found-tablet{
+    display: none;
+}
+
+.not-found {
+    text-align: center;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+#not-found{
+    border-top: var(--gris) 1px solid;
+    border-bottom: var(--gris) 1px solid;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
 
 
 
@@ -662,8 +716,8 @@ footer {
     .caracteristicasVentas {
         display: flex;
         flex-direction: row;
-        width: 80%;
-        margin-left: 10%;
+        width: 94%;
+        margin-left: 3%;
     }
 
     /* ---------- Nuestros productos categorias ---------- */
@@ -727,10 +781,10 @@ footer {
     }
 
     /* ---------- Boton editar o agregar ---------- */
-        
-    .divBotonEditar{
+
+    .divBotonEditar {
         width: 40%;
-        margin: 30px 5% 30px 55%;  
+        margin: 30px 5% 30px 55%;
     }
 
     /* ---------------- Caja con productos en oferta ---------------- */
@@ -769,6 +823,25 @@ footer {
 
     .logoDelFooter {
         max-width: 300px;
+    }
+
+    .porcentajeDescuento {
+        font-size: 16px;
+    }
+
+    .totoro-not-found-tablet{
+        display: block;
+        height: 15vw;
+        width: auto;
+        min-height: 100px;
+    }
+    .pagintaNotFoundTablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 80%;
+        margin-left: 10%;
     }
 
 }
@@ -847,13 +920,15 @@ footer {
         padding: 25px;
     }
 
-    .categoriasDeProductos li, .categoriasDeAnime li {
+    .categoriasDeProductos li,
+    .categoriasDeAnime li {
         display: block;
         color: white;
         padding: 5px 0px;
     }
 
-    .categoriasDeProductos li:hover, .categoriasDeAnime li:hover {
+    .categoriasDeProductos li:hover,
+    .categoriasDeAnime li:hover {
         color: var(--azul);
         background-color: var(--celeste);
     }
@@ -889,7 +964,7 @@ footer {
         margin: 0;
         padding: 20px;
         background-color: var(--azul);
-        opacity: 0.7;
+        opacity: 0.8;
         border-radius: 5px;
         position: absolute;
         bottom: 0;
@@ -925,10 +1000,10 @@ footer {
     }
 
     /* ---------- Boton editar o agregar ---------- */
-        
-    .divBotonEditar{
+
+    .divBotonEditar {
         width: 30%;
-        margin: 30px 5% 30px 65%;  
+        margin: 30px 5% 30px 65%;
     }
 
     /* -------------- categorias del footer -------------- */
@@ -937,6 +1012,41 @@ footer {
         transition: 0.5s;
     }
 
+    .product_infoCard {
+        width: 18vw;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+
+    .product_infoCard h4 {
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: oblique;
+    }
+
+    .totoro-not-found{
+        display: block;
+    }
+    .totoro-not-found-tablet{
+        display: none;
+    }
+
+    .pagintaNotFoundTablet{
+        display: block;
+        height: auto;
+    }
+
+    .paginaNotFound {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10vw;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    
 }
 
 

@@ -1,24 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head', title: 'Registro') %>
-
+    <%- include('../partials/head', {title: 'Registro'}) %>
 <body>
     <%- include('../partials/header') %>
     <main>
-        <form action="" method="POST" class="create-form">
+        <form action="/users" method="POST" class="create-form" enctype="multipart/form-data">
+            <h4 class="create-form-titulo">Registrate en nuestra página</h4>
             <div class="control-formulario-campos">
-                <h4 class="create-form-titulo">Registrate en nuestra página</h4>
-                <label>Usuario: <input type="text" name="user" placeholder="Usuario" class="control" required></label>
-                <label>Email: <input type="email" name="email" placeholder="1234@mail.com" class="control"
-                        required></label>
-                <label>Contraseña: <input type="password" id="password" name="password" class="control"
-                        placeholder="Contraseña" required></label>
-                <label>Repite contraseña: <input type="password" id="password-validacion" name="password-validacion"
-                        class="control" placeholder="Contraseña" required></label>
-                <label for="aceptoTerminos"><input type="checkbox" id="aceptoTerminos"> Acepto Términos y Condiciones</label>
+                <div class="">
+                    <input 
+                        type="text" 
+                        name="fullName" 
+                        placeholder="Ingresá un nombre de usuario" 
+                        class="control<%= locals.errors && errors.fullName ? 'Invalid' : null %>"   
+                        value="<%= locals.oldData ? oldData.fullName : null %>"
+                    >
+                        <% if (locals.errors && errors.fullName) { %>
+                            <div class="text-danger">
+                                <%= errors.fullName.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="text" 
+                        name="DNI" 
+                        placeholder="Ingresá su DNI" 
+                        class="control<%= locals.errors && errors.DNI ? 'Invalid' : null %>" 
+                        value="<%= locals.oldData ? oldData.DNI : null %>"
+                    >
+                        <% if (locals.errors && errors.DNI) { %>
+                            <div class="text-danger">
+                                <%= errors.DNI.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="text" 
+                        name="Email" 
+                        placeholder="Ingrese su Correo Electronico" 
+                        class="control<%= locals.errors && errors.Email ? 'Invalid' : null %>" 
+                        value="<%= locals.oldData ? oldData.Email : null %>"
+                    >
+                        <% if (locals.errors && errors.Email) { %>
+                            <div class="text-danger">
+                                <%= errors.Email.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="text" 
+                        name="Direction" 
+                        placeholder="Ingresá su Direccion" 
+                        class="control<%= locals.errors && errors.Direction ? 'Invalid' : null %>" 
+                        value="<%= locals.oldData ? oldData.Direction : null %>"
+                    >
+                        <% if (locals.errors && errors.Direction) { %>
+                            <div class="text-danger">
+                                <%= errors.Direction.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                   <select name="Country"
+                         class="control<%= locals.errors && errors.Country ? 'Invalid' : null %>" 
+                          id="">
+                        <option value="">Elegi un pais</option>
+                        <% 
+                        let countries = ['Argetina', 'Bolivia', 'Brasil', 'Colombia', 'Chile'];
+                        %> 
+                        <% for (const oneCountry of countries){ %> 
+                            <option
+                             value="<%= oneCountry %>"
+                                <%= locals.oldData && (oneCountry === oldData.Country) ? 'selected' : null %> 
+                            > <%= oneCountry %> </option>
+                        <% } %> 
+                    </select>
+                    <% if (locals.errors && errors.Country) { %>
+                        <div class="text-danger">
+                            <%= errors.Country.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="text" 
+                        name="Phone" 
+                        placeholder="Ingresá su Telefono" 
+                        class="control<%= locals.errors && errors.Phone ? 'Invalid' : null %>"  
+                        value="<%= locals.oldData ? oldData.Phone : null %>">
+                        <% if (locals.errors && errors.Phone) { %>
+                            <div class="text-danger">
+                                <%= errors.Phone.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="date" 
+                        name="Birthdate" 
+                        placeholder="Ingresá su Fecha de nacimiento" 
+                        class="control<%= locals.errors && errors.Birthdate ? 'Invalid' : null %>" 
+                        value="<%= locals.oldData ? oldData.Birthdate : null %>">
+                        <% if (locals.errors && errors.Birthdate) { %>
+                            <div class="text-danger">
+                                <%= errors.Birthdate.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="password" 
+                        name="Password" 
+                        placeholder="Ingresá su password" 
+                        class="control<%= locals.errors && errors.Password ? 'Invalid' : null %>" 
+                        value="">
+                        <% if (locals.errors && errors.Password) { %>
+                            <div class="text-danger">
+                                <%= errors.Password.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="password" 
+                        name="confirmPassword" 
+                        placeholder="Confirma tu password" 
+                        class="control<%= locals.errors && errors.confirmPassword ? 'Invalid' : null %>" 
+                        value="">
+                        <% if (locals.errors && errors.confirmPassword) { %>
+                            <div class="text-danger">
+                                <%= errors.confirmPassword.msg %> 
+                            </div>
+                        <% } %>
+                </div>
+
+                <div class="">
+                    <input 
+                        type="file" 
+                        name="Avatar" 
+                        placeholder="seleccione una imagen" 
+                        class="control<%= locals.errors && errors.Avatar ? 'Invalid' : null %>" 
+                        value="">
+                <% if (locals.errors && errors.Avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.Avatar.msg %> 
+                    </div>
+                <% } %>
+                </div>
+                
             </div>
-            <button type="submit" class="botonAgregar botonLogin" onclick="location.href='/'">Registrate</button>
+            <button type="submit" class="botonAgregar botonLogin" onclick="">Registrate</button>
 
             <div class="control-formulario-redes_sociales">
                 <h4 class="create-form-titulo">Ingresa con</h4>

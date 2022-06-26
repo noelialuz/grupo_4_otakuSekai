@@ -5,22 +5,23 @@ const methodOverride = require('method-override');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../public'))); 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));  
 app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views'));
 
-const mainRouter = require('./routes/main');
-const productRouter = require('./routes/product');
-const userRouter = require('./routes/user');
+const mainRouter = require('./routes/mainRoutes');
+const productRouter = require('./routes/productRoutes');
+const userRouter = require('./routes/userRoutes');
 
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
+app.use((req, res, next) => {res.status(404).render('not-found')})
 
-app.listen(process.env.PORT || 3030, function() {
-    console.log('Servidor funcionando http://localhost:3030/' );
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Servidor funcionando http://localhost:3000/' );
 });
 
