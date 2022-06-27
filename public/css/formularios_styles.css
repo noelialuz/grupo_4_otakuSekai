@@ -36,6 +36,7 @@
     margin-bottom: 1px;
     font-size: 1rem;
     padding: 0.5rem;
+    font-weight: bold;
 }
 
 .controlInvalid{
@@ -92,8 +93,8 @@
 .control-formulario-campos label{
     color: var(--azul);
     display: block;
-    font-weight: bolder;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 17px;
     margin-top: 10px;
 }
 
