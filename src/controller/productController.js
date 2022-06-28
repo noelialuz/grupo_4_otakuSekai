@@ -22,16 +22,6 @@ const controller = {
 	},
 
 
-
-
-
-
-
-
-
-
-
-
 	/* Ver detalle y descripcion de un producto POR CATEGORIA */
 	/* ------------------------------ VER DETALLE CATEGORIAS ------------------------------ */
 	
@@ -60,17 +50,6 @@ const controller = {
 			/* title: products.categoria */
 		});
 	},
-
-
-
-
-
-
-
-
-
-
-
 
 
 

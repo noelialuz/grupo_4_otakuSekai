@@ -15,7 +15,16 @@ const controller = {
 		};
 
         res.render('index', {offerProducts: offerProducts});
+    },
+
+    quienesSomos: (req, res) => {
+        res.render('./varios/quienesSomos')
+    },
+
+    enConstruccion: (req, res) => {
+        res.render('./varios/sitioEnConstruccion')
     }
 };
+
 
 module.exports = controller;
