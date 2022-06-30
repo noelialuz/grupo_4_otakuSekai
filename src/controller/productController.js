@@ -17,7 +17,7 @@ const controller = {
 		res.render('./products/productDetail', {
 			product,
 			products: products,
-			title: product.name
+			title: products.name
 		})
 	},
 
@@ -42,13 +42,20 @@ const controller = {
 				noOfferProducts.push(products[x])
 			}
 		}
-
-        res.render('./products/productCategory', {
-			product: products,
-			offerProducts: offerProducts,
-			noOfferProducts: noOfferProducts,
-			/* title: products.categoria */
-		});
+		
+		
+		for(let x = 0; x < products.length; x++){
+			if(products[x].categoria == categoria){
+				res.render('./products/productCategory', {
+					product: products,
+					offerProducts: offerProducts,
+					noOfferProducts: noOfferProducts,
+					/* title: products.categoria */
+				});
+			}
+		}
+		res.render('./products/not-found-products');
+        
 	},
 
 

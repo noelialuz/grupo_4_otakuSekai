@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {title: 'Página no encontrada'}) %>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        
+        <!---------------------------- CATEGORIAS DE PRODUCTOS ---------------------------->
+        <section class="paginaNotFound">
+            <div>
+                <div class="pagintaNotFoundTablet">
+                <h1 class="not-found" id="not-found">No encontramos la categoría que estás buscando :(</h1>
+                <img src="/img/inicio-logo-banner/totoro404.jpg" alt="" class="totoro-not-found-tablet">
+            </div>
+            <h2 class="not-found">Te recomendamos probar con alguna de las siguientes secciones</h2>
+            <!-- EN LUGAR DE CATEGORIAS EN GENERAL TOMAMOS SUBDIVISIONES DE LOS PRODUCTOS -->
+            <ul class="categoriasDelFooter1" id="categoriasDelFooter1">
+                <a href="/products/category/tazas">
+                    <li>Tazas, llaveros, pins, aros</li>
+                </a>
+                <a href="/products/category/indumentaria">
+                    <li>Indumentaria y accesorios</li>
+                </a>
+                <a href="/products/category/figuras">
+                    <li>Figuras</li>
+                </a>
+                <a href="/products/category/posters">
+                    <li>Pósters y cuadros</li>
+                </a>
+                <a href="/products/category/mangas">
+                    <li>Mangas y comics</li>
+                </a>
+            </ul>
+            </div>
+            <div>
+                <img src="/img/inicio-logo-banner/totoro404.jpg" alt="" class="totoro-not-found">
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
