@@ -19,6 +19,17 @@ const controller = {
 			products: products,
 			title: products.name
 		})
+
+		for(let x = 0; x < products.length; x++){
+			if(products[x].id == id){
+				res.render('./products/productDetail', {
+					product,
+					products: products,
+					title: products.name
+				});
+			}
+		}
+		res.render('./products/not-found-products', {especificacion: "el producto"});
 	},
 
 
@@ -50,11 +61,10 @@ const controller = {
 					product: products,
 					offerProducts: offerProducts,
 					noOfferProducts: noOfferProducts,
-					/* title: products.categoria */
 				});
 			}
 		}
-		res.render('./products/not-found-products');
+		res.render('./products/not-found-products', {especificacion: "la categoría"});
         
 	},
 
