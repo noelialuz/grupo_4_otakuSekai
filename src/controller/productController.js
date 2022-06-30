@@ -44,7 +44,7 @@ const controller = {
 		}
 
         res.render('./products/productCategory', {
-			/* products: products, */
+			product: products,
 			offerProducts: offerProducts,
 			noOfferProducts: noOfferProducts,
 			/* title: products.categoria */

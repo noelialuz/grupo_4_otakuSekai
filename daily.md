@@ -79,6 +79,8 @@ A la noche cuando vuelvo sigo trabajando con esto
 
 **Sprint 5**
 
-23/06/2022: Bruno trabajó sobre el formulario de registro y la validación de los campos. Terminó de completar el punto 5 de este Sprint. 
+23/06/2022: Bruno trabajó sobre el formulario de registro y la validación de los campos. Terminó de completar el punto 4 y 5 de este Sprint. 
 
 25/06/2022: Jhoxani hizo la página 404 not-found
+
+27/06/2022: Jhoxani agregó las vistas: "Quienes somos" y "Sitio en construcción"
