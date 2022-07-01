@@ -2,6 +2,7 @@
  {
   "name": "Taza Mágica Goku",
   "categoria": "tazas",
+  "anime": "DragonBallZ",
   "descuento": 20,
   "precioAnterior": 1500,
   "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
@@ -15,6 +16,7 @@
  {
   "name": "Taza Mágica Dragon Ball Z",
   "categoria": "tazas",
+  "anime": "DragonBallZ",
   "descuento": 20,
   "precioAnterior": 1500,
   "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
@@ -28,6 +30,7 @@
  {
   "name": "Llavero Totoro varios modelos",
   "categoria": "tazas",
+  "anime": "Otros",
   "descuento": 10,
   "precioAnterior": 690,
   "descripcion": "Llavero totoro excelente calidad. El material es de PVC. El precio es por unidad. Altura 8 cm. Ancho 4 cm. Incluye gancho.",
@@ -41,6 +44,7 @@
  {
   "name": "Peluche Llavero Pokemon Go",
   "categoria": "tazas",
+  "anime": "Pokemon",
   "descuento": 0,
   "precioAnterior": 780,
   "descripcion": "Peluches Pokemon excelente calidad. El precio es por unidad. En la lista desplegable de variantes figuran las opciones disponibles. Altura 12 cm. Excelente calidad",
@@ -54,6 +58,7 @@
  {
   "name": "Prendedores Pins Demon Slayer Nezuko",
   "categoria": "tazas",
+  "anime": "DemonSlayer",
   "descuento": 10,
   "precioAnterior": 75,
   "descripcion": "Prendedores Pins Demon Slayer Nezuko. Excelente calidad. Diseño a elección",
@@ -67,6 +72,7 @@
  {
   "name": "Aros Naruto Shippuden Aldea De La Hoja Naruto Metal",
   "categoria": "tazas",
+  "anime": "Naruto",
   "descuento": 0,
   "precioAnterior": 550,
   "descripcion": "Modelo: naruto shippuden. Material: Metal. Formato de venta: pack por 2 unidades",
@@ -80,6 +86,7 @@
  {
   "name": "Piece Luffy Boundman",
   "categoria": "figuras",
+  "anime": "OnePiece",
   "descuento": 15,
   "precioAnterior": 5400,
   "descripcion": "Figura de Plástico. Alto 25 cm. Desmontable. Incluye base. Producto original",
@@ -93,6 +100,7 @@
  {
   "name": "Figura de acción Marvel Hombre Araña",
   "categoria": "figuras",
+  "anime": "Otros",
   "descuento": 0,
   "precioAnterior": 4700,
   "descripcion": "Las figuras de acción están hechas de pvc, plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Juguetes articulados. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
@@ -106,6 +114,7 @@
  {
   "name": "Muñeco Pokemon Battle Charizard Deluxe",
   "categoria": "figuras",
+  "anime": "Pokemon",
   "descuento": 15,
   "precioAnterior": 5200,
   "descripcion": "Figura Pokemon Battle Feature Figure Charizard Deluxe Action. Original de Jazwares",
@@ -119,6 +128,7 @@
  {
   "name": "Figura de acción Naruto Shippuden Itachi Uchiha",
   "categoria": "figuras",
+  "anime": "Naruto",
   "descuento": 20,
   "precioAnterior": 9000,
   "descripcion": "Bandai es una de las mayores empresas representantes de la cultura animé en Japón. Con sus juguetes y figuras de acción es una de las preferidas por los más pequeños y por quienes se dedican a coleccionar. Las figuras de acción están hechas de plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
@@ -132,6 +142,7 @@
  {
   "name": "Juguete Dragon Ball Z Gogeta Super Saiyan Blue",
   "categoria": "figuras",
+  "anime": "DragonBallZ",
   "descuento": 15,
   "precioAnterior": 3200,
   "descripcion": "Nuevo en blister. No son articulados. Medidas 18x5x4 aproximadamente. Son importados",
@@ -145,6 +156,7 @@
  {
   "name": "Juguete Dragon Ball Z Vegeta Super Saiyan Fase Dios",
   "categoria": "figuras",
+  "anime": "DragonBallZ",
   "descuento": 15,
   "precioAnterior": 3200,
   "descripcion": "Nuevo en blister. No son articulados. Medidas 18x5x4 aproximadamente. Son importados",
@@ -158,6 +170,7 @@
  {
   "name": "Poster Jujutsu Kaisen En Lona O Vinilo Impreso",
   "categoria": "posters",
+  "anime": "JujutsuKaisen",
   "descuento": 5,
   "precioAnterior": 1100,
   "descripcion": "Gigantografia en Lona Vinílica Impresa a color. Medida: 100 x 56 cm (1 x 0,56 metros). Material: Lona Vinílica (resistente al agua y luz solar). Duración: En exteriores dura varios meses sin perder el color. En interiores el tiempo es indefinido, si no lo toca nadie puede durar toda la vida, solo trabajamos con materiales de primera calidad.",
@@ -171,6 +184,7 @@
  {
   "name": "Poster Boku No Hero En Lona O Vinilo Impreso",
   "categoria": "posters",
+  "anime": "BokuNoHeroAcademia",
   "descuento": 0,
   "precioAnterior": 900,
   "descripcion": "Gigantografia en Lona Vinílica Impresa a color. Medida: 100 x 56 cm (1 x 0,56 metros). Material: Lona Vinílica (resistente al agua y luz solar). Duración: En exteriores dura varios meses sin perder el color. En interiores el tiempo es indefinido, si no lo toca nadie puede durar toda la vida, solo trabajamos con materiales de primera calidad.",
@@ -184,6 +198,7 @@
  {
   "name": "Lona De Uzumaki Naruto",
   "categoria": "posters",
+  "anime": "Naruto",
   "descuento": 0,
   "precioAnterior": 950,
   "descripcion": "1 Lona de Naruto para colgar. Medida: 30x80cm. Material: Lona front full color",
@@ -197,6 +212,7 @@
  {
   "name": "Pokemon - Cuadros Personalizados - Todos Los Personajes",
   "categoria": "posters",
+  "anime": "Pokemon",
   "descuento": 10,
   "precioAnterior": 1700,
   "descripcion": "Lámina sobre bastidor sin marco. Tamaño: 20cm x 30cm. Imagen a elección. Se puede personalizar para colgarlo de manera vertical u horizontal.",
@@ -210,6 +226,7 @@
  {
   "name": "Cuadros Poster Pokemon Eevee Evolucion 60x90 (suv 5)",
   "categoria": "posters",
+  "anime": "Pokemon",
   "descuento": 0,
   "precioAnterior": 1950,
   "descripcion": "Lámina con impresión profesional, productos de la mejor calidad, con tecnología antioxidación, para que la imagen perdure a través de los años, y con protección anti UV para que el sol no sea un problema. Bastidor plano de 9mm de espesor, listo para colgar.",
@@ -223,6 +240,7 @@
  {
   "name": "Remera Algodón Anime Otaku Manga Todas Las Series Hombre",
   "categoria": "indumentaria",
+  "anime": "Otros",
   "descuento": 0,
   "precioAnterior": 1950,
   "descripcion": "Remera de Algodón Peinado 24.1 de excelente calidad. Estampado de Vinilo Textil calidad premium. Contamos con varios modelos! - Consultanos por el que estás buscando. Tabla de Medidas: Talle 1/S: 63 x 48 cm; Talle 1/S: 63 x 48 cm; Talle 3/L: 69 x 52 cm; Talle 4 /XL: 72 x 54 cm; Talle 5/XXL: 75 x 58 cm",
@@ -236,6 +254,7 @@
  {
   "name": "Remera Algodón Naruto",
   "categoria": "indumentaria",
+  "anime": "Naruto",
   "descuento": 10,
   "precioAnterior": 2550,
   "descripcion": "Remera de Algodón. Estampado de Vinilo Textil calidad premium. Remeras con diseños exclusivos de Naruto. Tabla de Medidas: Talle 1/S: 63 x 48 cm; Talle 1/S: 63 x 48 cm; Talle 3/L: 69 x 52 cm; Talle 4 /XL: 72 x 54 cm; Talle 5/XXL: 75 x 58 cm",
@@ -249,6 +268,7 @@
  {
   "name": "Pantalon Pokemon Pikachu Charmander Bulbasor Squirtle",
   "categoria": "indumentaria",
+  "anime": "Pokemon",
   "descuento": 15,
   "precioAnterior": 3200,
   "descripcion": "Pantalón unisex de Pokemon confeccionado en Tela de Poliéster. Cómodos y livianos. Bolsillos Laterales y bolsillo trasero (lado derecho). Presentación en bolsa acordonada porta pantalón.",
@@ -262,6 +282,7 @@
  {
   "name": "Campera Demon Slayer Anime Diseño Exclusivo",
   "categoria": "indumentaria",
+  "anime": "DemonSlayer",
   "descuento": 5,
   "precioAnterior": 3900,
   "descripcion": "Camperitas con diseños exclusivos. Confeccionado en ketten frisado (temporada intermedia) con sublimado full print. El ketten es una tela cuya composición es polyester.",
@@ -275,6 +296,7 @@
  {
   "name": "Manga Pokemon Yellow Editorial Panini Dgl Games & Comics",
   "categoria": "mangas",
+  "anime": "Pokemon",
   "descuento": 0,
   "precioAnterior": 800,
   "descripcion": "Han pasado dos años desde que Red y sus amigos derrotaron al Equipo Rocket en Silph S.A. Bruno, un miembro del Alto Mando, lanzó un reto para Red. Él salió a enfrentar el desafío con valentía, pero desapareció. Pikachu fue el único que regresó pero sus heridas son graves. Yellow tomó a Pikachu bajo su cuidado y partió en busca de Red.",

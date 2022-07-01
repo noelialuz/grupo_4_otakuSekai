@@ -84,3 +84,5 @@ A la noche cuando vuelvo sigo trabajando con esto
 25/06/2022: Jhoxani hizo la página 404 not-found
 
 27/06/2022: Jhoxani agregó las vistas: "Quienes somos" y "Sitio en construcción"
+
+30/06/2022: Jhoxani agregó las vistas not-found para productos no encontrados. Agregó el filtrado de productos por categorías y por anime. Arregló la barra de navegación

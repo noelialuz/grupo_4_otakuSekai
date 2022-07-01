@@ -693,8 +693,13 @@ footer {
 .not-found {
     text-align: center;
     font-family: 'Comforter Brush', cursive;
-    font-size: 40px;
+    font-size: 42px;
     letter-spacing: 1px;
+}
+
+.not-found-font{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 35px;
 }
 
 #not-found {
@@ -1070,7 +1075,7 @@ footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 5vw;
+        margin-top: 2vw;
         width: 90%;
         margin-left: 5%;
     }
