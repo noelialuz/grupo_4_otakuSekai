@@ -41,6 +41,10 @@ const controller = {
     },
     login: (req, res) => {
         res.render('./users/login');
+
+        if(req.body.recordame != undefined){
+            res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
+        }
     },
     profile: (req, res) => {
         res.render('./users/profile')
