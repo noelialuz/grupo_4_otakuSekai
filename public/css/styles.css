@@ -693,8 +693,13 @@ footer {
 .not-found {
     text-align: center;
     font-family: 'Comforter Brush', cursive;
-    font-size: 40px;
+    font-size: 42px;
     letter-spacing: 1px;
+}
+
+.not-found-font{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 35px;
 }
 
 #not-found {
@@ -883,41 +888,77 @@ footer {
         display: none;
     }
 
+    
     .navbar {
-        display: flex;
-        justify-content: space-around;
-        width: 65%;
-        height: 50px;
-        align-items: center;
-        position: relative;
-    }
+        display: block;
+        overflow: hidden;
+        background-color: var(--azul);
+      }
 
-    .navbar li,
-    .navbar a {
-        text-decoration: none;
-        list-style-type: none;
-        font-weight: bold;
+      .dropbtn{
+          font-weight: bold;
+      }
+      
+      .navbar a {
+        float: left;
+        font-size: 16px;
         color: white;
-    }
-
-    .navbar a {
-        height: 50px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-    }
-
-    /* ------------- VER para que sombree toda la caja del a */
-
-    /* ---------- NAV BAR ---------- */
-    .navbar a:hover {
-        background-color: var(--celeste);
-        transition: 0.5s;
-    }
-
-    .navbar a:hover li {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: var(--azulClaro);
         color: var(--azul);
-    }
+        border-radius: 5px;
+      }
+      .navbar a:hover, .dropdown:hover{
+        color: var(--azul);
+      }
+    
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
 
     .iconosRedesSociales {
         font-size: 3em;
@@ -931,47 +972,9 @@ footer {
     }
 
     /* ---------- barra oculta ---------- */
-    .categoriasDeProductos,
-    .categoriasDeAnime {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        position: absolute;
-        top: 50px;
-        background-color: var(--azul);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        color: white;
-        margin-top: 2px;
-        padding: 25px;
-    }
 
-    .categoriasDeProductos li,
-    .categoriasDeAnime li {
-        display: block;
-        color: white;
-        padding: 5px 0px;
-    }
 
-    .categoriasDeProductos li:hover,
-    .categoriasDeAnime li:hover {
-        color: var(--azul);
-        background-color: var(--celeste);
-    }
 
-    .linkProductos:hover .categoriasDeProductos {
-        display: flex;
-        background-color: var(--celeste);
-        padding: 15px;
-    }
-
-    .linkAnime:hover .categoriasDeAnime {
-        display: flex;
-        background-color: var(--celeste);
-    }
 
     /* ---------- Subtitutlos Home ---------- */
     .subtitulos {
@@ -1038,7 +1041,8 @@ footer {
     /* -------------- categorias del footer -------------- */
     .categoriasDelFooter1 a:hover li {
         opacity: 1;
-        transition: 0.5s;
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s;
     }
 
     .product_infoCard {
@@ -1071,12 +1075,12 @@ footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 5vw;
+        margin-top: 2vw;
         width: 90%;
         margin-left: 5%;
     }
 
-    
+
 
 }
 

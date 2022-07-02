@@ -14,11 +14,17 @@ const controller = {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = products.find(product => product.id == id);
-		res.render('./products/productDetail', {
-			product,
-			products: products,
-			title: product.name
-		})
+
+		for(let x = 0; x < products.length; x++){
+			if(products[x].id == id){
+				res.render('./products/productDetail', {
+					product,
+					products: products,
+					title: products.name
+				});
+			}
+		}
+		res.render('./products/not-found-products', {especificacion: "No encontramos el producto"});
 	},
 
 
@@ -42,15 +48,53 @@ const controller = {
 				noOfferProducts.push(products[x])
 			}
 		}
-
-        res.render('./products/productCategory', {
-			/* products: products, */
-			offerProducts: offerProducts,
-			noOfferProducts: noOfferProducts,
-			/* title: products.categoria */
-		});
+		
+		
+		for(let x = 0; x < products.length; x++){
+			if(products[x].categoria == categoria){
+				res.render('./products/productCategory', {
+					product: products,
+					offerProducts: offerProducts,
+					noOfferProducts: noOfferProducts,
+				});
+			}
+		}
+		res.render('./products/not-found-products', {especificacion: "No encontramos la categoría"});
+        
 	},
 
+
+	detailAnime: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let anime = req.params.anime;
+		
+		let offerProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento != 0 && products[x].eliminado == "false" && products[x].anime == anime){
+				offerProducts.push(products[x])
+			}
+		}
+
+		let noOfferProducts = [];
+		for(let x = 0; x < products.length; x++){
+			if(products[x].descuento == 0 && products[x].eliminado == "false" && products[x].anime == anime){
+				noOfferProducts.push(products[x])
+			}
+		}
+		
+		
+		for(let x = 0; x < products.length; x++){
+			if(products[x].anime == anime){
+				res.render('./products/productAnime', {
+					product: products,
+					offerProducts: offerProducts,
+					noOfferProducts: noOfferProducts,
+				});
+			}
+		}
+		res.render('./products/not-found-products', {especificacion: "Aún no tenemos productos del anime"});
+        
+	},
 
 
     /* Ver el listado completo de productos */
@@ -89,6 +133,7 @@ const controller = {
 		 let newProduct = {
 			name: req.body.name,
 			categoria: req.body.categoria,
+			anime: req.body.anime,
 			descuento: req.body.descuento,
 			precioAnterior: req.body.precioAnterior,
             descripcion: req.body.descripcion,
@@ -120,6 +165,7 @@ const controller = {
 		let editedProduct = {
             name: req.body.name,
 			categoria: req.body.categoria,
+			anime: req.body.anime,
 			descuento: req.body.descuento,
 			precioAnterior: req.body.precioAnterior,
             descripcion: req.body.descripcion,

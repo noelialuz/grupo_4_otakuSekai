@@ -6,10 +6,10 @@
      "precioAnterior": 1500,
      "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
      "id": 1,
-     "imagen1": "/img/tazas,llaveros,pins,aros/1/taza1.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/1/taza1a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/1/taza1b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/1/taza1c.png",
+     "imagen1": "/img/productos/1/taza1.png",
+     "imagen2": "/img/productos/1/taza1a.png",
+     "imagen3": "/img/productos/1/taza1b.png",
+     "imagen4": "/img/productos/1/taza1c.png",
      "eliminado": "false"
     },
     {
@@ -19,10 +19,10 @@
      "precioAnterior": 1500,
      "descripcion": "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.",
      "id": 2,
-     "imagen1": "/img/tazas,llaveros,pins,aros/2/taza2.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/2/taza2a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/2/taza2b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/2/taza2c.png",
+     "imagen1": "/img/productos/2/taza2.png",
+     "imagen2": "/img/productos/2/taza2a.png",
+     "imagen3": "/img/productos/2/taza2b.png",
+     "imagen4": "/img/productos/2/taza2c.png",
      "eliminado": "false"
     },
     {
@@ -32,10 +32,10 @@
      "precioAnterior": 690,
      "descripcion": "Llavero totoro excelente calidad. El material es de PVC. El precio es por unidad. Altura 8 cm. Ancho 4 cm. Incluye gancho.",
      "id": 3,
-     "imagen1": "/img/tazas,llaveros,pins,aros/3/llavero3.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/3/llavero3a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/3/llavero3b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/3/llavero3c.png",
+     "imagen1": "/img/productos/3/llavero3.png",
+     "imagen2": "/img/productos/3/llavero3a.png",
+     "imagen3": "/img/productos/3/llavero3b.png",
+     "imagen4": "/img/productos/3/llavero3c.png",
      "eliminado": "false"
     },
     {
@@ -45,10 +45,10 @@
      "precioAnterior": 780,
      "descripcion": "Peluches Pokemon excelente calidad. El precio es por unidad. En la lista desplegable de variantes figuran las opciones disponibles. Altura 12 cm. Excelente calidad",
      "id": 4,
-     "imagen1": "/img/tazas,llaveros,pins,aros/4/llavero4.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/4/llavero4a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/4/llavero4b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/4/llavero4c.png",
+     "imagen1": "/img/productos/4/llavero4.png",
+     "imagen2": "/img/productos/4/llavero4a.png",
+     "imagen3": "/img/productos/4/llavero4b.png",
+     "imagen4": "/img/productos/4/llavero4c.png",
      "eliminado": "false"
     },
     {
@@ -58,10 +58,10 @@
      "precioAnterior": 75,
      "descripcion": "Prendedores Pins Demon Slayer Nezuko. Excelente calidad. Diseño a elección",
      "id": 5,
-     "imagen1": "/img/tazas,llaveros,pins,aros/5/pin5.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/5/pin5a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/5/pin5b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/5/pin5c.png",
+     "imagen1": "/img/productos/5/pin5.png",
+     "imagen2": "/img/productos/5/pin5a.png",
+     "imagen3": "/img/productos/5/pin5b.png",
+     "imagen4": "/img/productos/5/pin5c.png",
      "eliminado": "false"
     },
     {
@@ -71,10 +71,10 @@
      "precioAnterior": 550,
      "descripcion": "Modelo: naruto shippuden. Material: Metal. Formato de venta: pack por 2 unidades",
      "id": 6,
-     "imagen1": "/img/tazas,llaveros,pins,aros/6/aros6.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/6/aros6a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/6/aros6b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/6/aros6c.png",
+     "imagen1": "/img/productos/6/aros6.png",
+     "imagen2": "/img/productos/6/aros6a.png",
+     "imagen3": "/img/productos/6/aros6b.png",
+     "imagen4": "/img/productos/6/aros6c.png",
      "eliminado": "false"
     },
     {
@@ -84,10 +84,10 @@
      "precioAnterior": 5400,
      "descripcion": "Figura de Plástico. Alto 25 cm. Desmontable. Incluye base. Producto original",
      "id": 7,
-     "imagen1": "/img/tazas,llaveros,pins,aros/7/figura7.jpg",
-     "imagen2": "/img/tazas,llaveros,pins,aros/7/figura7a.jpg",
-     "imagen3": "/img/tazas,llaveros,pins,aros/7/figura7b.jpg",
-     "imagen4": "/img/tazas,llaveros,pins,aros/7/figura7c.jpg",
+     "imagen1": "/img/productos/7/figura7.jpg",
+     "imagen2": "/img/productos/7/figura7a.jpg",
+     "imagen3": "/img/productos/7/figura7b.jpg",
+     "imagen4": "/img/productos/7/figura7c.jpg",
      "eliminado": "false"
     },
     {
@@ -97,10 +97,10 @@
      "precioAnterior": 4700,
      "descripcion": "Las figuras de acción están hechas de pvc, plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Juguetes articulados. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
      "id": 8,
-     "imagen1": "/img/tazas,llaveros,pins,aros/8/figura8.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/8/figura8a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/8/figura8b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/8/figura8c.png",
+     "imagen1": "/img/productos/8/figura8.png",
+     "imagen2": "/img/productos/8/figura8a.png",
+     "imagen3": "/img/productos/8/figura8b.png",
+     "imagen4": "/img/productos/8/figura8c.png",
      "eliminado": "false"
     },
     {
@@ -110,10 +110,10 @@
      "precioAnterior": 5200,
      "descripcion": "Figura Pokemon Battle Feature Figure Charizard Deluxe Action. Original de Jazwares",
      "id": 9,
-     "imagen1": "/img/tazas,llaveros,pins,aros/9/figura9.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/9/figura9a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/9/figura9b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/9/figura9c.png",
+     "imagen1": "/img/productos/9/figura9.png",
+     "imagen2": "/img/productos/9/figura9a.png",
+     "imagen3": "/img/productos/9/figura9b.png",
+     "imagen4": "/img/productos/9/figura9c.png",
      "eliminado": "false"
     },
     {
@@ -123,10 +123,10 @@
      "precioAnterior": 9000,
      "descripcion": "Bandai es una de las mayores empresas representantes de la cultura animé en Japón. Con sus juguetes y figuras de acción es una de las preferidas por los más pequeños y por quienes se dedican a coleccionar. Las figuras de acción están hechas de plástico lo que asegura que sean amables y suaves al tacto, diferenciando las distintas texturas y relieves del cuerpo de los personajes. Al tener marcadas las articulaciones podrás manejar y acomodar tus figuras como más te guste. Con ellas, vas a poder crear historias en la que los personajes puedan movilizarse y cobrar vida.",
      "id": 10,
-     "imagen1": "/img/tazas,llaveros,pins,aros/10/figura10.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/10/figura10a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/10/figura10b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/10/figura10c.png",
+     "imagen1": "/img/productos/10/figura10.png",
+     "imagen2": "/img/productos/10/figura10a.png",
+     "imagen3": "/img/productos/10/figura10b.png",
+     "imagen4": "/img/productos/10/figura10c.png",
      "eliminado": "false"
     },
     {
@@ -136,10 +136,10 @@
      "precioAnterior": 3200,
      "descripcion": "Nuevo en blister. No son articulados. Medidas 18x5x4 aproximadamente. Son importados",
      "id": 11,
-     "imagen1": "/img/tazas,llaveros,pins,aros/11/figura11.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/11/figura11a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/11/figura11b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/11/figura11c.png",
+     "imagen1": "/img/productos/11/figura11.png",
+     "imagen2": "/img/productos/11/figura11a.png",
+     "imagen3": "/img/productos/11/figura11b.png",
+     "imagen4": "/img/productos/11/figura11c.png",
      "eliminado": "false"
     },
     {
@@ -149,10 +149,10 @@
      "precioAnterior": 3200,
      "descripcion": "Nuevo en blister. No son articulados. Medidas 18x5x4 aproximadamente. Son importados",
      "id": 12,
-     "imagen1": "/img/tazas,llaveros,pins,aros/12/figura12.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/12/figura12a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/12/figura12b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/12/figura12c.png",
+     "imagen1": "/img/productos/12/figura12.png",
+     "imagen2": "/img/productos/12/figura12a.png",
+     "imagen3": "/img/productos/12/figura12b.png",
+     "imagen4": "/img/productos/12/figura12c.png",
      "eliminado": "false"
     },
     {
@@ -162,10 +162,10 @@
      "precioAnterior": 1100,
      "descripcion": "Gigantografia en Lona Vinílica Impresa a color. Medida: 100 x 56 cm (1 x 0,56 metros). Material: Lona Vinílica (resistente al agua y luz solar). Duración: En exteriores dura varios meses sin perder el color. En interiores el tiempo es indefinido, si no lo toca nadie puede durar toda la vida, solo trabajamos con materiales de primera calidad.",
      "id": 13,
-     "imagen1": "/img/tazas,llaveros,pins,aros/13/posters13.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/13/posters13a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/13/posters13b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/13/posters13c.png",
+     "imagen1": "/img/productos/13/posters13.png",
+     "imagen2": "/img/productos/13/posters13a.png",
+     "imagen3": "/img/productos/13/posters13b.png",
+     "imagen4": "/img/productos/13/posters13c.png",
      "eliminado": "false"
     },
     {
@@ -175,10 +175,10 @@
      "precioAnterior": 900,
      "descripcion": "Gigantografia en Lona Vinílica Impresa a color. Medida: 100 x 56 cm (1 x 0,56 metros). Material: Lona Vinílica (resistente al agua y luz solar). Duración: En exteriores dura varios meses sin perder el color. En interiores el tiempo es indefinido, si no lo toca nadie puede durar toda la vida, solo trabajamos con materiales de primera calidad.",
      "id": 14,
-     "imagen1": "/img/tazas,llaveros,pins,aros/14/posters14.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/14/posters14a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/14/posters14b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/14/posters14c.png",
+     "imagen1": "/img/productos/14/posters14.png",
+     "imagen2": "/img/productos/14/posters14a.png",
+     "imagen3": "/img/productos/14/posters14b.png",
+     "imagen4": "/img/productos/14/posters14c.png",
      "eliminado": "false"
     },
     {
@@ -188,10 +188,10 @@
      "precioAnterior": 950,
      "descripcion": "1 Lona de Naruto para colgar. Medida: 30x80cm. Material: Lona front full color",
      "id": 15,
-     "imagen1": "/img/tazas,llaveros,pins,aros/15/posters15.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/15/posters15a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/15/posters15b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/15/posters15c.png",
+     "imagen1": "/img/productos/15/posters15.png",
+     "imagen2": "/img/productos/15/posters15a.png",
+     "imagen3": "/img/productos/15/posters15b.png",
+     "imagen4": "/img/productos/15/posters15c.png",
      "eliminado": "false"
     },
     {
@@ -201,10 +201,10 @@
      "precioAnterior": 1700,
      "descripcion": "Lámina sobre bastidor sin marco. Tamaño: 20cm x 30cm. Imagen a elección. Se puede personalizar para colgarlo de manera vertical u horizontal.",
      "id": 16,
-     "imagen1": "/img/tazas,llaveros,pins,aros/16/cuadro16.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/16/cuadro16a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/16/cuadro16b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/16/cuadro16c.png",
+     "imagen1": "/img/productos/16/cuadro16.png",
+     "imagen2": "/img/productos/16/cuadro16a.png",
+     "imagen3": "/img/productos/16/cuadro16b.png",
+     "imagen4": "/img/productos/16/cuadro16c.png",
      "eliminado": "false"
     },
     {
@@ -214,10 +214,10 @@
      "precioAnterior": 1950,
      "descripcion": "Lámina con impresión profesional, productos de la mejor calidad, con tecnología antioxidación, para que la imagen perdure a través de los años, y con protección anti UV para que el sol no sea un problema. Bastidor plano de 9mm de espesor, listo para colgar.",
      "id": 17,
-     "imagen1": "/img/tazas,llaveros,pins,aros/17/cuadro17.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/17/cuadro17a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/17/cuadro17b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/17/cuadro17c.png",
+     "imagen1": "/img/productos/17/cuadro17.png",
+     "imagen2": "/img/productos/17/cuadro17a.png",
+     "imagen3": "/img/productos/17/cuadro17b.png",
+     "imagen4": "/img/productos/17/cuadro17c.png",
      "eliminado": "false"
     },
     {
@@ -227,10 +227,10 @@
      "precioAnterior": 1950,
      "descripcion": "Remera de Algodón Peinado 24.1 de excelente calidad. Estampado de Vinilo Textil calidad premium. Contamos con varios modelos! - Consultanos por el que estás buscando. Tabla de Medidas: Talle 1/S: 63 x 48 cm; Talle 1/S: 63 x 48 cm; Talle 3/L: 69 x 52 cm; Talle 4 /XL: 72 x 54 cm; Talle 5/XXL: 75 x 58 cm",
      "id": 18,
-     "imagen1": "/img/tazas,llaveros,pins,aros/18/indumentaria18.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/18/indumentaria18a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/18/indumentaria18b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/18/indumentaria18c.png",
+     "imagen1": "/img/productos/18/indumentaria18.png",
+     "imagen2": "/img/productos/18/indumentaria18a.png",
+     "imagen3": "/img/productos/18/indumentaria18b.png",
+     "imagen4": "/img/productos/18/indumentaria18c.png",
      "eliminado": "false"
     },
     {
@@ -240,10 +240,10 @@
      "precioAnterior": 2550,
      "descripcion": "Remera de Algodón. Estampado de Vinilo Textil calidad premium. Remeras con diseños exclusivos de Naruto. Tabla de Medidas: Talle 1/S: 63 x 48 cm; Talle 1/S: 63 x 48 cm; Talle 3/L: 69 x 52 cm; Talle 4 /XL: 72 x 54 cm; Talle 5/XXL: 75 x 58 cm",
      "id": 19,
-     "imagen1": "/img/tazas,llaveros,pins,aros/19/indumentaria19.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/19/indumentaria19a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/19/indumentaria19b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/19/indumentaria19c.png",
+     "imagen1": "/img/productos/19/indumentaria19.png",
+     "imagen2": "/img/productos/19/indumentaria19a.png",
+     "imagen3": "/img/productos/19/indumentaria19b.png",
+     "imagen4": "/img/productos/19/indumentaria19c.png",
      "eliminado": "false"
     },
     {
@@ -253,10 +253,10 @@
      "precioAnterior": 3200,
      "descripcion": "Pantalón unisex de Pokemon confeccionado en Tela de Poliéster. Cómodos y livianos. Bolsillos Laterales y bolsillo trasero (lado derecho). Presentación en bolsa acordonada porta pantalón.",
      "id": 20,
-     "imagen1": "/img/tazas,llaveros,pins,aros/20/indumentaria20.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/20/indumentaria20a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/20/indumentaria20b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/20/indumentaria20c.png",
+     "imagen1": "/img/productos/20/indumentaria20.png",
+     "imagen2": "/img/productos/20/indumentaria20a.png",
+     "imagen3": "/img/productos/20/indumentaria20b.png",
+     "imagen4": "/img/productos/20/indumentaria20c.png",
      "eliminado": "false"
     },
     {
@@ -266,10 +266,10 @@
      "precioAnterior": 3900,
      "descripcion": "Camperitas con diseños exclusivos. Confeccionado en ketten frisado (temporada intermedia) con sublimado full print. El ketten es una tela cuya composición es polyester.",
      "id": 21,
-     "imagen1": "/img/tazas,llaveros,pins,aros/21/indumentaria21.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/21/indumentaria21a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/21/indumentaria21b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/21/indumentaria21c.png",
+     "imagen1": "/img/productos/21/indumentaria21.png",
+     "imagen2": "/img/productos/21/indumentaria21a.png",
+     "imagen3": "/img/productos/21/indumentaria21b.png",
+     "imagen4": "/img/productos/21/indumentaria21c.png",
      "eliminado": "false"
     },
     {
@@ -279,10 +279,11 @@
      "precioAnterior": 800,
      "descripcion": "Han pasado dos años desde que Red y sus amigos derrotaron al Equipo Rocket en Silph S.A. Bruno, un miembro del Alto Mando, lanzó un reto para Red. Él salió a enfrentar el desafío con valentía, pero desapareció. Pikachu fue el único que regresó pero sus heridas son graves. Yellow tomó a Pikachu bajo su cuidado y partió en busca de Red.",
      "id": 22,
-     "imagen1": "/img/tazas,llaveros,pins,aros/22/manga22.png",
-     "imagen2": "/img/tazas,llaveros,pins,aros/22/manga22a.png",
-     "imagen3": "/img/tazas,llaveros,pins,aros/22/manga22b.png",
-     "imagen4": "/img/tazas,llaveros,pins,aros/22/manga22c.png",
+     "imagen1": "/img/productos/22/manga22.png",
+     "imagen2": "/img/productos/22/manga22a.png",
+     "imagen3": "/img/productos/22/manga22b.png",
+     "imagen4": "/img/productos/22/manga22c.png",
      "eliminado": "false"
     }
+   
    ]

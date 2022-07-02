@@ -1,48 +1,43 @@
 <header>
     <a href="/" class="logo"><img src="/img/logoAcortado.png" alt="Logo Otaku Sekai"></a> <!-- Poner link home -->
-    <nav class="navbar">
-        <!-- Barra de navegación (oculta para Mobile) -->
-        <a href="/">
-            <li>Home</li>
-        </a>
-        <a href="/quienesSomos">
-            <li>Quienes somos</li>
-        </a>
-        <a href="/products" class="linkProductos">
-            <li>Productos <i class="fa fa-caret-down"></i></li>
-            <ul class="categoriasDeProductos">
-                <!-- Ocultar en las tres vistas. Visible para hover en Productos -->
-                <li>Tazas, llaveros, pins, aros</li>
-                <li>Indumentaria y accesorios</li>
-                <li>Figuras</li>
-                <li>Pósters y cuadros</li>
-                <li>Mangas y comics</li>
-            </ul>
-        </a>
-        <a href="/sitioEnConstruccion" class="linkAnime">
-            <li>Anime <i class="fa fa-caret-down"></i></li>
-            <ul class="categoriasDeAnime">
-                <!-- Ocultar en las tres vistas. Visible para hover en Anime -->
-                <li>One Piece</li>
-                <li>Dragon Ball Z</li>
-                <li>Naruto</li>
-                <li>Demon Slayer</li>
-                <li>Shingeky no Kyojim</li>
-                <li>Jujutsu Kaisen</li>
-                <li>Ranking of Kings</li>
-                <li>Soul Eater</li>
-                <li>Pokemon</li>
-                <li>Boku No Hero Academia</li>
-                <li>Digimon</li>
-                <li>One Punch Man</li>
-                <li>HxH</li>
-                <li>Shamang King</li>
-            </ul>
-        </a>
-        <a href="/sitioEnConstruccion">
-            <li>Preguntas frecuentes</li>
-        </a>
-    </nav>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/quienesSomos">Quienes somos</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="location.href='/products'">Productos
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/products/category/tazas">Tazas, llaveros, pins, aros</a>
+            <a href="/products/category/indumentaria">Indumentaria y accesorios</a>
+            <a href="/products/category/figuras">Figuras</a>
+            <a href="/products/category/posters">Pósters y cuadros</a>
+            <a href="/products/category/mangas">Mangas y comics</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='/products'">Anime
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/products/anime/OnePiece">One Piece</a>
+                <a href="/products/anime/DragonBallZ">Dragon Ball Z</a>
+                <a href="/products/anime/Naruto">Naruto</a>
+                <a href="/products/anime/DemonSlayer">Demon Slayer</a>
+                <a href="/products/anime/ShingekyNoKyojim">Shingeky no Kyojim</a>
+                <a href="/products/anime/JujutsuKaisen">Jujutsu Kaisen</a>
+                <a href="/products/anime/RankingOfKings">Ranking of Kings</a>
+                <a href="/products/anime/SoulEater">Soul Eater</a>
+                <a href="/products/anime/Pokemon">Pokemon</a>
+                <a href="/products/anime/BokuNoHeroAcademia">Boku No Hero Academia</a>
+                <a href="/products/anime/Digimon">Digimon</a>
+                <a href="/products/anime/OnePunchMan">One Punch Man</a>
+                <a href="/products/anime/HxH">HxH</a>
+                <a href="/products/anime/Otros">Otros</a>
+            </div>
+          </div> 
+          <a href="/sitioEnConstruccion">Preguntas frecuentes</a>
+      </div>
 
     <select name="" id="opcionElegida">
         <!-- Categorias con menu en forma desplegable -->
@@ -60,7 +55,7 @@
             <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
             <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
         </form>
-        <a href="/users/login"><i class="fa-solid fa-user"></i></a> 
+        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
         <!--Login-->
         <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
         <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->

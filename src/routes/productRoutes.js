@@ -28,7 +28,10 @@ router.patch('/:id', productController.update);
 router.delete('/:id', productController.remove);
 
 /* Ver el listado completo de productos por Categoria*/
-router.get('/:categoria', productController.detailCategory); 
+router.get('/category/:categoria', productController.detailCategory); 
+
+/* Ver el listado completo de productos por Anime*/
+router.get('/anime/:anime', productController.detailAnime); 
 
 
 
