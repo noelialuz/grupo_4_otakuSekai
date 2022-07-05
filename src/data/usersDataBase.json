@@ -10,5 +10,17 @@
   "FNacimiento": "2022-06-17",
   "Password": "$2a$10$//e3GIq0Cs4JoZoi2hgk4OIU.GPrQXr7qQu3kUk3z0eTkbBBfqExu",
   "Avatar": "1656108129026_img.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "none",
+  "DNI": "123444",
+  "Email": "noelia_luz_fernandez@hotmail.com",
+  "Direccion": "qweqeqe 123",
+  "Pais": "Argetina",
+  "Telefono": "1231231321",
+  "FNacimiento": "1991-09-24",
+  "Password": "$2a$10$tD1Zew7gyHY7IHWLdzOrue4dkO66kJImKsRQAqmKYje9ICEHo1PlC",
+  "Avatar": "1656901557982_img.png"
  }
 ]

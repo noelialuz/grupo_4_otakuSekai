@@ -12,6 +12,7 @@ router.get('/register', userController.register);
 router.post('/', uploadFile.single('Avatar'), validations ,userController.processRegister); 
 
 router.get('/login', userController.login); 
+router.post('/logueado', userController.logueado);
 
 router.get('/profile/:userId', userController.profile);
 
