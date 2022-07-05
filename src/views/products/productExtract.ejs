@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', {title: 'Listado de Productos - ADMIN' }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main>
+
+                <section class="listadoDeProductosADMIN">
+                    <h2 class="subtitulos">Listado de productos - ADMIN</h2>
+
+                    <div class="productExtractAdmin">
+                        <div class="listadoDeProductos">
+                            <h3>ID</h3>
+                            <h3>Name</h3>
+                            <h3 class="categoriaYanimeAdmin">Categoría</h3>
+                            <h3 class="categoriaYanimeAdmin">Anime</h3>
+                            <h3 class="precioAdmin">Precio Actual</h3>
+                            <h3 class="imagenVistaAdmin">Imagen 1</h3>
+                            <h3 class="imagenVistaAdmin">Imagen 2</h3>
+                            <h3 class="imagenVistaAdmin">Imagen 3</h3>
+                            <h3 class="imagenVistaAdmin">Imagen 4</h3>
+                            <h3>Eliminado</h3>
+                            <h3>Acción</h3>
+                        </div>
+
+                        <div class="listadoDeProductos">
+                            <% for(let x = 0; x < products.length; x++){ %>
+                                <p><%= products[x].id %></p>
+                                <p><%= products[x].name %></p>
+                                <p class="categoriaYanimeAdmin"><%= products[x].categoria %></p>
+                                <p class="categoriaYanimeAdmin"><%= products[x].anime %></p>
+                                <p class="precioAdmin">$ <%= products[x].precioAnterior * (100-products[x].descuento) /100 %></p>
+                                <img src= <%= products[x].imagen1 %> alt="Imagen 1" class="imagenVistaAdmin">
+                                <img src= <%= products[x].imagen2 %> alt="Imagen 2" class="imagenVistaAdmin">
+                                <img src= <%= products[x].imagen3 %> alt="Imagen 3" class="imagenVistaAdmin">
+                                <img src= <%= products[x].imagen4 %> alt="Imagen 4" class="imagenVistaAdmin">
+                                <p><%= products[x].eliminado %></p> 
+                                <div class="botonesAccion">
+                                        <a href="/products/<%= products[x].id %>/edit" class="botonEditar1">Editar</a>
+                                        <form action="/products/resetADMIN/<%= products[x].id %>?_method=PATCH" method="POST">
+                                            <button type="submit" class="botonEditar1">Reestablecer</button>
+                                        </form>
+                                        <form action="/products/deleteADMIN/<%= products[x].id %>?_method=DELETE" method="POST">
+                                            <button type="submit" class="botonEditar1 botonEliminar1">Eliminar</button>
+                                        </form>
+                                </div>
+                                
+                            <% } %>
+                            
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+                <section class="divBotonEditar">
+                    <a href="/products/create" class="botonEditar">Agregar productos</a>
+                </section>
+
+
+            </main>
+
+            <%- include('../partials/footer') %>
+
+                <script src="/js/script.js"></script>
+    </body>
+
+</html>

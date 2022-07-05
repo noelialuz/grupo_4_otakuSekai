@@ -86,3 +86,9 @@ A la noche cuando vuelvo sigo trabajando con esto
 27/06/2022: Jhoxani agregó las vistas: "Quienes somos" y "Sitio en construcción"
 
 30/06/2022: Jhoxani agregó las vistas not-found para productos no encontrados. Agregó el filtrado de productos por categorías y por anime. Arregló la barra de navegación
+
+02/07/2022: Renzo implementó el botón de "Recordar usuario" y actualizó Trello con imágenes. 
+
+04/07/2022: Noe completó el punto 6 del Sprint. Implementó session, saludo de bienvenida al loguearse y plantea puntos a mejorar. Trabajó con validaciones.
+
+05/07/2022: Jhoxani agregó la vista "Listado de productos para ADMIN" para poder tener el listado completo, borrar, editar y reestablecer productos.
