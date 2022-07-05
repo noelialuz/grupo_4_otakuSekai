@@ -42,9 +42,6 @@ const controller = {
     login: (req, res) => {
         res.render('./users/login', {msg:''});
         
-        if(req.body.recordame != undefined){
-            res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
-        } 
     },
     logueado: (req,res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -54,7 +51,7 @@ const controller = {
             let password = bcrypt.compareSync(req.body.Password,userExist.Password);
             if(password){
                 if(req.body.recordame != undefined){
-                    res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
+                    res.cookie("recordame",userEmail.email, {MaxAge:2592000})
                 } 
                 res.render('./users/profile');
             }
