@@ -44,23 +44,31 @@ const controller = {
         
     },
     logueado: (req,res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let userEmail = req.body.Email;
-        let userExist = users.find(user => user.Email == userEmail);
-        if(userExist){
-            let password = bcrypt.compareSync(req.body.Password,userExist.Password);
-            if(password){
-                if(req.body.recordame != undefined){
-                    res.cookie("recordame",userEmail.email, {MaxAge:2592000})
-                } 
-                res.render('./users/profile');
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length>0){
+            return res.render('./users/login', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            }) 
+        }else{
+            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+            let userEmail = req.body.Email;
+            let userExist = users.find(user => user.Email == userEmail);
+            if(userExist){
+                let password = bcrypt.compareSync(req.body.Password,userExist.Password);
+                if(password){
+                    if(req.body.recordame != undefined){
+                        res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
+                    } 
+                    res.render('./users/profile');
+                }
+                else{
+                    res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
+                }
             }
             else{
-                res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
+                res.render('./users/login', {msg: "El usuario no existe. Si no tenes usuario crealo con el botón de abajo"});
             }
-        }
-        else{
-            res.render('./users/login', {msg: "El usuario no existe. Si no tenes usuario crealo con el botón de abajo"});
         }
     },
     profile: (req, res) => {

@@ -13,6 +13,7 @@
                     <input 
                         type="email" 
                         name="Email" 
+                        required
                         placeholder="Ingrese su Correo Electronico" 
                         class="control<%= locals.errors && errors.Email ? 'Invalid' : null %>" 
                         value="<%= locals.oldData ? oldData.Email : null %>"
@@ -27,6 +28,7 @@
                     <input 
                         type="password" 
                         name="Password" 
+                        required
                         placeholder="Ingrese su password" 
                         class="control<%= locals.errors && errors.Password ? 'Invalid' : null %>" 
                         value="">
