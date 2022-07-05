@@ -63,7 +63,8 @@ const controller = {
                     if(req.body.recordame != undefined){
                         res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
                     } 
-                    res.render('./users/profile');
+                    req.session.nombre = userExist.fullName;
+                    res.render('./users/profile', {nombreUsuario: req.session.nombre});
                 }
                 else{
                     res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
