@@ -59,7 +59,7 @@ const controller = {
                 if(password){
                     req.session.nombre = userExist.fullName;
                     if(req.body.recordame != undefined){
-                        res.cookie("recordame",nombre.email, {MaxAge:2592000})
+                        res.cookie("recordame",userExist.email, {MaxAge:2592000})
                     } 
                     
                     res.render('./users/profile', {nombreUsuario: req.session.nombre});
