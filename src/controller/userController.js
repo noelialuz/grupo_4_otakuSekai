@@ -57,13 +57,12 @@ const controller = {
             if(userExist){
                 let password = bcrypt.compareSync(req.body.Password,userExist.Password);
                 if(password){
-                    if(req.body.recordame != undefined){
-                        res.cookie("recordame",userEmail.email, {MaxAge:2592000})
-                    } 
-                    req.session.usuarioALoguearse == userExist;
                     req.session.nombre = userExist.fullName;
-                    //res.render('/',{nombreUsuario: req.session.nombre, usuario: req.session.usuarioALoguearse})
-                    res.render('./users/profile', {nombreUsuario: req.session.nombre, usuario: req.session.usuarioALoguearse});
+                    if(req.body.recordame != undefined){
+                        res.cookie("recordame",nombre.email, {MaxAge:2592000})
+                    } 
+                    
+                    res.render('./users/profile', {nombreUsuario: req.session.nombre});
                 }
                 else{
                     res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
@@ -75,12 +74,7 @@ const controller = {
         }
     },
     profile: (req, res) => {
-        if(req.session.usuarioALoguearse == undefined){
-            return res.render('./users/login');
-        }else{
-            res.render('./users/profile');
-        }
-        
+        res.render('./users/profile')
     }
     
 };

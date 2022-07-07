@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const recordameMiddleware = require("./middlewares/recordameMiddleware")
 
 const app = express();
 
@@ -19,6 +20,7 @@ const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
 const cookieParser = require('cookie-parser');
 
+app.use(recordameMiddleware);
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
