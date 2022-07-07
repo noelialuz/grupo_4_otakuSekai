@@ -6,7 +6,7 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/products/" method="POST" class="create-form">
+                <form action="/products/" method="POST" enctype="multipart/form-data" class="create-form">
                     <div class="control-formulario-campos">
                         <h4 class="create-form-titulo">Agregar nuevos productos</h4>
 
@@ -18,14 +18,14 @@
                         <label for="imagen1">Imagen principal:</label>
                         <input type="file" id="imagen1" name="imagen1" class="control" placeholder="Imagen del producto" required>
 
-                        <label for="imagen2">Imagen secundaria 1:</label>
+                        <!-- <label for="imagen2">Imagen secundaria 1:</label>
                         <input type="file" id="imagen2" name="imagen2" class="control" placeholder="Imagen del producto" required>
 
                         <label for="imagen3">Imagen secundaria 2:</label>
                         <input type="file" id="imagen3" name="imagen3" class="control" placeholder="Imagen del producto" required>
 
                         <label for="imagen4">Imagen secundaria 3:</label>
-                        <input type="file" id="imagen4" name="imagen4" class="control" placeholder="Imagen del producto" required>
+                        <input type="file" id="imagen4" name="imagen4" class="control" placeholder="Imagen del producto" required> -->
 
                         <label for="categoria">Categoría:</label>
                         <select id="categoria" name="categoria" class="control">

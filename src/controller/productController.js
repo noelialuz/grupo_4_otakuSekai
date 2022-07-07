@@ -2,21 +2,23 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const { validationResult } = require('express-validator');
+
 
 const controller = {
-    /* Ver carrito de compras */
-    cart: (req, res) => {
-        res.render('./products/productCart');
-    },
+	/* Ver carrito de compras */
+	cart: (req, res) => {
+		res.render('./products/productCart');
+	},
 
-    /* Ver detalle y descripcion de un producto */
-    detail: (req, res) => {
+	/* Ver detalle y descripcion de un producto */
+	detail: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let id = req.params.id;
 		let product = products.find(product => product.id == id);
 
-		for(let x = 0; x < products.length; x++){
-			if(products[x].id == id){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].id == id) {
 				res.render('./products/productDetail', {
 					product,
 					products: products,
@@ -24,34 +26,34 @@ const controller = {
 				});
 			}
 		}
-		res.render('./products/not-found-products', {especificacion: "No encontramos el producto"});
+		res.render('./products/not-found-products', { especificacion: "No encontramos el producto" });
 	},
 
 
 	/* Ver detalle y descripcion de un producto POR CATEGORIA */
 	/* ------------------------------ VER DETALLE CATEGORIAS ------------------------------ */
-	
+
 	detailCategory: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let categoria = req.params.categoria;
-		
+
 		let offerProducts = [];
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento != 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento != 0 && products[x].eliminado == "false" && products[x].categoria == categoria) {
 				offerProducts.push(products[x])
 			}
 		}
 
 		let noOfferProducts = [];
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento == 0 && products[x].eliminado == "false" && products[x].categoria == categoria){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento == 0 && products[x].eliminado == "false" && products[x].categoria == categoria) {
 				noOfferProducts.push(products[x])
 			}
 		}
-		
-		
-		for(let x = 0; x < products.length; x++){
-			if(products[x].categoria == categoria){
+
+
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].categoria == categoria) {
 				res.render('./products/productCategory', {
 					product: products,
 					offerProducts: offerProducts,
@@ -59,32 +61,32 @@ const controller = {
 				});
 			}
 		}
-		res.render('./products/not-found-products', {especificacion: "No encontramos la categoría"});
-        
+		res.render('./products/not-found-products', { especificacion: "No encontramos la categoría" });
+
 	},
 
 
 	detailAnime: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let anime = req.params.anime;
-		
+
 		let offerProducts = [];
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento != 0 && products[x].eliminado == "false" && products[x].anime == anime){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento != 0 && products[x].eliminado == "false" && products[x].anime == anime) {
 				offerProducts.push(products[x])
 			}
 		}
 
 		let noOfferProducts = [];
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento == 0 && products[x].eliminado == "false" && products[x].anime == anime){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento == 0 && products[x].eliminado == "false" && products[x].anime == anime) {
 				noOfferProducts.push(products[x])
 			}
 		}
-		
-		
-		for(let x = 0; x < products.length; x++){
-			if(products[x].anime == anime){
+
+
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].anime == anime) {
 				res.render('./products/productAnime', {
 					product: products,
 					offerProducts: offerProducts,
@@ -92,40 +94,41 @@ const controller = {
 				});
 			}
 		}
-		res.render('./products/not-found-products', {especificacion: "Aún no tenemos productos del anime"});
-        
+		res.render('./products/not-found-products', { especificacion: "Aún no tenemos productos del anime" });
+
 	},
 
 
-    /* Ver el listado completo de productos */
-    verMas: (req, res) => {
+	/* Ver el listado completo de productos */
+	verMas: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 		let offerProducts = [];
 
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento != 0 && products[x].eliminado == "false"){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento != 0 && products[x].eliminado == "false") {
 				offerProducts.push(products[x])
 			}
 		}
 
 		let noOfferProducts = [];
 
-		for(let x = 0; x < products.length; x++){
-			if(products[x].descuento == 0 && products[x].eliminado == "false"){
+		for (let x = 0; x < products.length; x++) {
+			if (products[x].descuento == 0 && products[x].eliminado == "false") {
 				noOfferProducts.push(products[x])
 			}
 		}
 
-        res.render('./products/productVerMas', {
+		res.render('./products/productVerMas', {
 			products: products,
 			offerProducts: offerProducts,
-			noOfferProducts: noOfferProducts});
-    },
+			noOfferProducts: noOfferProducts
+		});
+	},
 
 
 
-	productExtractADMIN: (req, res) =>{
+	productExtractADMIN: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 		res.render('./products/productExtract', {
@@ -134,57 +137,69 @@ const controller = {
 	},
 
 
-    /* Crear un nuevo producto */
-    create: (req, res) => {
+	/* Crear un nuevo producto */
+	create: (req, res) => {
 		res.render('./products/productCreate')
 	},
 
-    store: (req, res) => {
+	store: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('./products/create', {
+				errors: resultValidation.mapped(),
+				oldData: req.body,
+			});
+		}
+		else {
+			let newProduct = {
+				id: products[products.length - 1].id + 1,
+				name: req.body.name,
+				categoria: req.body.categoria,
+				anime: req.body.anime,
+				descuento: req.body.descuento,
+				precioAnterior: req.body.precioAnterior,
+				descripcion: req.body.descripcion,
+				imagen1: "/img/productos/" + req.file.filename,
+				/* imagen2: "/img/productos/" + req.file.filename,
+				imagen3: "/img/productos/" + req.file.filename,
+				imagen4: "/img/productos/" + req.file.filename */
+				eliminado: "false"
+			}
+			/* res.send(req.body); */
+			products.push(newProduct);
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+			res.redirect("/products");
+			
+		}
+	},
+
+
+	/* Editar un producto existente*/
+	edit: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		 let newProduct = {
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('./products/productEdit', { productToEdit, title: productToEdit.name })
+	},
+
+	update: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productToEdit = products.find(product => req.params.id == product.id);
+
+		let editedProduct = {
 			name: req.body.name,
 			categoria: req.body.categoria,
 			anime: req.body.anime,
 			descuento: req.body.descuento,
 			precioAnterior: req.body.precioAnterior,
-            descripcion: req.body.descripcion,
-            id: products[products.length - 1].id + 1,
-			imagen1: "imageTest.jpg",
-            imagen2: "imageTest.jpg",
-            imagen3: "imageTest.jpg",
-            imagen4: "imageTest.jpg",
-		}
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-	
-		res.redirect("/products"); 
-		res.send(req.body);
-	},
-
-    /* Editar un producto existente*/
-    edit: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('./products/productEdit', {productToEdit, title: productToEdit.name})
-	},
-
-    update: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productToEdit = products.find(product => req.params.id == product.id);
-
-		let editedProduct = {
-            name: req.body.name,
-			categoria: req.body.categoria,
-			anime: req.body.anime,
-			descuento: req.body.descuento,
-			precioAnterior: req.body.precioAnterior,
-            descripcion: req.body.descripcion,
-            id: req.params.id,
+			descripcion: req.body.descripcion,
+			id: req.params.id,
 			imagen1: productToEdit.imagen1,
-            imagen2: productToEdit.imagen2,
-            imagen3: productToEdit.imagen3,
-            imagen4: productToEdit.imagen4,
+			imagen2: productToEdit.imagen2,
+			imagen3: productToEdit.imagen3,
+			imagen4: productToEdit.imagen4,
 		}
 
 		let indice = products.findIndex(product => product.id == req.params.id);
@@ -194,8 +209,8 @@ const controller = {
 		res.redirect("/products");
 	},
 
-    /* Eliminar un producto existente*/
-    remove : (req, res) => {
+	/* Eliminar un producto existente*/
+	remove: (req, res) => {
 		/* Para eliminar un producto definitivamente: 
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let finalProducts = products.filter(product => product.id != req.params.id);
@@ -213,7 +228,7 @@ const controller = {
 		res.redirect("/products");
 	},
 
-	removeAdmin : (req, res) => {
+	removeAdmin: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let productToDelete = products.find(product => req.params.id == product.id);
 		let removeProduct = "true"
@@ -223,7 +238,7 @@ const controller = {
 		res.redirect("/products/extractADMIN");
 	},
 
-	resetAdmin : (req, res) => {
+	resetAdmin: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let productToDelete = products.find(product => req.params.id == product.id);
 		let removeProduct = "false"

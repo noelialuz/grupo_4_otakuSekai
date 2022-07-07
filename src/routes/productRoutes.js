@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 const productController = require('../controller/productController');
+const uploadFileProducts = require('../middlewares/multerProductsMiddleware')
+const validationsProducts = require('../middlewares/validateCreateMiddleware')
 
-
-/* Ver el listado completo de productos por Categoria*/
-//router.get('/:categoria', productController.detailCategory); //Esto genera cosas raras!!
 
 /* ADMIN - Ver detalle de productos */
 router.get('/extractADMIN', productController.productExtractADMIN);
 
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 
-router.post('/', productController.store);
+/* router.post('/', productController.store); */
+router.post('/', uploadFileProducts.single('imagen1'), validationsProducts, productController.store); 
 
 /* Ver carrito de compras */
 router.get('/cart', productController.cart);
