@@ -22,5 +22,17 @@
   "FNacimiento": "1991-09-24",
   "Password": "$2a$10$tD1Zew7gyHY7IHWLdzOrue4dkO66kJImKsRQAqmKYje9ICEHo1PlC",
   "Avatar": "1656901557982_img.png"
+ },
+ {
+  "id": 6,
+  "fullName": "Renzo Damian Aquino",
+  "DNI": "37687532",
+  "Email": "renzo_aquino_1993@hotmail.com",
+  "Direccion": "Bouchard",
+  "Pais": "Argetina",
+  "Telefono": "01168925247",
+  "FNacimiento": "1993-07-12",
+  "Password": "$2a$10$mie6nSfOIrHyCY7aKMps3.lCn7DO2zpAISi.a0JUzSeNsWmAMRoqG",
+  "Avatar": "1657229069387_img.jpg"
  }
 ]

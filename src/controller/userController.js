@@ -58,7 +58,7 @@ const controller = {
                 let password = bcrypt.compareSync(req.body.Password,userExist.Password);
                 if(password){
                     if(req.body.recordame != undefined){
-                        res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
+                        res.cookie("recordame",userEmail.email, {MaxAge:2592000})
                     } 
                     req.session.nombre = userExist.fullName;
                     res.render('./users/profile', {nombreUsuario: req.session.nombre});
