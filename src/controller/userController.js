@@ -42,9 +42,6 @@ const controller = {
     login: (req, res) => {
         res.render('./users/login', {msg:''});
         
-        if(req.body.recordame != undefined){
-            res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
-        } 
     },
     logueado: (req,res) => {
         const resultValidation = validationResult(req);
@@ -60,10 +57,11 @@ const controller = {
             if(userExist){
                 let password = bcrypt.compareSync(req.body.Password,userExist.Password);
                 if(password){
-                    if(req.body.recordame != undefined){
-                        res.cookie("recordame",usarioAloguearse.email, {MaxAge:2592000})
-                    } 
                     req.session.nombre = userExist.fullName;
+                    if(req.body.recordame != undefined){
+                        res.cookie("recordame",userExist.email, {MaxAge:2592000})
+                    } 
+                    
                     res.render('./users/profile', {nombreUsuario: req.session.nombre});
                 }
                 else{
