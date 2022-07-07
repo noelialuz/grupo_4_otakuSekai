@@ -126,72 +126,91 @@ const controller = {
 
 
 	productExtractADMIN: (req, res) =>{
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+			if(req.session.usuarioALoguearse == undefined){
+				return res.render('./users/login', {msg:''});
+			}else{
+			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		res.render('./products/productExtract', {
-			products: products
-		})
+			res.render('./products/productExtract', {
+				products: products
+			})
+	}
 	},
 
 
     /* Crear un nuevo producto */
     create: (req, res) => {
-		res.render('./products/productCreate')
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+		res.render('./products/productCreate');}
 	},
 
     store: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		 let newProduct = {
-			name: req.body.name,
-			categoria: req.body.categoria,
-			anime: req.body.anime,
-			descuento: req.body.descuento,
-			precioAnterior: req.body.precioAnterior,
-            descripcion: req.body.descripcion,
-            id: products[products.length - 1].id + 1,
-			imagen1: "imageTest.jpg",
-            imagen2: "imageTest.jpg",
-            imagen3: "imageTest.jpg",
-            imagen4: "imageTest.jpg",
-		}
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-	
-		res.redirect("/products"); 
-		res.send(req.body);
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+					const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+					let newProduct = {
+						name: req.body.name,
+						categoria: req.body.categoria,
+						anime: req.body.anime,
+						descuento: req.body.descuento,
+						precioAnterior: req.body.precioAnterior,
+						descripcion: req.body.descripcion,
+						id: products[products.length - 1].id + 1,
+						imagen1: "imageTest.jpg",
+						imagen2: "imageTest.jpg",
+						imagen3: "imageTest.jpg",
+						imagen4: "imageTest.jpg",
+					}
+					products.push(newProduct);
+					fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+				
+					res.redirect("/products"); 
+					res.send(req.body);
+				}
 	},
 
     /* Editar un producto existente*/
     edit: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('./products/productEdit', {productToEdit, title: productToEdit.name})
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+				let id = req.params.id
+				let productToEdit = products.find(product => product.id == id)
+				res.render('./products/productEdit', {productToEdit, title: productToEdit.name});
+		}
 	},
 
     update: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productToEdit = products.find(product => req.params.id == product.id);
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+				let productToEdit = products.find(product => req.params.id == product.id);
 
-		let editedProduct = {
-            name: req.body.name,
-			categoria: req.body.categoria,
-			anime: req.body.anime,
-			descuento: req.body.descuento,
-			precioAnterior: req.body.precioAnterior,
-            descripcion: req.body.descripcion,
-            id: req.params.id,
-			imagen1: productToEdit.imagen1,
-            imagen2: productToEdit.imagen2,
-            imagen3: productToEdit.imagen3,
-            imagen4: productToEdit.imagen4,
-		}
+				let editedProduct = {
+					name: req.body.name,
+					categoria: req.body.categoria,
+					anime: req.body.anime,
+					descuento: req.body.descuento,
+					precioAnterior: req.body.precioAnterior,
+					descripcion: req.body.descripcion,
+					id: req.params.id,
+					imagen1: productToEdit.imagen1,
+					imagen2: productToEdit.imagen2,
+					imagen3: productToEdit.imagen3,
+					imagen4: productToEdit.imagen4,
+				}
 
-		let indice = products.findIndex(product => product.id == req.params.id);
-		products[indice] = editedProduct;
+				let indice = products.findIndex(product => product.id == req.params.id);
+				products[indice] = editedProduct;
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products");
+				fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+				res.redirect("/products");
+			}
 	},
 
     /* Eliminar un producto existente*/
@@ -204,33 +223,45 @@ const controller = {
 		 */
 
 		/* Vamos a hacer un BORRADO LÓGICO cambiando propiedades del producto sin eliminarlo por completo */
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productToDelete = products.find(product => req.params.id == product.id);
-		let removeProduct = "true"
-		let indice = products.findIndex(product => product.id == req.params.id);
-		products[indice].eliminado = removeProduct;
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products");
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+			let productToDelete = products.find(product => req.params.id == product.id);
+			let removeProduct = "true"
+			let indice = products.findIndex(product => product.id == req.params.id);
+			products[indice].eliminado = removeProduct;
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+			res.redirect("/products");
+			}
 	},
 
 	removeAdmin : (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productToDelete = products.find(product => req.params.id == product.id);
-		let removeProduct = "true"
-		let indice = products.findIndex(product => product.id == req.params.id);
-		products[indice].eliminado = removeProduct;
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products/extractADMIN");
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+				let productToDelete = products.find(product => req.params.id == product.id);
+				let removeProduct = "true"
+				let indice = products.findIndex(product => product.id == req.params.id);
+				products[indice].eliminado = removeProduct;
+				fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+				res.redirect("/products/extractADMIN");
+		}
 	},
 
 	resetAdmin : (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productToDelete = products.find(product => req.params.id == product.id);
-		let removeProduct = "false"
-		let indice = products.findIndex(product => product.id == req.params.id);
-		products[indice].eliminado = removeProduct;
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products/extractADMIN");
+		if(req.session.usuarioALoguearse == undefined){
+			return res.render('./users/login', {msg:''});
+		}else{
+				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+				let productToDelete = products.find(product => req.params.id == product.id);
+				let removeProduct = "false"
+				let indice = products.findIndex(product => product.id == req.params.id);
+				products[indice].eliminado = removeProduct;
+				fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+				res.redirect("/products/extractADMIN");
+		}
 	}
 
 };

@@ -60,8 +60,10 @@ const controller = {
                     if(req.body.recordame != undefined){
                         res.cookie("recordame",userEmail.email, {MaxAge:2592000})
                     } 
+                    req.session.usuarioALoguearse == userExist;
                     req.session.nombre = userExist.fullName;
-                    res.render('./users/profile', {nombreUsuario: req.session.nombre});
+                    //res.render('/',{nombreUsuario: req.session.nombre, usuario: req.session.usuarioALoguearse})
+                    res.render('./users/profile', {nombreUsuario: req.session.nombre, usuario: req.session.usuarioALoguearse});
                 }
                 else{
                     res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
@@ -73,7 +75,12 @@ const controller = {
         }
     },
     profile: (req, res) => {
-        res.render('./users/profile')
+        if(req.session.usuarioALoguearse == undefined){
+            return res.render('./users/login');
+        }else{
+            res.render('./users/profile');
+        }
+        
     }
     
 };
