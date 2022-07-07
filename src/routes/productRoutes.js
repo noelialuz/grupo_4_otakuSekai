@@ -7,6 +7,9 @@ const productController = require('../controller/productController');
 /* Ver el listado completo de productos por Categoria*/
 //router.get('/:categoria', productController.detailCategory); //Esto genera cosas raras!!
 
+/* ADMIN - Ver detalle de productos */
+router.get('/extractADMIN', productController.productExtractADMIN);
+
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 
 router.post('/', productController.store);
@@ -26,6 +29,12 @@ router.patch('/:id', productController.update);
 
 /* Eliminar un producto existente*/
 router.delete('/:id', productController.remove);
+
+/* Eliminar un producto existente DESDE ADMIN*/
+router.delete('/deleteADMIN/:id', productController.removeAdmin);
+
+/* Reestablecer un producto existente DESDE ADMIN*/
+router.patch('/resetADMIN/:id', productController.resetAdmin);
 
 /* Ver el listado completo de productos por Categoria*/
 router.get('/category/:categoria', productController.detailCategory); 

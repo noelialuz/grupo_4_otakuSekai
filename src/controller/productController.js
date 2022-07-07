@@ -123,6 +123,17 @@ const controller = {
 			noOfferProducts: noOfferProducts});
     },
 
+
+
+	productExtractADMIN: (req, res) =>{
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		res.render('./products/productExtract', {
+			products: products
+		})
+	},
+
+
     /* Crear un nuevo producto */
     create: (req, res) => {
 		res.render('./products/productCreate')
@@ -200,8 +211,27 @@ const controller = {
 		products[indice].eliminado = removeProduct;
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		res.redirect("/products");
-	}
+	},
 
+	removeAdmin : (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productToDelete = products.find(product => req.params.id == product.id);
+		let removeProduct = "true"
+		let indice = products.findIndex(product => product.id == req.params.id);
+		products[indice].eliminado = removeProduct;
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/products/extractADMIN");
+	},
+
+	resetAdmin : (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productToDelete = products.find(product => req.params.id == product.id);
+		let removeProduct = "false"
+		let indice = products.findIndex(product => product.id == req.params.id);
+		products[indice].eliminado = removeProduct;
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/products/extractADMIN");
+	}
 
 };
 

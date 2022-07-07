@@ -928,6 +928,7 @@ footer {
         background-color: var(--azulClaro);
         color: var(--azul);
         border-radius: 5px;
+        cursor: pointer;
       }
       .navbar a:hover, .dropdown:hover{
         color: var(--azul);
