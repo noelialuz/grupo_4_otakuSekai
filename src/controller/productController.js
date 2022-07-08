@@ -129,7 +129,7 @@ const controller = {
 
 
 	productExtractADMIN: (req, res) =>{
-			if(req.session.usuarioALoguearse == undefined){
+			if(req.session.usuario == undefined){
 				return res.render('./users/login', {msg:''});
 			}else{
 			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -143,14 +143,15 @@ const controller = {
 
     /* Crear un nuevo producto */
     create: (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
+			
 			return res.render('./users/login', {msg:''});
 		}else{
 		res.render('./products/productCreate');}
 	},
 
     store: (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
@@ -188,7 +189,7 @@ const controller = {
 
     /* Editar un producto existente*/
     edit: (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -199,7 +200,7 @@ const controller = {
 	},
 
     update: (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -237,7 +238,7 @@ const controller = {
 		 */
 
 		/* Vamos a hacer un BORRADO LÓGICO cambiando propiedades del producto sin eliminarlo por completo */
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -251,7 +252,7 @@ const controller = {
 	},
 
 	removeAdmin : (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -265,7 +266,7 @@ const controller = {
 	},
 
 	resetAdmin : (req, res) => {
-		if(req.session.usuarioALoguearse == undefined){
+		if(req.session.usuario == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
 				const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

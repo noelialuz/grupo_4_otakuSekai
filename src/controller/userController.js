@@ -58,11 +58,12 @@ const controller = {
                 let password = bcrypt.compareSync(req.body.Password,userExist.Password);
                 if(password){
                     req.session.nombre = userExist.fullName;
+                    req.session.usuario = userExist;
                     if(req.body.recordame != undefined){
-                        res.cookie("recordame",userExist.email, {MaxAge:2592000})
+                        res.cookie("recordame",req.session.usuario.Email, {MaxAge:2592000})
                     } 
                     
-                    res.render('./users/profile', {nombreUsuario: req.session.nombre});
+                    res.render('./users/profile', {nombreUsuario: req.session.nombre, usuario: req.session.usuario});
                 }
                 else{
                     res.render('./users/login', {msg: "El usuario o contraseña no son válidos"});
