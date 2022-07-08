@@ -153,25 +153,36 @@ const controller = {
 		if(req.session.usuarioALoguearse == undefined){
 			return res.render('./users/login', {msg:''});
 		}else{
-					const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-					let newProduct = {
-						name: req.body.name,
-						categoria: req.body.categoria,
-						anime: req.body.anime,
-						descuento: req.body.descuento,
-						precioAnterior: req.body.precioAnterior,
-						descripcion: req.body.descripcion,
-						id: products[products.length - 1].id + 1,
-						imagen1: "imageTest.jpg",
-						imagen2: "imageTest.jpg",
-						imagen3: "imageTest.jpg",
-						imagen4: "imageTest.jpg",
-					}
-					products.push(newProduct);
-					fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-				
-					res.redirect("/products"); 
-					res.send(req.body);
+			const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+			const resultValidation = validationResult(req);
+	
+			if (resultValidation.errors.length > 0) {
+				return res.render('./products/create', {
+					errors: resultValidation.mapped(),
+					oldData: req.body,
+				});
+			}
+			else {
+				let newProduct = {
+					id: products[products.length - 1].id + 1,
+					name: req.body.name,
+					categoria: req.body.categoria,
+					anime: req.body.anime,
+					descuento: req.body.descuento,
+					precioAnterior: req.body.precioAnterior,
+					descripcion: req.body.descripcion,
+					imagen1: "/img/productos/" + req.file.filename,
+					/* imagen2: "/img/productos/" + req.file.filename,
+					imagen3: "/img/productos/" + req.file.filename,
+					imagen4: "/img/productos/" + req.file.filename */
+					eliminado: "false"
+				}
+				/* res.send(req.body); */
+				products.push(newProduct);
+				fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+				res.redirect("/products");
+	
+			}
 				}
 	},
 
