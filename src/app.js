@@ -19,13 +19,13 @@ const mainRouter = require('./routes/mainRoutes');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
 const cookieParser = require('cookie-parser');
-
+app.use(cookieParser());
 app.use(recordameMiddleware);
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
 app.use((req, res, next) => {res.status(404).render('not-found')})
-app.use(cookieParser());
+
 
 app.listen(process.env.PORT || 3000, function() {
     console.log('Servidor funcionando http://localhost:3000/' );
