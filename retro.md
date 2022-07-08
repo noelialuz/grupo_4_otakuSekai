@@ -45,6 +45,9 @@ URL a la retro: https://metroretro.io/board/LB5ZRWZZ2N0D
 
 
 **Retrospectiva 4 - Sprint 5** 
+Nos queda pendiente la retro de este Sprint ya que estamos utilizando el tiempo completo para terminar de mejorar la entrega
+
+**Retrospectiva 5 - Sprint 6** 
 A Mejorar
 1- 
 2- 

@@ -92,3 +92,5 @@ A la noche cuando vuelvo sigo trabajando con esto
 04/07/2022: Noe completó el punto 6 del Sprint. Implementó session, saludo de bienvenida al loguearse y plantea puntos a mejorar. Trabajó con validaciones.
 
 05/07/2022: Jhoxani agregó la vista "Listado de productos para ADMIN" para poder tener el listado completo, borrar, editar y reestablecer productos.
+
+07/07/2022: Noe completó el punto 8 del Sprint. Jhoxani implementó multer y validaciones para productos (pero queda para revisar la subida de varias imágenes juntas). En grupo arreglamos los productos nuevos que no se veían en la vista de productos.
