@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const { validationResult } = require('express-validator');
@@ -8,7 +9,11 @@ const { validationResult } = require('express-validator');
 const controller = {
 	/* Ver carrito de compras */
 	cart: (req, res) => {
-		res.render('./products/productCart');
+		db.Sales_Detail.findAll()
+		.then(respuesta => {
+			res.send(respuesta)
+		})
+		/* res.render('./products/productCart'); */
 	},
 
 	/* Ver detalle y descripcion de un producto */
