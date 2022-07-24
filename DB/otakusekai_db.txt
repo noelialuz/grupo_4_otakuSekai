@@ -63,9 +63,11 @@ CREATE TABLE sales (
 );
 
 CREATE TABLE sales_detail (
+   id INT NOT NULL AUTO_INCREMENT,
    sale_id INT NOT NULL,
    product_id INT NOT NULL,
-   qty_product FLOAT NOT NULL
+   qty_product FLOAT NOT NULL,
+   PRIMARY KEY (id)
 );
 
 
