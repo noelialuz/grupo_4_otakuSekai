@@ -1,8 +1,9 @@
 CREATE DATABASE otakusekai_db;
 USE otakusekai_db;
 CREATE TABLE users (
-   id INT NOT NULL AUTO_INCREMENT,
-   fullname VARCHAR(255) NOT NULL,
+   id INT NOT NULL AUTO_INCREMENT, 
+   first_name VARCHAR(255) NOT NULL,
+   last_name VARCHAR(255) NOT NULL,
    dni INT NOT NULL,
    email VARCHAR(255) NOT NULL,
    address VARCHAR(255) NOT NULL,
@@ -46,7 +47,7 @@ CREATE TABLE products (
    serie_id INT,
    price DECIMAL NOT NULL,
    discount FLOAT DEFAULT 0,
-   description VARCHAR(255) NOT NULL,
+   description VARCHAR(1000) NOT NULL,
    image VARCHAR(255) NOT NULL,
    deleted BINARY NOT NULL DEFAULT 0,
    stock INT NOT NULL DEFAULT 1,
