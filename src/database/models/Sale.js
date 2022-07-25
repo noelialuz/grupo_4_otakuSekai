@@ -32,6 +32,14 @@ Sale.associate = function(models) {
         as: 'users',
         foreignKey: 'id_user'
     })
+
+    Sale.belongsTo(models.Products, {
+        as: 'products',
+        through: 'sales_detail',
+        foreignKey: 'sale_id',
+        otherKey: 'product_id',
+        timestamps: false
+    })
 }
 
 return Sale
