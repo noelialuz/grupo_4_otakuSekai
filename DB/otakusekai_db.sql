@@ -1,8 +1,9 @@
 CREATE DATABASE otakusekai_db;
 USE otakusekai_db;
 CREATE TABLE users (
-   id INT NOT NULL AUTO_INCREMENT,
-   fullname VARCHAR(255) NOT NULL,
+   id INT NOT NULL AUTO_INCREMENT, 
+   first_name VARCHAR(255) NOT NULL,
+   last_name VARCHAR(255) NOT NULL,
    dni INT NOT NULL,
    email VARCHAR(255) NOT NULL,
    address VARCHAR(255) NOT NULL,
@@ -17,7 +18,7 @@ CREATE TABLE users (
 
 CREATE TABLE countries (
    id INT NOT NULL AUTO_INCREMENT,
-   desscription VARCHAR(255) NOT NULL,
+   description VARCHAR(255) NOT NULL,
    PRIMARY KEY (id)
 );
 
@@ -33,7 +34,7 @@ CREATE TABLE categories (
    PRIMARY KEY (id)
 );
 
-CREATE TABLE serie (
+CREATE TABLE series (
    id INT NOT NULL AUTO_INCREMENT,
    description VARCHAR(255) NOT NULL,
    PRIMARY KEY (id)
@@ -46,7 +47,7 @@ CREATE TABLE products (
    serie_id INT,
    price DECIMAL NOT NULL,
    discount FLOAT DEFAULT 0,
-   description VARCHAR(255) NOT NULL,
+   description VARCHAR(1000) NOT NULL,
    image VARCHAR(255) NOT NULL,
    deleted BINARY NOT NULL DEFAULT 0,
    stock INT NOT NULL DEFAULT 1,
@@ -77,7 +78,7 @@ ALTER TABLE otakusekai_db.users ADD FOREIGN KEY (profile_id) REFERENCES profiles
 
 ALTER TABLE otakusekai_db.products ADD FOREIGN KEY (category_id) REFERENCES categories(id)  ;
 
-ALTER TABLE otakusekai_db.products ADD FOREIGN KEY (serie_id) REFERENCES serie(id)  ;
+ALTER TABLE otakusekai_db.products ADD FOREIGN KEY (serie_id) REFERENCES series(id)  ;
 
 ALTER TABLE otakusekai_db.sales ADD FOREIGN KEY (user_id) REFERENCES users(id)  ;
 
