@@ -6,7 +6,10 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        fullname: {
+        first_name: {
+            type: dataTypes.STRING(255)
+        },
+        last_name: {
             type: dataTypes.STRING(255)
         },
         dni: {
@@ -45,15 +48,15 @@ const User = sequelize.define(alias, cols, config)
 User.associate = function(models) {
     User.belongsTo(models.Countries, {
         as: 'countries',
-        foreignKey: 'id_country'
+        foreignKey: 'country_id'
     }),
     User.belongsTo(models.Profiles, {
         as: 'profiles',
-        foreignKey: 'id_profile'
+        foreignKey: 'profile_id'
     }),
     User.hasMany(models.Sales, {
         as: 'sales',
-        foreignKey: 'id_user'
+        foreignKey: 'user_id'
     }) 
 }
 

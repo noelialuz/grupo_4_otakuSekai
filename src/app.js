@@ -27,7 +27,7 @@ app.use('/users', userRouter);
 app.use((req, res, next) => {res.status(404).render('not-found')})
 
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('Servidor funcionando http://localhost:3000/' );
+app.listen(process.env.PORT || 3030, function() {
+    console.log('Servidor funcionando http://localhost:3030/' );
 });
 

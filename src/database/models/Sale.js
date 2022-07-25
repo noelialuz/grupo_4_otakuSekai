@@ -30,7 +30,7 @@ const Sale = sequelize.define(alias, cols, config)
 Sale.associate = function(models) {
     Sale.belongsTo(models.Users, {
         as: 'users',
-        foreignKey: 'id_user'
+        foreignKey: 'user_id'
     })
 
     Sale.belongsTo(models.Products, {

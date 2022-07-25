@@ -45,12 +45,12 @@ const Product = sequelize.define(alias, cols, config)
 Product.associate = function(models) {
     Product.belongsTo(models.Categories, {
         as: 'categories',
-        foreignKey: 'id_category'
+        foreignKey: 'category_id'
     })
 
     Product.belongsTo(models.Series, {
         as: 'series',
-        foreignKey: 'id_serie'
+        foreignKey: 'serie_id'
     })
 
     Product.belongsToMany(models.Sales, {

@@ -5,24 +5,23 @@ const db = require('../database/models')
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const { validationResult } = require('express-validator');
 
+const products = db.Products
+
 
 const controller = {
 	/* Ver carrito de compras */
 	cart: (req, res) => {
-		db.Sales_Detail.findAll()
-		.then(respuesta => {
-			res.send(respuesta)
-		})
-		/* res.render('./products/productCart'); */
+		res.render('./products/productCart');
 	},
 
 	/* Ver detalle y descripcion de un producto */
 	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id;
-		let product = products.find(product => product.id == id);
+		db.Products.findByPk(req.params.id)
+			.then(products => {
+				res.send(products)
+			})
 
-		for (let x = 0; x < products.length; x++) {
+		/* for (let x = 0; x < products.length; x++) {
 			if (products[x].id == id) {
 				res.render('./products/productDetail', {
 					product,
@@ -30,7 +29,7 @@ const controller = {
 					title: products.name
 				});
 			}
-		}
+		} */
 		res.render('./products/not-found-products', { especificacion: "No encontramos el producto" });
 	},
 

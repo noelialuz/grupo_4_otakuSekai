@@ -21,7 +21,7 @@ const Profile = sequelize.define(alias, cols, config)
 Profile.associate = function(models) {
     Profile.hasMany(models.Users, {
         as: 'users',
-        foreignKey: 'id_country'
+        foreignKey: 'country_id'
     })
 }
 

@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
   Countrie.associate = function(models) {
     Countrie.hasMany(models.Users, {
         as: 'users',
-        foreignKey: 'id_country'
+        foreignKey: 'country_id'
     })
 }
 
