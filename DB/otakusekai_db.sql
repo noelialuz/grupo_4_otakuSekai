@@ -49,7 +49,7 @@ CREATE TABLE products (
    discount FLOAT DEFAULT 0,
    description VARCHAR(1000) NOT NULL,
    image VARCHAR(255) NOT NULL,
-   deleted BINARY NOT NULL DEFAULT 0,
+   deleted BOOLEAN NOT NULL DEFAULT 0,
    stock INT NOT NULL DEFAULT 1,
    PRIMARY KEY (id)
 );

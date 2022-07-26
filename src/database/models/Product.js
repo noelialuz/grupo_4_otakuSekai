@@ -4,34 +4,41 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         name: {
             type: dataTypes.STRING(255),
+            allowNull: false
         },
         category_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         },
         serie_id: {
             type: dataTypes.INTEGER
         },
         price: {
-            type: dataTypes.DECIMAL
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
         discount: {
             type: dataTypes.FLOAT
         },
         description: {
-            type: dataTypes.STRING(255)
+            type: dataTypes.STRING(1000),
+            allowNull: false
         },
         image: {
-            type: dataTypes.STRING(255)
+            type: dataTypes.STRING(255),
+            allowNull: false
         },
         deleted: {
             type: dataTypes.BOOLEAN
         },
         stock: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         }
     }
 
