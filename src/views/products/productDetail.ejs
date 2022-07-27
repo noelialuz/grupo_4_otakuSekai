@@ -18,32 +18,32 @@
                 </div>
                 <div class="divcontendor">
                     <article class="productCountainer">
-                        <img class="productImg" src= <%= product.imagen1  %>  alt="producto">
+                        <img class="productImg" src= <%= product.image  %>  alt="producto">
                         <button class="botonProducto">
                             Agregar al carrito
                         </button>
                         <div class="detallesArticulo">
                             <h4> <%= product.name %> </h4>
-                            <p> <%= product.descripcion %> </p>
-                            <p> <%= product.precioAnterior %>  (Tax Included)</p>
+                            <p> <%= product.description %> </p>
+                            <p> <%= product.price %>  (Tax Included)</p>
                         </div>
                     </article>
                 </div>
                 <div class="contenedorMiniaturas">
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src= <%= product.imagen1  %>
+                        <img class="imagenMiniatura" src= <%= product.image  %>
                         alt="boundoman1">
                     </article>
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src= <%= product.imagen2 %>
+                        <img class="imagenMiniatura" src= <%= product.image %>
                          alt="boundoman2">
                     </article>
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src= <%= product.imagen3 %> 
+                        <img class="imagenMiniatura" src= <%= product.image %> 
                         alt="boundoman3">
                     </article>
                     <article class="miniaturasProducto">
-                        <img class="imagenMiniatura" src= <%= product.imagen4 %>
+                        <img class="imagenMiniatura" src= <%= product.image %>
                          alt="boundoman4">
                     </article>
                 </div>
@@ -70,13 +70,13 @@
                         } %>
                         <div class="productosEnOfertaDetail">
                             <a href="/products/ <%= products[num].id %>"> <img class="otherProductsImg" 
-                                src= <%= products[num].imagen1 %>  alt=""></a>
+                                src= <%= products[num].image %>  alt=""></a>
                             <!-- Link a la página del producto -->
                             <div class="detallesOferta">
                                 <h4><%= products[num].name %></h4>
-                                <p class="porcentajeDescuento">- <%= products[num].descuento %> off</p>
-                                <p class="precioAnterior">$ <%= products[num].precioAnterior %></p>
-                                <p class="precioActual">$ <%= precioActual = (products[num].precioAnterior - ((100 * products[num].descuento) / products[num].precioAnterior)).toFixed(0) %></p>
+                                <p class="porcentajeDescuento">- <%= products[num].discount %> off</p>
+                                <p class="precioAnterior">$ <%= products[num].price %></p>
+                                <p class="precioActual">$ <%= price = (products[num].price - ((100 * products[num].discount) / products[num].price)).toFixed(0) %></p>
                                 <button onclick="" class="botonAgregar">Agregar al carrito</button>
                             </div>
                         </div>

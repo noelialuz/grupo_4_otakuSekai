@@ -14,20 +14,23 @@ const controller = {
     res.render("./products/productCart");
   },
 
-  /* Ver detalle y descripcion de un producto */
+  /* Ver detalle y descripcion de un producto */  
   detail: (req, res) => {
-    for (let x = 0; x < products.length; x++) {
-      if (products[x].id == id) {
-        res.render("./products/productDetail", {
-          product,
-          products: products,
-          title: products.name,
-        });
-      }
-    }
-    res.render("./products/not-found-products", {
-      especificacion: "No encontramos el producto",
-    });
+    db.Products.findByPk(req.params.id).then(function(product) {
+      db.Products.findAll().then(function(products){
+        if(product != null){
+          res.render("./products/productDetail", {
+            product,
+            products: products,
+            title: product.name,
+          });
+        } else {
+          res.render("./products/not-found-products", {
+            especificacion: "No encontramos el producto",
+          });
+        }
+      })
+    })
   },
 
   /* Ver detalle y descripcion de un producto POR CATEGORIA */
@@ -161,10 +164,6 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      /*  db.Categories.findAll()
-	  .then(function(categories) {
-        res.render("./products/productCreate", {categories: categories});
-      }); */
       db.Categories.findAll().then(function (categories) {
         db.Series.findAll().then(function (series) {
           res.render("./products/productCreate", {
