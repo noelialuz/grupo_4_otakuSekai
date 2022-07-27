@@ -12,11 +12,11 @@
 
                         <label for="name">Nombre del producto: </label>
                         <input type="text" id="name" name="name" class="control" placeholder="Ejemplo: Llavero Pokemon" required >
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" id="descripcion" name="descripcion" class="control" placeholder="Ejemplo: Material pvc resistente al agua" required >
+                        <label for="description">Descripción:</label>
+                        <input type="text" id="description" name="description" class="control" placeholder="Ejemplo: Material pvc resistente al agua" required >
 
-                        <label for="imagen1">Imagen principal:</label>
-                        <input type="file" id="imagen1" name="imagen1" class="control" placeholder="Imagen del producto" required>
+                        <label for="image">Imagen principal:</label>
+                        <input type="file" id="image" name="image" class="control" placeholder="Imagen del producto" required>
 
                         <!-- <label for="imagen2">Imagen secundaria 1:</label>
                         <input type="file" id="imagen2" name="imagen2" class="control" placeholder="Imagen del producto" required>
@@ -27,40 +27,32 @@
                         <label for="imagen4">Imagen secundaria 3:</label>
                         <input type="file" id="imagen4" name="imagen4" class="control" placeholder="Imagen del producto" required> -->
 
-                        <label for="categoria">Categoría:</label>
-                        <select id="categoria" name="categoria" class="control">
-							<option value="">Elegí</option>
-							<option value="tazas">Tazas, llaveros, pins, aros</option>
-							<option value="indumentaria">Indumentaria y accesorios</option>
-                            <option value="figuras">Figuras</option>
-                            <option value="posters">Pósters y cuadros</option>
-                            <option value="mangas">Mangas y comics</option>
+                        <label for="category">Categoría:</label>
+                        <select id="category" name="category" class="control">
+                            <% for(let i = 0; i < categories.length; i++){ %> 
+                                <option value="<%= categories[i].id %>">
+                                    <%= categories[i].description %> 
+                                </option>
+                                <% } %> 
 						</select>
 
-                        <label for="anime">Anime:</label>
-                        <select id="anime" name="anime" class="control">
-							<option value="">Elegí</option>
-							<option value="OnePiece">One Piece</option>
-							<option value="DragonBallZ">Dragon Ball Z</option>
-                            <option value="Naruto">Naruto</option>
-                            <option value="DemonSlayer">Demon Slayer</option>
-                            <option value="ShingekyNoKyojim">Shingeky No Kyojim</option>
-                            <option value="JujutsuKaisen">Jujutsu Kaisen</option>
-                            <option value="RankingOfKings">Ranking Of Kings</option>
-                            <option value="SoulEater">Soul Eater</option>
-                            <option value="Pokemon">Pokemon</option>
-                            <option value="BokuNoHeroAcademia">Boku No Hero Academia</option>
-                            <option value="Digimon">Digimon</option>
-                            <option value="OnePunchMan">One Punch Man</option>
-                            <option value="HxH">HxH</option>
-                            <option value="Otros">Otros</option>
+                        <label for="serie">Series:</label>
+                        <select id="serie" name="serie" class="control">
+                            <% for(let i = 0; i < series.length; i++){ %> 
+                                <option value="<%= series[i].id %> ">
+                                    <%= series[i].description %> 
+                                </option>
+                                <% } %> 
 						</select>
 
-                        <label for="precioAnterior">Precio:</label>
-                        <input type="number" id="precioAnterior" name="precioAnterior" class="control" placeholder="Precio del producto" required >
+                        <label for="price">Precio:</label>
+                        <input type="number" id="price" name="price" class="control" placeholder="Precio del producto" required >
 
-                        <label for="descuento">Descuento:</label>
-                        <input type="number" id="descuento" name="descuento" class="control" placeholder="Descuento del producto" required>
+                        <label for="discount">Descuento:</label>
+                        <input type="number" id="discount" name="discount" class="control" placeholder="Descuento del producto" required>
+
+                        <label for="stock">Stock:</label>
+                        <input type="number" id="stock" name="stock" class="control" placeholder="Stock del producto" required >
 
                     </div>
                     <button type="submit" class="botonAgregar botonLogin" onclick="">Agregar producto</button>

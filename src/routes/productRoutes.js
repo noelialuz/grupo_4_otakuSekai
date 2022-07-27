@@ -12,7 +12,7 @@ router.get('/extractADMIN', productController.productExtractADMIN);
 /* Crear un nuevo producto */
 router.get('/create', productController.create); 
 /* router.post('/', productController.store); */
-router.post('/', uploadFileProducts.single('imagen1'), validationsProducts, productController.store); 
+router.post('/', uploadFileProducts.single('image'), validationsProducts,  productController.store); 
 
 /* Ver carrito de compras */
 router.get('/cart', productController.cart);

@@ -3,12 +3,13 @@ const {body} = require('express-validator')
 
 module.exports = [
     body('name').notEmpty().withMessage('Falta escribir un nombre para el producto'),
-    body('categoria').notEmpty().withMessage('Falta elegir una categoria'),
-    body('anime').notEmpty().withMessage('Falta elegir un anime'),
-    body('precioAnterior').notEmpty().withMessage('Falta escribir un precio para el producto'),
-    body('descripcion').notEmpty().withMessage('Falta escribir una descripción del producto'),
-    body('descuento').notEmpty().withMessage('Falta aclarar si el producto tiene descuento'),
-    body('imagen1').custom((value, { req }) => {
+    body('category').notEmpty().withMessage('Falta elegir una categoria'),
+    body('serie').notEmpty().withMessage('Falta elegir un serie'),
+    body('price').notEmpty().withMessage('Falta escribir un precio para el producto'),
+    body('description').notEmpty().withMessage('Falta escribir una descripción del producto'),
+    body('discount').notEmpty().withMessage('Falta aclarar si el producto tiene descuento'),
+	body('stock').notEmpty().withMessage('Falta aclarar cual es el stock'),
+    body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
