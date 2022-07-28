@@ -25,7 +25,7 @@ router.get('/', productController.verMas);
 
 /* Editar un producto existente*/
 router.get('/:id/edit', productController.edit);
-router.patch('/:id', productController.update); 
+router.patch('/:id', uploadFileProducts.single('image'), productController.update); 
 
 /* Eliminar un producto existente*/
 router.delete('/:id', productController.remove);

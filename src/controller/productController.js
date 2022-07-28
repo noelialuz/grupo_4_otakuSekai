@@ -14,11 +14,11 @@ const controller = {
     res.render("./products/productCart");
   },
 
-  /* Ver detalle y descripcion de un producto */  
+  /* Ver detalle y descripcion de un producto */
   detail: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function(product) {
-      db.Products.findAll().then(function(products){
-        if(product != null){
+    db.Products.findByPk(req.params.id).then(function (product) {
+      db.Products.findAll().then(function (products) {
+        if (product != null) {
           res.render("./products/productDetail", {
             product,
             products: products,
@@ -29,8 +29,8 @@ const controller = {
             especificacion: "No encontramos el producto",
           });
         }
-      })
-    })
+      });
+    });
   },
 
   /* Ver detalle y descripcion de un producto POR CATEGORIA */
@@ -179,7 +179,6 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-
       const resultValidation = validationResult(req);
 
       if (resultValidation.errors.length > 0) {
@@ -213,12 +212,20 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let id = req.params.id;
-      let productToEdit = products.find((product) => product.id == id);
-      res.render("./products/productEdit", {
-        productToEdit,
-        title: productToEdit.name,
+      let productID = req.params.id;
+      db.Products.findByPk(productID, {
+        include: [{ association: "categories" }, { association: "series" }],
+      }).then(function (product) {
+        db.Categories.findAll().then(function (allCategories) {
+          db.Series.findAll().then(function (allSeries) {
+            res.render("./products/productEdit", {
+              product,
+              allCategories: allCategories,
+              allSeries: allSeries,
+              title: product.name,
+            });
+          });
+        });
       });
     }
   },
@@ -227,30 +234,27 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToEdit = products.find(
-        (product) => req.params.id == product.id
-      );
-
-      let editedProduct = {
-        name: req.body.name,
-        categoria: req.body.categoria,
-        anime: req.body.anime,
-        descuento: req.body.descuento,
-        precioAnterior: req.body.precioAnterior,
-        descripcion: req.body.descripcion,
-        id: req.params.id,
-        imagen1: productToEdit.imagen1,
-        imagen2: productToEdit.imagen2,
-        imagen3: productToEdit.imagen3,
-        imagen4: productToEdit.imagen4,
-      };
-
-      let indice = products.findIndex((product) => product.id == req.params.id);
-      products[indice] = editedProduct;
-
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/products");
+      let productID = req.params.id;
+      db.Products.update(
+        {
+          name: req.body.name,
+          category_id: req.body.category_id,
+          serie_id: req.body.serie_id,
+          price: req.body.price,
+          discount: req.body.discount,
+          description: req.body.description,
+          image: "/img/productos/" + req.file.filename,
+          deleted: false,
+          stock: req.body.stock,
+        },
+        {
+          where: { id: productID },
+        }
+      )
+        .then(() => {
+          return res.redirect("/products");
+        })
+        .catch((error) => res.send(error));
     }
   },
 

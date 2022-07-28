@@ -6,62 +6,55 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/products/<%= productToEdit.id %>?_method=PATCH" method="POST" class="create-form">
+                <form action="/products/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="create-form">
                     <div class="control-formulario-campos">
-                        <h4 class="create-form-titulo">Editar producto: <i> <%= productToEdit.name %>  </i></h4>
+                        <h4 class="create-form-titulo">Editar producto: <i> <%= product.name %>  </i></h4>
 
                         <label for="name">Nombre del producto: </label>
-                        <input type="text" value="<%= productToEdit.name %>" id="name" name="name" class="control" placeholder="Ejemplo: <%= productToEdit.name %>" required >
+                        <input type="text" value="<%= product.name %>" id="name" name="name" class="control" placeholder="Ejemplo: <%= product.name %>" required >
 
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" value="<%= productToEdit.descripcion %>" id="descripcion" name="descripcion" class="control" placeholder="Ejemplo: <%= productToEdit.descripcion %>" required >
+                        <label for="description">Descripción:</label>
+                        <input type="text" value="<%= product.description %>" id="description" name="description" class="control" placeholder="Ejemplo: <%= product.description %>" required >
 
-                        <label for="imagen1">Imagen principal:</label>
-                        <input type="file" value="<%= productToEdit.imagen1 %>" id="imagen1" name="imagen1" class="control" placeholder="Imagen del producto">
+                        <label for="image">Imagen principal:</label>
+                        <input type="file" value="<%= product.image %>" id="image" name="image" class="control" placeholder="Imagen del producto">
 
-                        <label for="imagen2">Imagen secundaria 1:</label>
-                        <input type="file" value="<%= productToEdit.imagen2 %>" id="imagen2" name="imagen2" class="control" placeholder="Imagen del producto">
-
-                        <label for="imagen3">Imagen secundaria 2:</label>
-                        <input type="file" value="<%= productToEdit.imagen3 %>" id="imagen3" name="imagen3" class="control" placeholder="Imagen del producto">
-
-                        <label for="imagen4">Imagen secundaria 3:</label>
-                        <input type="file" value="<%= productToEdit.imagen4 %>" id="imagen4" name="imagen4" class="control" placeholder="Imagen del producto">
-
-                        <label for="categoria">Categoría:</label>
-                        <select id="categoria" name="categoria" class="control">
-							<option value="">Elegí</option>
-							<option value="tazas">Tazas, llaveros, pins, aros</option>
-							<option value="indumentaria">Indumentaria y accesorios</option>
-                            <option value="figuras">Figuras</option>
-                            <option value="posters">Pósters y cuadros</option>
-                            <option value="mangas">Mangas y comics</option>
+                        <label for="category">Categoría:</label>
+                        <select id="category" name="category_id" class="control">
+							<option value="" disabled>Elegí categoria</option>
+                            <% allCategories.forEach(category => { %>
+                                <option value="<%= category.id %>"
+                                    <% if(product.categories.id == category.id){ %> 
+                                        selected
+                                    <% } %> 
+                                    >
+                                        <%= category.description %> 
+                                </option>
+                            <% }) %> 
 						</select>
 
-                        <label for="anime">Anime:</label>
-                        <select id="anime" name="anime" class="control">
-							<option value="">Elegí</option>
-							<option value="OnePiece">One Piece</option>
-							<option value="DragonBallZ">Dragon Ball Z</option>
-                            <option value="Naruto">Naruto</option>
-                            <option value="DemonSlayer">Demon Slayer</option>
-                            <option value="ShingekyNoKyojim">Shingeky No Kyojim</option>
-                            <option value="JujutsuKaisen">Jujutsu Kaisen</option>
-                            <option value="RankingOfKings">Ranking Of Kings</option>
-                            <option value="SoulEater">Soul Eater</option>
-                            <option value="Pokemon">Pokemon</option>
-                            <option value="BokuNoHeroAcademia">Boku No Hero Academia</option>
-                            <option value="Digimon">Digimon</option>
-                            <option value="OnePunchMan">One Punch Man</option>
-                            <option value="HxH">HxH</option>
-                            <option value="Otros">Otros</option>
+                        <label for="serie">Serie:</label>
+                        <select id="serie" name="serie_id" class="control">
+							<option value="" disabled>Elegí categoria</option>
+                            <% allSeries.forEach(serie => { %>
+                                <option value="<%= serie.id %>"
+                                    <% if(product.series.id == serie.id){ %> 
+                                        selected
+                                    <% } %> 
+                                    >
+                                        <%= serie.description %> 
+                                </option>
+                            <% }) %> 
 						</select>
 
-                        <label for="precioAnterior">Precio:</label>
-                        <input type="number" value="<%= productToEdit.precioAnterior %>" id="precioAnterior" name="precioAnterior" class="control" placeholder="<%= productToEdit.precioAnterior %>" required >
+                        <label for="price">Precio:</label>
+                        <input type="number" value="<%= product.price %>" id="price" name="price" class="control" placeholder="<%= product.price %>" required >
 
-                        <label for="descuento">Descuento:</label>
-                        <input type="number" value="<%= productToEdit.descuento %>" id="descuento" name="descuento" class="control" placeholder="<%= productToEdit.descuento %>" required>
+                        <label for="discount">Descuento:</label>
+                        <input type="number" value="<%= product.discount %>" id="discount" name="discount" class="control" placeholder="<%= product.discount %>" required>
+
+                        <label for="stock">stock:</label>
+                        <input type="number" value="<%= product.stock %>" id="stock" name="stock" class="control" placeholder="<%= product.stock %>" required>
 
                     </div>
                  
