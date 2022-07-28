@@ -11,14 +11,26 @@
                 <div class="">
                     <input 
                         type="text" 
-                        name="fullName" 
-                        placeholder="Ingresá un nombre de usuario" 
-                        class="control<%= locals.errors && errors.fullName ? 'Invalid' : null %>"   
-                        value="<%= locals.oldData ? oldData.fullName : null %>"
+                        name="nombre" 
+                        placeholder="Ingresá tu nombre" 
+                        class="control<%= locals.errors && errors.nombre ? 'Invalid' : null %>"   
+                        value="<%= locals.oldData ? oldData.nombre : null %>"
                     >
-                        <% if (locals.errors && errors.fullName) { %>
+                        <% if (locals.errors && errors.nombre) { %>
                             <div class="text-danger">
-                                <%= errors.fullName.msg %> 
+                                <%= errors.nombre.msg %> 
+                            </div>
+                        <% } %>
+                        <input 
+                        type="text" 
+                        name="apellido" 
+                        placeholder="Ingresá tu apellido" 
+                        class="control<%= locals.errors && errors.apellido ? 'Invalid' : null %>"   
+                        value="<%= locals.oldData ? oldData.apellido : null %>"
+                    >
+                        <% if (locals.errors && errors.apellido) { %>
+                            <div class="text-danger">
+                                <%= errors.apellido.msg %> 
                             </div>
                         <% } %>
                 </div>
@@ -69,20 +81,14 @@
                 </div>
 
                 <div class="">
-                   <select name="Country"
-                         class="control<%= locals.errors && errors.Country ? 'Invalid' : null %>" 
-                          id="">
-                        <option value="">Elegi un pais</option>
-                        <% 
-                        let countries = ['Argetina', 'Bolivia', 'Brasil', 'Colombia', 'Chile'];
-                        %> 
-                        <% for (const oneCountry of countries){ %> 
-                            <option
-                             value="<%= oneCountry %>"
-                                <%= locals.oldData && (oneCountry === oldData.Country) ? 'selected' : null %> 
-                            > <%= oneCountry %> </option>
-                        <% } %> 
-                    </select>
+                        <select id="Country" name="Country" class="control">
+                             <option selected="selected">Pais</option>
+                            <% for(let i = 0; i < paises.length; i++){ %> 
+                                <option value="<%= paises[i].id %>">
+                                    <%= paises[i].description %> 
+                                </option>
+                                <% } %> 
+						</select>
                     <% if (locals.errors && errors.Country) { %>
                         <div class="text-danger">
                             <%= errors.Country.msg %> 
