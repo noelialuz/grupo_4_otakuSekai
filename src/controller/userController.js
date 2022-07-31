@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 
 const { validationResult } = require('express-validator');
 
+
 const profile = 1;
 
 const controller = {
@@ -67,8 +68,12 @@ const controller = {
                         if (req.body.recordame != undefined) {
                             res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
                         }
-
-                        res.render('./users/profile', { nombreUsuario: req.session.nombre, usuario: req.session.usuario });
+                        db.Countries.findAll().then(function (countries) {
+                            console.log(userExist);
+                            res.render('./users/profile', { usuario: userExist,
+                                paises: countries  });
+                        });
+                        
                     }
                     else {
                         res.render('./users/login', { msg: "El usuario o contraseña no son válidos" });
@@ -81,7 +86,7 @@ const controller = {
         }
     },
     profile: (req, res) => {
-        res.render('./users/profile')
+        res.render('./users/profile');
     }
 
 };
