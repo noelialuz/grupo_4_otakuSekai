@@ -6,7 +6,7 @@ const recordameMiddleware = require("./middlewares/recordameMiddleware")
 
 const app = express();
 
-app.use(session({secret:'es un secreto a voces'}));
+app.use(session({secret:'es un secreto a voces', resave: false, saveUninitialized: false,}));
 app.use(express.static(path.join(__dirname, '../public'))); 
 app.use(express.urlencoded({ extended: false }));  
 app.use(express.json());

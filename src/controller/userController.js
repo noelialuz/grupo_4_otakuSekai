@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
+const sequelize = db.sequelize;
+const { Op } = require('sequelize');
+
 
 const { validationResult } = require('express-validator');
 
-
-const profile = 1;
-
-const controller = {
+const userController = {
     register: (req, res) => {
         db.Countries.findAll().then(function (countries) {
               res.render('./users/register', {
@@ -96,4 +96,4 @@ const controller = {
 
 };
 
-module.exports = controller;
+module.exports = userController;
