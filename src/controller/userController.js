@@ -7,7 +7,7 @@ const { Op } = require('sequelize');
 
 
 const { validationResult } = require('express-validator');
-const profile = 1;
+
 const userController = {
     register: (req, res) => {
         db.Countries.findAll().then(function (countries) {
