@@ -14,6 +14,7 @@ router.post('/', uploadFile.single('Avatar'), validations ,userController.proces
 router.get('/login', userController.login); 
 router.post('/logueado', userController.logueado);
 
-router.get('/profile/:userId', userController.profile);
+router.get('/profile/', userController.profile);
+router.patch('/:id', userController.profile);
 
 module.exports = router;

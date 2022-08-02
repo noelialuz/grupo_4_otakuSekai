@@ -69,11 +69,11 @@ value("Otros");
 
 
 insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
-values("Franco", "Franco", 33333333,"brunomaiorano@gmail.com",  "Pasaje Mozart 1079",1,"1522233333",'2022-06-17',"$2a$10$//e3GIq0Cs4JoZoi2hgk4OIU.GPrQXr7qQu3kUk3z0eTkbBBfqExu","1656108129026_img.jpg",2);
+values("Franco", "Franco", 33333333,"brunomaiorano@gmail.com",  "Pasaje Mozart 1079",1,"1522233333",'2022-06-17',"$2a$10$//e3GIq0Cs4JoZoi2hgk4OIU.GPrQXr7qQu3kUk3z0eTkbBBfqExu","../img/avatars/1656108129026_img.jpg",2);
 insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
-values("None", "None", 34666887,"noelia_luz_fernandez@hotmail.com",  "qweqeqe 123",1,"11117777",'1991-09-24',"$2a$10$tD1Zew7gyHY7IHWLdzOrue4dkO66kJImKsRQAqmKYje9ICEHo1PlC","1656901557982_img.png",2);
+values("None", "None", 34666887,"noelia_luz_fernandez@hotmail.com",  "qweqeqe 123",1,"11117777",'1991-09-24',"$2a$10$tD1Zew7gyHY7IHWLdzOrue4dkO66kJImKsRQAqmKYje9ICEHo1PlC","../img/avatars/1656901557982_img.png",2);
 insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
-values("Renzo", "Aquino", 37687532,"renzo_aquino_1993@hotmail.com",  "Bouchard",1,"01168925247",'1993-07-12',"$2a$10$mie6nSfOIrHyCY7aKMps3.lCn7DO2zpAISi.a0JUzSeNsWmAMRoqG","1657229069387_img.jpg",2);
+values("Renzo", "Aquino", 37687532,"renzo_aquino_1993@hotmail.com",  "Bouchard",1,"01168925247",'1993-07-12',"$2a$10$mie6nSfOIrHyCY7aKMps3.lCn7DO2zpAISi.a0JUzSeNsWmAMRoqG","../img/avatars/1657229069387_img.jpg",2);
 
 insert into products(name,category_id, serie_id, price, discount, description, image, deleted, stock)
 values("Taza Mágica Goku", 5, 1, 1500,0, "¿Cómo funciona la taza mágica? Es sensible al calor. Cuando la taza está fría se ve negra, al introducir líquido caliente en ella, va desapareciendo la capa negra gradualmente y aparece el diseño. Una vez que el líquido se enfría, la taza vuelve al color negro original.", "/img/productos/1/taza1.png", 0, 10);

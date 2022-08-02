@@ -7,7 +7,7 @@ const { Op } = require('sequelize');
 
 
 const { validationResult } = require('express-validator');
-
+const profile = 1;
 const userController = {
     register: (req, res) => {
         db.Countries.findAll().then(function (countries) {
@@ -21,7 +21,6 @@ const userController = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            console.log("Rompio al carajo");
             return db.Countries.findAll().then(function (countries) {
                 res.render('./users/profile', {
                   paises: countries,
@@ -43,7 +42,7 @@ const userController = {
                 phone: req.body.Phone,
                 birthday: req.body.Birthdate,
                 password: bcrypt.hashSync(req.body.Password, 10),
-                avatar: req.file.filename,
+                avatar: "../img/avatars/" + req.file.filename,
                 profile_id: profile
             }).then(() => {
                 return res.redirect('/');
@@ -74,6 +73,7 @@ const userController = {
                         if (req.body.recordame != undefined) {
                             res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
                         }
+                        console.log("id usuario "+ userExist.id)
                         db.Countries.findAll().then(function (countries) {
                             res.render('./users/profile', { usuario: userExist,
                                 paises: countries  });
@@ -92,6 +92,43 @@ const userController = {
     },
     profile: (req, res) => {
         res.render('./users/profile');
+    },
+    profile: (req,res) =>{
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            console.log("Tengo errores");
+            return db.Countries.findAll().then(function (countries) {
+                res.render('./users/profile', {
+                  paises: countries,
+                  errors: resultValidation.mapped(),
+                  usuario: req.body
+                });
+            });
+             
+        } else {
+            console.log("PAseeee, estoy por updetear "+ req.params.id);
+            db.Users
+            .update(
+                {
+                first_name: req.body.nombre,
+                last_name: req.body.apellido,
+                dni: req.body.DNI,
+                email: req.body.Email,
+                address: req.body.Direction,
+                country_id: req.body.Country,
+                phone: req.body.Phone,
+                birthday: req.body.Birthdate
+                     },
+                     {
+                        where: { id: req.params.id },
+                      }
+                     
+            ).then(() => {
+                return res.redirect('/');
+            })
+                .catch((error) => res.send(error));
+
+        }
     }
 
 };
