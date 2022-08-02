@@ -17,15 +17,21 @@ const controller = {
           });
     },
     processRegister: (req, res) => {
-        console.log(req.body);
+        
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render('./users/register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
+            console.log("Rompio al carajo");
+            return db.Countries.findAll().then(function (countries) {
+                res.render('./users/profile', {
+                  paises: countries,
+                  errors: resultValidation.mapped(),
+                    usuario: req.body
+                });
             });
+             
         } else {
+            console.log(req.body.nombre);
             db.Users
             .create({
                 first_name: req.body.nombre,
@@ -40,7 +46,7 @@ const controller = {
                 avatar: req.file.filename,
                 profile_id: profile
             }).then(() => {
-                return res.redirect('/users/login');
+                return res.redirect('/');
             })
                 .catch((error) => res.send(error));
 
@@ -69,7 +75,6 @@ const controller = {
                             res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
                         }
                         db.Countries.findAll().then(function (countries) {
-                            console.log(userExist);
                             res.render('./users/profile', { usuario: userExist,
                                 paises: countries  });
                         });

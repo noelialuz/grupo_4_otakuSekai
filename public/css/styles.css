@@ -265,6 +265,18 @@ main {
     margin-bottom: 100px;
 }
 
+.profile_img {
+    padding: 10px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* ------------ Media query carrusel ------------ */
 
 @media (min-width: 481px) {
