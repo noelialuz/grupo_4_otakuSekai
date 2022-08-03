@@ -71,8 +71,9 @@ const userController = {
                         req.session.nombre = userExist.first_name;
                         req.session.usuario = userExist;
                         if (req.body.recordame != undefined) {
-                            res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
+                            res.cookie("userEmail", req.session.usuario.email, { MaxAge: 2592000 })
                         }
+                        console.log(req.session.usuario)
                         console.log("id usuario "+ userExist.id)
                         db.Countries.findAll().then(function (countries) {
                             res.render('./users/profile', { usuario: userExist,

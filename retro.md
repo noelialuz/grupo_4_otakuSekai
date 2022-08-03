@@ -49,13 +49,13 @@ Nos queda pendiente la retro de este Sprint ya que estamos utilizando el tiempo 
 
 **Retrospectiva 5 - Sprint 6** 
 A Mejorar
-1- 
-2- 
-3- 
+1- Poco tiempo dedicado al proyecto
+2- Conectarse para trabjar en Pareja/Grupo
+3- Limpiar el codigo obsoleto del proyecto
 
 Accionables: 
-1- 
-2- 
-3- 
+1- Reuniones a las 19:00hs
+2- Reuniones a las 19:00hs
+3- Tomar tiempo para revisar cada Archivo.
 
-URL a la retro: 
+URL a la retro: https://metroretro.io/board/LBW6JZSVCB2W
