@@ -25,7 +25,7 @@ const userController = {
                 res.render('./users/profile', {
                   paises: countries,
                   errors: resultValidation.mapped(),
-                    usuario: req.body
+                  usuario: req.body
                 });
             });
              
@@ -70,13 +70,13 @@ const userController = {
                     if (password) {
                         req.session.nombre = userExist.first_name;
                         req.session.usuario = userExist;
+                        req.session.usuario.email = userExist.email;
                         if (req.body.recordame != undefined) {
                             res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
                         }
                         console.log("id usuario "+ userExist.id)
                         db.Countries.findAll().then(function (countries) {
-                            res.render('./users/profile', { usuario: userExist,
-                                paises: countries  });
+                            res.redirect('/');
                         });
                         
                     }
@@ -91,9 +91,29 @@ const userController = {
         }
     },
     profile: (req, res) => {
-        res.render('./users/profile');
+        usuarioLogueado = req.session.usuario.email;
+        if(usuarioLogueado){
+            db.Users.findAll().then(function (users) {
+                let userExist = users.find(user => user.email == usuarioLogueado);
+                if (userExist) {
+                    return db.Countries.findAll().then(function (countries) {
+                        res.render('./users/profile', {
+                          paises: countries,
+                          usuario: userExist
+                        });
+                    });
+                }
+                    else {
+                        res.render('./users/register', { msg: "El usuario no existe, registrate" });
+                    }
+                });
+        }
+        else {
+            res.render('./users/login', { msg: "El usuario no está logueado, por favor hazlo aquí" });
+        }
+        
     },
-    profile: (req,res) =>{
+    profile_id: (req,res) =>{
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             console.log("Tengo errores");
