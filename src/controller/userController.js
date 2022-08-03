@@ -47,7 +47,7 @@ const userController = {
                     birthday: req.body.Birthdate,
                     password: bcrypt.hashSync(req.body.Password, 10),
                     avatar: "../img/avatars/" + req.file.filename,
-                    profile_id: profile
+                    profile_id: 1
                 }).then(() => {
                     return res.redirect('/');
                 })
