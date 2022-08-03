@@ -5,7 +5,7 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/users/<%= usuario.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="create-form">
+                <form action="/users/<%= usuario.id %>?_method=PATCH" method="POST"  class="create-form">
                     <div class="">
                         <img class="profile_img" src="<%= usuario.avatar %>" alt="avatar">
                     </div>
