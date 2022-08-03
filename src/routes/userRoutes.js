@@ -15,6 +15,6 @@ router.get('/login', userController.login);
 router.post('/logueado', userController.logueado);
 
 router.get('/profile/', userController.profile);
-router.patch('/:id', userController.profile);
+router.patch('/:id', userController.profile_id);
 
 module.exports = router;
