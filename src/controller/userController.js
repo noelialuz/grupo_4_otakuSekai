@@ -70,13 +70,12 @@ const userController = {
                     if (password) {
                         req.session.nombre = userExist.first_name;
                         req.session.usuario = userExist;
+                        req.session.usuario.email = userExist.email;
                         if (req.body.recordame != undefined) {
-                            res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
+                            res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 });
                         }
-                        console.log("id usuario "+ userExist.id)
                         db.Countries.findAll().then(function (countries) {
-                            res.render('./users/profile', { usuario: userExist,
-                                paises: countries  });
+                            res.redirect('/');
                         });
                         
                     }
@@ -91,9 +90,30 @@ const userController = {
         }
     },
     profile: (req, res) => {
-        res.render('./users/profile');
+        usuarioLogueado = req.session.usuario.email;
+        db.Users.findAll().then(function (users) {
+            if(usuarioLogueado){
+                let userExist = users.find(user => user.email == usuarioLogueado);
+                if (userExist) {
+                    
+                        db.Countries.findAll().then(function (countries) {
+                            res.render('./users/profile', { usuario: userExist,
+                                paises: countries  });
+                        });
+                        
+                    }
+                else {
+                    res.render('./users/login', { msg: "El usuario no existe." });
+                }
+            }
+            else{
+                res.render('./users/login', { msg: "No estás logueado, por favor hacelo aquí." });
+            }
+            
+        });
+        
     },
-    profile: (req,res) =>{
+    profile_id: (req,res) =>{
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             console.log("Tengo errores");
@@ -106,7 +126,6 @@ const userController = {
             });
              
         } else {
-            console.log("PAseeee, estoy por updetear "+ req.params.id);
             db.Users
             .update(
                 {
@@ -124,6 +143,7 @@ const userController = {
                       }
                      
             ).then(() => {
+                console.log("entro en el then");
                 return res.redirect('/');
             })
                 .catch((error) => res.send(error));

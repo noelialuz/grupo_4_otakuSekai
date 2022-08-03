@@ -4,8 +4,8 @@ const router = express.Router();
 
 const userController = require('../controller/userController');
 
-const uploadFile = require('../middlewares/multerMiddleware')
-const validations = require('../middlewares/validateRegisterMiddleware')
+const uploadFile = require('../middlewares/multerMiddleware');
+const validations = require('../middlewares/validateRegisterMiddleware');
 
 
 router.get('/register', userController.register);
@@ -14,7 +14,7 @@ router.post('/', uploadFile.single('Avatar'), validations ,userController.proces
 router.get('/login', userController.login); 
 router.post('/logueado', userController.logueado);
 
-router.get('/profile/', userController.profile);
-router.patch('/:id', userController.profile);
+router.get('/profile', userController.profile);
+router.patch('/:id', validations , userController.profile_id);
 
 module.exports = router;
