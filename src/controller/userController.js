@@ -25,7 +25,7 @@ const userController = {
                 res.render('./users/profile', {
                   paises: countries,
                   errors: resultValidation.mapped(),
-                    usuario: req.body
+                  usuario: req.body
                 });
             });
              
@@ -91,26 +91,25 @@ const userController = {
     },
     profile: (req, res) => {
         usuarioLogueado = req.session.usuario.email;
-        db.Users.findAll().then(function (users) {
-            if(usuarioLogueado){
+        if(usuarioLogueado){
+            db.Users.findAll().then(function (users) {
                 let userExist = users.find(user => user.email == usuarioLogueado);
                 if (userExist) {
-                    
-                        db.Countries.findAll().then(function (countries) {
-                            res.render('./users/profile', { usuario: userExist,
-                                paises: countries  });
+                    return db.Countries.findAll().then(function (countries) {
+                        res.render('./users/profile', {
+                          paises: countries,
+                          usuario: userExist
                         });
-                        
-                    }
-                else {
-                    res.render('./users/login', { msg: "El usuario no existe." });
+                    });
                 }
-            }
-            else{
-                res.render('./users/login', { msg: "No estás logueado, por favor hacelo aquí." });
-            }
-            
-        });
+                    else {
+                        res.render('./users/register', { msg: "El usuario no existe, registrate" });
+                    }
+                });
+        }
+        else {
+            res.render('./users/login', { msg: "El usuario no está logueado, por favor hazlo aquí" });
+        }
         
     },
     profile_id: (req,res) =>{
