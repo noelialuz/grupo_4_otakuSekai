@@ -72,10 +72,8 @@ const userController = {
                         req.session.usuario = userExist;
                         req.session.usuario.email = userExist.email;
                         if (req.body.recordame != undefined) {
-                            res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 })
+                            res.cookie("recordame", req.session.usuario.email, { MaxAge: 2592000 });
                         }
-                        console.log(req.session.usuario)
-                        console.log("id usuario "+ userExist.id)
                         db.Countries.findAll().then(function (countries) {
                             res.redirect('/');
                         });
@@ -127,7 +125,6 @@ const userController = {
             });
              
         } else {
-            console.log("PAseeee, estoy por updetear "+ req.params.id);
             db.Users
             .update(
                 {
@@ -145,6 +142,7 @@ const userController = {
                       }
                      
             ).then(() => {
+                console.log("entro en el then");
                 return res.redirect('/');
             })
                 .catch((error) => res.send(error));
