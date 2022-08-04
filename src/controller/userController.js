@@ -74,6 +74,7 @@ const userController = {
                 if (userExist) {
                     let password = bcrypt.compareSync(req.body.Password, userExist.password);
                     if (password) {
+                        delete userExist.password
                         req.session.nombre = userExist.first_name;
                         req.session.usuario = userExist;
                         req.session.usuario.email = userExist.email;
