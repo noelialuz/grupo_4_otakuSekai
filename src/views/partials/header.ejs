@@ -55,8 +55,16 @@
       <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
       <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
     </form>
-    <div class="dropdown">
-      <button class="dropbtn" onclick=""><i class="fa-solid fa-user"></i></button>
+    <div class="dropdown"><% if(locals.isLogged) {%>
+      <button class="dropbtn" onclick=""><img src="/grupo_4_otakuSekai/public/img/avatars/<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
+      <%} else {%>
+        <button class="dropbtn" onclick=""><img src="/grupo_4_otakuSekai/public/img/avatars/userDefault.jpg" class="imagenAvatar"></img></button>
+        <% } %>
+      hola <% if(locals.isLogged) {%>
+        <%-locals.usuario.first_name%>
+        <%} else {%>
+          Usuario
+          <% } %>
       <div class="dropdown-content">
         <% if(locals.isLogged) {%>
           <a href="/users/profile">Perfil</a>
