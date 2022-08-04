@@ -58,13 +58,11 @@
     <div class="dropdown"><% if(locals.isLogged) {%>
       <button class="dropbtn" onclick=""><img src="./img/avatars/<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
       <%} else {%>
-        <button class="dropbtn" onclick=""><img src="./img/avatars/userDefault.jpg" class="imagenAvatar"></img></button>
+        <button class="dropbtn" onclick=""><i class="fa-solid fa-user"></i></img></button>
         <% } %>
-      hola <% if(locals.isLogged) {%>
+          <% if(locals.isLogged) {%>
         <%-locals.usuario.first_name%>
-        <%} else {%>
-          Usuario
-          <% } %>
+        <%} %>
       <div class="dropdown-content">
         <% if(locals.isLogged) {%>
           <a href="/users/profile">Perfil</a>
