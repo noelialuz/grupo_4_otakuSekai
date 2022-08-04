@@ -148,7 +148,11 @@ const userController = {
             })
             .catch((error) => res.send(error));
 
-    }
+    },
+    logout: (req, res) =>{
+        req.session.destroy();
+        return res.redirect("/");
+    },
 
 };
 

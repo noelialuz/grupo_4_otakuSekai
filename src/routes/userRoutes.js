@@ -14,8 +14,10 @@ router.post('/', uploadFile.single('Avatar'), validations ,userController.proces
 
 router.get('/login', guestMiddleware , userController.login); 
 router.post('/logueado', userController.logueado);
+router.get("/logout", userController.logout)
 
 router.get('/profile', authMiddleware , userController.profile);
 router.patch('/:id', validations , userController.profile_id);
+
 
 module.exports = router;
