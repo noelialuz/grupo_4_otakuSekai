@@ -56,7 +56,7 @@
       <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
     </form>
     <div class="dropdown"><% if(locals.isLogged) {%>
-      <button class="dropbtn" onclick=""><img src="./img/avatars/<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
+      <button class="dropbtn" onclick=""><img src="<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
       <%} else {%>
         <button class="dropbtn" onclick=""><i class="fa-solid fa-user"></i></img></button>
         <% } %>

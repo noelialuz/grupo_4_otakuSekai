@@ -86,6 +86,25 @@ const userController = {
             });
           }
         } else {
+            console.log(req.body.nombre);
+            db.Users
+                .create({
+                    first_name: req.body.nombre,
+                    last_name: req.body.apellido,
+                    dni: req.body.DNI,
+                    email: req.body.Email,
+                    address: req.body.Direction,
+                    country_id: req.body.Country,
+                    phone: req.body.Phone,
+                    birthday: req.body.Birthdate,
+                    password: bcrypt.hashSync(req.body.Password, 10),
+                    avatar: "../img/avatars"+req.file.filename,
+                    profile_id: 1
+                }).then(() => {
+                    return res.redirect('/');
+                })
+                .catch((error) => res.send(error));
+
           res.render("./users/login", {
             msg: "El usuario no existe. Si no tenes usuario crealo con el botón de abajo",
           });
