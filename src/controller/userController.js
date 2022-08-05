@@ -6,6 +6,7 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const { validationResult } = require("express-validator");
+const { count } = require("console");
 
 const userController = {
   register: (req, res) => {
@@ -119,21 +120,21 @@ const userController = {
         let userExist = users.find((user) => user.email == usuarioLogueado);
         if (userExist) {
           return db.Countries.findAll().then(function (countries) {
+            let selected_country= countries.find( element => element.id = userExist.country_id);
+            userExist.country_id = selected_country.description;
+            country_list = countries.splice(selected_country.id,1);
+            console.log(country_list);
             res.render("./users/profile", {
               paises: countries,
-              usuario: userExist,
+              usuario: userExist
             });
           });
         } else {
-          res.render("./users/register", {
-            msg: "El usuario no existe, registrate",
-          });
+          res.render("./users/register");
         }
       });
     } else {
-      res.render("./users/login", {
-        msg: "El usuario no está logueado, por favor hazlo aquí",
-      });
+      res.render("./users/login");
     }
   },
   profile_id: (req, res) => {
@@ -155,7 +156,6 @@ const userController = {
       }
     )
       .then(() => {
-        console.log("entro en el then");
         return res.redirect("/");
       })
       .catch((error) => res.send(error));
