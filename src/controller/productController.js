@@ -151,23 +151,18 @@ const controller = {
   /* Ver el listado completo de productos */
   verMas: (req, res) => {
     db.Products.findAll().then(function (products) {
+      
       let offerProducts = [];
-
-      for (let x = 0; x < products.length; x++) {
-        if (
-          products[x].discount != 0 /* && products[x].eliminado == "false" */
-        ) {
-          offerProducts.push(products[x]);
-        }
-      }
-
       let noOfferProducts = [];
-
       for (let x = 0; x < products.length; x++) {
-        if (
-          products[x].discount == 0 /* && products[x].eliminado == "false" */
-        ) {
-          noOfferProducts.push(products[x]);
+        if(products[x].deleted != 1){
+          
+          if (products[x].discount != 0 ) {
+            offerProducts.push(products[x]);
+          }
+          else{
+            noOfferProducts.push(products[x]);
+          }
         }
       }
 
@@ -292,26 +287,23 @@ const controller = {
 
   /* Eliminar un producto existente*/
   remove: (req, res) => {
-    /* Para eliminar un producto definitivamente: 
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let finalProducts = products.filter(product => product.id != req.params.id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-		res.redirect("/products");
-		 */
-
-    /* Vamos a hacer un BORRADO LÓGICO cambiando propiedades del producto sin eliminarlo por completo */
+   
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToDelete = products.find(
-        (product) => req.params.id == product.id
-      );
       let removeProduct = "true";
-      let indice = products.findIndex((product) => product.id == req.params.id);
-      products[indice].eliminado = removeProduct;
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/products");
+       db.Products.update(
+        {
+          deleted: removeProduct
+        },
+        {
+          where: { id: req.params.id },
+        }
+      ).then(() => {
+        res.redirect("/products");
+      })
+      .catch((error) => res.send(error));
+      
     }
   },
 
