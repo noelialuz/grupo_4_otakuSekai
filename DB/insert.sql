@@ -95,3 +95,5 @@ insert into products(name,category_id, serie_id, price, discount, description, i
 values("Muñeco Pokemon Battle Charizard Deluxe", 4,7, 5200, 15, "Figura Pokemon Battle Feature Figure Charizard Deluxe Action. Original de Jazwares","/img/productos/9/figura9.png" ,0, 3);
 insert into products(name,category_id, serie_id, price, discount, description, image, deleted, stock)
 values("Remera Algodón Naruto", 2,2, 5200, 5, "Remera de Algodón. Estampado de Vinilo Textil calidad premium. Remeras con diseños exclusivos de Naruto. Talle unico","/img/productos/19/indumentaria19.png" ,0, 30);
+insert into products(name,category_id, serie_id, price, discount, description, image, deleted, stock)
+values("Muñeco Pokemon Battle Charizard Deluxe", 4, 7, 5200,10, "Figura Pokemon Battle Feature Figure Charizard Deluxe Action. Original de Jazwares", "/img/productos/9/figura9.png", 0, 4);

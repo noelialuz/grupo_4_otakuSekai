@@ -8,11 +8,10 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="/products/category/tazas">Tazas, llaveros, pins, aros</a>
-            <a href="/products/category/indumentaria">Indumentaria y accesorios</a>
-            <a href="/products/category/figuras">Figuras</a>
-            <a href="/products/category/posters">Pósters y cuadros</a>
-            <a href="/products/category/mangas">Mangas y comics</a>
+            <% for( let x = 0; x < category.length; x++ ) { %>
+              <a href="/products/category/<%= category[x].id %>  "><%= category[x].description %> </a>
+            <% } %>
+            
           </div>
         </div> 
         <div class="dropdown">

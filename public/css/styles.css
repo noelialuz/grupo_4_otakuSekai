@@ -106,6 +106,7 @@ main {
 
 .imgBanner {
     vertical-align: middle;
+    width:100%;
 }
 
 /* Botones next y previus */
@@ -341,12 +342,17 @@ main {
     padding-bottom: 3rem;
 }
 
+.product_infoCard a{
+    text-decoration: none;
+}
+
 .product_infoCard h4 {
     text-align: center;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     font-style: oblique;
     margin-top: 5px;
+    color: black;
 }
 
 .icon-cards__item img {
@@ -986,7 +992,10 @@ footer {
 
     /* ---------- barra oculta ---------- */
 
-
+    .imgBanner {
+        width:70%;
+        height: 50%;
+    }
 
 
     /* ---------- Subtitutlos Home ---------- */

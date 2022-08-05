@@ -33,49 +33,70 @@ const controller = {
     });
   },
 
-  /* Ver detalle y descripcion de un producto POR CATEGORIA */
-  /* ------------------------------ VER DETALLE CATEGORIAS ------------------------------ */
+  /* ------------ Ver detalle y descripcion de un producto POR CATEGORIA ------------ */
 
   detailCategory: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let categoria = req.params.categoria;
-
-    let offerProducts = [];
-    for (let x = 0; x < products.length; x++) {
-      if (
-        products[x].descuento != 0 &&
-        products[x].eliminado == "false" &&
-        products[x].categoria == categoria
-      ) {
-        offerProducts.push(products[x]);
+    // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    db.Categories.findAll().then(function(category){
+      db.Products.findAll().then(function (products) {
+      
+      let categoria = req.params.categoria;
+      /* Pasar esa categoría a número: category_id */
+  
+      let offerProducts = [];
+      for (let x = 0; x < products.length; x++) {
+        if (
+          products[x].discount != 0 &&
+          products[x].deleted == 0 &&
+          products[x].category_id == categoria //PONER EL NUMERO DE LA CATEGORIA
+        ) {
+          offerProducts.push(products[x]);
+        }
       }
-    }
-
-    let noOfferProducts = [];
-    for (let x = 0; x < products.length; x++) {
-      if (
-        products[x].descuento == 0 &&
-        products[x].eliminado == "false" &&
-        products[x].categoria == categoria
-      ) {
-        noOfferProducts.push(products[x]);
+  
+      let noOfferProducts = [];
+      for (let x = 0; x < products.length; x++) {
+        if (
+          products[x].discount == 0 &&
+          products[x].deleted == 0 &&
+          products[x].category_id == categoria //PONER EL NUMERO DE LA CATEGORIA
+        ) {
+          noOfferProducts.push(products[x]);
+        }
       }
-    }
-
-    for (let x = 0; x < products.length; x++) {
-      if (products[x].categoria == categoria) {
-        res.render("./products/productCategory", {
-          product: products,
-          offerProducts: offerProducts,
-          noOfferProducts: noOfferProducts,
-        });
+  
+      for (let x = 0; x < products.length; x++) {
+        if (products[x].category_id == categoria) { //PONER EL NUMERO DE LA CATEGORIA
+          res.render("./products/productCategory", {
+            category,
+            product: products,
+            offerProducts: offerProducts,
+            noOfferProducts: noOfferProducts,
+          });
+        }
       }
-    }
-    res.render("./products/not-found-products", {
-      especificacion: "No encontramos la categoría",
+      res.render("./products/not-found-products", {
+        especificacion: "No encontramos la categoría",
+      });
     });
-  },
 
+    });
+
+
+},
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ Ver detalle y descripcion de un producto POR ANIME ------------ */
   detailAnime: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let anime = req.params.anime;
@@ -115,6 +136,17 @@ const controller = {
       especificacion: "Aún no tenemos productos del anime",
     });
   },
+
+
+
+
+
+
+
+
+
+
+  
 
   /* Ver el listado completo de productos */
   verMas: (req, res) => {
