@@ -37,35 +37,69 @@
           </div> 
           <a href="/sitioEnConstruccion">Preguntas frecuentes</a>
       </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="location.href='/products'">Anime
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/products/anime/OnePiece">One Piece</a>
+        <a href="/products/anime/DragonBallZ">Dragon Ball Z</a>
+        <a href="/products/anime/Naruto">Naruto</a>
+        <a href="/products/anime/DemonSlayer">Demon Slayer</a>
+        <a href="/products/anime/ShingekyNoKyojim">Shingeky no Kyojim</a>
+        <a href="/products/anime/JujutsuKaisen">Jujutsu Kaisen</a>
+        <a href="/products/anime/RankingOfKings">Ranking of Kings</a>
+        <a href="/products/anime/SoulEater">Soul Eater</a>
+        <a href="/products/anime/Pokemon">Pokemon</a>
+        <a href="/products/anime/BokuNoHeroAcademia">Boku No Hero Academia</a>
+        <a href="/products/anime/Digimon">Digimon</a>
+        <a href="/products/anime/OnePunchMan">One Punch Man</a>
+        <a href="/products/anime/HxH">HxH</a>
+        <a href="/products/anime/Otros">Otros</a>
+      </div>
+    </div>
+    <a href="/sitioEnConstruccion">Preguntas frecuentes</a>
+  </div>
 
-    <select name="" id="opcionElegida">
-        <!-- Categorias con menu en forma desplegable -->
-        <option value="todasLasCategorias">Todas las categorías</option>
-        <option value="home">Home</option>
-        <option value="quienesSomos">Quienes Somos</option>
-        <option value="productos">Productos</option>
-        <option value="anime">Anime</option>
-        <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
-    </select>
+  <select name="" id="opcionElegida">
+    <!-- Categorias con menu en forma desplegable -->
+    <option value="todasLasCategorias">Todas las categorías</option>
+    <option value="home">Home</option>
+    <option value="quienesSomos">Quienes Somos</option>
+    <option value="productos">Productos</option>
+    <option value="anime">Anime</option>
+    <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
+  </select>
 
-    <div class="iconosHeader">
-        <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
-        <form class="buscador">
-            <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
-            <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
-        </form>
-        <div class="dropdown">
-          <button class="dropbtn" onclick=""><i class="fa-solid fa-user"></i></button>
-          <div class="dropdown-content">
+  <div class="iconosHeader">
+    <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
+    <form class="buscador">
+      <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
+      <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
+    </form>
+    <div class="dropdown"><% if(locals.isLogged) {%>
+      <button class="dropbtn" onclick=""><img src="<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
+      <%} else {%>
+        <button class="dropbtn" onclick=""><i class="fa-solid fa-user"></i></img></button>
+        <% } %>
+          <% if(locals.isLogged) {%>
+        <%-locals.usuario.first_name%>
+        <%} %>
+      <div class="dropdown-content">
+        <% if(locals.isLogged) {%>
+          <a href="/users/profile">Perfil</a>
+          <a href="/users/logout">Log Out</a>
+          <%} else {%>
             <a href="/users/login">Login</a>
             <a href="/users/register">Registro</a>
-            <a href="/users/profile">Perfil</a>
-          </div>
-            
-        </div>
-        <!--Login-->
-        <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
-        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
+            <% } %>
+      </div>
+
     </div>
+    <!--Login-->
+    <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
+    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
+  </div>
 
 </header>
