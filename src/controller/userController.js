@@ -6,6 +6,7 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const { validationResult } = require("express-validator");
+const { count } = require("console");
 
 const userController = {
   register: (req, res) => {
@@ -121,19 +122,15 @@ const userController = {
           return db.Countries.findAll().then(function (countries) {
             res.render("./users/profile", {
               paises: countries,
-              usuario: userExist,
+              usuario: userExist
             });
           });
         } else {
-          res.render("./users/register", {
-            msg: "El usuario no existe, registrate",
-          });
+          res.render("./users/register");
         }
       });
     } else {
-      res.render("./users/login", {
-        msg: "El usuario no está logueado, por favor hazlo aquí",
-      });
+      res.render("./users/login");
     }
   },
   profile_id: (req, res) => {
@@ -155,7 +152,6 @@ const userController = {
       }
     )
       .then(() => {
-        console.log("entro en el then");
         return res.redirect("/");
       })
       .catch((error) => res.send(error));
