@@ -4,6 +4,13 @@ const { Op } = require("sequelize");
 
 function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
+  if (req.cookies != undefined && req.cookies.userEmail != undefined){
+    let emailCookie = req.cookies.userEmail;
+    let userFromCookie = db.Users.findOne({ where: { email: emailCookie } });
+    if(userFromCookie != undefined){
+      req.session.usuario =userFromCookie; 
+    }
+  }
 
  /*let emailInCookie = req.cookies.userEmail
   console.log(emailInCookie)*/
