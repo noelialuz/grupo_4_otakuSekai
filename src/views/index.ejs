@@ -14,19 +14,19 @@
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides1 fade">
                     <!-- <div class="numbertext">1 / 3</div> -->
-                    <img src="/img/banner1.jpg" style="width:100%" class="imgBanner">
+                    <img src="/img/banner1.jpg" class="imgBanner">
                     <!-- <div class="textCarrusel1">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides1 fade">
                     <!-- <div class="numbertext">2 / 3</div> -->
-                    <img src="/img/banner2.jpg" style="width:100%" class="imgBanner">
+                    <img src="/img/banner2.jpg" class="imgBanner">
                     <!-- <div class="textCarrusel1">Caption Two</div> -->
                 </div>
 
                 <div class="mySlides1 fade">
                     <!-- <div class="numbertext">3 / 3</div> -->
-                    <img src="/img/banner3.jpg" style="width:100%" class="imgBanner">
+                    <img src="/img/banner3.jpg" class="imgBanner">
                     <!-- <div class="textCarrusel1">Caption Three</div> -->
                 </div>
 
@@ -73,8 +73,10 @@
                     <% for(let i = 0; i < 5; i++){ %> 
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <div class="product_infoCard">
-                            <img src=<%= offerProducts[i].imagen1 %>  alt="">
-                            <h4> <%= offerProducts[i].name %> </h4>
+                            <a href="/products/ <%= offerProducts[i].id %>">
+                                <img src=<%= offerProducts[i].imagen1 %>  alt="">
+                                <h4> <%= offerProducts[i].name %> </h4>
+                            </a>
                         </div>
                     </div>
                     <% } %> 

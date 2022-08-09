@@ -64,15 +64,24 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 3px;
+    height: 100%;
 }
 
+.buscador{
+    display: grid;
+    align-items: center;
+}
 .iconosHeader a {
     text-decoration: none;
     color: white;
+    display: grid;
+    align-items: center;
 }
 
 .iconosHeader i {
     padding: 5px;
+    display: grid;
+    align-items: center;
 }
 
 #opcionElegida {
@@ -83,7 +92,7 @@ header {
 }
 
 .imagenAvatar{
-    width: 20px;
+    width: 25px;
     border-radius: 100%;
 }
 
@@ -936,6 +945,27 @@ footer {
         overflow: hidden;
       }
       
+      .dropbtnUser { 
+        border: none;
+        outline: none;
+        color: white;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+
+        height: 100%;
+      }
+
+      .saludoUser{
+        padding: 5px;
+        margin: 0;
+    }
+    
+    .divSaludoUser{
+          display: grid;
+          align-items: center;
+      }
+
       .dropdown .dropbtn {
         font-size: 16px;  
         border: none;
@@ -947,7 +977,7 @@ footer {
         margin: 0;
       }
       
-      .navbar a:hover, .dropdown:hover .dropbtn {
+      .navbar a:hover, .dropdown:hover .dropbtn, .dropdown:hover .dropbtnUser {
         background-color: var(--azulClaro);
         color: var(--azul);
         border-radius: 5px;
@@ -985,7 +1015,7 @@ footer {
 
 
     .iconosRedesSociales {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .barraDeNavegacion {
