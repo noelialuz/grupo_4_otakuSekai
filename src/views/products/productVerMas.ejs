@@ -38,7 +38,7 @@
         
         <!---------------------------- PRODUCTOS EN OFERTA ---------------------------->
         <section>
-            <h2 class="subtitulos">Productos en oferta</h2>
+            <h2 class="subtitulos">Productos en Oferta</h2>
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
             <div class="cajaConProductosEnOferta">
                 <% offerProducts.forEach(function(product){ %>
@@ -58,7 +58,7 @@
         </section>
 
         <section>
-            <h2 class="subtitulos">Todos nuestros productos</h2>
+            <h2 class="subtitulos">Otros Productos</h2>
             <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
             <div class="cajaConProductosEnOferta">
                 <% noOfferProducts.forEach(function(product){ %>
@@ -68,21 +68,6 @@
                     <div>
                         <h4> <%= product.name %>  </h4>
                             <p class="precioActual">$ <%= product.price %>  </p>
-                        <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
-                    </div>
-                </div>
-                <% }) %> 
-            </div>
-            <div class="cajaConProductosEnOferta">
-                <% offerProducts.forEach(function(product){ %>
-                <div class="productosEnOferta">
-                    <a href="/products/ <%= product.id %>"> <img src=<%= product.image %>  alt=""></a>
-                    <!-- Link a la página del producto -->
-                    <div>
-                        <h4> <%= product.name %>  </h4>
-                        <p class="porcentajeDescuento">- <%= product.discount %> % off</p>
-                            <p class="precioAnterior">$ <%= product.price %> </p>
-                            <p class="precioActual">$ <%= product.price * (100-product.discount) /100 %>  </p>
                         <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
                     </div>
                 </div>
