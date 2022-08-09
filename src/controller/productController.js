@@ -36,9 +36,9 @@ const controller = {
   /* ------------ Ver detalle y descripcion de un producto POR CATEGORIA ------------ */
 
   detailCategory: (req, res) => {
-    // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    db.Categories.findAll().then(function(category){
-      db.Products.findAll().then(function (products) {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    //db.Categories.findAll().then(function(category){
+    //  db.Products.findAll().then(function (products) {
       
       let categoria = req.params.categoria;
       /* Pasar esa categoría a número: category_id */
@@ -78,23 +78,11 @@ const controller = {
       res.render("./products/not-found-products", {
         especificacion: "No encontramos la categoría",
       });
-    });
-
-    });
-
-
-},
+    },
+   // );});
 
 
-
-
-
-
-
-
-
-
-
+//},
 
 /* ------------ Ver detalle y descripcion de un producto POR ANIME ------------ */
   detailAnime: (req, res) => {
