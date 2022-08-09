@@ -50,34 +50,45 @@
   </select>
 
   <div class="iconosHeader">
-    <!-- Aca van los tres iconos del header: lupa, contacto, carrito -->
     <form class="buscador">
       <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
       <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
     </form>
-    <div class="dropdown"><% if(locals.isLogged) {%>
-      <button class="dropbtn" onclick=""><img src="<%-locals.usuario.avatar%> " class="imagenAvatar"></img></button>
-      <%} else {%>
-        <button class="dropbtn" onclick=""><img src="../img/avatars/userDefault.jpg" class="imagenAvatar"></img></button>
-        <% } %>
-      hola <% if(locals.isLogged) {%>
-        <%-locals.usuario.first_name%>
+
+    <div class="dropdown">
+      <% if(locals.isLogged) {%>
+        <button class="dropbtnUser" onclick="location.href='/users/logueado'">
+          <img src="<%-locals.usuario.avatar%> " class="imagenAvatar"></img>
+        </button>
         <%} else {%>
-          Usuario
+          <button class="dropbtnUser" onclick="location.href='/users/login'">
+            <img src="../img/avatars/userDefault.jpg" class="imagenAvatar">
+          </button>
           <% } %>
-      <div class="dropdown-content">
-        <% if(locals.isLogged) {%>
-          <a href="/users/profile">Perfil</a>
-          <a href="/users/logout">Log Out</a>
-          <%} else {%>
-            <a href="/users/login">Login</a>
-            <a href="/users/register">Registro</a>
-            <% } %>
-      </div>
+
+
+            <div class="dropdown-content">
+              <% if(locals.isLogged) {%>
+                <a href="/users/profile">Perfil</a>
+                <a href="/users/logout">Log Out</a>
+                <%} else {%>
+                  <a href="/users/login">Login</a>
+                  <a href="/users/register">Registro</a>
+                  <% } %>
+
+            </div>
+
 
     </div>
+    <div class="divSaludoUser">
+      <% if(locals.isLogged) {%>
+        <p class="saludoUser">¡Hola, <%-locals.usuario.first_name%>!</p>
+
+        <%} else {%>
+          <p class="saludoUser">Iniciá sesión</p>
+          <% } %>
+    </div>
     <!--Login-->
-    <i class="fa-solid fa-envelope"></i> <!-- Contacto -->
     <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
   </div>
 
