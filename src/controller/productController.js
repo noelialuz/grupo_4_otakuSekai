@@ -36,119 +36,87 @@ const controller = {
   /* ------------ Ver detalle y descripcion de un producto POR CATEGORIA ------------ */
 
   detailCategory: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    //db.Categories.findAll().then(function(category){
-    //  db.Products.findAll().then(function (products) {
-      
-      let categoria = req.params.categoria;
-      /* Pasar esa categoría a número: category_id */
-  
+    let categoriaID = req.params.category_id;
+
+    db.Products.findAll({
+      include: [{ association: "categories" }, { association: "series" }],
+      where: { category_id: categoriaID },
+    }).then(function (fiterProducts) {
       let offerProducts = [];
-      for (let x = 0; x < products.length; x++) {
-        if (
-          products[x].discount != 0 &&
-          products[x].deleted == 0 &&
-          products[x].category_id == categoria //PONER EL NUMERO DE LA CATEGORIA
-        ) {
-          offerProducts.push(products[x]);
+      for (let x = 0; x < fiterProducts.length; x++) {
+        if (fiterProducts[x].discount != 0 && fiterProducts[x].deleted == 0) {
+          offerProducts.push(fiterProducts[x]);
         }
       }
-  
+
       let noOfferProducts = [];
-      for (let x = 0; x < products.length; x++) {
+      for (let x = 0; x < fiterProducts.length; x++) {
+        if (fiterProducts[x].discount == 0 && fiterProducts[x].deleted == 0) {
+          noOfferProducts.push(fiterProducts[x]);
+        }
+      }
+
+      if (fiterProducts != null) {
+        res.render("./products/productCategory", {
+          offerProducts: offerProducts,
+          noOfferProducts: noOfferProducts,
+        });
+      } else {
+        res.render("./products/not-found-products", {
+          especificacion: "Aún no tenemos productos del anime",
+        });
+      }
+    });
+  },
+
+  /* ------------ Ver detalle y descripcion de un producto POR ANIME ------------ */
+  detailAnime: (req, res) => {
+    let serieID = req.params.serie_id;
+
+    db.Products.findAll({
+      include: [{ association: "categories" }, { association: "series" }],
+      where: { serie_id: serieID },
+    }).then(function (fiterProducts) {
+      let offerProducts = [];
+      for (let x = 0; x < fiterProducts.length; x++) {
+        if (fiterProducts[x].discount != 0 && fiterProducts[x].deleted == 0) {
+          offerProducts.push(fiterProducts[x]);
+        }
+      }
+
+      let noOfferProducts = [];
+      for (let x = 0; x < fiterProducts.length; x++) {
         if (
-          products[x].discount == 0 &&
-          products[x].deleted == 0 &&
-          products[x].category_id == categoria //PONER EL NUMERO DE LA CATEGORIA
+          fiterProducts[x].descuento == 0 &&
+          fiterProducts[x].eliminado == 0
         ) {
           noOfferProducts.push(products[x]);
         }
       }
-  
-      for (let x = 0; x < products.length; x++) {
-        if (products[x].category_id == categoria) { //PONER EL NUMERO DE LA CATEGORIA
-          res.render("./products/productCategory", {
-            category,
-            product: products,
-            offerProducts: offerProducts,
-            noOfferProducts: noOfferProducts,
-          });
-        }
-      }
-      res.render("./products/not-found-products", {
-        especificacion: "No encontramos la categoría",
-      });
-    },
-   // );});
 
-
-//},
-
-/* ------------ Ver detalle y descripcion de un producto POR ANIME ------------ */
-  detailAnime: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let anime = req.params.anime;
-
-    let offerProducts = [];
-    for (let x = 0; x < products.length; x++) {
-      if (
-        products[x].descuento != 0 &&
-        products[x].eliminado == "false" &&
-        products[x].anime == anime
-      ) {
-        offerProducts.push(products[x]);
-      }
-    }
-
-    let noOfferProducts = [];
-    for (let x = 0; x < products.length; x++) {
-      if (
-        products[x].descuento == 0 &&
-        products[x].eliminado == "false" &&
-        products[x].anime == anime
-      ) {
-        noOfferProducts.push(products[x]);
-      }
-    }
-
-    for (let x = 0; x < products.length; x++) {
-      if (products[x].anime == anime) {
+      if (fiterProducts != null) {
         res.render("./products/productAnime", {
-          product: products,
           offerProducts: offerProducts,
           noOfferProducts: noOfferProducts,
         });
+      } else {
+        res.render("./products/not-found-products", {
+          especificacion: "Aún no tenemos productos del anime",
+        });
       }
-    }
-    res.render("./products/not-found-products", {
-      especificacion: "Aún no tenemos productos del anime",
     });
   },
-
-
-
-
-
-
-
-
-
-
-  
 
   /* Ver el listado completo de productos */
   verMas: (req, res) => {
     db.Products.findAll().then(function (products) {
-      
       let offerProducts = [];
       let noOfferProducts = [];
       for (let x = 0; x < products.length; x++) {
-        if(products[x].deleted != 1){
-          
-          if (products[x].discount != 0 ) {
+        if (products[x].deleted != 1) {
+          if (products[x].discount != 0) {
             offerProducts.push(products[x]);
-          }
-          else{
+          } else {
             noOfferProducts.push(products[x]);
           }
         }
@@ -166,10 +134,11 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+      db.Products.findAll().then(function (allProducts){
+        res.render("./products/productExtract", {
+          products: allProducts,
+      })
 
-      res.render("./products/productExtract", {
-        products: products,
       });
     }
   },
@@ -275,23 +244,22 @@ const controller = {
 
   /* Eliminar un producto existente*/
   remove: (req, res) => {
-   
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
       let removeProduct = "true";
-       db.Products.update(
+      db.Products.update(
         {
-          deleted: removeProduct
+          deleted: removeProduct,
         },
         {
           where: { id: req.params.id },
         }
-      ).then(() => {
-        res.redirect("/products");
-      })
-      .catch((error) => res.send(error));
-      
+      )
+        .then(() => {
+          res.redirect("/products");
+        })
+        .catch((error) => res.send(error));
     }
   },
 
