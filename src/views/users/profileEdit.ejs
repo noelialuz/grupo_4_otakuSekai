@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: 'Profile' }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <form action="/users/<%= usuario.id %>?_method=PATCH" method="POST"  class="create-form">
+                    <div class="">
+                        <img class="profile_img" src="<%= usuario.avatar %>" alt="avatar">
+                    </div>
+                    <h4 class="create-form-titulo">
+                        <%= usuario.first_name %>
+                            <%= usuario.last_name %>
+                    </h4>
+                    <div class="control-formulario-campos">
+                        <div class="">
+                            <input type="text" name="nombre" placeholder="Nombre"
+                                class="control<%= locals.errors && errors.nombre ? 'Invalid' : null %>"
+                                value="<%= usuario.first_name ? usuario.first_name : null %>">
+                            <% if (locals.errors && errors.nombre) { %>
+                                <div class="text-danger">
+                                    <%= errors.nombre.msg %>
+                                </div>
+                                <% } %>
+                                    <input type="text" name="apellido" placeholder="Apellido"
+                                        class="control<%= locals.errors && errors.apellido ? 'Invalid' : null %>"
+                                        value="<%= usuario.last_name ? usuario.last_name : null %>">
+                                    <% if (locals.errors && errors.apellido) { %>
+                                        <div class="text-danger">
+                                            <%= errors.apellido.msg %>
+                                        </div>
+                                        <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="text" name="DNI" placeholder="DNI"
+                                class="control<%= locals.errors && errors.DNI ? 'Invalid' : null %>"
+                                value="<%= usuario.dni ? usuario.dni : null %>">
+                            <% if (locals.errors && errors.DNI) { %>
+                                <div class="text-danger">
+                                    <%= errors.DNI.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="text" name="Email" placeholder="Correo Electronico"
+                                class="control<%= locals.errors && errors.Email ? 'Invalid' : null %>"
+                                value="<%= usuario.email ? usuario.email : null %>">
+                            <% if (locals.errors && errors.Email) { %>
+                                <div class="text-danger">
+                                    <%= errors.Email.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="text" name="Direction" placeholder="Direccion"
+                                class="control<%= locals.errors && errors.Direction ? 'Invalid' : null %>"
+                                value="<%= usuario.address ? usuario.address : null %>">
+                            <% if (locals.errors && errors.Direction) { %>
+                                <div class="text-danger">
+                                    <%= errors.Direction.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <select id="Country" name="Country" class="control">
+                                <option selected="selected">
+                                    <%= usuario.country_id %>
+                                </option>
+                                <% for(let i=0; i < paises.length; i++){ %>
+                                    <option value="<%= paises[i].id %>">
+                                        <%= paises[i].description %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                            <% if (locals.errors && errors.Country) { %>
+                                <div class="text-danger">
+                                    <%= errors.Country.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="text" name="Phone" placeholder="Telefono"
+                                class="control<%= locals.errors && errors.Phone ? 'Invalid' : null %>"
+                                value="<%= usuario.phone ? usuario.phone : null %>">
+                            <% if (locals.errors && errors.Phone) { %>
+                                <div class="text-danger">
+                                    <%= errors.Phone.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="date" name="Birthdate" placeholder="Fecha de nacimiento"
+                                class="control<%= locals.errors && errors.Birthdate ? 'Invalid' : null %>"
+                                value="<%= usuario.birthday ? usuario.birthday : null %>">
+                            <% if (locals.errors && errors.Birthdate) { %>
+                                <div class="text-danger">
+                                    <%= errors.Birthdate.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <!-- <div class="">
+                            <input type="password" name="Password" placeholder="Password"
+                                class="control<%= locals.errors && errors.Password ? 'Invalid' : null %>"
+                                value="<%= usuario.password %>">
+                            <% if (locals.errors && errors.Password) { %>
+                                <div class="text-danger">
+                                    <%= errors.Password.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="">
+                            <input type="password" name="confirmPassword" placeholder="Confirma tu password"
+                                class="control<%= locals.errors && errors.confirmPassword ? 'Invalid' : null %>"
+                                value="<%= usuario.password %>">
+                            <% if (locals.errors && errors.confirmPassword) { %>
+                                <div class="text-danger">
+                                    <%= errors.confirmPassword.msg %>
+                                </div>
+                                <% } %>
+                        </div> -->
+                    </div>
+                    <button type="/" class="botonAgregar botonLogin" onclick="">Guardar</button>
+                </form>
+            </main>
+
+            <%- include('../partials/footer') %>
+
+            <script src="/js/script.js"></script>
+
+    </body>
+
+</html>
