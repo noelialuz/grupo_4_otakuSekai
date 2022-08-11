@@ -45,19 +45,13 @@ value("Dragon ball Z"); /* OK */
 insert into series(description)
 value("Naruto"); /* OK */
 insert into series(description)
-value("Evangelion");/* DEBERÍA SER: Jujutsu Kaisen */
+value("Jujutsu Kaisen");/* DEBERÍA SER: Jujutsu Kaisen */
 insert into series(description)
-value("Full Metal Alchemist"); /* DEBERÍA SER: Boku No Hero */
-insert into series(description)
-value("Tsukihime"); /* SACARLO */
-insert into series(description)
-value("Super Campeones"); /* SACARLO */
+value("Boku No Hero"); /* DEBERÍA SER: Boku No Hero */
 insert into series(description)
 value("Pokemon"); /* OK */
 insert into series(description)
-value("Princesa Mononoke"); /* DEBERÍA SER: Demon Slayer */
-insert into series(description)
-value("Los Alcones Galacticos"); /* SACARLO */
+value("Demon Slayer"); /* DEBERÍA SER: Demon Slayer */
 insert into series(description)
 value("Mi Vecino Totoro"); /* OK */
 insert into series(description)
