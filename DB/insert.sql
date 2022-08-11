@@ -74,8 +74,11 @@ insert into users (first_name, last_name, dni, email,address, country_id, phone,
 values("None", "None", 34666887,"noelia_luz_fernandez@hotmail.com",  "qweqeqe 123",1,"11117777",'1991-09-24',"$2a$10$tD1Zew7gyHY7IHWLdzOrue4dkO66kJImKsRQAqmKYje9ICEHo1PlC","../img/avatars/1656901557982_img.png",2);
 insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
 values("Renzo", "Aquino", 37687532,"renzo_aquino_1993@hotmail.com",  "Bouchard",1,"01168925247",'1993-07-12',"$2a$10$mie6nSfOIrHyCY7aKMps3.lCn7DO2zpAISi.a0JUzSeNsWmAMRoqG","../img/avatars/1657229069387_img.jpg",2);
-/* Debería agregar el usuario JHOXANI?? */
-/* Creamos un usuario x para el perfil de cliente??? */
+insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
+values("Jhoxani", "Diaz", 95342250,"jdiaz@digitalhouse.com",  "Gavilan 45",1,"1137684987",'2000-08-21',"$2a$10$1Z66D.LZLf22LToXlgKTJuATVYaCTHuRF4/ZTBHMN8akQiAXXKBtO","../img/avatars/1659565481708_img.png",2);
+insert into users (first_name, last_name, dni, email,address, country_id, phone, birthday, password, avatar, profile_id)
+values("Franco", "Gomez", 33241657,"FrancoGomez@hotmail.com",  "San lorenzo 720",1,"01168925247",'1993-07-12',"$2a$10$mie6nSfOIrHyCY7aKMps3.lCn7DO2zpAISi.a0JUzSeNsWmAMRoqG","../img/avatars/1657229069387_img.jpg",1);
+/* CONTRASEÑA PARA USUARIO COMÚN: 1234567 */
 
 
 insert into products(name,category_id, serie_id, price, discount, description, image, deleted, stock)
