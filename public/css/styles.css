@@ -1,5 +1,5 @@
 @import url("/css/styles-Pdetail.css");
-@import url("/grupo_4_otakuSekai/public/css/normalize.css");
+/* @import url("/grupo_4_otakuSekai/public/css/normalize.css"); */
 
 
 /* -------------------- Para que se vea bien al principio, disponible para editar luego ------------- */
@@ -54,10 +54,92 @@ header {
     display: none;
 }
 
+.dropbtnUser {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    height: 100%;
+}
+
+.divSaludoUser {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 
 /*  Hay que mostrarlo al apretar la lupa PENDIENTE DE HACER */
-.buscador input {
+.barraDeBusqueda {
+    height: 40px;
+    border: var(--azul) 2px solid;
+    border-radius: 5px;
+}
+
+.botonBusqueda:hover{
+    cursor: pointer;
+}
+
+.barraBusquedaConLupaMasInput{
+    position: relative;
+}
+
+.buscador{
     display: none;
+    position: absolute;
+    top: 48px;
+    right: 1%;
+    min-width: 160px;
+    z-index: 1;
+    background-color: var(--gris);
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+
+.emojisLupa:hover {
+    cursor: pointer;
+}
+
+.botonLupa {
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.botonLupa:hover, .carritoCompras:hover {
+    color: var(--azul);
+    background-color: var(--azulClaro);
+    border-radius: 5px;
+}
+
+.emojisLupa:hover {
+    cursor: pointer;
+}
+
+.mostrarBarra{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .iconosHeader {
@@ -67,10 +149,8 @@ header {
     height: 100%;
 }
 
-.buscador{
-    display: grid;
-    align-items: center;
-}
+
+
 .iconosHeader a {
     text-decoration: none;
     color: white;
@@ -91,9 +171,11 @@ header {
     width: 40%;
 }
 
-.imagenAvatar{
+.imagenAvatar {
     width: 25px;
     border-radius: 100%;
+    display: grid;
+    align-items: center;
 }
 
 /* ---------------------------------- MAIN ---------------------------------- */
@@ -120,7 +202,7 @@ main {
 
 .imgBanner {
     vertical-align: middle;
-    width:100%;
+    width: 100%;
 }
 
 /* Botones next y previus */
@@ -356,7 +438,7 @@ main {
     padding-bottom: 3rem;
 }
 
-.product_infoCard a{
+.product_infoCard a {
     text-decoration: none;
 }
 
@@ -729,7 +811,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.not-found-font{
+.not-found-font {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 35px;
 }
@@ -920,98 +1002,85 @@ footer {
         display: none;
     }
 
-    
+
     .navbar {
         display: block;
         overflow: hidden;
         background-color: var(--azul);
-      }
+    }
 
-      .dropbtn{
-          font-weight: bold;
-      }
-      
-      .navbar a {
+    .dropbtn {
+        font-weight: bold;
+    }
+
+    .navbar a {
         float: left;
         font-size: 16px;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px 6px;
         text-decoration: none;
-      }
-      
-      .dropdown {
+    }
+
+    .dropdown {
         float: left;
         overflow: hidden;
-      }
-      
-      .dropbtnUser { 
-        border: none;
-        outline: none;
-        color: white;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
+    }
 
-        height: 100%;
-      }
 
-      .saludoUser{
+
+    .saludoUser {
         padding: 5px;
         margin: 0;
     }
-    
-    .divSaludoUser{
-          display: grid;
-          align-items: center;
-      }
 
-      .dropdown .dropbtn {
-        font-size: 16px;  
+    .divSaludoUser {
+        display: grid;
+        align-items: center;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
         border: none;
         outline: none;
         color: white;
-        padding: 14px 16px;
+        padding: 14px 6px;
         background-color: inherit;
         font-family: inherit;
         margin: 0;
-      }
-      
-      .navbar a:hover, .dropdown:hover .dropbtn, .dropdown:hover .dropbtnUser {
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn,
+    .dropdown:hover .dropbtnUser {
         background-color: var(--azulClaro);
         color: var(--azul);
         border-radius: 5px;
         cursor: pointer;
-      }
-      .navbar a:hover, .dropdown:hover{
+    }
+
+    .navbar a:hover,
+    .dropdown:hover {
         color: var(--azul);
-      }
-    
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
+    }
+
+
+    .dropdown-content a {
         float: none;
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
-      }
-      
-      .dropdown-content a:hover {
+    }
+
+    .dropdown-content a:hover {
         background-color: #ddd;
-      }
-      
-      .dropdown:hover .dropdown-content {
+    }
+
+    .dropdown:hover .dropdown-content {
         display: block;
-      }
+    }
 
 
     .iconosRedesSociales {
@@ -1028,7 +1097,7 @@ footer {
     /* ---------- barra oculta ---------- */
 
     .imgBanner {
-        width:70%;
+        width: 70%;
         height: 50%;
     }
 

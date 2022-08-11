@@ -1,3 +1,9 @@
+/* ---------------------------- BARRA DE BÚSQUEDA ----------- */
+function busqueda(){
+  let barraInput = document.querySelector("#barraDeBusqueda")
+  barraInput.classList.toggle("mostrarBarra")
+}
+
 /* ---------------------------- CARRUSEL DE FOTOS DEL BANENR DEL HOME ----------- */
 
 let slideIndex1 = 0;

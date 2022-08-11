@@ -75,7 +75,7 @@ const userController = {
             req.session.usuario.email = userExist.email;
             if (req.body.recordame != undefined) {
               res.cookie("userEmail", req.body.Email, {
-                MaxAge: 2592000,
+                MaxAge: 3*60*60*1000,
               });
             }
             db.Countries.findAll().then(function (countries) {
@@ -163,6 +163,30 @@ const userController = {
   logout: (req, res) => {
     req.session.destroy();
     return res.redirect("/");
+  },
+  profileEdit: (req, res) => {
+    usuarioLogueado = req.session.usuario.email;
+    if (usuarioLogueado) {
+      db.Users.findAll().then(function (users) {
+        let userExist = users.find((user) => user.email == usuarioLogueado);
+        if (userExist) {
+          return db.Countries.findAll().then(function (countries) {
+            let selected_country= countries.find( element => element.id = userExist.country_id);
+            userExist.country_id = selected_country.description;
+            country_list = countries.splice(selected_country.id,1);
+            userExist.avatar = "../" + userExist.avatar
+            res.render("./users/profileEdit", {
+              paises: countries,
+              usuario: userExist
+            });
+          });
+        } else {
+          res.render("./users/register");
+        }
+      });
+    } else {
+      res.render("./users/login");
+    }
   },
 };
 

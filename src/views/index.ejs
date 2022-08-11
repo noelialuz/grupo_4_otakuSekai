@@ -38,9 +38,9 @@
 
             <!-- The dots/circles -->
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
             <!---------------------------- FIN DEL CARRUSEL DE FOTOS ---------------------------->
            
@@ -74,7 +74,7 @@
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <div class="product_infoCard">
                             <a href="/products/ <%= offerProducts[i].id %>">
-                                <img src=<%= offerProducts[i].imagen1 %>  alt="">
+                                <img src=<%= offerProducts[i].image %>  alt="">
                                 <h4> <%= offerProducts[i].name %> </h4>
                             </a>
                         </div>
@@ -122,20 +122,17 @@
         <section>
             <h2 class="subtitulos">Productos en oferta</h2>
 
-
-            <!-- BUSCAR IMAGENES CUADRADAS O VERTICALES PARA PONER COMO PRODUCTOS -->
-
             <div class="cajaConProductosEnOferta">
                 <div class="cajaConProductosEnOferta">
                     <% offerProducts.slice(0, 8).forEach(function(product){ %>
-                    <% let precioActual = (product.precioAnterior - ((100 * product.descuento) / product.precioAnterior)).toFixed(0) %> 
+                    <% let price = (product.price - ((100 * product.discount) / product.price)).toFixed(0) %> 
                         <div class="productosEnOferta">
-                            <a href="/products/ <%= product.id %>"> <img src= <%= product.imagen1 %> alt=""></a>
+                            <a href="/products/ <%= product.id %>"> <img src= <%= product.image %> alt=""></a>
                             <div>
                                 <h4><%= product.name %></h4>
-                                <p class="porcentajeDescuento">- <%= product.descuento %> % off</p>
-                                <p class="precioAnterior">$ <%= product.precioAnterior %> </p>
-                                <p class="precioActual">$ <%= product.precioAnterior * (100-product.descuento) /100 %>  </p>
+                                <p class="porcentajeDescuento">- <%= product.discount %> % off</p>
+                                <p class="precioAnterior">$ <%= product.price %> </p>
+                                <p class="precioActual">$ <%= product.price * (100-product.discount) /100 %>  </p>
                                 <a href="/products/cart" id="linkBotonAgregar"><button onclick="" class="botonAgregar">Agregar al carrito</button></a>
                             </div>
                         </div>  

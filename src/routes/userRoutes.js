@@ -18,6 +18,7 @@ router.get("/logout", userController.logout)
 
 router.get('/profile', authMiddleware , userController.profile);
 router.patch('/:id', validations , userController.profile_id);
+router.get('/profile/edit', userController.profileEdit);
 
 
 module.exports = router;

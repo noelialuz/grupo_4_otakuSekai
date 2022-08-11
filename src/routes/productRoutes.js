@@ -37,10 +37,10 @@ router.delete('/deleteADMIN/:id', productController.removeAdmin);
 router.patch('/resetADMIN/:id', productController.resetAdmin);
 
 /* Ver el listado completo de productos por Categoria*/
-router.get('/category/:categoria', productController.detailCategory); 
+router.get('/category/:category_id', productController.detailCategory); 
 
 /* Ver el listado completo de productos por Anime*/
-router.get('/anime/:anime', productController.detailAnime); 
+router.get('/anime/:serie_id', productController.detailAnime); 
 
 
 

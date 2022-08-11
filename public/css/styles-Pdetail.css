@@ -1,8 +1,9 @@
 :root{
-    -lavanda:#E5E1EE;
-    -lightcyan: #DFFDFF;
-    -paleCerulean:#90BEDE;
-    -darkBlue:#003F91;
+    --gris: #E5E1EE;
+    --celeste: #DFFDFF;
+    --azulClaro: #90BEDE;
+    --azul: #003F91;
+    --violeta: #C090DE;
 }
 /*---------------------------- Css del burger menu---------------------------- */
 .abrir, .cerrar { 
@@ -101,6 +102,7 @@ input#abrir-cerrar {
     margin: auto;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 6px;
+    background-color: white;
 }
 
 .productImg{
@@ -116,31 +118,36 @@ input#abrir-cerrar {
     color: white;
     border-radius: 5px;
     border: none;
-    padding: 5px;
-    width: 90%;
-    margin-bottom: 5px;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
 }
    
 .detallesArticulo{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     background-color: white;
+    margin: 15px 10px;
+    display: grid;
+    align-items: center;
 }
 
+.detallesArticulo h3, .detallesArticulo p{
+    text-align: center;
+    margin: 0;
+}
+.detallesArticulo h3{
+    color: var(--azul);
+}
 .contenedorMiniaturas{
 display: flex;
 justify-content: space-around;
 margin: 10px;
 width: 90%;
 }
-.miniaturasProducto{
-box-shadow: 0px 0px 10px rgb(100, 100, 100);
-background-color: white;
-border-radius: 5px;
-width: 30%;
-align-self: center;
-}
+
 .imagenMiniatura{
     width: 100%;
 }
@@ -148,12 +155,6 @@ align-self: center;
 .otherProductsImg{
     width: 20vw;
     max-height: 30vh;
-}
-
-.miniaturasProducto4, .miniaturasProducto5 {
-    width: 30%;
-    align-self: center;
-    display: none;
 }
 
 .titulo_seccion{
@@ -173,43 +174,6 @@ align-self: center;
     width: 10vw;
 }
 
-.productosEnOfertaDetail{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    width: 30%;
-   
-}
-
-.productosEnOfertaDetail a {
-    width: 30%;
-    display: flex;
-    align-items: center;
-}
-
-.productosEnOfertaDetail a img {
-    width: 100%;
-}
-
-.productosEnOfertaDetail div {
-    width: 30%;
-    border-left: var(--gris) 1px solid;
-    margin-left: 5px;
-}
-
-.productosEnOfertaDetail div h4,
-.productosEnOfertaDetail div p {
-    margin: 2px;
-}
-
-.otherProducts-Container{
-    display: flex; 
-    flex-wrap: wrap;
-    margin: auto;
-}
 
 .titulo_seccion{
     text-align: center;    
@@ -222,7 +186,7 @@ align-self: center;
     margin: auto;
     justify-content: space-around;
     width: 90%;
-    margin-left: 3rem;
+    margin-left: 3em;
 }
 
 article{
@@ -233,26 +197,26 @@ article{
     
 }
 
-
-
-
-
-
-
-
+.pDetailProduct{
+    font-size: 16px;
+    font-weight: bold;
+}
+.pDiscountProduct{
+    font-size: 16px;
+    font-weight: bold;
+}
+.pDetailProductDiscount{
+    text-decoration: line-through;
+}
+.detallePreciosDescuento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px 10%;
+}
 
 /*--------------------------------Media Queris---------------------------*/
 /*------------------------------Visual para celulares medianos y Tablets-----------------------*/
 @media(min-width: 361px){
-
-.miniaturasProducto4,.miniaturasProducto{
-    display: block;
-    width: 20%;
-}
-
-.productCountainer{
-    max-width: 40%
-}
 
 .nombre-producto{
 font-size: 25px;
@@ -260,29 +224,35 @@ font-size: 25px;
 .cajaConProductosEnOferta1{
     display: contents;
 }
-.productosEnOfertaDetail{
-    margin: 5px 0px;
-    
-}
 }
 
+.divcontendor{
+    width: 70%;
+    margin-left: 15%;
+}
 
+/*------------------------------Visual para Desktop-----------------------*/
 
 @media (min-width: 769px){
-.miniaturasProducto5, .miniaturasProducto4,.miniaturasProducto{
-    display: block;
-    width: 15%;
-}
-
-.productCountainer{
-    width: 50%;
-}
 .otros-productos{
     font-size: 30px;
 }
 .nombre-producto{
     font-size: 30px;
     padding: 10px;
-    
+}
+
+.productosEnOfertax3{
+ width: 30%;   
+}
+
+.productCountainer{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+}
+
+.divContenedorImg{
+    width: 120%;
 }
 }
