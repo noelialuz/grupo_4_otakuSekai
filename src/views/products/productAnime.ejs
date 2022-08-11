@@ -32,12 +32,18 @@
                                     <h4>
                                         <%= product.name %>
                                     </h4>
-                                    <p class="porcentajeDescuento">- <%= product.discount %> % off</p>
-                                    <p class="precioAnterior">$ <%= product.price %>
-                                    </p>
-                                    <p class="precioActual">$ <%= product.price * (100-product.discount) /100
-                                            %>
-                                    </p>
+                                    <% if (product.discount != 0) { %>
+                                        <p class="porcentajeDescuento">- <%= product.discount %> off
+                                        </p>
+                                        <p class="precioAnterior">$ <%= product.price %>
+                                        </p>
+                                        <p class="precioActual">$ <%= price=(product.price * ((100-product.discount) / 100)).toFixed(0)%>
+                                        </p>
+                                    <% }else {%>
+                                        <p class="precioActual">$ <%= product.price %>
+                                        </p>
+                                    <% } %>
+                                    
                                     <a href="/products/cart" id="linkBotonAgregar"><button onclick=""
                                             class="botonAgregar">Agregar al carrito</button></a>
                                 </div>
