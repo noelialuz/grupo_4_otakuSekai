@@ -50,10 +50,13 @@
   </select>
 
   <div class="iconosHeader">
-    <form class="buscador">
-      <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda">
-      <i class="fa-solid fa-magnifying-glass emojis2"></i> <!-- Lupa de búsqueda -->
-    </form>
+    <div class="barraBusquedaConLupaMasInput">
+      <button onclick="busqueda()" class="botonLupa"><i class="fa-solid fa-magnifying-glass emojisLupa"></i></button><!-- Lupa de búsqueda -->
+      <form class="buscador" id="barraDeBusqueda">
+        <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda" > <!-- id="barraDeBusqueda" -->
+        <button class="botonEditar botonBusqueda">Buscar</button>
+      </form>
+    </div>
 
     <div class="dropdown">
       <% if(locals.isLogged) {%>
@@ -89,7 +92,7 @@
           <% } %>
     </div>
     <!--Login-->
-    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
+    <a href="/products/cart" class="carritoCompras"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
   </div>
 
 </header>
