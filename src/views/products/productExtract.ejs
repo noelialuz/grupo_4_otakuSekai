@@ -30,14 +30,31 @@
                             <% for(let x = 0; x < products.length; x++){ %>
                                 <p><%= products[x].id %></p>
                                 <p><%= products[x].name %></p>
-                                <p class="categoriaYanimeAdmin"><%= products[x].categoria %></p>
-                                <p class="categoriaYanimeAdmin"><%= products[x].anime %></p>
-                                <p class="precioAdmin">$ <%= products[x].precioAnterior * (100-products[x].descuento) /100 %></p>
-                                <img src= <%= products[x].imagen1 %> alt="Imagen 1" class="imagenVistaAdmin">
-                                <img src= <%= products[x].imagen2 %> alt="Imagen 2" class="imagenVistaAdmin">
-                                <img src= <%= products[x].imagen3 %> alt="Imagen 3" class="imagenVistaAdmin">
-                                <img src= <%= products[x].imagen4 %> alt="Imagen 4" class="imagenVistaAdmin">
-                                <p><%= products[x].eliminado %></p> 
+
+                                <% for( let i = 0; i < categories.length; i++ ) { %>
+                                    <% if (categories[i].id == products[x].category_id) { %>
+                                        <p class="categoriaYanimeAdmin"><%= categories[i].description%></p>
+                                    <% } %>
+                                <% } %>
+
+                                <% for( let i = 0; i < series.length; i++ ) { %>
+                                    <% if (series[i].id == products[x].serie_id) { %>
+                                        <p class="categoriaYanimeAdmin"><%= series[i].description%></p>
+                                    <% } %>
+                                <% } %>
+
+                                <p class="precioAdmin">$ <%= products[x].price * (100-products[x].discount) /100 %></p>
+                                <img src= <%= products[x].image %> alt="Imagen 1" class="imagenVistaAdmin">
+                                <img src= <%= products[x].image %> alt="Imagen 2" class="imagenVistaAdmin">
+                                <img src= <%= products[x].image %> alt="Imagen 3" class="imagenVistaAdmin">
+                                <img src= <%= products[x].image %> alt="Imagen 4" class="imagenVistaAdmin">
+                                
+                                <% if (products[x].deleted == 0){ %>
+                                    <P>Activo</P>
+                                <% } else { %>
+                                    <p>Eliminado</p>
+                                <% } %>  
+
                                 <div class="botonesAccion">
                                         <a href="/products/<%= products[x].id %>/edit" class="botonEditar1">Editar</a>
                                         <form action="/products/resetADMIN/<%= products[x].id %>?_method=PATCH" method="POST">

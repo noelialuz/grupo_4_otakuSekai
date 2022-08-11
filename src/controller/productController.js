@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
 
-const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 const { validationResult } = require("express-validator");
 const { push } = require("../middlewares/validateCreateMiddleware");
 
@@ -134,11 +133,16 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      db.Products.findAll().then(function (allProducts){
-        res.render("./products/productExtract", {
-          products: allProducts,
-      })
-
+      db.Products.findAll().then(function (allProducts) {
+        db.Categories.findAll().then(function (allCategories) {
+          db.Series.findAll().then(function (allSeries) {
+            res.render("./products/productExtract", {
+              products: allProducts,
+              categories: allCategories,
+              series: allSeries,
+            });
+          });
+        });
       });
     }
   },
@@ -267,32 +271,45 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToDelete = products.find(
-        (product) => req.params.id == product.id
-      );
-      let removeProduct = "true";
-      let indice = products.findIndex((product) => product.id == req.params.id);
-      products[indice].eliminado = removeProduct;
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/products/extractADMIN");
+      let productID = req.params.id;
+      dbProducts
+        .destroy({ where: { id: productID }, force: true })
+        .then(() => {
+          return res.redirect("/products/extractADMIN");
+        })
+        .catch((err) => res.send(err));
     }
   },
 
   resetAdmin: (req, res) => {
-    if (req.session.usuario == undefined) {
-      return res.render("./users/login", { msg: "" });
-    } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToDelete = products.find(
-        (product) => req.params.id == product.id
-      );
-      let removeProduct = "false";
-      let indice = products.findIndex((product) => product.id == req.params.id);
-      products[indice].eliminado = removeProduct;
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/products/extractADMIN");
-    }
+    let productID = req.params.id;
+    db.Products.findByPk(productID).then(function (product) {
+      if (product.deleted == true) {
+        dbProducts
+          .update(
+            {
+              deleted: false,
+            },
+            { where: { id: productID } }
+          )
+          .then(() => {
+            return res.redirect("/products/extractADMIN");
+          })
+          .catch((err) => res.send(err));
+      } else {
+        dbProducts
+          .update(
+            {
+              deleted: true,
+            },
+            { where: { id: productID } }
+          )
+          .then(() => {
+            return res.redirect("/products/extractADMIN");
+          })
+          .catch((err) => res.send(err));
+      }
+    });
   },
 };
 
