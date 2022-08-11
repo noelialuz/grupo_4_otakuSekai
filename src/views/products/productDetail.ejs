@@ -7,6 +7,7 @@
         <%- include('../partials/header') %>
             <main>
                 <div class="presentacion-producto">
+                    <!-- AGREGAR FUNCIONALIDAD O SACAR -->
                     <div>
                         <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
                         <label for="abrir-cerrar" class="toggle-button">
@@ -14,18 +15,29 @@
                             <span class="abrir" title="Abrir">Abrir</span>
                         </label>
                     </div>
-                    <h2 class="nombre-producto"> <%= product.name %> </h2>
+                    <h2 class="nombre-producto">
+                        <%= product.name %>
+                    </h2>
                 </div>
                 <div class="divcontendor">
                     <article class="productCountainer">
-                        <img class="productImg" src= <%= product.image  %>  alt="producto">
-                        <button class="botonProducto">
-                            Agregar al carrito
-                        </button>
+                        <div class="divContenedorImg">
+                            <img class="productImg" src=<%=product.image %> alt="producto">
+                            <button class="botonProducto">Agregar al carrito</button>
+                        </div>
                         <div class="detallesArticulo">
-                            <h4> <%= product.name %> </h4>
-                            <p> <%= product.description %> </p>
-                            <p> <%= product.price %>  (Tax Included)</p>
+                            <h3><%= product.name %></h3>
+                            <p class="pDetailProduct"><%= product.description %></p>
+                            <% if (product.discount != 0) { %>
+                                <div class="detallePreciosDescuento">
+                                    <p class="pDiscountProduct">- <%= product.discount %> % off</p>
+                                    <p class="pDiscountProduct pDetailProductDiscount">$ <%= product.price %></p>
+                                </div>
+                                <p class="precioActual">$ <%= price=(product.price * ((100-product.discount) / 100)).toFixed(0)%></p>
+                            <% }else {%>
+                                <p class="precioActual">$ <%= product.price %></p>
+                            <% } %>
+                            
                         </div>
                     </article>
                 </div>
@@ -36,37 +48,47 @@
                     <button type="submit" class="botonEditar botonEliminar">ELIMINAR</button>
                 </form>
 
-                               
-               <section class="otherProducts-Container">
-                <h3 class="titulo_seccion">Otros porductos similares...</h3>
-                    <div class="products-Container">
 
-                        <% function getRandomArbitrary(min, max) {
-                            return Math.random() * (max - min) + min;
-                          } %>
-                        <% let ant = 0; %>  
-                        <% for(let x = 0; x < 3; x++){ %> 
-                        <% let num = getRandomArbitrary(1, products.length-1).toFixed(0) %> 
-                        <% while(num == ant){
-                            num = getRandomArbitrary(1, products.length-1).toFixed(0)
-                        } %>
-                        <div class="productosEnOfertaDetail">
-                            <a href="/products/ <%= products[num].id %>"> <img class="otherProductsImg" 
-                                src= <%= products[num].image %>  alt=""></a>
-                            <!-- Link a la página del producto -->
-                            <div class="detallesOferta">
-                                <h4><%= products[num].name %></h4>
-                                <p class="porcentajeDescuento">- <%= products[num].discount %> off</p>
-                                <p class="precioAnterior">$ <%= products[num].price %></p>
-                                <p class="precioActual">$ <%= price = (products[num].price - ((100 * products[num].discount) / products[num].price)).toFixed(0) %></p>
-                                <button onclick="" class="botonAgregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                        <% ant = num %> 
-                        <%}%> 
+                <section>
+                    <h2 class="subtitulos">Otros productos similares...</h2>
+                    <!-- <div class="products-Container"> -->
+
+                    <div class="cajaConProductosEnOferta">
+                        <% function getRandomArbitrary(min, max) { return Math.random() * (max - min) + min; } %>
+                            <% let ant=0; %>
+                                <% for(let x=0; x < 3; x++){ %>
+                                    <% let num=getRandomArbitrary(1, products.length-1).toFixed(0) %>
+                                        <% while(num==ant){ num=getRandomArbitrary(1, products.length-1).toFixed(0) } %>
+                                            <div class="productosEnOferta productosEnOfertax3">
+                                                <a href="/products/ <%= products[num].id %>"> <img
+                                                        class="otherProductsImg" src=<%=products[num].image %>
+                                                    alt=""></a>
+                                                <!-- Link a la página del producto -->
+                                                <div class="detallesOferta">
+                                                    <h4>
+                                                        <%= products[num].name %>
+                                                    </h4>
+                                                    <% if (products[num].discount != 0) { %>
+                                                        <p class="porcentajeDescuento">- <%= products[num].discount %> off
+                                                        </p>
+                                                        <p class="precioAnterior">$ <%= products[num].price %>
+                                                        </p>
+                                                        <p class="precioActual">$ <%= price=(products[num].price * ((100-products[num].discount) / 100)).toFixed(0)%>
+                                                        </p>
+                                                    <% }else {%>
+                                                        <p class="precioActual">$ <%= products[num].price %>
+                                                        </p>
+                                                    <% } %>
+                                                    
+                                                    <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                                                </div>
+                                            </div>
+                                            <% ant=num %>
+                                                <%}%>
                     </div>
-               </section>
-                
+                    <!--      </div> -->
+                </section>
+
             </main>
             <%- include('../partials/footer') %>
     </body>
