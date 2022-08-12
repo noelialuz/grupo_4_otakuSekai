@@ -135,6 +135,11 @@
     margin: 10px ;
 }
 
+
+.erroresValidacion{
+    color: red;
+    font-weight: 900;
+}
 /*  Con esto manejo los estilos de los imput en los form*/
 
 

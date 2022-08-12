@@ -9,11 +9,13 @@
                 <form action="/products/" method="POST" enctype="multipart/form-data" class="create-form">
                     <div class="control-formulario-campos">
                         <h4 class="create-form-titulo">Agregar nuevos productos</h4>
-
+                        <div class = "erroresValidacion">
+                            <ul></ul>
+                        </div>
                         <label for="name">Nombre del producto: </label>
-                        <input type="text" id="name" name="name" class="control" placeholder="Ejemplo: Llavero Pokemon" required >
+                        <input type="text" id="name" name="name" class="control nombreProducto" placeholder="Ejemplo: Llavero Pokemon" required >
                         <label for="description">Descripción:</label>
-                        <input type="text" id="description" name="description" class="control" placeholder="Ejemplo: Material pvc resistente al agua" required >
+                        <input type="text" id="description" name="description" class="control descripcionProducto" placeholder="Ejemplo: Material pvc resistente al agua" required >
 
                         <label for="image">Imagen principal:</label>
                         <input type="file" id="image" name="image" class="control" placeholder="Imagen del producto" required>
@@ -51,6 +53,7 @@
                 </form>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/js/validacion.js"></script>
     </body>
 
 </html>
