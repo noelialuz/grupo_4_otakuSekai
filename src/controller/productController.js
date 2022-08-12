@@ -41,24 +41,16 @@ const controller = {
       include: [{ association: "categories" }, { association: "series" }],
       where: { category_id: categoriaID },
     }).then(function (fiterProducts) {
-      let offerProducts = [];
+      let products = [];
       for (let x = 0; x < fiterProducts.length; x++) {
-        if (fiterProducts[x].discount != 0 && fiterProducts[x].deleted == 0) {
-          offerProducts.push(fiterProducts[x]);
-        }
-      }
-
-      let noOfferProducts = [];
-      for (let x = 0; x < fiterProducts.length; x++) {
-        if (fiterProducts[x].discount == 0 && fiterProducts[x].deleted == 0) {
-          noOfferProducts.push(fiterProducts[x]);
+        if (fiterProducts[x].deleted == 0) {
+          products.push(fiterProducts[x]);
         }
       }
 
       if (fiterProducts != null) {
         res.render("./products/productCategory", {
-          offerProducts: offerProducts,
-          noOfferProducts: noOfferProducts,
+          products: products
         });
       } else {
         res.render("./products/not-found-products", {
@@ -76,27 +68,16 @@ const controller = {
       include: [{ association: "categories" }, { association: "series" }],
       where: { serie_id: serieID },
     }).then(function (fiterProducts) {
-      let offerProducts = [];
+      let products = [];
       for (let x = 0; x < fiterProducts.length; x++) {
-        if (fiterProducts[x].discount != 0 && fiterProducts[x].deleted == 0) {
-          offerProducts.push(fiterProducts[x]);
-        }
-      }
-
-      let noOfferProducts = [];
-      for (let x = 0; x < fiterProducts.length; x++) {
-        if (
-          fiterProducts[x].descuento == 0 &&
-          fiterProducts[x].eliminado == 0
-        ) {
-          noOfferProducts.push(products[x]);
+        if (fiterProducts[x].deleted == 0) {
+          products.push(fiterProducts[x]);
         }
       }
 
       if (fiterProducts != null) {
         res.render("./products/productAnime", {
-          offerProducts: offerProducts,
-          noOfferProducts: noOfferProducts,
+          products: products,
         });
       } else {
         res.render("./products/not-found-products", {

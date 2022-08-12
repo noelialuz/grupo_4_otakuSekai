@@ -25,8 +25,10 @@
                     <% for(let i = 0; i < 5; i++){ %> 
                     <div class="icon-cards__item d-flex align-items-center justify-content-center">
                         <div class="product_infoCard">
-                            <img src=<%= offerProducts[i].image %>  alt="">
-                            <h4> <%= offerProducts[i].name %> </h4>
+                            <a href="/products/ <%= offerProducts[i].id %>">
+                                <img src=<%= offerProducts[i].image %>  alt="">
+                                <h4> <%= offerProducts[i].name %> </h4>
+                            </a>
                         </div>
                     </div>
                     <% } %> 

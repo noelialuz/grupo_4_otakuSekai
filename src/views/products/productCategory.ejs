@@ -23,25 +23,8 @@
                     
                     <h2 class="subtitulos">Todos nuestros productos</h2>                    
                     
-                    <div class="cajaConProductosEnOferta">
-                        <% noOfferProducts.forEach(function(product){ %>
-                            <div class="productosEnOferta">
-                                <a href="/products/ <%= product.id %>"> <img src=<%=product.image %> alt=""></a>
-                                <!-- Link a la página del producto -->
-                                <div>
-                                    <h4>
-                                        <%= product.name %>
-                                    </h4>
-                                    <p class="precioActual">$ <%= product.price %>
-                                    </p>
-                                    <a href="/products/cart" id="linkBotonAgregar"><button onclick=""
-                                            class="botonAgregar">Agregar al carrito</button></a>
-                                </div>
-                            </div>
-                            <% }) %>
-                    </div>
                     <div class="cajaConProductosEnOferta">  
-                        <% offerProducts.forEach(function(product){ %>
+                        <% products.forEach(function(product){ %>
                             <div class="productosEnOferta">
                                 <a href="/products/ <%= product.id %>"> <img src=<%=product.image %> alt=""></a>
                                 <!-- Link a la página del producto -->
@@ -49,12 +32,17 @@
                                     <h4>
                                         <%= product.name %>
                                     </h4>
-                                    <p class="porcentajeDescuento">- <%= product.discount %> % off</p>
-                                    <p class="precioAnterior">$ <%= product.price %>
-                                    </p>
-                                    <p class="precioActual">$ <%= product.price * (100-product.discount) /100
-                                            %>
-                                    </p>
+                                    <% if (product.discount != 0) { %>
+                                        <p class="porcentajeDescuento">- <%= product.discount %> off
+                                        </p>
+                                        <p class="precioAnterior">$ <%= product.price %>
+                                        </p>
+                                        <p class="precioActual">$ <%= price=(product.price * ((100-product.discount) / 100)).toFixed(0)%>
+                                        </p>
+                                    <% }else {%>
+                                        <p class="precioActual">$ <%= product.price %>
+                                        </p>
+                                    <% } %>
                                     <a href="/products/cart" id="linkBotonAgregar"><button onclick=""
                                             class="botonAgregar">Agregar al carrito</button></a>
                                 </div>
