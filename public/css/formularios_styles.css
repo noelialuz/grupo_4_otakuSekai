@@ -34,9 +34,7 @@
     display: block;
     margin: 10px auto;
     margin-bottom: 1px;
-    font-size: 1rem;
     padding: 0.5rem;
-    font-weight: bold;
 }
 
 .controlInvalid{
@@ -140,6 +138,46 @@
     color: red;
     font-weight: 900;
 }
+
+
+/* ------------------- CSS PARA VALIDACIONES FRONT END CON JS ------------------- */
+
+.userAdd{
+    display: none;
+  }
+
+  .validationUserAdd{
+    display: block;
+    color: #842029;
+    background-color: #F8D7DA;
+  }
+
+  .is-valid {
+    color: #198754;
+  }
+  
+  .is-invalid {
+    color: #842029;
+  }
+  
+  .alert-warning{
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 5px;
+  }
+  
+  .alert-complete{
+    color:#2a8d03;
+    background-color: #bbfca6;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    border-bottom: 5px;
+  }
+
+
 /*  Con esto manejo los estilos de los imput en los form*/
 
 

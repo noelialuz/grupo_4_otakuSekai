@@ -637,6 +637,8 @@ main {
     width: 50%;
     border-left: var(--gris) 1px solid;
     margin-left: 5px;
+    display: grid;
+    align-items: center;
 }
 
 .productosEnOferta div h4,
