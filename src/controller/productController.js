@@ -50,7 +50,7 @@ const controller = {
 
       if (fiterProducts != null) {
         res.render("./products/productCategory", {
-          products: products
+          products: products,
         });
       } else {
         res.render("./products/not-found-products", {
@@ -148,14 +148,9 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      const resultValidation = validationResult(req);
+      let errors = validationResult(req);
+    if (errors.isEmpty()) {
 
-      if (resultValidation.errors.length > 0) {
-        return res.render("./products/create", {
-          errors: resultValidation.mapped(),
-          oldData: req.body,
-        });
-      } else {
         dbProducts
           .create({
             name: req.body.name,
@@ -182,6 +177,8 @@ const controller = {
       return res.render("./users/login", { msg: "" });
     } else {
       let productID = req.params.id;
+      let errors = validationResult(req);
+      if (errors.isEmpty()){
       db.Products.findByPk(productID, {
         include: [{ association: "categories" }, { association: "series" }],
       }).then(function (product) {
@@ -196,7 +193,7 @@ const controller = {
           });
         });
       });
-    }
+    }};
   },
 
   update: (req, res) => {

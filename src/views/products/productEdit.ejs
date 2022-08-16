@@ -8,13 +8,16 @@
             <main>
                 <form action="/products/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="create-form">
                     <div class="control-formulario-campos">
+                        <div class = "erroresValidacion">
+                            <ul></ul>
+                        </div>
                         <h4 class="create-form-titulo">Editar producto: <i> <%= product.name %>  </i></h4>
 
                         <label for="name">Nombre del producto: </label>
-                        <input type="text" value="<%= product.name %>" id="name" name="name" class="control" placeholder="Ejemplo: <%= product.name %>" required >
+                        <input type="text" value="<%= product.name %>" id="name" name="name" class="control nombreEdit" placeholder="Ejemplo: <%= product.name %>" required >
 
                         <label for="description">Descripción:</label>
-                        <input type="text" value="<%= product.description %>" id="description" name="description" class="control" placeholder="Ejemplo: <%= product.description %>" required >
+                        <input type="text" value="<%= product.description %>" id="description" name="description " class="control descripcionEdit" placeholder="Ejemplo: <%= product.description %>" required >
 
                         <label for="image">Imagen principal:</label>
                         <input type="file" value="<%= product.image %>" id="image" name="image" class="control" placeholder="Imagen del producto">
@@ -63,6 +66,7 @@
                 </form>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/js/validacionEditProduct.js"></script>
     </body>
 
 </html>
