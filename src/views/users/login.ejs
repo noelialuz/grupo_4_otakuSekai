@@ -9,9 +9,6 @@
         <form action="/users/logueado" method="POST" class="create-form">
             <div class="control-formulario-campos">
                 <h4 class="create-form-titulo">Inicia sesión</h4>
-                <div class = "erroresValidacion">
-                    <ul></ul>
-                </div>
                 <div class="">
                     <input 
                         type="email" 
@@ -49,6 +46,9 @@
             <button type="submit" class="botonAgregar botonLogin">Iniciar
                 Sesión</button>
                 <h5 style="color:#FF0000"><%= msg %></h5>
+                <div class = "erroresValidacion">
+                    <ul></ul>
+                </div>
             <div class="control-formulario-redes_sociales">
                 <h4 class="create-form-titulo">Ingresa con</h4>
                 <a><i class="fav fa-brands fa-facebook"></i></a>
