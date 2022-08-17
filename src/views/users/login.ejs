@@ -9,6 +9,9 @@
         <form action="/users/logueado" method="POST" class="create-form">
             <div class="control-formulario-campos">
                 <h4 class="create-form-titulo">Inicia sesión</h4>
+                <div class = "erroresValidacion">
+                    <ul></ul>
+                </div>
                 <div class="">
                     <input 
                         type="email" 
@@ -62,6 +65,7 @@
                 onclick="location.href='/users/register'">Registrate</button>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/js/validacionLogin.js"></script>
 </body>
 
 </html>
