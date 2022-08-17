@@ -95,7 +95,7 @@ const userController = {
                     dni: req.body.DNI,
                     email: req.body.Email,
                     address: req.body.Direction,
-                    country_id: req.body.Country,
+                    country_id: req.body.country_id,
                     phone: req.body.Phone,
                     birthday: req.body.Birthdate,
                     password: bcrypt.hashSync(req.body.Password, 10),
