@@ -31,6 +31,7 @@
                         value="<%= locals.oldData ? oldData.apellido : null %>"
                         id="formApellidoRegister"
                     >
+                    <div id="apellidoRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.apellido) { %>
                             <div class="text-danger">
                                 <%= errors.apellido.msg %> 
@@ -47,6 +48,7 @@
                         value="<%= locals.oldData ? oldData.DNI : null %>"
                         id="formDNIRegister"
                     >
+                    <div id="dniRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.DNI) { %>
                             <div class="text-danger">
                                 <%= errors.DNI.msg %> 
@@ -63,6 +65,7 @@
                         value="<%= locals.oldData ? oldData.Email : null %>"
                         id="formEmailRegister"
                     >
+                    <div id="emailRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.Email) { %>
                             <div class="text-danger">
                                 <%= errors.Email.msg %> 
@@ -79,6 +82,7 @@
                         value="<%= locals.oldData ? oldData.Direction : null %>"
                         id="formDirectionRegister"
                     >
+                    <div id="directionRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.Direction) { %>
                             <div class="text-danger">
                                 <%= errors.Direction.msg %> 
@@ -95,6 +99,7 @@
                                 </option>
                                 <% } %> 
 						</select>
+                        <div id="countryRegister" class="userAdd"></div>
                     <% if (locals.errors && errors.Country) { %>
                         <div class="text-danger">
                             <%= errors.Country.msg %> 
@@ -110,6 +115,7 @@
                         class="control<%= locals.errors && errors.Phone ? 'Invalid' : null %>"  
                         value="<%= locals.oldData ? oldData.Phone : null %>"
                         id="formPhoneRegister">
+                        <div id="phoneRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.Phone) { %>
                             <div class="text-danger">
                                 <%= errors.Phone.msg %> 
@@ -125,6 +131,7 @@
                         class="control<%= locals.errors && errors.Birthdate ? 'Invalid' : null %>" 
                         value="<%= locals.oldData ? oldData.Birthdate : null %>"
                         id="formBirthdateRegister">
+                        <div id="birthdateRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.Birthdate) { %>
                             <div class="text-danger">
                                 <%= errors.Birthdate.msg %> 
@@ -140,6 +147,7 @@
                         class="control<%= locals.errors && errors.Password ? 'Invalid' : null %>" 
                         value=""
                         id="formPasswordRegister">
+                        <div id="passwordRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.Password) { %>
                             <div class="text-danger">
                                 <%= errors.Password.msg %> 
@@ -153,7 +161,9 @@
                         name="confirmPassword" 
                         placeholder="Confirma tu password" 
                         class="control<%= locals.errors && errors.confirmPassword ? 'Invalid' : null %>" 
-                        value="">
+                        value=""
+                        id="formPasswordConfirmRegister">
+                        <div id="passwordConfirmRegister" class="userAdd"></div>
                         <% if (locals.errors && errors.confirmPassword) { %>
                             <div class="text-danger">
                                 <%= errors.confirmPassword.msg %> 
@@ -169,6 +179,7 @@
                         class="control<%= locals.errors && errors.Avatar ? 'Invalid' : null %>" 
                         value=""
                         id="formImgRegister">
+                        <div id="imageRegister" class="userAdd"></div>
                 <% if (locals.errors && errors.Avatar) { %>
                     <div class="text-danger">
                         <%= errors.Avatar.msg %> 

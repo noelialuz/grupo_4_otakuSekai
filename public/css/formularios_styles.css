@@ -35,6 +35,9 @@
     margin: 10px auto;
     margin-bottom: 1px;
     padding: 0.5rem;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 15px;
 }
 
 .controlInvalid{
