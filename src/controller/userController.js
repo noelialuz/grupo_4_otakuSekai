@@ -68,48 +68,28 @@ const userController = {
             req.body.Password,
             userExist.password
           );
-          if (password) {
-            delete userExist.password;
-            req.session.nombre = userExist.first_name;
-            req.session.usuario = userExist;
-            req.session.usuario.email = userExist.email;
-            if (req.body.recordame != undefined) {
-              res.cookie("userEmail", req.body.Email, {
-                MaxAge: 3*60*60*1000,
-              });
-            }
-            db.Countries.findAll().then(function (countries) {
-              res.redirect("/");
-            });
-          } else {
-            res.render("./users/login", {
-              msg: "El usuario o contraseña no son válidos",
-            });
-          }
-        } else {
-            console.log(req.body.nombre);
-            db.Users
-                .create({
-                    first_name: req.body.nombre,
-                    last_name: req.body.apellido,
-                    dni: req.body.DNI,
-                    email: req.body.Email,
-                    address: req.body.Direction,
-                    country_id: req.body.Country,
-                    phone: req.body.Phone,
-                    birthday: req.body.Birthdate,
-                    password: bcrypt.hashSync(req.body.Password, 10),
-                    avatar: "../img/avatars"+req.file.filename,
-                    profile_id: 1
-                }).then(() => {
-                    return res.redirect('/');
-                })
-                .catch((error) => res.send(error));
-
-          res.render("./users/login", {
-            msg: "El usuario no existe. Si no tenes usuario crealo con el botón de abajo",
-          });
-        }
+              if (password) {
+                delete userExist.password;
+                req.session.nombre = userExist.first_name;
+                req.session.usuario = userExist;
+                req.session.usuario.email = userExist.email;
+                if (req.body.recordame != undefined) {
+                  res.cookie("userEmail", req.body.Email, {
+                    MaxAge: 3 * 60 * 60 * 1000,
+                  });
+                }
+                //db.Countries.findAll().then(function (countries) {
+                  //res.redirect("/");
+                //});
+              } else {
+                res.render("./users/login", {
+                  msg: "El usuario o contraseña no son válidos",
+                });
+              }
+        }else {res.render("./users/login", {
+          msg: "El usuario no existe. Si no tenes usuario crealo con el botón de abajo",
+        });
+      }
       });
     }
   },
@@ -120,9 +100,9 @@ const userController = {
         let userExist = users.find((user) => user.email == usuarioLogueado);
         if (userExist) {
           return db.Countries.findAll().then(function (countries) {
-            let selected_country= countries.find( element => element.id = userExist.country_id);
+            let selected_country = countries.find(element => element.id = userExist.country_id);
             userExist.country_id = selected_country.description;
-            country_list = countries.splice(selected_country.id,1);
+            country_list = countries.splice(selected_country.id, 1);
             console.log(country_list);
             res.render("./users/profile", {
               paises: countries,
@@ -171,9 +151,9 @@ const userController = {
         let userExist = users.find((user) => user.email == usuarioLogueado);
         if (userExist) {
           return db.Countries.findAll().then(function (countries) {
-            let selected_country= countries.find( element => element.id = userExist.country_id);
+            let selected_country = countries.find(element => element.id = userExist.country_id);
             userExist.country_id = selected_country.description;
-            country_list = countries.splice(selected_country.id,1);
+            country_list = countries.splice(selected_country.id, 1);
             userExist.avatar = "../" + userExist.avatar
             res.render("./users/profileEdit", {
               paises: countries,
