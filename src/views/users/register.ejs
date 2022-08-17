@@ -7,6 +7,7 @@
     <main>
         <form action="/users" method="POST" class="create-form" enctype="multipart/form-data" id="formRegistro">
             <h4 class="create-form-titulo">Registrate en nuestra página</h4>
+            <ul class="errores"></ul>
             <div class="control-formulario-campos">
                 <div class="">
                     <input 
@@ -206,6 +207,7 @@
     </main>
     <%- include('../partials/footer') %>
 
+    <script src="/js/validacionRegister.js"></script>
 </body>
 
 </html>

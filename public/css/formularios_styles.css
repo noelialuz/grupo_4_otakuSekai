@@ -153,6 +153,12 @@
     display: block;
     color: #842029;
     background-color: #F8D7DA;
+    border-radius: 10px;
+  }
+
+  .validationUserAdd p{
+    text-align: center;
+    font-weight: bold;
   }
 
   .is-valid {
