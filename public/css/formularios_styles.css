@@ -142,6 +142,20 @@
     font-weight: 900;
 }
 
+.recordameCheck{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.recordameCheck label{
+  display: grid;
+  align-items: center;
+  margin: 0;
+}
+
 
 /* ------------------- CSS PARA VALIDACIONES FRONT END CON JS ------------------- */
 

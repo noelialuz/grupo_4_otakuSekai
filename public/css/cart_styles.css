@@ -32,6 +32,15 @@
     border-bottom: 1px solid #D2C3FA;
     text-align: left;
     margin: revert;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.producto-info-title{
+    font-weight: bold;
+    font-size: 18px;
+    width: 40%;
 }
 
 .card-carrito_empty{
@@ -45,21 +54,32 @@
     flex-direction: row;
     border: #E5E1EE 1px solid;
     margin: 20px;
+    border-radius: 7px;
 }
-.imagen{
-    max-width: 25%;
-    max-height: 25%;
-    
+.imagenCarrito{
+    width: 25%;
+    height: 25%;
 }
 
 .card-carrito-info-botton_add_delete{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
 }
 
+.card-carrito-info-botton_add_delete p{
+    font-weight: bold;
+    font-size: 18px;
+}
 .card-carrito-producto-info-precio{
-    max-width: 30%;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    color: #003F91;
+    font-size: 18px;
 }
 
 p{
@@ -116,6 +136,7 @@ p{
 .botonComprar{
     width: 15%;
     margin: 10px ;
+    font-size: 16px;
 }
 
 .botonVaciar{
@@ -124,6 +145,7 @@ p{
     background-color: white;
     color: var(--azul);
     border: var(--azulClaro) 1px solid;
+    font-size: 16px;
 }
 
 
@@ -135,6 +157,23 @@ p{
 .botonVaciar:hover{
     background-color: var(--azulClaro);
     border-color: #E5E1EE;
+}
+
+.precioTotalProductos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.precioTotalProductos h3{
+    width: 70%;
+    text-align: right;
+}
+
+#precioTotal{
+    width: 30%;
+    text-align: center;
 }
 
 @media (min-width: 361px) {

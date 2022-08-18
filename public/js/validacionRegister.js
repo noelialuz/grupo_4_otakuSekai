@@ -97,6 +97,11 @@ window.addEventListener("load", function () {
             advertencia.innerHTML += "<p>El email no puede estar vacío</p>"
             advertencia.classList.remove("userAdd")
             advertencia.classList.add("validationUserAdd")
+        } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmailRegister.value)) {
+            advertencia.innerHTML = "";
+            advertencia.innerHTML += "<p>El email debe ser del tipo: ejemplo@mail.com</p>"
+            advertencia.classList.remove("userAdd")
+            advertencia.classList.add("validationUserAdd")
         }
         else {
             advertencia.innerHTML = "";
@@ -301,6 +306,10 @@ window.addEventListener("load", function () {
 
         if (formEmailRegister.value == "") {
             errores.push("El email no puede estar vacío");
+            formEmailRegister.classList.remove("is-valid");
+            formEmailRegister.classList.add("is-invalid");
+        } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmailRegister.value)) {
+           errores.push("El email debe ser del tipo: ejemplo@mail.com");
             formEmailRegister.classList.remove("is-valid");
             formEmailRegister.classList.add("is-invalid");
         }

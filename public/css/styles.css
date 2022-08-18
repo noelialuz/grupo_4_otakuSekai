@@ -571,12 +571,12 @@ main {
     width: 100%;
     transition: opacity 2s;
 }
-
 .nuestrosProductos1 {
     height: 180px;
-    background-image: url("/img/nuestrosProductos/tazas1.png");
+    background-image: url("/img/nuestrosProductos/mangas1.png");
     background-size: cover;
 }
+
 
 .nuestrosProductos2 {
     height: 180px;
@@ -586,19 +586,32 @@ main {
 
 .nuestrosProductos3 {
     height: 180px;
-    background-image: url("/img/nuestrosProductos/figuras1.png");
+    background-image: url("/img/nuestrosProductos/posters1.png");
     background-size: cover;
 }
 
 .nuestrosProductos4 {
     height: 180px;
-    background-image: url("/img/nuestrosProductos/posters1.png");
+    background-image: url("/img/nuestrosProductos/figuras1.png");
     background-size: cover;
 }
 
+
 .nuestrosProductos5 {
     height: 180px;
-    background-image: url("/img/nuestrosProductos/mangas1.png");
+    background-image: url("/img/nuestrosProductos/tazas2.jpg");
+    background-size: cover;
+}
+
+.nuestrosProductos6 {
+    height: 180px;
+    background-image: url("/img/nuestrosProductos/llaveros1.png");
+    background-size: cover;
+}
+
+.nuestrosProductos7 {
+    height: 180px;
+    background-image: url("/img/nuestrosProductos/tazas1.png");
     background-size: cover;
 }
 
@@ -872,15 +885,15 @@ footer {
     /* ---------- Nuestros productos categorias ---------- */
 
     .nuestrosProductos1 {
-        height: 180px;
+        height: 230px;
     }
 
     .nuestrosProductos2 {
-        height: 270px;
+        height: 290px;
     }
 
     .nuestrosProductos3 {
-        height: 140px;
+        height: 150px;
     }
 
     .nuestrosProductos4 {
@@ -891,6 +904,13 @@ footer {
         height: 200px;
     }
 
+    .nuestrosProductos6 {
+        height: 220px;
+    }
+
+    .nuestrosProductos7 {
+        height: 140px;
+    }
     .nuestrosProductos {
         display: flex;
         flex-wrap: wrap;

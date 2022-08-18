@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head', {title: 'Carrito de compras'}) %>
+<%- include('../partials/head', {title: 'Carrito de compras' }) %>
+
     <body>
         <%- include('../partials/header') %>
-        <main>
-            <div class="carrito">
-                <div class="card-carrito">
-                    <h4 class="card-carrito-titulo">Carrito de compras</h4>
-                    <div class = "card-carrito_empty">
-                        <p>Tu carrito de compras está vacío</p>
-                    <p>Ve a los productos de la tienda para agregarlos</p>
-                    </div>
+            <main>
+                <div class="carrito">
                     <div class="card-carrito">
-                        <div class="card-carrito-producto">
-                            <img class="imagen" src="/img/productos/2/taza2.png" alt="imagen pieza anime">
-                            <div class="card-carrito-producto-info">
-                                <p class="producto-info-title">Taza Mágica Dragon Ball Z</p>
-                            </div>
-                            <div class="card-carrito-info-botton_add_delete">
-                                <button class="carrito-button-items"><i class="fa-solid fa-circle-minus"></i></button>
-                                <p>5</p>
-                                <button class="carrito-button-items"><i class="fa-solid fa-circle-plus"></i></button>
-                            </div>
-                            <div class="card-carrito-producto-info-precio">
-                                <p>$5.000,00</p>
-                            </div>
+                        <h2 class="card-carrito-titulo">Carrito de compras</h2>
+                        <div class="card-carrito_empty">
+                            <p>Tu carrito de compras está vacío</p>
+                            <p>Ve a los productos de la tienda para agregarlos</p>
                         </div>
-                        <div class="card-carrito-producto">
-                            <img class="imagen" src="/img/productos/11/figura11.png" alt="imagen pieza anime">
-                            <div class="card-carrito-producto-info">
+                        <div class="card-carrito">
+                            <div class="card-carrito-producto">
+                                <img class="imagenCarrito" src="/img/productos/2/taza2.png" alt="imagen pieza anime">
+                                <p class="producto-info-title">Taza Mágica Dragon Ball Z</p>
+                                <div class="card-carrito-info-botton_add_delete">
+                                    <button class="carrito-button-items"><i
+                                            class="fa-solid fa-circle-minus"></i></button>
+                                    <p>5</p>
+                                    <button class="carrito-button-items"><i
+                                            class="fa-solid fa-circle-plus"></i></button>
+                                </div>
+                                <p class="card-carrito-producto-info-precio">$ <span id="precio1">5000</span></p>
+                            </div>
+                            <div class="card-carrito-producto">
+                                <img class="imagenCarrito" src="/img/productos/11/figura11.png" alt="imagen pieza anime">
                                 <p class="producto-info-title">Juguete Dragon Ball Z Gogeta Super Saiyan Blue</p>
+                                <div class="card-carrito-info-botton_add_delete">
+                                    <button class="carrito-button-items"><i
+                                            class="fa-solid fa-circle-minus"></i></button>
+                                    <p>1</p>
+                                    <button class="carrito-button-items"><i
+                                            class="fa-solid fa-circle-plus"></i></button>
+                                </div>
+                                <p class="card-carrito-producto-info-precio">$ <span id="precio2">3000</span></p>
                             </div>
-                            <div class="card-carrito-info-botton_add_delete">
-                                <button class="carrito-button-items"><i class="fa-solid fa-circle-minus"></i></button>
-                                <p>1</p>
-                                <button class="carrito-button-items"><i class="fa-solid fa-circle-plus"></i></button>
-                            </div>
-                            <div class="card-carrito-producto-info-precio">
-                                <p>$3.000,00</p>
+                            <div class="precioTotalProductos">
+                                <h3>Total</h3>
+                                <p class="card-carrito-producto-info-precio">$ <span id="precioTotal">8000</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="carrito-buttons">
-                <button type="submit" class="botonAgregar botonVaciar">Vaciar Carrito</button>
-                <button type="submit" class="botonAgregar botonComprar">Comprar</button>
-            </div>
-        </main>
-        <%- include('../partials/footer') %>
-        
-        <script src="/js/script.js"></script>
+                <div class="carrito-buttons">
+                    <button type="submit" class="botonAgregar botonVaciar">Vaciar Carrito</button>
+                    <button type="submit" class="botonAgregar botonComprar">Comprar</button>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+
+                
     </body>
+
 </html>
