@@ -7,7 +7,7 @@
       <button class="dropbtn" onclick="location.href='/products'">Productos
         <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
+      <div class="dropdown-content" id="cambio">
         <a href="/products/category/1">Mangas</a>
         <a href="/products/category/2">Indumentarias</a>
         <a href="/products/category/3">Posters</a>
@@ -50,10 +50,14 @@
   <div class="iconosHeader">
     <div class="barraBusquedaConLupaMasInput">
       <button onclick="busqueda()" class="botonLupa"><i class="fa-solid fa-magnifying-glass emojisLupa"></i></button><!-- Lupa de búsqueda -->
-      <form class="buscador" id="barraDeBusqueda">
-        <input type="text" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda" > <!-- id="barraDeBusqueda" -->
-        <button class="botonEditar botonBusqueda">Buscar</button>
+
+      <form class="buscador" method="POST" id="barraDeBusqueda" action="/products/search/">
+
+        <input type="search" placeholder="Buscar productos, anime, etc." class="barraDeBusqueda" name="value"> <!-- id="barraDeBusqueda" -->
+        <button type="submit" class="botonEditar" id="btnLupa" >Buscar</button>
+
       </form>
+
     </div>
 
     <div class="dropdown">
@@ -92,5 +96,7 @@
     <!--Login-->
     <a href="/products/cart" class="carritoCompras"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Carrito de compras -->
   </div>
+
+<script src="../../../public/js/script.js"></script>
 
 </header>

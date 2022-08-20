@@ -22,6 +22,7 @@ router.get('/:id', productController.detail);
 
 /* Ver el listado completo de productos */
 router.get('/', productController.verMas); 
+router.post('/search', productController.Buscar);
 
 /* Editar un producto existente*/
 router.get('/:id/edit', productController.edit);

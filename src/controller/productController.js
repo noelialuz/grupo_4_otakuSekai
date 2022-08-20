@@ -1,9 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
+const { Op } = require("sequelize");
+
 
 const { validationResult } = require("express-validator");
 const { push } = require("../middlewares/validateCreateMiddleware");
+
 
 const dbProducts = db.Products;
 
@@ -101,13 +104,41 @@ const controller = {
           }
         }
       }
-
       res.render("./products/productVerMas", {
         products: products,
         offerProducts: offerProducts,
         noOfferProducts: noOfferProducts,
       });
     });
+  },
+
+  Buscar: (req, res) => {
+    let searchProduct = req.body.value;
+
+    db.Products.findAll({
+   /*    include: [{ association: "categories" }, { association: "series" }], */
+      where: {
+        name: {[Op.like]: '%' +  searchProduct +'%'},
+      }
+    })
+    .then(function (products) {
+      let offerProducts = [];
+      let noOfferProducts = [];
+      for (let x = 0; x < products.length; x++) {
+        if (products[x].deleted != 1) {
+          if (products[x].discount != 0) {
+            offerProducts.push(products[x]);
+          } else {
+            noOfferProducts.push(products[x]);
+          }
+        }
+      }
+      res.render("./products/productVerMas", {
+        products: products,
+        offerProducts: offerProducts,
+        noOfferProducts: noOfferProducts,
+      });
+    })
   },
 
   productExtractADMIN: (req, res) => {

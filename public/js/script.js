@@ -4,6 +4,13 @@ function busqueda(){
   barraInput.classList.toggle("mostrarBarra")
 }
 
+
+  let botonLupa = document.querySelector("#btnLupa")
+ /*  botonLupa.addEventListener('click', function(event){
+    alert('loQueSea')
+  }) */
+
+
 /* ---------------------------- CARRUSEL DE FOTOS DEL BANENR DEL HOME ----------- */
 
 let slideIndex1 = 0;
@@ -67,5 +74,17 @@ function showSlides(n) {
   dots[slideIndex2-1].className += " active";
 } */
 
+
+
+
+/*    
+ 
+  }) */
+
+
+/*   window.onload = function() { // también puede usar window.addEventListener('load', (event) => {
+   
+    alert('asd')
+  }; */
 
 
