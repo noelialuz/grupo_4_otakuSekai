@@ -111,6 +111,28 @@ const controller = {
       });
     });
   },
+  
+  /* --------------------------- AGREGAR VISTA PARA VER MAS PRODUCTOS POR ANIME --------------------------- */
+  verMasAnime: (req, res) => {
+    db.Products.findAll().then(function (products) {
+      let offerProducts = [];
+      let noOfferProducts = [];
+      for (let x = 0; x < products.length; x++) {
+        if (products[x].deleted != 1) {
+          if (products[x].discount != 0) {
+            offerProducts.push(products[x]);
+          } else {
+            noOfferProducts.push(products[x]);
+          }
+        }
+      }
+      res.render("./products/productVerMasAnime", {
+        products: products,
+        offerProducts: offerProducts,
+        noOfferProducts: noOfferProducts,
+      });
+    });
+  },
 
   Buscar: (req, res) => {
     let searchProduct = req.body.value;

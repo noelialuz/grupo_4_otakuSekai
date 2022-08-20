@@ -21,7 +21,8 @@ router.get('/cart', productController.cart);
 router.get('/:id', productController.detail); 
 
 /* Ver el listado completo de productos */
-router.get('/', productController.verMas); 
+router.get('/', productController.verMas);
+router.get('/categoriaAnime', productController.verMasAnime); 
 router.post('/search', productController.Buscar);
 
 /* Editar un producto existente*/
