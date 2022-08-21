@@ -78,9 +78,9 @@ const userController = {
                     MaxAge: 3 * 60 * 60 * 1000,
                   });
                 }
-                //db.Countries.findAll().then(function (countries) {
-                  //res.redirect("/");
-                //});
+                db.Countries.findAll().then(function (countries) {
+                  res.redirect("/");
+                });
               } else {
                 res.render("./users/login", {
                   msg: "El usuario o contraseña no son válidos",
