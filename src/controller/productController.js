@@ -138,13 +138,17 @@ const controller = {
     let searchProduct = req.body.value;
 
     db.Products.findAll({
-   /*    include: [{ association: "categories" }, { association: "series" }], */
       where: {
         name: {[Op.like]: '%' +  searchProduct +'%'},
       }
     })
     .then(function (products) {
-      let offerProducts = [];
+      if(products == ""){
+        res.render("./products/not-found-products", {
+          especificacion: "No encontramos el producto",
+        });
+      } else {
+        let offerProducts = [];
       let noOfferProducts = [];
       for (let x = 0; x < products.length; x++) {
         if (products[x].deleted != 1) {
@@ -160,6 +164,7 @@ const controller = {
         offerProducts: offerProducts,
         noOfferProducts: noOfferProducts,
       });
+      }
     })
   },
 
