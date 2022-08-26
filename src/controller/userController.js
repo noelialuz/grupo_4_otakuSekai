@@ -24,7 +24,7 @@ const userController = {
         res.render("./users/register", {
           paises: countries,
           errors: resultValidation.mapped(),
-          usuario: req.body,
+          oldData: req.body,
         });
       });
     } else {
