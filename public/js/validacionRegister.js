@@ -210,8 +210,8 @@ window.addEventListener("load", function () {
 
     /* -------------- INPUT PASSWORD -------------- */
     formPasswordConfirmRegister.addEventListener("blur", function () {
-        let advertencia = document.querySelector("#passwordRegister")
-        if (formPasswordConfirmRegister.value != formPasswordRegister) {
+        let advertencia = document.querySelector("#passwordRegister");
+        if (formPasswordConfirmRegister.value !== formPasswordRegister.value) {
             advertencia.innerHTML = "";
             advertencia.innerHTML += "<p>Las contraseñas deben coincidir</p>"
             advertencia.classList.remove("userAdd")
@@ -308,16 +308,8 @@ window.addEventListener("load", function () {
             errores.push("El email no puede estar vacío");
             formEmailRegister.classList.remove("is-valid");
             formEmailRegister.classList.add("is-invalid");
-        } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmailRegister.value)) {
-           errores.push("El email debe ser del tipo: ejemplo@mail.com");
-            formEmailRegister.classList.remove("is-valid");
-            formEmailRegister.classList.add("is-invalid");
-        }
-        else {
-            formEmailRegister.classList.remove("is-invalid");
-            formEmailRegister.classList.add("is-valid");
-        }
-
+        } 
+        
         /* -------------- INPUT DIRECTION -------------- */
 
         if (formDirectionRegister.value == "") {
@@ -377,7 +369,7 @@ window.addEventListener("load", function () {
         /* -------------- INPUT PASSWORD -------------- */
 
         if (formPasswordRegister.value == "") {
-            errores.push("LLa contraseña no puede estar vacía");
+            errores.push("La contraseña no puede estar vacía");
             formPasswordRegister.classList.remove("is-valid");
             formPasswordRegister.classList.add("is-invalid");
         }
@@ -393,7 +385,7 @@ window.addEventListener("load", function () {
 
         /* -------------- INPUT PASSWORD CONFIRM -------------- */
 
-        if (formPasswordConfirmRegister.value != formPasswordRegister) {
+        if (formPasswordConfirmRegister.value != formPasswordRegister.value) {
             errores.push("Las contraseñas deben coincidir");
             formPasswordConfirmRegister.classList.remove("is-valid");
             formPasswordConfirmRegister.classList.add("is-invalid");

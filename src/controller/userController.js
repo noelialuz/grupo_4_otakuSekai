@@ -28,7 +28,6 @@ const userController = {
         });
       });
     } else {
-      console.log(req.body.nombre);
       db.Users.create({
         first_name: req.body.nombre,
         last_name: req.body.apellido,
