@@ -7,6 +7,7 @@ const { Op } = require("sequelize");
 
 const { validationResult } = require("express-validator");
 
+const { count, Console } = require("console");
 
 const userController = {
   register: (req, res) => {
@@ -17,18 +18,18 @@ const userController = {
     });
   },
   processRegister: (req, res) => {
+    console.log(req.body);
     const resultValidation = validationResult(req);
-
     if (resultValidation.errors.length > 0) {
       return db.Countries.findAll().then(function (countries) {
-        res.render("./users/profile", {
+        res.render("./users/register", {
           paises: countries,
           errors: resultValidation.mapped(),
-          usuario: req.body
+          oldData: req.body,
+
         });
       });
     } else {
-      console.log(req.body.nombre);
       db.Users.create({
         first_name: req.body.nombre,
         last_name: req.body.apellido,
@@ -75,7 +76,7 @@ const userController = {
                 req.session.usuario.email = userExist.email;
                 if (req.body.recordame != undefined) {
                   res.cookie("userEmail", req.body.Email, {
-                    MaxAge: 3 * 60 * 60 * 1000,
+                    MaxAge:2592000,
                   });
                 }
                 db.Countries.findAll().then(function (countries) {
