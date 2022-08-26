@@ -6,7 +6,7 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const { validationResult } = require("express-validator");
-const { count } = require("console");
+const { count, Console } = require("console");
 
 const userController = {
   register: (req, res) => {
@@ -17,11 +17,11 @@ const userController = {
     });
   },
   processRegister: (req, res) => {
+    console.log(req.body);
     const resultValidation = validationResult(req);
-
     if (resultValidation.errors.length > 0) {
       return db.Countries.findAll().then(function (countries) {
-        res.render("./users/profile", {
+        res.render("./users/register", {
           paises: countries,
           errors: resultValidation.mapped(),
           usuario: req.body,
