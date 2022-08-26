@@ -5,6 +5,8 @@ const productController = require('../controller/productController');
 const uploadFileProducts = require('../middlewares/multerProductsMiddleware')
 const validationsProducts = require('../middlewares/validateCreateMiddleware')
 
+/* Ir a la vista que muestra productos por ...   */
+router.get('/productVerMasAnime', productController.verMasAnime); 
 
 /* ADMIN - Ver detalle de productos */
 router.get('/extractADMIN', productController.productExtractADMIN);
@@ -22,7 +24,6 @@ router.get('/:id', productController.detail);
 
 /* Ver el listado completo de productos */
 router.get('/', productController.verMas);
-router.get('/categoriaAnime', productController.verMasAnime); 
 router.post('/search', productController.Buscar);
 
 /* Editar un producto existente*/
