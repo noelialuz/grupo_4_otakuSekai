@@ -210,13 +210,8 @@ window.addEventListener("load", function () {
 
     /* -------------- INPUT PASSWORD -------------- */
     formPasswordConfirmRegister.addEventListener("blur", function () {
-<<<<<<< HEAD
         let advertencia = document.querySelector("#passwordRegister")
         if (formPasswordConfirmRegister.value != formPasswordRegister.value) {
-=======
-        let advertencia = document.querySelector("#passwordRegister");
-        if (formPasswordConfirmRegister.value !== formPasswordRegister.value) {
->>>>>>> 4c69ee490a313016823fec0a19ef43caf2150f34
             advertencia.innerHTML = "";
             advertencia.innerHTML += "<p>Las contraseñas deben coincidir</p>"
             advertencia.classList.remove("userAdd")

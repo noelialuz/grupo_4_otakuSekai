@@ -19,9 +19,11 @@ app.set('views', path.join(__dirname, 'views'));
 const mainRouter = require('./routes/mainRoutes');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
+const useApiProducts = require("./routes/api/apiProductRoutes")
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 app.use('/', mainRouter);
+app.use("/api", useApiProducts)
 app.use('/products', productRouter);
 app.use('/users', userRouter);
 app.use((req, res, next) => {res.status(404).render('not-found')})
