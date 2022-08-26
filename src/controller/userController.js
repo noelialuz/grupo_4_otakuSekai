@@ -75,7 +75,7 @@ const userController = {
                 req.session.usuario.email = userExist.email;
                 if (req.body.recordame != undefined) {
                   res.cookie("userEmail", req.body.Email, {
-                    MaxAge: 3 * 60 * 60 * 1000,
+                    MaxAge:2592000,
                   });
                 }
                 db.Countries.findAll().then(function (countries) {
