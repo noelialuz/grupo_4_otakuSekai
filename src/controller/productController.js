@@ -3,10 +3,8 @@ const path = require("path");
 const db = require("../database/models");
 const { Op } = require("sequelize");
 
-
 const { validationResult } = require("express-validator");
 const { push } = require("../middlewares/validateCreateMiddleware");
-
 
 const dbProducts = db.Products;
 
@@ -111,7 +109,7 @@ const controller = {
       });
     });
   },
-  
+
   /* --------------------------- AGREGAR VISTA PARA VER MAS PRODUCTOS POR ANIME --------------------------- */
   verMasAnime: (req, res) => {
     db.Products.findAll().then(function (products) {
@@ -139,33 +137,32 @@ const controller = {
 
     db.Products.findAll({
       where: {
-        name: {[Op.like]: '%' +  searchProduct +'%'},
-      }
-    })
-    .then(function (products) {
-      if(products == ""){
+        name: { [Op.like]: "%" + searchProduct + "%" },
+      },
+    }).then(function (products) {
+      if (products == "") {
         res.render("./products/not-found-products", {
           especificacion: "No encontramos el producto",
         });
       } else {
         let offerProducts = [];
-      let noOfferProducts = [];
-      for (let x = 0; x < products.length; x++) {
-        if (products[x].deleted != 1) {
-          if (products[x].discount != 0) {
-            offerProducts.push(products[x]);
-          } else {
-            noOfferProducts.push(products[x]);
+        let noOfferProducts = [];
+        for (let x = 0; x < products.length; x++) {
+          if (products[x].deleted != 1) {
+            if (products[x].discount != 0) {
+              offerProducts.push(products[x]);
+            } else {
+              noOfferProducts.push(products[x]);
+            }
           }
         }
+        res.render("./products/productVerMas", {
+          products: products,
+          offerProducts: offerProducts,
+          noOfferProducts: noOfferProducts,
+        });
       }
-      res.render("./products/productVerMas", {
-        products: products,
-        offerProducts: offerProducts,
-        noOfferProducts: noOfferProducts,
-      });
-      }
-    })
+    });
   },
 
   productExtractADMIN: (req, res) => {
@@ -206,26 +203,39 @@ const controller = {
     if (req.session.usuario == undefined) {
       return res.render("./users/login", { msg: "" });
     } else {
-      let errors = validationResult(req);
-    if (errors.isEmpty()) {
+      let repetido = false;
+      db.Products.findAll().then(function (allProducts) {
+        for (let x = 0; x < allProducts.length; x++) {
+          if (req.body.name == allProducts[x].name) {
+            repetido = true;
+          }
+        }
 
-        dbProducts
-          .create({
-            name: req.body.name,
-            category_id: req.body.category,
-            serie_id: req.body.serie,
-            price: req.body.price,
-            discount: req.body.discount,
-            description: req.body.description,
-            image: "/img/productos/" + req.file.filename,
-            deleted: false,
-            stock: req.body.stock,
-          })
-          .then(() => {
-            return res.redirect("/products");
-          })
-          .catch((error) => res.send(error));
-      }
+        if (repetido == true) {
+          return res.send("Este producto ya existe ameo")
+          /* return res.redirect("/"); */
+        } else {
+          let errors = validationResult(req);
+          if (errors.isEmpty()) {
+            dbProducts
+              .create({
+                name: req.body.name,
+                category_id: req.body.category,
+                serie_id: req.body.serie,
+                price: req.body.price,
+                discount: req.body.discount,
+                description: req.body.description,
+                image: "/img/productos/" + req.file.filename,
+                deleted: false,
+                stock: req.body.stock,
+              })
+              .then(() => {
+                return res.redirect("/products");
+              })
+              .catch((error) => res.send(error));
+          }
+        }
+      });
     }
   },
 
@@ -236,22 +246,23 @@ const controller = {
     } else {
       let productID = req.params.id;
       let errors = validationResult(req);
-      if (errors.isEmpty()){
-      db.Products.findByPk(productID, {
-        include: [{ association: "categories" }, { association: "series" }],
-      }).then(function (product) {
-        db.Categories.findAll().then(function (allCategories) {
-          db.Series.findAll().then(function (allSeries) {
-            res.render("./products/productEdit", {
-              product,
-              allCategories: allCategories,
-              allSeries: allSeries,
-              title: product.name,
+      if (errors.isEmpty()) {
+        db.Products.findByPk(productID, {
+          include: [{ association: "categories" }, { association: "series" }],
+        }).then(function (product) {
+          db.Categories.findAll().then(function (allCategories) {
+            db.Series.findAll().then(function (allSeries) {
+              res.render("./products/productEdit", {
+                product,
+                allCategories: allCategories,
+                allSeries: allSeries,
+                title: product.name,
+              });
             });
           });
         });
-      });
-    }};
+      }
+    }
   },
 
   update: (req, res) => {
