@@ -45,7 +45,5 @@ router.get('/category/:category_id', productController.detailCategory);
 /* Ver el listado completo de productos por Anime*/
 router.get('/anime/:serie_id', productController.detailAnime); 
 
-
-
 /* Exportar modulo */
 module.exports = router;

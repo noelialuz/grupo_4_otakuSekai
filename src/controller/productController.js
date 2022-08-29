@@ -204,15 +204,19 @@ const controller = {
       return res.render("./users/login", { msg: "" });
     } else {
       let repetido = false;
+      let dProduct;
       db.Products.findAll().then(function (allProducts) {
         for (let x = 0; x < allProducts.length; x++) {
           if (req.body.name == allProducts[x].name) {
             repetido = true;
+            dProduct = allProducts[x]
           }
         }
 
         if (repetido == true) {
-          return res.send("Este producto ya existe ameo")
+          return res.render("./products/productDuplicity", {
+            product: dProduct
+          })
           /* return res.redirect("/"); */
         } else {
           let errors = validationResult(req);
@@ -232,7 +236,7 @@ const controller = {
               .then(() => {
                 return res.redirect("/products");
               })
-              .catch((error) => res.send(error));
+              .catch((err) => res.send(err));
           }
         }
       });
