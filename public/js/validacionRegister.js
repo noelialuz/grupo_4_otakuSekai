@@ -90,14 +90,17 @@ window.addEventListener("load", function () {
 
 
     /* FALTA AGREGAR: No puede repetirse con los e-mails ya registrados. */
+
+    let regEmail = /\S+@\S+\.\S+/;
+
     formEmailRegister.addEventListener("blur", function () {
         let advertencia = document.querySelector("#emailRegister")
         if (formEmailRegister.value == "") {
-            advertencia.innerHTML = "";
+            advertencia.innerHTML == "";
             advertencia.innerHTML += "<p>El email no puede estar vacío</p>"
             advertencia.classList.remove("userAdd")
             advertencia.classList.add("validationUserAdd")
-        } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmailRegister.value)) {
+        } else if (!regEmail.test(formEmailRegister.value)) {
             advertencia.innerHTML = "";
             advertencia.innerHTML += "<p>El email debe ser del tipo: ejemplo@mail.com</p>"
             advertencia.classList.remove("userAdd")
@@ -136,9 +139,9 @@ window.addEventListener("load", function () {
     /* -------------- INPUT COUNTRY -------------- */
     formCountryRegister.addEventListener("blur", function () {
         let advertencia = document.querySelector("#countryRegister")
-        if (formDirectionRegister.value == "") {
+        if (formCountryRegister.value == "" || formCountryRegister.value == "Pais") {
             advertencia.innerHTML = "";
-            advertencia.innerHTML += "<p>El país no puede estar vacío</p>"
+            advertencia.innerHTML += "<p>Tienes que seleccionar un Pais</p>"
             advertencia.classList.remove("userAdd")
             advertencia.classList.add("validationUserAdd")
         }
@@ -210,7 +213,7 @@ window.addEventListener("load", function () {
 
     /* -------------- INPUT PASSWORD -------------- */
     formPasswordConfirmRegister.addEventListener("blur", function () {
-        let advertencia = document.querySelector("#passwordRegister")
+        let advertencia = document.querySelector("#passwordConfirmRegister")
         if (formPasswordConfirmRegister.value != formPasswordRegister.value) {
             advertencia.innerHTML = "";
             advertencia.innerHTML += "<p>Las contraseñas deben coincidir</p>"
@@ -227,7 +230,7 @@ window.addEventListener("load", function () {
 
     /* -------------- INPUT IMAGE -------------- */
     formImgRegister.addEventListener("blur", function () {
-        let advertencia = document.querySelector("#passwordRegister")
+        let advertencia = document.querySelector("#imageRegister")
         let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
         if (!allowedExtensions.exec(formImgRegister.value)) {
             advertencia.innerHTML = "";
@@ -271,8 +274,8 @@ window.addEventListener("load", function () {
 
         if (formApellidoRegister.value == "") {
             errores.push("El apellido no puede estar vacío");
-            formNameRegister.classList.remove("is-valid");
-            formNameRegister.classList.add("is-invalid");
+            formApellidoRegister.classList.remove("is-valid");
+            formApellidoRegister.classList.add("is-invalid");
         }
         else if (formApellidoRegister.length < 2) {
             errores.push("El apellido debe tener al menos 2 caracteres");
@@ -329,8 +332,8 @@ window.addEventListener("load", function () {
 
         /* -------------- INPUT COUNTRY -------------- */
 
-        if (formCountryRegister.value == "") {
-            errores.push("El país no puede estar vacío");
+        if (formCountryRegister.value == "" || formCountryRegister.value == "Pais") {
+            errores.push("Tienes que seleccionar un Pais");
             formCountryRegister.classList.remove("is-valid");
             formCountryRegister.classList.add("is-invalid");
         }
@@ -384,8 +387,12 @@ window.addEventListener("load", function () {
         }
 
         /* -------------- INPUT PASSWORD CONFIRM -------------- */
-
-        if (formPasswordConfirmRegister.value != formPasswordRegister.value) {
+        if (formPasswordConfirmRegister.value == "") {
+            errores.push("El campo de confirmacion no puede quedar vacion");
+            formPasswordConfirmRegister.classList.remove("is-valid");
+            formPasswordConfirmRegister.classList.add("is-invalid");
+        }
+        else if (formPasswordConfirmRegister.value != formPasswordRegister.value) {
             errores.push("Las contraseñas deben coincidir");
             formPasswordConfirmRegister.classList.remove("is-valid");
             formPasswordConfirmRegister.classList.add("is-invalid");
