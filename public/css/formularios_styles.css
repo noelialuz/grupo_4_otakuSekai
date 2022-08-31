@@ -166,13 +166,16 @@
   .validationUserAdd{
     display: block;
     color: #842029;
-    background-color: #F8D7DA;
+    background-color: #fceced;
     border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
   }
 
   .validationUserAdd p{
     text-align: center;
     font-weight: bold;
+    margin: 0 0 15px 0;
   }
 
   .is-valid {
