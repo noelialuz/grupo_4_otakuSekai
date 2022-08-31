@@ -24,17 +24,25 @@ const usersController = {
                 },
                 count: users.length,
                 users: users
-              });
-        });
+              })
+        }).catch((error) => res.status(400).json({
+            meta: {
+              status: 400,
+              url: "api/users/" + req.params.id,
+              msg: "Error al buscar el listado de usuarios.  " + error
+            }
+          }));
     },
     user: (req, res) =>{
         db.Users.findByPk(req.params.id).then(function (user) {
+            if(user != null){
+                
+            }
             db.Countries.findByPk(user.country_id).then(function (countryData) {
-
             return res.status(200).json({
                 meta: {
                   status: 200,
-                  url: "api/products/:id",
+                  url: "api/users/:id",
                 },
                 data: {
                     id: user.id,
@@ -49,8 +57,20 @@ const usersController = {
                     Avatar: user.avatar,
                 },
               });
-            });
-        });
+            }).catch((error) => res.status(400).json({
+                meta: {
+                  status: 400,
+                  url: "api/users/" + req.params.id,
+                  msg: "Error al buscar el país " + user.country_id + ".  " + error
+                }
+              }));
+        }).catch((error) => res.status(400).json({
+            meta: {
+              status: 400,
+              url: "api/users/" + req.params.id,
+              msg: "Error al buscar el usuario " + req.params.id + ".  " + error
+            }
+          }));
     }
     
 
