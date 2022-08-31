@@ -215,7 +215,8 @@ const controller = {
 
         if (repetido == true) {
           return res.render("./products/productDuplicity", {
-            product: dProduct
+            product: dProduct,
+            products: allProducts
           })
           /* return res.redirect("/"); */
         } else {

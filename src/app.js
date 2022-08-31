@@ -24,7 +24,7 @@ const useApiUsers = require("./routes/api/apiUserRoutes")
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 app.use('/', mainRouter);
-app.use("/api", useApiProducts);
+app.use("/api/products/", useApiProducts)
 app.use("/api/users", useApiUsers);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
