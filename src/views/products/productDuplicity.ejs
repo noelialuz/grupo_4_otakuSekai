@@ -6,13 +6,24 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        
-        <!---------------------------- CATEGORIAS DE PRODUCTOS ---------------------------->
+        <div class="presentacion-producto">
+            <!-- AGREGAR FUNCIONALIDAD O SACAR -->
+            <div>
+                <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+                <label for="abrir-cerrar" class="toggle-button">
+                    <span class="cerrar" title="Cerrar">Cerrar</span>
+                    <span class="abrir" title="Abrir">Abrir</span>
+                </label>
+            </div>
+            <h2 class="nombre-producto">
+                <%= product.name %>
+            </h2>
+        </div>
         <div class="divcontendor">
-            <h2>EL producto que queres agregar ya existe!!</h2>
             <article class="productCountainer">
                 <div class="divContenedorImg">
                     <img class="productImg" src=<%=product.image %> alt="producto">
+                    <button class="botonProducto">Agregar al carrito</button>
                 </div>
                 <div class="detallesArticulo">
                     <h3><%= product.name %></h3>
@@ -30,30 +41,54 @@
                 </div>
             </article>
         </div>
-       
-       
-       
-        <section class="paginaNotFound">
 
-            <ul class="categoriasDelFooter1" id="categoriasDelFooter1">
-                <a href="/products/category/tazas">
-                    <li>Tazas, llaveros, pins, aros</li>
-                </a>
-                <a href="/products/category/indumentaria">
-                    <li>Indumentaria y accesorios</li>
-                </a>
-                <a href="/products/category/figuras">
-                    <li>Figuras</li>
-                </a>
-                <a href="/products/category/posters">
-                    <li>Pósters y cuadros</li>
-                </a>
-                <a href="/products/category/mangas">
-                    <li>Mangas y comics</li>
-                </a>
-            </ul>
+        <a href="/products/<%= product.id %>/edit" class="botonEditar">Editar este producto</a>
+
+        <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <button type="submit" class="botonEditar botonEliminar">ELIMINAR</button>
+        </form>
+
+
+        <section>
+            <h2 class="subtitulos">Otros productos similares...</h2>
+            <!-- <div class="products-Container"> -->
+
+            <div class="cajaConProductosEnOferta">
+                <% function getRandomArbitrary(min, max) { return Math.random() * (max - min) + min; } %>
+                    <% let ant=0; %>
+                        <% for(let x=0; x < 3; x++){ %>
+                            <% let num=getRandomArbitrary(1, products.length-1).toFixed(0) %>
+                                <% while(num==ant){ num=getRandomArbitrary(1, products.length-1).toFixed(0) } %>
+                                    <div class="productosEnOferta productosEnOfertax3">
+                                        <a href="/products/ <%= products[num].id %>"> <img
+                                                class="otherProductsImg" src=<%=products[num].image %>
+                                            alt=""></a>
+                                        <!-- Link a la página del producto -->
+                                        <div class="detallesOferta">
+                                            <h4>
+                                                <%= products[num].name %>
+                                            </h4>
+                                            <% if (products[num].discount != 0) { %>
+                                                <p class="porcentajeDescuento">- <%= products[num].discount %> off
+                                                </p>
+                                                <p class="precioAnterior">$ <%= products[num].price %>
+                                                </p>
+                                                <p class="precioActual">$ <%= price=(products[num].price * ((100-products[num].discount) / 100)).toFixed(0)%>
+                                                </p>
+                                            <% }else {%>
+                                                <p class="precioActual">$ <%= products[num].price %>
+                                                </p>
+                                            <% } %>
+                                            
+                                            <button onclick="" class="botonAgregar">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                    <% ant=num %>
+                                        <%}%>
             </div>
+            <!--      </div> -->
         </section>
+
     </main>
 
     <script src="/js/script.js"></script>
