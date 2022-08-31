@@ -1153,6 +1153,82 @@ footer {
                 background-color: var(--azulClaro)
             }
 
+            .sectionProductAnime:nth-child(1) {
+                background: url("/img/anime/dragonballz.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(2) {
+                background: url("/img/anime/naruto.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(3) {
+                background: url("/img/anime/jujutsukaisen.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(4) {
+                background: url("/img/anime/bokunohero.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(5) {
+                background: url("/img/anime/pokemon.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(6) {
+                background: url("/img/anime/demonslayer.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+
+            .sectionProductAnime:nth-child(7) {
+                background: url("/img/anime/totoro.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+            .sectionProductAnime:nth-child(8) {
+                background: url("/img/anime/supernatural.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+            .sectionProductAnime:nth-child(9) {
+                background: url("/img/anime/theboys.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
+            .sectionProductAnime:nth-child(10) {
+                background: url("/img/anime/otros.jpeg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--azulClaro)
+            }
 }
 
 /* ------------------------------ Version Desktop ------------------------------ */
@@ -1403,15 +1479,18 @@ footer {
 
     .cont_title h1 {
         position: relative;
-        top: 35vh;
+        top: 30vh;
         transition: all 0.8s;
-
     }
 
 
     .sectionProduct:hover {
         flex-grow: 1.3;
         transition: flex 0.3s;
+    }
+
+    .sectionProductAnime h1{
+        font-size: 16px;
     }
 
     .sectionProduct:hover h1 {
