@@ -19,9 +19,9 @@
                             <h3 class="categoriaYanimeAdmin">Anime</h3>
                             <h3 class="precioAdmin">Precio Actual</h3>
                             <h3 class="imagenVistaAdmin">Imagen 1</h3>
-                            <h3 class="imagenVistaAdmin">Imagen 2</h3>
+                            <!-- <h3 class="imagenVistaAdmin">Imagen 2</h3>
                             <h3 class="imagenVistaAdmin">Imagen 3</h3>
-                            <h3 class="imagenVistaAdmin">Imagen 4</h3>
+                            <h3 class="imagenVistaAdmin">Imagen 4</h3> -->
                             <h3>Eliminado</h3>
                             <h3>Acción</h3>
                         </div>
@@ -45,9 +45,6 @@
 
                                 <p class="precioAdmin">$ <%= products[x].price * (100-products[x].discount) /100 %></p>
                                 <img src= <%= products[x].image %> alt="Imagen 1" class="imagenVistaAdmin">
-                                <img src= <%= products[x].image %> alt="Imagen 2" class="imagenVistaAdmin">
-                                <img src= <%= products[x].image %> alt="Imagen 3" class="imagenVistaAdmin">
-                                <img src= <%= products[x].image %> alt="Imagen 4" class="imagenVistaAdmin">
                                 
                                 <% if (products[x].deleted == 0){ %>
                                     <P>Activo</P>
