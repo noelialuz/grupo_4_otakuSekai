@@ -166,12 +166,6 @@ header {
     align-items: center;
 }
 
-#opcionElegida {
-    height: 25px;
-    border-radius: 5px;
-    color: var(--azul);
-    width: 40%;
-}
 
 .imagenAvatar {
     width: 25px;
@@ -1255,10 +1249,6 @@ footer {
 @media (min-width: 769px) {
 
     /* ----------------- BARRA DE NAVEGACION - NAV BAR ----------------- */
-    #opcionElegida {
-        display: none;
-    }
-
 
     .navbar {
         display: block;
@@ -1284,6 +1274,10 @@ footer {
         overflow: hidden;
     }
 
+    .dropdown-resp {
+        float: left;
+    }
+
 
 
     .saludoUser {
@@ -1296,7 +1290,7 @@ footer {
         align-items: center;
     }
 
-    .dropdown .dropbtn {
+    .dropdown .dropbtn  {
         font-size: 16px;
         border: none;
         outline: none;
@@ -1542,3 +1536,153 @@ footer {
 
 
 /* ------------ FIN Version Desktop ------------ */
+
+.dropdown-resp {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 6px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    visibility: hidden;
+}
+
+.dropdown-content-resp {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+@media (max-width: 480px){
+    .dropdown-resp {
+        visibility:visible;
+     }
+
+     .dropdown-resp {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 8px 6px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    
+    .dropdown-content-resp {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropbtn-resp  {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.5px 6px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    .dropbtn-resp {
+        font-weight: bold;
+    }
+    .dropdown-resp:hover .dropbtn-resp {
+        background-color: var(--azulClaro);
+        color: var(--azul);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .dropdown-content-resp a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content-resp a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-resp:hover .dropdown-content-resp {
+        display: block;
+    }
+}
+
+/* hasta aca */
+
+@media (max-width: 768px){
+    .dropdown-resp {
+        visibility:visible;
+     }
+
+     .dropdown-resp {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.5px 6px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    
+    .dropdown-content-resp {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropbtn-resp  {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 6px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    .dropbtn-resp {
+        font-weight: bold;
+    }
+
+    .dropdown-resp:hover .dropbtn-resp {
+        background-color: var(--azulClaro);
+        color: var(--azul);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown-content-resp a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content-resp a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-resp:hover .dropdown-content-resp {
+        display: block;
+    }
+}
+
