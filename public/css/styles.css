@@ -624,7 +624,7 @@ main {
 /* ---------------- CAJA CON PRODUCTOS EN OFERTA ---------------- */
 
 .productosEnOferta {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-around;
     padding: 15px;
@@ -633,6 +633,15 @@ main {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
+
+    overflow: hidden;
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.productosEnOferta:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
 }
 
 .productosEnOferta p {
@@ -1377,7 +1386,18 @@ footer {
     .productosEnOferta {
         width: 23%;
         margin: 5px 0px;
-    }
+
+        overflow: hidden;
+        cursor: default;
+        transition: all 400ms ease;
+}
+
+.productosEnOferta:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+
 
     .cajaConProductosEnOferta {
         display: flex;
