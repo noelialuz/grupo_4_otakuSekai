@@ -46,37 +46,72 @@ const productsController = {
           data: products,
         });
       });
-    });
+    }).catch((error) => res.status(400).json({
+      meta: {
+        status: 400,
+        url: "api/products/" + req.params.id,
+        msg: "Error al listar productos.  " + error
+      }
+    }));
   },
 
   show: (req, res) => {
     db.Products.findByPk(req.params.id).then(function (product) {
-      return res.status(200).json({
-        meta: {
-          status: 200,
-          url: "api/products/:id",
-        },
-        data: product,
-      });
-    });
-  },
+      if (product != null){
+        return res.status(200).json({
+          meta: {
+            status: 200,
+            url: "api/products/:id",
+          },
+          data: product,
+        });
+      }
+      else{
+        res.status(404).json({
+            meta: {
+                status: 404,
+                url: "api/products/" + req.params.id,
+                msg: "No existe el producto " + req.params.id 
+            }
+        })
+    }
+    }).catch((error) => res.status(400).json({
+      meta: {
+        status: 400,
+        url: "api/products/" + req.params.id,
+        msg: "Error al buscar el producto " + req.params.id + ".  " + error
+      }
+    }));
+},
   add: (req, res) => {
     db.Products.create(req.body).then(function (product) {
-      return res.status(200).json({
-        data: product,
-        status: 200,
-        created: "true",
-      });
+    return res.status(200).json({
+      data: product,
+      status: 200,
+      created: "true",
     });
+  }).catch((error) => res.status(400).json({
+    meta: {
+      status: 400,
+      url: "api/products/",
+      msg: "Error al crear el producto un nuevo producto." + error
+    }
+  }));
   },
 
-  delete: (req, res) => {
-    db.Products.destroy({
-      where: { id: req.params.id },
-    }).then((respose) => {
-      return res.json(respose);
-    });
-  },
+delete: (req, res) => {
+  db.Products.destroy({
+    where: { id: req.params.id },
+  }).then((respose) => {
+    return res.json(respose);
+  }).catch((error) => res.status(400).json({
+    meta: {
+      status: 400,
+      url: "api/products/",
+      msg: "Error al eliminar un producto. " + error
+    }
+  }));
+},
 };
 
 module.exports = productsController;
