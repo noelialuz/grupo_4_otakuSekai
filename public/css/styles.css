@@ -801,6 +801,10 @@ footer {
     margin: 0 3%;
 }
 
+.iconosRedesSocialesFooter a{
+    padding-bottom: 15px;
+}
+
 .logoDelFooter {
     width: 70%;
     margin-top: 10px;
@@ -1005,15 +1009,23 @@ footer {
         list-style-type: none;
         color: white;
         font-weight: bold;
+        padding: 10px;
     }
 
+    .categoriasDelFooter2 li:hover {
+        box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
     .categoriasDelFooter2 a {
         text-decoration: none;
     }
 
     .logoDelFooter {
         max-width: 300px;
+        box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.6);
     }
+
+    
 
     .porcentajeDescuento {
         font-size: 16px;
@@ -1379,6 +1391,7 @@ footer {
         background-color: var(--celeste);
         color: var(--azul);
         transition: 0.5s;
+        cursor: pointer;
     }
 
     /* ---------------- Caja con productos en oferta ---------------- */
@@ -1421,10 +1434,14 @@ footer {
     }
 
     /* -------------- categorias del footer -------------- */
+    .categoriasDelFooter1 a{
+        position: relative;
+    }
     .categoriasDelFooter1 a:hover li {
         opacity: 1;
         transform: scale(1.1, 1.1);
         transition: all 0.3s;
+        box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.2);
     }
 
     .product_infoCard {
@@ -1467,6 +1484,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.6);
     }
 
     .container:hover .sectionProduct {

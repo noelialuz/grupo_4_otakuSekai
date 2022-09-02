@@ -106,7 +106,8 @@ input#abrir-cerrar {
 }
 
 .productImg{
-    width: 100%;
+    width: 60%;
+    min-width: 200px
 }
 
 .divcontendor{

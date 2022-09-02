@@ -33,6 +33,7 @@ const productsController = {
             description: allProducts[b].description,
             relations: ["Categories", "Series"],
             detail: "api/products/" + allProducts[b].id,
+            image:  allProducts[b].image
           };
           products.push(product);
         }
