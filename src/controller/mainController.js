@@ -24,6 +24,10 @@ const controller = {
   enConstruccion: (req, res) => {
     res.render("./varios/sitioEnConstruccion");
   },
+
+  preguntasFrecuentes: (req, res) =>{
+    res.render("./varios/preguntasFrecuentes");
+  }
 };
 
 module.exports = controller;

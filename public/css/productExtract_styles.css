@@ -162,3 +162,16 @@
     }
 }
 
+@media (max-width: 480px){
+    .vistaAdmin{
+        background-color: white;
+        position:unset;
+    }
+}
+
+@media (max-width: 768px){
+    .vistaAdmin{
+        position:unset;
+        background-color: white;
+    }
+}
