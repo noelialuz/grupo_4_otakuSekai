@@ -1,6 +1,9 @@
+
+
 .pFrecuentes-main{
 	display: flex;
     flex-wrap: wrap;
+	width: 90%;
 }
 
 .pFrecuentes-section {
@@ -10,6 +13,17 @@
 	margin-top: 2vw;
 	width: 60%;
 	margin-left: 5%;
+}
+
+.pFrecuentes-pic{
+	display: block;
+	height: 40rem;
+	padding-right: 5rem;
+    width: auto;
+}
+
+.pFrecuentes-picContainer{
+	width: 30%;
 }
 
 
@@ -26,7 +40,7 @@
 }
 
 .contenedor-pregunta {
-	background: #fff;
+	background: #DFFDFF;
 	padding: 1px;
 	border: 2px solid transparent;
 	border-radius: 10px;
@@ -52,6 +66,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	color: #003F91;
 }
 
 .pregunta img {
