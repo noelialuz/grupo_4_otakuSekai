@@ -822,6 +822,7 @@ footer {
 .copyright {
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
 
@@ -884,6 +885,11 @@ footer {
 
 .container{
     display: none;
+}
+
+.productosEnOferta:active{
+    box-shadow: 4px 10px 10px 4px rgba(0, 26, 255, 0.2);
+    transition: 0.2s;
 }
 
 /* ------------------------------ Version Tablet ------------------------------ */
@@ -1394,8 +1400,8 @@ footer {
     }
 
     .productosEnOferta:hover{
-        box-shadow: 4px 10px 10px 4px rgba(0, 26, 255, 0.4);
-        transition: 0.3s;
+        box-shadow: 4px 10px 10px 4px rgba(0, 26, 255, 0.2);
+        transition: 0.2s;
     }
 
     .cajaConProductosEnOferta {
