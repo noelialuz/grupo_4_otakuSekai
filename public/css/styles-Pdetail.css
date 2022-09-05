@@ -107,7 +107,7 @@ input#abrir-cerrar {
 
 .productImg{
     width: 60%;
-    min-width: 200px
+    min-width: 100px
 }
 
 .divcontendor{
@@ -121,7 +121,7 @@ input#abrir-cerrar {
     border: none;
     width: 80%;
     margin-bottom: 15px;
-    padding: 10px 15px;
+    padding: 10px;
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -172,7 +172,7 @@ width: 90%;
 }
 
 .detallesOferta button{
-    width: 10vw;
+    margin-left: 10px;
 }
 
 

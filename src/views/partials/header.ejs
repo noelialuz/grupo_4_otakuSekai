@@ -39,10 +39,10 @@
   </div>
 
   <div class="dropdown-resp" id="opcionElegida">
-    <button class="dropbtn-resp">Menu
+    <button class="dropbtn-resp" onclick="menuDesplegable()">Menu
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content-resp">
+    <div class="dropdown-content-resp" id="dropdown-content-resp">
       <a href="/">Home</a>
       <a href="/quienesSomos">Quienes Somos</a>
       <a href="/products">Productos</a>
@@ -51,16 +51,6 @@
     </div>
   </div>
 
-<!--   <select name="" id="opcionElegida">
-    <option value="todasLasCategorias">Todas las categorías</option>
-    <option value="home" ><a href="/">Home</a></option>
-    <option value="quienesSomos">Quienes Somos</option>
-    <option value="productos">Productos</option>
-    <option value="anime">Anime</option>
-    <option value="preguntasFrecuentes">Preguntas Frecuentes</option>
-  </select> -->
-
- 
 
   <div class="iconosHeader">
     <div class="barraBusquedaConLupaMasInput">
@@ -75,13 +65,13 @@
 
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown carritoCompras">
       <% if(locals.isLogged) {%>
-        <button class="dropbtnUser" onclick="location.href='/users/profile'">
+        <button class="dropbtnUser carritoCompras" onclick="location.href='/users/profile'">
           <img src="../<%-locals.usuario.avatar%> " class="imagenAvatar"></img>
         </button>
         <%} else {%>
-          <button class="dropbtnUser" onclick="location.href='/users/login'">
+          <button class="dropbtnUser carritoCompras" onclick="location.href='/users/login'">
             <img src="../../img/avatars/userDefault.jpg" class="imagenAvatar">
           </button>
           <% } %>
