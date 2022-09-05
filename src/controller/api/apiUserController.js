@@ -41,6 +41,7 @@ const usersController = {
                         meta: {
                             status: 200,
                             url: "api/users/:id",
+                            count: users.length,
                         },
                         data: {
                             id: user.id,

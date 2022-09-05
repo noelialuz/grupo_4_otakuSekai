@@ -42,8 +42,8 @@ const productsController = {
             count: allProducts.length,
             status: 200,
             url: "api/products",
+            countcat: allCategories.length, 
           },
-          countByCategory: countByCategory,
           data: products,
         });
       });
