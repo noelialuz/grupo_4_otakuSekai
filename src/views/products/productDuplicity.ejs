@@ -6,17 +6,10 @@
 <body>
     <%- include('../partials/header') %>
     <main>
+        <br>
         <div class="presentacion-producto">
-            <!-- AGREGAR FUNCIONALIDAD O SACAR -->
-            <div>
-                <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
-                <label for="abrir-cerrar" class="toggle-button">
-                    <span class="cerrar" title="Cerrar">Cerrar</span>
-                    <span class="abrir" title="Abrir">Abrir</span>
-                </label>
-            </div>
             <h2 class="nombre-producto">
-                <%= product.name %>
+                El siguiente producto ya existe: <%= product.name %>
             </h2>
         </div>
         <div class="divcontendor">
@@ -42,6 +35,11 @@
             </article>
         </div>
 
+        <div class="presentacion-producto">
+            <h3 class="nombre-producto">
+                Probá con algunas de estas opciones o agregá un producto distinto
+            </h3>
+        </div>
         <a href="/products/<%= product.id %>/edit" class="botonEditar">Editar este producto</a>
 
         <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
@@ -88,9 +86,25 @@
             </div>
             <!--      </div> -->
         </section>
-
+        <section class="vistaAdmin" 
+        <% if (locals.usuario == undefined) { %>
+          style="visibility: hidden"
+        <% } else if (locals.usuario.profile_id != 2) {%>
+          style="visibility: hidden" 
+        <% } else { %>
+          style="visibility:visible "
+        <% } %>
+        >
+            <h3>¿Sos admin de la página?</h3>
+            <div class="botonesAdminEditarAgregar">
+                <a href="/products/extractADMIN" class="botonEditar">Ver base de datos</a>
+                <a href="/products/create" class="botonEditar">Agregar productos</a>
+            </div>
+            
+        </section>
     </main>
 
+    <%- include('../partials/footer') %>
     <script src="/js/script.js"></script>
 </body>
 
