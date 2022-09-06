@@ -46,6 +46,7 @@ const productsController = {
           },
           countByCategory: countByCategory,
           data: products,
+          countByCategory: countByCategory
         });
       });
     }).catch((error) => res.status(400).json({
