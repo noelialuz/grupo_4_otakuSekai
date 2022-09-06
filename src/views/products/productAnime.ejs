@@ -52,9 +52,22 @@
                     </div>
                 </section>
 
-                <section class="divBotonEditar">
-                    <a href="/products/create" class="botonEditar">Agregar productos</a>
-                </section>
+                <section class="vistaAdmin" 
+        <% if (locals.usuario == undefined) { %>
+          style="visibility: hidden"
+        <% } else if (locals.usuario.profile_id != 2) {%>
+          style="visibility: hidden"
+        <% } else { %>
+          style="visibility:visible "
+        <% } %>
+        >
+            <h3>¿Sos admin de la página?</h3>
+            <div class="botonesAdminEditarAgregar">
+                <a href="/products/extractADMIN" class="botonEditar">Ver base de datos</a>
+                <a href="/products/create" class="botonEditar">Agregar productos</a>
+            </div>
+            
+        </section>
 
             </main>
 
