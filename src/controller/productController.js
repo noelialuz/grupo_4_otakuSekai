@@ -324,8 +324,13 @@ const controller = {
       return res.render("./users/login", { msg: "" });
     } else {
       let productID = req.params.id;
-      dbProducts
-        .destroy({ where: { id: productID }, force: true })
+      dbProducts.update(
+        {
+          deleted: true,
+        },
+        { where: { id: productID } }
+      )
+        //.destroy({ where: { id: productID }, force: true })
         .then(() => {
           return res.redirect("/products/extractADMIN");
         })
