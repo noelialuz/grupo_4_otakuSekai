@@ -45,6 +45,7 @@ const productsController = {
             countcat: allCategories.length, 
           },
           data: products,
+          countByCategory: countByCategory
         });
       });
     }).catch((error) => res.status(400).json({
